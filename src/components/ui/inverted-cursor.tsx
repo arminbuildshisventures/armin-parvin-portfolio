@@ -69,7 +69,7 @@ export const Cursor: React.FC<CursorProps> = ({ size = 60 }) => {
   return (
     <div
       ref={cursorRef}
-      className="fixed pointer-events-none rounded-full bg-white mix-blend-difference z-50 transition-opacity duration-300"
+      className="fixed pointer-events-none rounded-full bg-white mix-blend-difference z-[9999] transition-opacity duration-300"
       style={{
         width: size,
         height: size,
