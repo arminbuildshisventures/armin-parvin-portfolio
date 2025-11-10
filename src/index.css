@@ -141,4 +141,9 @@ All colors MUST be HSL.
     text-shadow: 
       2px 2px 0 hsl(var(--pixel-shadow));
   }
+
+  .text-pixel-inverted {
+    text-shadow: 
+      3px 3px 0 hsl(var(--pixel-highlight));
+  }
 }
