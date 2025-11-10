@@ -5,6 +5,7 @@ import { Mail, FileText, PenTool, Target, TrendingUp, Users } from "lucide-react
 import heroImage from "@/assets/hero-pixel-art.png";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
+import { Cursor } from "@/components/ui/inverted-cursor";
 
 const Index = () => {
   const scrollToContact = () => {
@@ -16,6 +17,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Cursor />
       <Header />
 
       {/* Hero Section */}
