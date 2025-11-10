@@ -43,7 +43,7 @@ const Index = () => {
             <div className="inline-block pixel-border bg-secondary px-6 py-2">
               <p className="font-primary text-xs">Content • Copy • Email Marketing</p>
             </div>
-            <h1 className="font-primary text-3xl md:text-5xl lg:text-6xl text-pixel leading-relaxed">
+            <h1 className="font-primary text-3xl md:text-5xl lg:text-6xl leading-relaxed" style={{ textShadow: '3px 3px 0 #000000' }}>
               Words That Convert
             </h1>
             <p className="font-secondary text-lg md:text-xl max-w-2xl mx-auto">
