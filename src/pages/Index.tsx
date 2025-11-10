@@ -3,6 +3,8 @@ import { PixelButton } from "@/components/PixelButton";
 import { PixelCard } from "@/components/PixelCard";
 import { Mail, FileText, PenTool, Target, TrendingUp, Users } from "lucide-react";
 import heroImage from "@/assets/hero-pixel-art.png";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+import { motion } from "framer-motion";
 
 const Index = () => {
   const scrollToContact = () => {
@@ -17,15 +19,24 @@ const Index = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+      <AuroraBackground className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
           <img 
             src={heroImage} 
             alt="Pixel art marketing" 
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="container mx-auto relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="container mx-auto relative z-10"
+        >
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-block pixel-border bg-secondary px-6 py-2">
               <p className="font-primary text-xs">Content • Copy • Email Marketing</p>
@@ -46,8 +57,8 @@ const Index = () => {
               </PixelButton>
             </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </AuroraBackground>
 
       {/* About Section */}
       <section id="about" className="py-24 px-4">
