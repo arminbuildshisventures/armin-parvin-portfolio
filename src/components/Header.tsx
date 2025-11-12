@@ -1,4 +1,3 @@
-import { ThemeToggle } from "./ThemeToggle";
 import { PixelButton } from "./PixelButton";
 import { Menu } from "lucide-react";
 import { useState } from "react";
@@ -48,12 +47,10 @@ export function Header() {
             >
               Contact
             </button>
-            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center gap-2">
-            <ThemeToggle />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2"
