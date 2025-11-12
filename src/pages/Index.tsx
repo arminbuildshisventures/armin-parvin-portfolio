@@ -22,55 +22,44 @@ const Index = () => {
 
       {/* Hero Section */}
       <AuroraBackground className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
-        <div className="container mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-            <motion.div 
-              initial={{ opacity: 0, x: -40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="space-y-8 text-center lg:text-left"
-            >
-              <div className="inline-block pixel-border bg-secondary px-6 py-2">
-                <p className="font-primary text-xs">Content • Copy • Email Marketing</p>
-              </div>
-              <h1 className="font-primary text-3xl md:text-5xl lg:text-6xl text-pixel-inverted leading-relaxed">
-                Words That Convert
-              </h1>
-              <p className="font-secondary text-lg md:text-xl">
-                Crafting compelling content and email campaigns that turn readers into customers. 
-                Pixel-perfect copy for the digital age.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <PixelButton variant="primary" onClick={scrollToContact}>
-                  Start Project
-                </PixelButton>
-                <PixelButton variant="accent" onClick={() => document.getElementById("work")?.scrollIntoView({ behavior: "smooth" })}>
-                  View Work
-                </PixelButton>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                delay: 0.5,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="flex justify-center lg:justify-end"
-            >
-              <img 
-                src={heroImage} 
-                alt="Pixel art marketing professional" 
-                className="w-full max-w-md lg:max-w-lg object-contain"
-              />
-            </motion.div>
-          </div>
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <img 
+            src={heroImage} 
+            alt="Pixel art marketing" 
+            className="w-full h-full object-cover"
+          />
         </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="container mx-auto relative z-10"
+        >
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="inline-block pixel-border bg-secondary px-6 py-2">
+              <p className="font-primary text-xs">Content • Copy • Email Marketing</p>
+            </div>
+            <h1 className="font-primary text-3xl md:text-5xl lg:text-6xl text-pixel-inverted leading-relaxed">
+              Words That Convert
+            </h1>
+            <p className="font-secondary text-lg md:text-xl max-w-2xl mx-auto">
+              Crafting compelling content and email campaigns that turn readers into customers. 
+              Pixel-perfect copy for the digital age.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <PixelButton variant="primary" onClick={scrollToContact}>
+                Start Project
+              </PixelButton>
+              <PixelButton variant="accent" onClick={() => document.getElementById("work")?.scrollIntoView({ behavior: "smooth" })}>
+                View Work
+              </PixelButton>
+            </div>
+          </div>
+        </motion.div>
       </AuroraBackground>
 
       {/* About Section */}
