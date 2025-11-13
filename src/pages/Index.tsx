@@ -47,7 +47,7 @@ const Index = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <PixelButton variant="primary" onClick={scrollToContact}>
-                Start Project
+                Work With Me
               </PixelButton>
               <PixelButton variant="accent" onClick={() => document.getElementById("work")?.scrollIntoView({
               behavior: "smooth"
