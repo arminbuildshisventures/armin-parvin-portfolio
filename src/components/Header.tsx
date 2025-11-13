@@ -17,7 +17,12 @@ export function Header() {
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm pixel-border border-t-0 border-x-0">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <img src={logo} alt="Logo" className="h-8 md:h-10" />
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="Logo" className="h-8 md:h-10" />
+            <h1 className="font-primary text-sm md:text-base text-primary">
+              {"<MARKETER/>"}
+            </h1>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
