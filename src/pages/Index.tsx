@@ -226,7 +226,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 px-4 pixel-border border-b-0 border-x-0">
         <div className="container mx-auto text-center">
-          <p className="font-primary text-xs mb-2">{"<MARKETER/>"}</p>
+          <p className="font-primary text-xs mb-2">Armin Parvin</p>
           <p className="font-secondary text-sm text-muted-foreground">© 2025 All Rights Reserved</p>
         </div>
       </footer>
