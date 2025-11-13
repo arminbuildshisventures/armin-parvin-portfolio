@@ -1,7 +1,7 @@
 import { PixelButton } from "./PixelButton";
 import { Menu } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo (5).png";
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const scrollToSection = (id: string) => {
