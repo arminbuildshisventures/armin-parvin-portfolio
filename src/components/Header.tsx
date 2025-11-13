@@ -14,10 +14,10 @@ export function Header() {
     }
   };
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm pixel-border border-t-0 border-x-0">
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Logo" className="h-12 md:h-16" />
+            <img src={logo} alt="Logo" className="h-16 md:h-20" />
             
           </div>
 
