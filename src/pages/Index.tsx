@@ -11,12 +11,11 @@ const Index = () => {
     const element = document.getElementById("contact");
     if (element) {
       element.scrollIntoView({
-        behavior: "smooth",
+        behavior: "smooth"
       });
     }
   };
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Cursor />
       <Header />
 
@@ -25,22 +24,17 @@ const Index = () => {
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <img src={heroImage} alt="Pixel art marketing" className="w-full h-full object-cover" />
         </div>
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 40,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="container mx-auto relative z-10"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 40
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        delay: 0.3,
+        duration: 0.8,
+        ease: "easeInOut"
+      }} className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-block pixel-border bg-secondary px-6 py-2">
               <p className="font-primary text-xs">Copywriter • Ghostwriter • Content Marketer • Email Marketer</p>
@@ -55,14 +49,9 @@ const Index = () => {
               <PixelButton variant="primary" onClick={scrollToContact}>
                 Work With Me
               </PixelButton>
-              <PixelButton
-                variant="accent"
-                onClick={() =>
-                  document.getElementById("work")?.scrollIntoView({
-                    behavior: "smooth",
-                  })
-                }
-              >
+              <PixelButton variant="accent" onClick={() => document.getElementById("work")?.scrollIntoView({
+              behavior: "smooth"
+            })}>
                 View Portfolio
               </PixelButton>
             </div>
@@ -223,7 +212,7 @@ const Index = () => {
               Ready to level up your content and email marketing? Let's discuss how I can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <PixelButton variant="primary" onClick={() => (window.location.href = "mailto:hello@marketer.com")}>
+              <PixelButton variant="primary" onClick={() => window.location.href = "mailto:hello@marketer.com"}>
                 Send Email
               </PixelButton>
               <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com", "_blank")}>
@@ -238,10 +227,9 @@ const Index = () => {
       <footer className="py-8 px-4 pixel-border border-b-0 border-x-0">
         <div className="container mx-auto text-center">
           <p className="font-primary text-xs mb-2">{"<MARKETER/>"}</p>
-          <p className="font-secondary text-sm text-muted-foreground">© 2024 All Rights Reserved</p>
+          <p className="font-secondary text-sm text-muted-foreground">© All Rights Reserved</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
 export default Index;
