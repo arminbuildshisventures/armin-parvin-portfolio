@@ -7,13 +7,16 @@ export function Header() {
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm pixel-border border-t-0 border-x-0">
       <nav className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <img src={logo} alt="Logo" className="h-16 md:h-20" />
             
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
+            <Link to="/" className="font-secondary text-sm hover:text-accent transition-colors">
+              Home
+            </Link>
             <Link to="/about" className="font-secondary text-sm hover:text-accent transition-colors">
               About
             </Link>
@@ -38,6 +41,13 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && <div className="md:hidden mt-4 pixel-border bg-card p-4 space-y-4">
+            <Link 
+              to="/" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block w-full text-left font-secondary text-sm hover:text-accent transition-colors"
+            >
+              Home
+            </Link>
             <Link 
               to="/about" 
               onClick={() => setMobileMenuOpen(false)}
