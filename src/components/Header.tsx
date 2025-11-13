@@ -1,6 +1,7 @@
 import { PixelButton } from "./PixelButton";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo.png";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,6 +18,7 @@ export function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
+            <img src={logo} alt="Logo" className="h-8 md:h-10" />
             <h1 className="font-primary text-sm md:text-base text-primary">
               {"<MARKETER/>"}
             </h1>
