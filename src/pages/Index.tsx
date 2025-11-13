@@ -43,8 +43,7 @@ const Index = () => {
               Words That Convert
             </h1>
             <p className="font-secondary text-lg md:text-xl max-w-2xl mx-auto">
-              Crafting compelling content and email campaigns that turn readers into customers. 
-              Pixel-perfect copy for the digital age.
+              Let's make your brand stand out in a skeptical market.        
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <PixelButton variant="primary" onClick={scrollToContact}>
