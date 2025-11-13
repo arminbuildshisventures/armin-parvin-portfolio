@@ -6,42 +6,38 @@ import heroImage from "@/assets/hero-pixel-art.png";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
 import { Cursor } from "@/components/ui/inverted-cursor";
-
 const Index = () => {
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Cursor />
       <Header />
 
       {/* Hero Section */}
       <AuroraBackground className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-20 pointer-events-none">
-          <img 
-            src={heroImage} 
-            alt="Pixel art marketing" 
-            className="w-full h-full object-cover"
-          />
+          <img src={heroImage} alt="Pixel art marketing" className="w-full h-full object-cover" />
         </div>
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="container mx-auto relative z-10"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 40
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        delay: 0.3,
+        duration: 0.8,
+        ease: "easeInOut"
+      }} className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-block pixel-border bg-secondary px-6 py-2">
-              <p className="font-primary text-xs">Content • Copy • Email Marketing</p>
+              <p className="font-primary text-xs">  Copywriter • Content Writer • Ghostwriter • Email Marketer</p>
             </div>
             <h1 className="font-primary text-3xl md:text-5xl lg:text-6xl text-pixel-inverted leading-relaxed">
               Words That Convert
@@ -54,7 +50,9 @@ const Index = () => {
               <PixelButton variant="primary" onClick={scrollToContact}>
                 Start Project
               </PixelButton>
-              <PixelButton variant="accent" onClick={() => document.getElementById("work")?.scrollIntoView({ behavior: "smooth" })}>
+              <PixelButton variant="accent" onClick={() => document.getElementById("work")?.scrollIntoView({
+              behavior: "smooth"
+            })}>
                 View Work
               </PixelButton>
             </div>
@@ -225,16 +223,10 @@ const Index = () => {
               help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <PixelButton 
-                variant="primary"
-                onClick={() => window.location.href = "mailto:hello@marketer.com"}
-              >
+              <PixelButton variant="primary" onClick={() => window.location.href = "mailto:hello@marketer.com"}>
                 Send Email
               </PixelButton>
-              <PixelButton 
-                variant="accent"
-                onClick={() => window.open("https://linkedin.com", "_blank")}
-              >
+              <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com", "_blank")}>
                 LinkedIn
               </PixelButton>
             </div>
@@ -251,8 +243,6 @@ const Index = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
