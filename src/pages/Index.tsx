@@ -11,11 +11,12 @@ const Index = () => {
     const element = document.getElementById("contact");
     if (element) {
       element.scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       <Cursor />
       <Header />
 
@@ -24,20 +25,173 @@ const Index = () => {
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <img src={heroImage} alt="Pixel art marketing" className="w-full h-full object-cover" />
         </div>
-        <motion.div initial={{
-        opacity: 0,
-        y: 40
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        delay: 0.3,
-        duration: 0.8,
-        ease: "easeInOut"
-      }} className="container mx-auto relative z-10">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="container mx-auto relative z-10"
+        >
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-block pixel-border bg-secondary px-6 py-2">
-              <p className="font-primary text-xs">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Copywriter • Ghostwriter • Content Marketer • Email Marketer</p>
+              <p className="font-primary text-xs">
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                        
+                                                                                                                       
+                                                                                                                        
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+                                                                                                                        
+                                                                                                                        
+                                                                                                                       
+                                             Copywriter • Ghostwriter • Content Marketer • Email Marketer
+              </p>
             </div>
             <h1 className="font-primary text-3xl md:text-5xl lg:text-6xl text-pixel-inverted leading-relaxed">
               Words That Convert
@@ -49,10 +203,15 @@ const Index = () => {
               <PixelButton variant="primary" onClick={scrollToContact}>
                 Work With Me
               </PixelButton>
-              <PixelButton variant="accent" onClick={() => document.getElementById("work")?.scrollIntoView({
-              behavior: "smooth"
-            })}>
-                View Work
+              <PixelButton
+                variant="accent"
+                onClick={() =>
+                  document.getElementById("work")?.scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
+              >
+                View Portfolio
               </PixelButton>
             </div>
           </div>
@@ -62,18 +221,16 @@ const Index = () => {
       {/* About Section */}
       <section id="about" className="py-24 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">
-            About Me
-          </h2>
+          <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">About Me</h2>
           <PixelCard>
             <p className="font-secondary text-base md:text-lg leading-relaxed mb-6">
-              I'm a content strategist and copywriter who believes in the power of words to 
-              drive action. With expertise in email marketing, content creation, and conversion 
-              optimization, I help businesses communicate their value effectively.
+              I'm a content strategist and copywriter who believes in the power of words to drive action. With expertise
+              in email marketing, content creation, and conversion optimization, I help businesses communicate their
+              value effectively.
             </p>
             <p className="font-secondary text-base md:text-lg leading-relaxed">
-              My approach combines data-driven insights with creative storytelling to deliver 
-              campaigns that resonate with your audience and achieve measurable results.
+              My approach combines data-driven insights with creative storytelling to deliver campaigns that resonate
+              with your audience and achieve measurable results.
             </p>
           </PixelCard>
         </div>
@@ -82,16 +239,14 @@ const Index = () => {
       {/* Services Section */}
       <section id="services" className="py-24 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">
-            Services
-          </h2>
+          <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PixelCard>
               <Mail className="w-12 h-12 mb-4 text-accent" />
               <h3 className="font-primary text-sm mb-3">Email Marketing</h3>
               <p className="font-secondary text-sm leading-relaxed">
-                Strategic email campaigns that nurture leads and drive conversions through 
-                targeted messaging and automation.
+                Strategic email campaigns that nurture leads and drive conversions through targeted messaging and
+                automation.
               </p>
             </PixelCard>
 
@@ -99,8 +254,8 @@ const Index = () => {
               <FileText className="w-12 h-12 mb-4 text-secondary" />
               <h3 className="font-primary text-sm mb-3">Content Writing</h3>
               <p className="font-secondary text-sm leading-relaxed">
-                SEO-optimized blog posts, articles, and web content that engage readers and 
-                establish thought leadership.
+                SEO-optimized blog posts, articles, and web content that engage readers and establish thought
+                leadership.
               </p>
             </PixelCard>
 
@@ -108,8 +263,7 @@ const Index = () => {
               <PenTool className="w-12 h-12 mb-4 text-accent" />
               <h3 className="font-primary text-sm mb-3">Copywriting</h3>
               <p className="font-secondary text-sm leading-relaxed">
-                Persuasive copy for landing pages, ads, and sales materials that converts 
-                visitors into customers.
+                Persuasive copy for landing pages, ads, and sales materials that converts visitors into customers.
               </p>
             </PixelCard>
 
@@ -143,9 +297,7 @@ const Index = () => {
       {/* Work Section */}
       <section id="work" className="py-24 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">
-            Featured Work
-          </h2>
+          <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Featured Work</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <PixelCard>
               <div className="bg-accent/20 pixel-border h-48 mb-6 flex items-center justify-center">
@@ -153,8 +305,8 @@ const Index = () => {
               </div>
               <h3 className="font-primary text-sm mb-3">Email Series: 42% Open Rate</h3>
               <p className="font-secondary text-sm leading-relaxed mb-4">
-                Developed a 5-part welcome series for an e-commerce brand, resulting in 
-                42% open rates and 18% click-through rates.
+                Developed a 5-part welcome series for an e-commerce brand, resulting in 42% open rates and 18%
+                click-through rates.
               </p>
               <div className="flex gap-2 flex-wrap">
                 <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Email</span>
@@ -168,8 +320,8 @@ const Index = () => {
               </div>
               <h3 className="font-primary text-sm mb-3">Blog Content: 3x Traffic Growth</h3>
               <p className="font-secondary text-sm leading-relaxed mb-4">
-                Created SEO-optimized blog content strategy that tripled organic traffic 
-                in 6 months for a B2B SaaS company.
+                Created SEO-optimized blog content strategy that tripled organic traffic in 6 months for a B2B SaaS
+                company.
               </p>
               <div className="flex gap-2 flex-wrap">
                 <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Content</span>
@@ -183,8 +335,8 @@ const Index = () => {
               </div>
               <h3 className="font-primary text-sm mb-3">Landing Page: 28% Conversion</h3>
               <p className="font-secondary text-sm leading-relaxed mb-4">
-                Rewrote landing page copy and optimized CTAs, increasing conversion rate 
-                from 12% to 28% for a lead generation campaign.
+                Rewrote landing page copy and optimized CTAs, increasing conversion rate from 12% to 28% for a lead
+                generation campaign.
               </p>
               <div className="flex gap-2 flex-wrap">
                 <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Copywriting</span>
@@ -198,8 +350,8 @@ const Index = () => {
               </div>
               <h3 className="font-primary text-sm mb-3">Newsletter: 10K Subscribers</h3>
               <p className="font-secondary text-sm leading-relaxed mb-4">
-                Launched and grew a weekly industry newsletter to 10,000 engaged subscribers 
-                with consistent 35%+ open rates.
+                Launched and grew a weekly industry newsletter to 10,000 engaged subscribers with consistent 35%+ open
+                rates.
               </p>
               <div className="flex gap-2 flex-wrap">
                 <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Email</span>
@@ -213,16 +365,13 @@ const Index = () => {
       {/* Contact Section */}
       <section id="contact" className="py-24 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">
-            Let's Work Together
-          </h2>
+          <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Let's Work Together</h2>
           <PixelCard className="text-center">
             <p className="font-secondary text-lg mb-8 leading-relaxed">
-              Ready to level up your content and email marketing? Let's discuss how I can 
-              help you achieve your goals.
+              Ready to level up your content and email marketing? Let's discuss how I can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <PixelButton variant="primary" onClick={() => window.location.href = "mailto:hello@marketer.com"}>
+              <PixelButton variant="primary" onClick={() => (window.location.href = "mailto:hello@marketer.com")}>
                 Send Email
               </PixelButton>
               <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com", "_blank")}>
@@ -237,11 +386,10 @@ const Index = () => {
       <footer className="py-8 px-4 pixel-border border-b-0 border-x-0">
         <div className="container mx-auto text-center">
           <p className="font-primary text-xs mb-2">{"<MARKETER/>"}</p>
-          <p className="font-secondary text-sm text-muted-foreground">
-            © 2024 All Rights Reserved
-          </p>
+          <p className="font-secondary text-sm text-muted-foreground">© 2024 All Rights Reserved</p>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
 export default Index;
