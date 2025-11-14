@@ -1,7 +1,7 @@
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo (5).png";
+import logo from "@/assets/logo.png";
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm pixel-border border-t-0 border-x-0">
