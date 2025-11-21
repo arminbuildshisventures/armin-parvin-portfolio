@@ -59,6 +59,18 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="py-8 px-4 pixel-border border-b-0 border-x-0">
+        <div className="container mx-auto text-center">
+          <p className="font-primary text-xs mb-2">Armin Parvin</p>
+          <p className="font-secondary text-sm text-muted-foreground">
+            4rminp4rvin@gmail.com
+            <br />
+            <br />© {new Date().getFullYear()} All Rights Reserved
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
