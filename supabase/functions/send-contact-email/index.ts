@@ -87,7 +87,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email with escaped HTML to prevent XSS
     const emailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
-      to: ["4rminp4rvin@gmail.com"],
+      to: ["arminbuildshisventures@gmail.com"],
       subject: `Portfolio Contact: ${escapeHtml(subject)}`,
       html: `
         <h2>New Contact Form Submission</h2>
