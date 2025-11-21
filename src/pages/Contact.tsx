@@ -15,47 +15,43 @@ const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters").max(100),
   email: z.string().email("Invalid email address").max(255),
   subject: z.string().min(3, "Subject must be at least 3 characters").max(200),
-  message: z.string().min(10, "Message must be at least 10 characters").max(1000)
+  message: z.string().min(10, "Message must be at least 10 characters").max(1000),
 });
 export default function Contact() {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
       subject: "",
-      message: ""
-    }
+      message: "",
+    },
   });
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const {
-        data,
-        error
-      } = await supabase.functions.invoke('send-contact-email', {
-        body: values
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: values,
       });
       if (error) {
         throw error;
       }
       toast({
         title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon!"
+        description: "Thank you for reaching out. I'll get back to you soon!",
       });
       form.reset();
     } catch (error: any) {
-      console.error('Error sending message:', error);
+      console.error("Error sending message:", error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again or email me directly at 4rminp4rvin@gmail.com",
-        variant: "destructive"
+        variant: "destructive",
       });
     }
   };
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       <Cursor />
       <Header />
 
@@ -66,51 +62,76 @@ export default function Contact() {
           <PixelCard>
             <div className="space-y-6">
               <p className="font-secondary text-lg text-center">
-                Ready to elevate your content and drive real results?
+                Ready to elevate your content and drive real results? <br />
                 Let's discuss how I can help your business grow.
               </p>
 
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <FormField control={form.control} name="name" render={({
-                  field
-                }) => <FormItem>
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
                         <FormLabel className="font-primary">Name</FormLabel>
                         <FormControl>
                           <Input placeholder="Your name" {...field} className="pixel-border" />
                         </FormControl>
                         <FormMessage />
-                      </FormItem>} />
+                      </FormItem>
+                    )}
+                  />
 
-                  <FormField control={form.control} name="email" render={({
-                  field
-                }) => <FormItem>
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
                         <FormLabel className="font-primary">Email</FormLabel>
                         <FormControl>
-                          <Input type="email" placeholder="your.email@example.com" {...field} className="pixel-border" />
+                          <Input
+                            type="email"
+                            placeholder="your.email@example.com"
+                            {...field}
+                            className="pixel-border"
+                          />
                         </FormControl>
                         <FormMessage />
-                      </FormItem>} />
+                      </FormItem>
+                    )}
+                  />
 
-                  <FormField control={form.control} name="subject" render={({
-                  field
-                }) => <FormItem>
+                  <FormField
+                    control={form.control}
+                    name="subject"
+                    render={({ field }) => (
+                      <FormItem>
                         <FormLabel className="font-primary">Subject</FormLabel>
                         <FormControl>
                           <Input placeholder="What's this about?" {...field} className="pixel-border" />
                         </FormControl>
                         <FormMessage />
-                      </FormItem>} />
+                      </FormItem>
+                    )}
+                  />
 
-                  <FormField control={form.control} name="message" render={({
-                  field
-                }) => <FormItem>
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
                         <FormLabel className="font-primary">Message</FormLabel>
                         <FormControl>
-                          <Textarea placeholder="Tell me about your project..." className="pixel-border min-h-[150px]" {...field} />
+                          <Textarea
+                            placeholder="Tell me about your project..."
+                            className="pixel-border min-h-[150px]"
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
-                      </FormItem>} />
+                      </FormItem>
+                    )}
+                  />
 
                   <PixelButton type="submit" variant="primary" className="w-full">
                     <Mail className="w-4 h-4 mr-2" />
@@ -126,7 +147,10 @@ export default function Contact() {
                     <Mail className="w-4 h-4 mr-2" />
                     Send Email
                   </PixelButton>
-                  <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}>
+                  <PixelButton
+                    variant="accent"
+                    onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}
+                  >
                     <Linkedin className="w-4 h-4 mr-2" />
                     LinkedIn
                   </PixelButton>
@@ -170,5 +194,6 @@ export default function Contact() {
           </p>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 }
