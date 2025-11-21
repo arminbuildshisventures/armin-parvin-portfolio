@@ -215,7 +215,7 @@ const Index = () => {
               <PixelButton variant="primary" onClick={() => window.location.href = "mailto:hello@marketer.com"}>
                 Send Email
               </PixelButton>
-              <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com", "_blank")}>
+              <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com/arminparvin/", "_blank")}>
                 LinkedIn
               </PixelButton>
             </div>

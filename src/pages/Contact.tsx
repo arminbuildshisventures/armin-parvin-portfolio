@@ -25,7 +25,7 @@ export default function Contact() {
                   <Mail className="w-4 h-4 mr-2" />
                   Email Me
                 </PixelButton>
-                <PixelButton variant="accent">
+                <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com/arminparvin/", "_blank")}>
                   <Linkedin className="w-4 h-4 mr-2" />
                   LinkedIn
                 </PixelButton>
