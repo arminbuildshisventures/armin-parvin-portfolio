@@ -26,10 +26,10 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col bg-background">
       <Header />
       
-      <main className="container mx-auto px-4 pt-32 pb-16">
+      <main className="flex-grow container mx-auto px-4 pt-32 pb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -75,14 +75,13 @@ const Testimonials = () => {
         </motion.div>
       </main>
 
-      <footer className="border-t-4 pixel-border mt-16 py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-foreground font-primary mb-2">Armin Parvin</p>
-          <p className="text-muted-foreground font-secondary mb-2">
+      <footer className="py-8 px-4 pixel-border border-b-0 border-x-0">
+        <div className="container mx-auto text-center">
+          <p className="font-primary text-xs mb-2">Armin Parvin</p>
+          <p className="font-secondary text-sm text-muted-foreground">
             4rminp4rvin@gmail.com
-          </p>
-          <p className="text-muted-foreground font-secondary">
-            © {new Date().getFullYear()} All rights reserved
+            <br />
+            <br />© {new Date().getFullYear()} All Rights Reserved
           </p>
         </div>
       </footer>

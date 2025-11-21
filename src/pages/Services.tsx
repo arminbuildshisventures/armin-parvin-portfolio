@@ -38,11 +38,11 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Cursor />
       <Header />
       
-      <section className="py-24 px-4 pt-32">
+      <section className="flex-grow py-24 px-4 pt-32">
         <div className="container mx-auto max-w-6xl">
           <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Services</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
