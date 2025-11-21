@@ -170,9 +170,9 @@ export default function About() {
                 </div>
 
                 <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="font-primary text-xl">Product Marketing Manager & Technical Content Specialist</h3>
-                    <span className="font-secondary text-sm text-muted-foreground">Nov. 2022 — Jun. 2023</span>
+                  <div className="flex justify-between items-start gap-4 mb-4">
+                    <h3 className="font-primary text-xl flex-1">Product Marketing Manager & Technical Content Specialist</h3>
+                    <span className="font-secondary text-sm text-muted-foreground whitespace-nowrap flex-shrink-0">Nov. 2022 — Jun. 2023</span>
                   </div>
                   <p className="font-primary text-secondary mb-3">Nordic Defender · Gothenburg, Sweden (Remote)</p>
                   <ul className="space-y-2 font-secondary text-muted-foreground">
