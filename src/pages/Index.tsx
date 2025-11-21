@@ -103,10 +103,7 @@ const Index = () => {
 
 
             </p>
-            <p className="font-secondary text-base md:text-lg leading-relaxed">
-              My approach combines data-driven insights with creative storytelling to deliver campaigns that resonate
-              with your audience and achieve measurable results.
-            </p>
+            
           </PixelCard>
         </div>
       </section>
