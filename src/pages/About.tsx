@@ -3,13 +3,14 @@ import { Cursor } from "@/components/ui/inverted-cursor";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Briefcase, GraduationCap, Code, Award, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import aboutBgPixel from "@/assets/about-bg-pixel.png";
 export default function About() {
   return <div className="min-h-screen flex flex-col">
       <Cursor />
       <Header />
 
       <section className="flex-grow py-24 px-4 pt-32 relative" style={{
-      backgroundImage: `url('/src/assets/about-bg-pixel.png')`,
+      backgroundImage: `url(${aboutBgPixel})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundAttachment: "fixed"
@@ -328,17 +329,9 @@ export default function About() {
                 <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all flex items-center gap-4">
                   <Award className="w-6 h-6 text-accent" />
                   <div className="flex-1">
-                    <p className="font-secondary">2025 — Guest Speaker | ADPList's 2025 Don't Settle Conference          <span className="font-primary">2025 —       </span>
-                      Top Rated Email Marketing Specialist, Upwork
-                    </p>
-                  </div>
-                </div>
-
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all flex items-center gap-4">
-                  <Award className="w-6 h-6 text-accent" />
-                  <div className="flex-1">
-                    <p className="font-secondary">2025 — ADPList Top 50 Mentor         <span className="font-primary">2025 —     </span>
-                      Content Marketing Award for Best Email Campaign
+                    <p className="font-secondary">
+                      <span className="font-primary">2025 — </span>
+                      Guest Speaker | ADPList's Don't Settle Conference
                     </p>
                   </div>
                 </div>
@@ -347,18 +340,8 @@ export default function About() {
                   <Award className="w-6 h-6 text-accent" />
                   <div className="flex-1">
                     <p className="font-secondary">
-                      <span className="font-primary">2021 — </span>
-                      Featured in "Top 50 Marketing Writers to Follow"
-                    </p>
-                  </div>
-                </div>
-
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all flex items-center gap-4">
-                  <Award className="w-6 h-6 text-accent" />
-                  <div className="flex-1">
-                    <p className="font-secondary">
-                      <span className="font-primary">2020 — </span>
-                      AWAI Circle of Success Award
+                      <span className="font-primary">2025 — </span>
+                      ADPList Top 50 Mentor
                     </p>
                   </div>
                 </div>
