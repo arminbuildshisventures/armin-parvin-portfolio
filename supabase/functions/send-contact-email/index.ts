@@ -1,8 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm:resend@2.0.0";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 
 // Rate limiting store
 const rateLimitMap = new Map<string, number[]>();
@@ -84,26 +83,35 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Sending contact email from:", escapeHtml(name), escapeHtml(email));
 
-    // Send email with escaped HTML to prevent XSS
-    const emailResponse = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
-      to: ["arminbuildshisventures@gmail.com"],
-      subject: `Portfolio Contact: ${escapeHtml(subject)}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>From:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
-        <hr />
-        <p><strong>Message:</strong></p>
-        <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
-      `,
-      reply_to: email,
+    // Send email using Resend REST API directly
+    const emailResponse = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${RESEND_API_KEY}`,
+      },
+      body: JSON.stringify({
+        from: "Contact Form <onboarding@resend.dev>",
+        to: ["arminbuildshisventures@gmail.com"],
+        reply_to: email,
+        subject: `Portfolio Contact: ${escapeHtml(subject)}`,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>From:</strong> ${escapeHtml(name)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+          <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
+          <hr />
+          <p><strong>Message:</strong></p>
+          <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
+        `,
+      }),
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    const emailData = await emailResponse.json();
 
-    return new Response(JSON.stringify({ success: true, data: emailResponse }), {
+    console.log("Email sent successfully:", emailData);
+
+    return new Response(JSON.stringify({ success: true, data: emailData }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
