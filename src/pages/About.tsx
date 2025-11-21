@@ -93,44 +93,43 @@ export default function About() {
                   <p className="font-secondary text-lg text-muted-foreground">of Professional Experience</p>
                 </div>
                 <div className="relative overflow-hidden">
-                  <div className="flex gap-3 animate-marquee whitespace-nowrap">
-                    <Badge variant="secondary" className="pixel-border inline-block">Email Marketing</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Content Strategy</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Copywriting</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Ghostwriting</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Content Writing</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">SEO</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Leadership</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Cryptocurrency Research Analysis</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Creative Writing</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Storytelling</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Technical Writing</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Content Editing</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Copy Editing</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Proofreading</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Campaign Management</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Research</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Marketing</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Sales</Badge>
-                    {/* Duplicate for seamless loop */}
-                    <Badge variant="secondary" className="pixel-border inline-block">Email Marketing</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Content Strategy</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Copywriting</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Ghostwriting</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Content Writing</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">SEO</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Leadership</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Cryptocurrency Research Analysis</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Creative Writing</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Storytelling</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Technical Writing</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Content Editing</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Copy Editing</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Proofreading</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Campaign Management</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Research</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Marketing</Badge>
-                    <Badge variant="secondary" className="pixel-border inline-block">Sales</Badge>
+                  <div className="flex gap-3 animate-marquee whitespace-nowrap will-change-transform">
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Email Marketing</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Content Strategy</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Copywriting</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Ghostwriting</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Content Writing</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">SEO</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Leadership</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Cryptocurrency Research Analysis</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Creative Writing</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Storytelling</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Technical Writing</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Content Editing</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Copy Editing</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Proofreading</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Campaign Management</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Research</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Marketing</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Sales</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Email Marketing</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Content Strategy</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Copywriting</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Ghostwriting</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Content Writing</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">SEO</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Leadership</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Cryptocurrency Research Analysis</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Creative Writing</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Storytelling</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Technical Writing</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Content Editing</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Copy Editing</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Proofreading</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Campaign Management</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Research</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Marketing</Badge>
+                    <Badge variant="secondary" className="pixel-border inline-block flex-shrink-0">Sales</Badge>
                   </div>
                 </div>
               </div>
