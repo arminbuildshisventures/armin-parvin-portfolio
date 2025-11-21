@@ -4,20 +4,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Briefcase, GraduationCap, Code, Award, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 export default function About() {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Cursor />
       <Header />
 
-      <section
-        className="flex-grow py-24 px-4 pt-32 relative"
-        style={{
-          backgroundImage: `url('/src/assets/about-bg-pixel.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
-      >
+      <section className="flex-grow py-24 px-4 pt-32 relative" style={{
+      backgroundImage: `url('/src/assets/about-bg-pixel.png')`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundAttachment: "fixed"
+    }}>
         <div className="absolute inset-0 bg-background/80" />
 
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -42,38 +38,23 @@ export default function About() {
 
           <Tabs defaultValue="experience" className="w-full">
             <TabsList className="grid w-full grid-cols-5 mb-8 pixel-border h-auto gap-2 p-2 bg-card/50">
-              <TabsTrigger
-                value="experience"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
-              >
+              <TabsTrigger value="experience" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
                 <Briefcase className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Experience</span>
               </TabsTrigger>
-              <TabsTrigger
-                value="education"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
-              >
+              <TabsTrigger value="education" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
                 <GraduationCap className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Education</span>
               </TabsTrigger>
-              <TabsTrigger
-                value="skills"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
-              >
+              <TabsTrigger value="skills" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
                 <Code className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Skills</span>
               </TabsTrigger>
-              <TabsTrigger
-                value="recognition"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
-              >
+              <TabsTrigger value="recognition" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
                 <Award className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Recognition</span>
               </TabsTrigger>
-              <TabsTrigger
-                value="interests"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
-              >
+              <TabsTrigger value="interests" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
                 <Target className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Interests</span>
               </TabsTrigger>
@@ -347,8 +328,7 @@ export default function About() {
                 <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all flex items-center gap-4">
                   <Award className="w-6 h-6 text-accent" />
                   <div className="flex-1">
-                    <p className="font-secondary">
-                      <span className="font-primary">2023 — </span>
+                    <p className="font-secondary">2025 — Guest Speaker | ADPList's 2025 Don't Settle Conference          <span className="font-primary">2025 —       </span>
                       Top Rated Email Marketing Specialist, Upwork
                     </p>
                   </div>
@@ -357,8 +337,7 @@ export default function About() {
                 <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all flex items-center gap-4">
                   <Award className="w-6 h-6 text-accent" />
                   <div className="flex-1">
-                    <p className="font-secondary">
-                      <span className="font-primary">2022 — </span>
+                    <p className="font-secondary">2025 — ADPList Top 50 Mentor         <span className="font-primary">2025 —     </span>
                       Content Marketing Award for Best Email Campaign
                     </p>
                   </div>
@@ -461,6 +440,5 @@ export default function About() {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 }
