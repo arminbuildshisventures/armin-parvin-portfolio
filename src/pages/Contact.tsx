@@ -144,6 +144,7 @@ export default function Contact() {
                 <p className="font-secondary text-center mb-4">Or connect with me on:</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <PixelButton variant="primary" onClick={() => window.open("mailto:4rminp4rvin@gmail.com", "_blank")}>
+                    <Mail className="w-4 h-4 mr-2" />
                     Send Email
                   </PixelButton>
                   <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}>
