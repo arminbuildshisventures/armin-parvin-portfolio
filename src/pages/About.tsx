@@ -362,7 +362,7 @@ export default function About() {
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
                     <p className="font-secondary text-lg">
-                      Finance and Economics:                                   
+                      Finance and Economics:  Connecting numbers to narratives, and translating data into insight and strategy                                                                                                           
                     </p>
                   </div>
 
@@ -383,7 +383,7 @@ export default function About() {
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
                     <p className="font-secondary text-lg">
-                      Reading: Business books, copywriting classics, and psychological thrillers
+                      Reading: Business books, finance literature, and marketing classics                                                                
                     </p>
                   </div>
 
