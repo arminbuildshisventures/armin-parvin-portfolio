@@ -4,52 +4,76 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Briefcase, GraduationCap, Code, Award, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 export default function About() {
-  return <div className="min-h-screen flex flex-col">
+  return (
+    <div className="min-h-screen flex flex-col">
       <Cursor />
       <Header />
-      
-      <section className="flex-grow py-24 px-4 pt-32 relative" style={{
-      backgroundImage: `url('/src/assets/about-bg-pixel.png')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundAttachment: 'fixed'
-    }}>
+
+      <section
+        className="flex-grow py-24 px-4 pt-32 relative"
+        style={{
+          backgroundImage: `url('/src/assets/about-bg-pixel.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
         <div className="absolute inset-0 bg-background/80" />
-        
+
         <div className="container mx-auto max-w-6xl relative z-10">
           <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">About Me</h1>
-          
+
           <div className="pixel-border pixel-shadow bg-card p-6 mb-12 max-w-4xl mx-auto">
-            
-            
-            <p className="font-secondary text-base md:text-lg leading-relaxed">
-              Head of Content with 5+ years of experience generating demand and high-quality leads in SaaS and B2B Tech companies. Generated $12M+ in client revenue, boosted email engagement (open rate +52%, CTOR +5%, registration +194%), and produced content ranking #1 and #0.
-
-Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B Tech from early to growth stages.
-
-Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to narratives, and translating data into insight and strategy.
+            <p className="font-secondary text-base md:text-lg leading-relaxed mb-6">
+              Head of Content with <strong>5+ years of experience</strong> generating demand and high-quality leads in
+              SaaS and B2B Tech companies. Generated <strong>$12M+ in client revenue</strong>, boosted email engagement
+              (<strong>open rate +52%, CTOR +5%, registration +194%</strong>), and produced content{" "}
+              <strong>ranking #1 and #0</strong>.
+              <br />
+              <br />
+              Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B
+              Tech from early to growth stages.
+              <br />
+              <br />
+              Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to
+              narratives, and translating data into insight and strategy.
             </p>
           </div>
-          
+
           <Tabs defaultValue="experience" className="w-full">
             <TabsList className="grid w-full grid-cols-5 mb-8 pixel-border h-auto gap-2 p-2 bg-card/50">
-              <TabsTrigger value="experience" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
+              <TabsTrigger
+                value="experience"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+              >
                 <Briefcase className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Experience</span>
               </TabsTrigger>
-              <TabsTrigger value="education" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
+              <TabsTrigger
+                value="education"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+              >
                 <GraduationCap className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Education</span>
               </TabsTrigger>
-              <TabsTrigger value="skills" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
+              <TabsTrigger
+                value="skills"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+              >
                 <Code className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Skills</span>
               </TabsTrigger>
-              <TabsTrigger value="recognition" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
+              <TabsTrigger
+                value="recognition"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+              >
                 <Award className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Recognition</span>
               </TabsTrigger>
-              <TabsTrigger value="interests" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
+              <TabsTrigger
+                value="interests"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+              >
                 <Target className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Interests</span>
               </TabsTrigger>
@@ -64,10 +88,18 @@ Currently building expertise in the Web3, blockchain, and cryptocurrency space, 
 
               <div className="pixel-border pixel-shadow bg-card/30 p-6 mb-6">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge variant="secondary" className="pixel-border">Email Marketing</Badge>
-                  <Badge variant="secondary" className="pixel-border">Content Strategy</Badge>
-                  <Badge variant="secondary" className="pixel-border">Copywriting</Badge>
-                  <Badge variant="secondary" className="pixel-border">Conversion Optimization</Badge>
+                  <Badge variant="secondary" className="pixel-border">
+                    Email Marketing
+                  </Badge>
+                  <Badge variant="secondary" className="pixel-border">
+                    Content Strategy
+                  </Badge>
+                  <Badge variant="secondary" className="pixel-border">
+                    Copywriting
+                  </Badge>
+                  <Badge variant="secondary" className="pixel-border">
+                    Conversion Optimization
+                  </Badge>
                 </div>
                 <p className="font-secondary text-lg text-left text-white">5+ Years of Professional Experience</p>
               </div>
@@ -284,41 +316,53 @@ Currently building expertise in the Web3, blockchain, and cryptocurrency space, 
 
               <div className="pixel-border pixel-shadow bg-card/30 p-8">
                 <h3 className="font-primary text-xl mb-6">Hobbies & Passions</h3>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">Marketing Psychology: Understanding consumer behavior and decision-making</p>
+                    <p className="font-secondary text-lg">
+                      Marketing Psychology: Understanding consumer behavior and decision-making
+                    </p>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">Writing Fiction: Crafting short stories and creative narratives</p>
+                    <p className="font-secondary text-lg">
+                      Writing Fiction: Crafting short stories and creative narratives
+                    </p>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">Podcasts: Deep dives into marketing, storytelling, and entrepreneurship</p>
+                    <p className="font-secondary text-lg">
+                      Podcasts: Deep dives into marketing, storytelling, and entrepreneurship
+                    </p>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">Reading: Business books, copywriting classics, and psychological thrillers</p>
+                    <p className="font-secondary text-lg">
+                      Reading: Business books, copywriting classics, and psychological thrillers
+                    </p>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
                     <p className="font-secondary text-lg">Coffee Culture: Exploring local cafes and brewing methods</p>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">Hiking & Nature: Finding inspiration outdoors and disconnecting to recharge</p>
+                    <p className="font-secondary text-lg">
+                      Hiking & Nature: Finding inspiration outdoors and disconnecting to recharge
+                    </p>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">Photography: Capturing moments and practicing visual storytelling</p>
+                    <p className="font-secondary text-lg">
+                      Photography: Capturing moments and practicing visual storytelling
+                    </p>
                   </div>
                 </div>
               </div>
@@ -338,5 +382,6 @@ Currently building expertise in the Web3, blockchain, and cryptocurrency space, 
           </p>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 }
