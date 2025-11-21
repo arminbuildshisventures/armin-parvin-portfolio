@@ -212,7 +212,7 @@ const Index = () => {
               Ready to level up your content and email marketing? Let's discuss how I can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <PixelButton variant="primary" onClick={() => window.location.href = "mailto:4rminp4rvin@gmail.com"}>
+              <PixelButton variant="primary" onClick={() => window.open("mailto:4rminp4rvin@gmail.com"}, "_blank")}>
                 Send Email
               </PixelButton>
               <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}>
