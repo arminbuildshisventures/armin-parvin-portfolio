@@ -20,11 +20,7 @@ export default function About() {
           <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">About Me</h1>
           
           <div className="pixel-border pixel-shadow bg-card p-6 mb-12 max-w-4xl mx-auto">
-            <p className="font-secondary text-base md:text-lg leading-relaxed mb-6">
-              I'm a content strategist and copywriter who believes in the power of words to drive action. With expertise
-              in email marketing, content creation, and conversion optimization, I help businesses communicate their
-              value effectively.
-            </p>
+            
             
             <p className="font-secondary text-base md:text-lg leading-relaxed">
               Head of Content with 5+ years of experience generating demand and high-quality leads in SaaS and B2B Tech companies. Generated $12M+ in client revenue, boosted email engagement (open rate +52%, CTOR +5%, registration +194%), and produced content ranking #1 and #0.
