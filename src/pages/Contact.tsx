@@ -3,10 +3,8 @@ import { PixelCard } from "@/components/PixelCard";
 import { PixelButton } from "@/components/PixelButton";
 import { Mail, Linkedin, Twitter } from "lucide-react";
 import { Cursor } from "@/components/ui/inverted-cursor";
-
 export default function Contact() {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Cursor />
       <Header />
 
@@ -17,7 +15,8 @@ export default function Contact() {
           <PixelCard>
             <div className="text-center space-y-6">
               <p className="font-secondary text-lg">
-                Ready to elevate your content and drive real results? Let's discuss how I can help your business grow.
+                Ready to elevate your content and drive real results?
+Let's discuss how I can help your business grow.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center py-6">
@@ -25,10 +24,7 @@ export default function Contact() {
                   <Mail className="w-4 h-4 mr-2" />
                   Email Me
                 </PixelButton>
-                <PixelButton
-                  variant="accent"
-                  onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}
-                >
+                <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}>
                   <Linkedin className="w-4 h-4 mr-2" />
                   LinkedIn
                 </PixelButton>
@@ -63,6 +59,5 @@ export default function Contact() {
           </PixelCard>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 }
