@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { PixelCard } from "@/components/PixelCard";
 import { PixelButton } from "@/components/PixelButton";
-import { Mail, Linkedin, Twitter } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 import { Cursor } from "@/components/ui/inverted-cursor";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -143,13 +143,12 @@ export default function Contact() {
               <div className="pt-6 border-t border-border">
                 <p className="font-secondary text-center mb-4">Or connect with me on:</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <PixelButton variant="primary" onClick={() => window.open("mailto:4rminp4rvin@gmail.com", "_blank")}>
+                    Send Email
+                  </PixelButton>
                   <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}>
                     <Linkedin className="w-4 h-4 mr-2" />
                     LinkedIn
-                  </PixelButton>
-                  <PixelButton variant="secondary">
-                    <Twitter className="w-4 h-4 mr-2" />
-                    Twitter
                   </PixelButton>
                 </div>
               </div>
