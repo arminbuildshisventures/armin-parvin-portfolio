@@ -362,14 +362,14 @@ export default function About() {
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
                     <p className="font-secondary text-lg">
-                      Marketing Psychology: Understanding consumer behavior and decision-making
+                      Finance and Economics:                                   
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
                     <p className="font-secondary text-lg">
-                      Writing Fiction: Crafting short stories and creative narratives
+                      Marketing Psychology: Understanding consumer behavior and decision-making
                     </p>
                   </div>
 
