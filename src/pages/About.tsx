@@ -200,6 +200,24 @@ export default function About() {
                 </div>
 
                 <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="font-primary text-xl">Digital Marketing Manager</h3>
+                    <span className="font-secondary text-sm text-muted-foreground">Jun. 2023 — Sep. 2023</span>
+                  </div>
+                  <p className="font-primary text-secondary mb-3">
+                    Citronity · Vancouver, British Columbia, Canada (Remote)
+                  </p>
+                  <ul className="space-y-2 font-secondary text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary mt-1">●</span>
+                      <span>
+                        Developed and implemented comprehensive digital marketing strategies to enhance the company's brand visibility, generating qualified leads, driving customer acquisition, identifying target audiences, creating engaging campaigns, and leveraging various digital channels to maximize reach and engagement
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
                   <div className="flex justify-between items-start gap-4 mb-4">
                     <h3 className="font-primary text-xl flex-1">
                       Product Marketing Manager & Technical Content Specialist
@@ -242,6 +260,24 @@ export default function About() {
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">●</span>
                       <span>Increased webpage and landing page conversion rates by 3.7%</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="font-primary text-xl">Content Marketer & Email Marketer</h3>
+                    <span className="font-secondary text-sm text-muted-foreground">Sep. 2021 — Apr. 2022</span>
+                  </div>
+                  <p className="font-primary text-secondary mb-3">
+                    WatchThemLive · Toronto, Ontario, Canada (Remote)
+                  </p>
+                  <ul className="space-y-2 font-secondary text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary mt-1">●</span>
+                      <span>
+                        Developed and executed targeted email marketing campaigns to nurture leads, drive engagement, and grow conversions, increasing open rates by 50%+ and CTRs by 23%+
+                      </span>
                     </li>
                   </ul>
                 </div>
