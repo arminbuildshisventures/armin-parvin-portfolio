@@ -5,16 +5,20 @@ import { Briefcase, GraduationCap, Code, Award, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import aboutBgPixel from "@/assets/about-bg-pixel.png";
 export default function About() {
-  return <div className="min-h-screen flex flex-col">
+  return (
+    <div className="min-h-screen flex flex-col">
       <Cursor />
       <Header />
 
-      <section className="flex-grow py-24 px-4 pt-32 relative" style={{
-      backgroundImage: `url(${aboutBgPixel})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundAttachment: "fixed"
-    }}>
+      <section
+        className="flex-grow py-24 px-4 pt-32 relative"
+        style={{
+          backgroundImage: `url(${aboutBgPixel})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
         <div className="absolute inset-0 bg-background/80" />
 
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -39,23 +43,38 @@ export default function About() {
 
           <Tabs defaultValue="experience" className="w-full">
             <TabsList className="grid w-full grid-cols-5 mb-8 pixel-border h-auto gap-2 p-2 bg-card/50">
-              <TabsTrigger value="experience" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
+              <TabsTrigger
+                value="experience"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+              >
                 <Briefcase className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Experience</span>
               </TabsTrigger>
-              <TabsTrigger value="education" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
+              <TabsTrigger
+                value="education"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+              >
                 <GraduationCap className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Education</span>
               </TabsTrigger>
-              <TabsTrigger value="skills" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
+              <TabsTrigger
+                value="skills"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+              >
                 <Code className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Skills</span>
               </TabsTrigger>
-              <TabsTrigger value="recognition" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
+              <TabsTrigger
+                value="recognition"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+              >
                 <Award className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Recognition</span>
               </TabsTrigger>
-              <TabsTrigger value="interests" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground">
+              <TabsTrigger
+                value="interests"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+              >
                 <Target className="w-4 h-4 mr-2" />
                 <span className="hidden sm:inline">Interests</span>
               </TabsTrigger>
@@ -100,7 +119,10 @@ export default function About() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">●</span>
-                      <span>Mentored and led a team of 12 writers and marketers, overseeing their deliverables and providing feedback and training materials to maintain high quality, authentic voice, and brand alignment</span>
+                      <span>
+                        Mentored and led a team of 12 writers and marketers, overseeing their deliverables and providing
+                        feedback and training materials to maintain high quality, authentic voice, and brand alignment
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -114,7 +136,10 @@ export default function About() {
                   <ul className="space-y-2 font-secondary text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">●</span>
-                      <span>Mentored global marketers and founders through 80+ sessions totaling 2,600+ minutes of 1:1 guidance</span>
+                      <span>
+                        Mentored global marketers and founders through 80+ sessions totaling 2,600+ minutes of 1:1
+                        guidance
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -128,7 +153,10 @@ export default function About() {
                   <ul className="space-y-2 font-secondary text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">●</span>
-                      <span>Delivered a 1-hour speech on "The $100K Side Hustle Formula: A Step-by-Step Guide to Monetization"</span>
+                      <span>
+                        Delivered a 1-hour speech on "The $100K Side Hustle Formula: A Step-by-Step Guide to
+                        Monetization"
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -138,11 +166,16 @@ export default function About() {
                     <h3 className="font-primary text-xl">Senior Email Marketing Manager</h3>
                     <span className="font-secondary text-sm text-muted-foreground">Nov. 2023 — Jan. 2025</span>
                   </div>
-                  <p className="font-primary text-secondary mb-3">Roomvu · Vancouver, British Columbia, Canada (Remote)</p>
+                  <p className="font-primary text-secondary mb-3">
+                    Roomvu · Vancouver, British Columbia, Canada (Remote)
+                  </p>
                   <ul className="space-y-2 font-secondary text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">●</span>
-                      <span>Strategized, developed, and sent cold emails to 1M+ leads weekly and marketing emails to brokerages</span>
+                      <span>
+                        Strategized, developed, and sent cold emails to 1M+ leads weekly and marketing emails to
+                        brokerages
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">●</span>
@@ -153,18 +186,29 @@ export default function About() {
 
                 <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
                   <div className="flex justify-between items-start gap-4 mb-4">
-                    <h3 className="font-primary text-xl flex-1">Product Marketing Manager & Technical Content Specialist</h3>
-                    <span className="font-secondary text-sm text-muted-foreground whitespace-nowrap flex-shrink-0">Nov. 2022 — Jun. 2023</span>
+                    <h3 className="font-primary text-xl flex-1">
+                      Product Marketing Manager & Technical Content Specialist
+                    </h3>
+                    <span className="font-secondary text-sm text-muted-foreground whitespace-nowrap flex-shrink-0">
+                      Nov. 2022 — Jun. 2023
+                    </span>
                   </div>
                   <p className="font-primary text-secondary mb-3">Nordic Defender · Gothenburg, Sweden (Remote)</p>
                   <ul className="space-y-2 font-secondary text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">●</span>
-                      <span>Initiated and conducted in-depth market analysis proactively to identify trends and competitive differentiators</span>
+                      <span>
+                        Initiated and conducted in-depth market analysis proactively to identify trends and competitive
+                        differentiators
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">●</span>
-                      <span>Partnered with cross-functional teams to simplify complex cybersecurity concepts into white papers, press releases, case studies, blogs, articles, emails, LinkedIn posts, webpages, and landing pages</span>
+                      <span>
+                        Partnered with cross-functional teams to simplify complex cybersecurity concepts into white
+                        papers, press releases, case studies, blogs, articles, emails, LinkedIn posts, webpages, and
+                        landing pages
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -362,47 +406,43 @@ export default function About() {
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
                     <p className="font-secondary text-lg">
-                      Finance and Economics:  Connecting numbers to narratives, and translating data into insight and strategy                                                                                                           
+                      Finance and Economics:  Connecting numbers to narratives, and translating data into insight and
+                      strategy
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
                     <p className="font-secondary text-lg">
-                      Marketing Psychology: Understanding consumer behavior and decision-making
+                      Marketing Psychology: Understanding consumer behavior, decision-making, and influence
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
                     <p className="font-secondary text-lg">
-                      Podcasts: Deep dives into marketing, storytelling, and entrepreneurship
+                      Entrepreneurship: Problem-solving, leadership, and high-level strategizing
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
                     <p className="font-secondary text-lg">
-                      Reading: Business books, finance literature, and marketing classics                                                                
-                    </p>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">Coffee Culture: Exploring specialty (third-wave) coffee and different brewing methods                                                                                                                                                                                                                                                                                       </p>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">
-                      Hiking & Nature: Finding inspiration outdoors and disconnecting to recharge
+                      Reading: Business books, finance literature, and marketing classics
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
                     <p className="font-secondary text-lg">
-                      Photography: Capturing moments and practicing visual storytelling
+                      Coffee: Exploring specialty (third-wave) coffee and different brewing methods
+                    </p>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <span className="text-accent text-xl mt-1">●</span>
+                    <p className="font-secondary text-lg">
+                      Music: Listening to Classical and Jazz music and playing Flamenco and Classical Guitar
                     </p>
                   </div>
                 </div>
@@ -423,5 +463,6 @@ export default function About() {
           </p>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 }
