@@ -1,7 +1,45 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
+import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+
+// Rate limiting store
+const rateLimitMap = new Map<string, number[]>();
+
+// Schema validation
+const contactSchema = z.object({
+  name: z.string().trim().min(2).max(100),
+  email: z.string().email().max(255),
+  subject: z.string().trim().min(3).max(200),
+  message: z.string().trim().min(10).max(1000)
+});
+
+// HTML escape function to prevent XSS
+const escapeHtml = (str: string): string => {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+};
+
+// Rate limiting check (5 requests per hour per IP)
+const checkRateLimit = (ip: string): boolean => {
+  const now = Date.now();
+  const requests = rateLimitMap.get(ip) || [];
+  
+  // Filter requests from the last hour
+  const recentRequests = requests.filter(time => now - time < 3600000);
+  
+  if (recentRequests.length >= 5) {
+    return false;
+  }
+  
+  rateLimitMap.set(ip, [...recentRequests, now]);
+  return true;
+};
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -21,23 +59,44 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, subject, message }: ContactEmailRequest = await req.json();
+    // Get client IP for rate limiting
+    const ip = req.headers.get('x-forwarded-for')?.split(',')[0] || 'unknown';
+    
+    // Check rate limit
+    if (!checkRateLimit(ip)) {
+      return new Response(
+        JSON.stringify({ 
+          success: false, 
+          error: "Rate limit exceeded. Please try again later." 
+        }),
+        {
+          status: 429,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
 
-    console.log("Sending contact email from:", name, email);
+    const body = await req.json();
+    
+    // Validate input server-side
+    const validated = contactSchema.parse(body);
+    const { name, email, subject, message } = validated;
 
-    // Send email to your address
+    console.log("Sending contact email from:", escapeHtml(name), escapeHtml(email));
+
+    // Send email with escaped HTML to prevent XSS
     const emailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
       to: ["4rminp4rvin@gmail.com"],
-      subject: `Portfolio Contact: ${subject}`,
+      subject: `Portfolio Contact: ${escapeHtml(subject)}`,
       html: `
         <h2>New Contact Form Submission</h2>
-        <p><strong>From:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
+        <p><strong>From:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
         <hr />
         <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
+        <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
       `,
       reply_to: email,
     });
@@ -53,10 +112,16 @@ const handler = async (req: Request): Promise<Response> => {
     });
   } catch (error: any) {
     console.error("Error in send-contact-email function:", error);
+    
+    // Return user-friendly error message (don't expose internal details)
+    const errorMessage = error instanceof z.ZodError 
+      ? "Invalid input. Please check your form fields."
+      : "Failed to send message. Please try again later.";
+    
     return new Response(
-      JSON.stringify({ success: false, error: error.message }),
+      JSON.stringify({ success: false, error: errorMessage }),
       {
-        status: 500,
+        status: error instanceof z.ZodError ? 400 : 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },
       }
     );
