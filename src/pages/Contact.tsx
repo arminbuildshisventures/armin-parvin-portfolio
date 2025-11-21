@@ -3,7 +3,45 @@ import { PixelCard } from "@/components/PixelCard";
 import { PixelButton } from "@/components/PixelButton";
 import { Mail, Linkedin, Twitter } from "lucide-react";
 import { Cursor } from "@/components/ui/inverted-cursor";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+const formSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters").max(100),
+  email: z.string().email("Invalid email address").max(255),
+  subject: z.string().min(3, "Subject must be at least 3 characters").max(200),
+  message: z.string().min(10, "Message must be at least 10 characters").max(1000),
+});
+
 export default function Contact() {
+  const { toast } = useToast();
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
+    const mailtoLink = `mailto:4rminp4rvin@gmail.com?subject=${encodeURIComponent(values.subject)}&body=${encodeURIComponent(
+      `Name: ${values.name}\nEmail: ${values.email}\n\nMessage:\n${values.message}`
+    )}`;
+    
+    window.location.href = mailtoLink;
+    
+    toast({
+      title: "Opening email client",
+      description: "Your default email application will open with the message pre-filled.",
+    });
+  };
+
   return <div className="min-h-screen">
       <Cursor />
       <Header />
@@ -13,29 +51,97 @@ export default function Contact() {
           <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Get In Touch</h1>
 
           <PixelCard>
-            <div className="text-center space-y-6">
-              <p className="font-secondary text-lg">
+            <div className="space-y-6">
+              <p className="font-secondary text-lg text-center">
                 Ready to elevate your content and drive real results?
-Let's discuss how I can help your business grow.
+                Let's discuss how I can help your business grow.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center py-6">
-                <PixelButton variant="primary" onClick={() => window.open("mailto:4rminp4rvin@gmail.com", "_blank")}>
-                  <Mail className="w-4 h-4 mr-2" />
-                  Email Me
-                </PixelButton>
-                <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}>
-                  <Linkedin className="w-4 h-4 mr-2" />
-                  LinkedIn
-                </PixelButton>
-                <PixelButton variant="secondary">
-                  <Twitter className="w-4 h-4 mr-2" />
-                  Twitter
-                </PixelButton>
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-primary">Name</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Your name" {...field} className="pixel-border" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-primary">Email</FormLabel>
+                        <FormControl>
+                          <Input type="email" placeholder="your.email@example.com" {...field} className="pixel-border" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="subject"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-primary">Subject</FormLabel>
+                        <FormControl>
+                          <Input placeholder="What's this about?" {...field} className="pixel-border" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-primary">Message</FormLabel>
+                        <FormControl>
+                          <Textarea 
+                            placeholder="Tell me about your project..." 
+                            className="pixel-border min-h-[150px]" 
+                            {...field} 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <PixelButton type="submit" variant="primary" className="w-full">
+                    <Mail className="w-4 h-4 mr-2" />
+                    Send Message
+                  </PixelButton>
+                </form>
+              </Form>
+
+              <div className="pt-6 border-t border-border">
+                <p className="font-secondary text-center mb-4">Or connect with me on:</p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}>
+                    <Linkedin className="w-4 h-4 mr-2" />
+                    LinkedIn
+                  </PixelButton>
+                  <PixelButton variant="secondary">
+                    <Twitter className="w-4 h-4 mr-2" />
+                    Twitter
+                  </PixelButton>
+                </div>
               </div>
 
               <div className="pt-6 border-t border-border">
-                <h3 className="font-primary text-lg mb-4">What to Expect</h3>
+                <h3 className="font-primary text-lg mb-4 text-center">What to Expect</h3>
                 <ul className="font-secondary text-sm space-y-3 text-left max-w-md mx-auto">
                   <li className="flex items-start">
                     <span className="text-accent mr-2">•</span>
