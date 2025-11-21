@@ -64,27 +64,18 @@ const Index = () => {
       </AuroraBackground>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-4 relative" style={{ backgroundImage: `url(${aboutBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section id="about" className="py-24 px-4 relative" style={{
+      backgroundImage: `url(${aboutBg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
         <div className="absolute inset-0 bg-background/90"></div>
         <div className="container mx-auto max-w-4xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">About Me</h2>
           <PixelCard>
-            <p className="font-secondary text-base md:text-lg leading-relaxed mb-6">
-              Head of Content with 5+ years of experience generating demand and high-quality leads in SaaS and B2B Tech companies. Generated $12M+ in client revenue, boosted email engagement (open rate +52%, CTOR +5%, registration +194%), and produced content ranking #1 and #0. Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B Tech from early to growth stages. Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to narratives, and translating data into insight and strategy.
+            <p className="font-secondary text-base md:text-lg leading-relaxed mb-6">Head of Content with 5+ years of experience generating demand and high-quality leads in SaaS and B2B Tech companies. Generated $12M+ in client revenue, boosted email engagement (open rate +52%, CTOR +5%, registration +194%), and produced content ranking #1 and #0. Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B Tech from early to growth stages. Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to narratives, and translating data into insight and strategy.
 
-
-
-
-
-
-
-
-
-
-
-
-
- <strong>(open rate +52%, CTOR +5%, registration +194%)</strong>, and produced <strong>content ranking #1 and #0</strong>. Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B Tech from early to growth stages.
+            <strong>(open rate +52%, CTOR +5%, registration +194%)</strong>, and produced <strong>content ranking #1 and #0</strong>. Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B Tech from early to growth stages.
               <br /><br />
               Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to narratives, and translating data into insight and strategy.
 
@@ -114,7 +105,11 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 px-4 relative" style={{ backgroundImage: `url(${servicesBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section id="services" className="py-24 px-4 relative" style={{
+      backgroundImage: `url(${servicesBg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
         <div className="absolute inset-0 bg-muted/90"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Services</h2>
@@ -173,7 +168,11 @@ const Index = () => {
       </section>
 
       {/* Work Section */}
-      <section id="work" className="py-24 px-4 relative" style={{ backgroundImage: `url(${workBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section id="work" className="py-24 px-4 relative" style={{
+      backgroundImage: `url(${workBg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
         <div className="absolute inset-0 bg-background/90"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Featured Work</h2>
@@ -242,7 +241,11 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-4 relative" style={{ backgroundImage: `url(${contactBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section id="contact" className="py-24 px-4 relative" style={{
+      backgroundImage: `url(${contactBg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
         <div className="absolute inset-0 bg-muted/90"></div>
         <div className="container mx-auto max-w-4xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Let's Work Together</h2>
