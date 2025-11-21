@@ -26,6 +26,12 @@ export function Header() {
             <Link to="/portfolio" className="font-secondary text-sm hover:text-accent transition-colors">
               Portfolio
             </Link>
+            <Link to="/insights" className="font-secondary text-sm hover:text-accent transition-colors">
+              Insights
+            </Link>
+            <Link to="/testimonials" className="font-secondary text-sm hover:text-accent transition-colors">
+              Testimonials
+            </Link>
             <Link to="/contact" className="font-secondary text-sm hover:text-accent transition-colors">
               Contact
             </Link>
@@ -68,6 +74,20 @@ export function Header() {
               className="block w-full text-left font-secondary text-sm hover:text-accent transition-colors"
             >
               Portfolio
+            </Link>
+            <Link 
+              to="/insights" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block w-full text-left font-secondary text-sm hover:text-accent transition-colors"
+            >
+              Insights
+            </Link>
+            <Link 
+              to="/testimonials" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block w-full text-left font-secondary text-sm hover:text-accent transition-colors"
+            >
+              Testimonials
             </Link>
             <Link 
               to="/contact" 
