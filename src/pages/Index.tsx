@@ -224,6 +224,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <PixelButton variant="primary" onClick={() => window.open("mailto:4rminp4rvin@gmail.com", "_blank")}>
+                <Mail className="w-4 h-4 mr-2" />
                 Send Email
               </PixelButton>
               <PixelButton
