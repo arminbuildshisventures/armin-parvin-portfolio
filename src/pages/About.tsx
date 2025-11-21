@@ -3,22 +3,17 @@ import { Cursor } from "@/components/ui/inverted-cursor";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Briefcase, GraduationCap, Code, Award, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-
 export default function About() {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Cursor />
       <Header />
       
-      <section 
-        className="flex-grow py-24 px-4 pt-32 relative"
-        style={{
-          backgroundImage: `url('/src/assets/about-bg-pixel.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
+      <section className="flex-grow py-24 px-4 pt-32 relative" style={{
+      backgroundImage: `url('/src/assets/about-bg-pixel.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed'
+    }}>
         <div className="absolute inset-0 bg-background/80" />
         
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -79,7 +74,7 @@ export default function About() {
                   <Badge variant="secondary" className="pixel-border">Copywriting</Badge>
                   <Badge variant="secondary" className="pixel-border">Conversion Optimization</Badge>
                 </div>
-                <p className="font-secondary text-lg text-muted-foreground">5+ Years of Professional Experience</p>
+                <p className="font-secondary text-lg text-left text-white">5+ Years of Professional Experience</p>
               </div>
 
               <div className="space-y-6">
@@ -348,6 +343,5 @@ export default function About() {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 }
