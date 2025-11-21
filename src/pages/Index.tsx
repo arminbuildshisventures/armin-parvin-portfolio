@@ -15,11 +15,12 @@ const Index = () => {
     const element = document.getElementById("contact");
     if (element) {
       element.scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       <Cursor />
       <Header />
 
@@ -28,17 +29,22 @@ const Index = () => {
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <img src={heroImage} alt="Pixel art marketing" className="w-full h-full object-cover" />
         </div>
-        <motion.div initial={{
-        opacity: 0,
-        y: 40
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        delay: 0.3,
-        duration: 0.8,
-        ease: "easeInOut"
-      }} className="container mx-auto relative z-10">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="container mx-auto relative z-10"
+        >
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-block pixel-border bg-secondary px-6 py-2">
               <p className="font-primary text-xs">Copywriter • Ghostwriter • Content Marketer • Email Marketer</p>
@@ -53,9 +59,14 @@ const Index = () => {
               <PixelButton variant="primary" onClick={scrollToContact}>
                 Work With Me
               </PixelButton>
-              <PixelButton variant="accent" onClick={() => document.getElementById("work")?.scrollIntoView({
-              behavior: "smooth"
-            })}>
+              <PixelButton
+                variant="accent"
+                onClick={() =>
+                  document.getElementById("work")?.scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
+              >
                 View Portfolio
               </PixelButton>
             </div>
@@ -64,52 +75,47 @@ const Index = () => {
       </AuroraBackground>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-4 relative" style={{
-      backgroundImage: `url(${aboutBg})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }}>
+      <section
+        id="about"
+        className="py-24 px-4 relative"
+        style={{
+          backgroundImage: `url(${aboutBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="absolute inset-0 bg-background/90"></div>
         <div className="container mx-auto max-w-4xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">About Me</h2>
           <PixelCard>
-            <p className="font-secondary text-base md:text-lg leading-relaxed mb-6">Head of Content with 5+ years of experience generating demand and high-quality leads in SaaS and B2B Tech companies. Generated $12M+ in client revenue, boosted email engagement (open rate +52%, CTOR +5%, registration +194%), and produced content ranking #1 and #0. Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B Tech from early to growth stages. Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to narratives, and translating data into insight and strategy.
-
-            <strong>(open rate +52%, CTOR +5%, registration +194%)</strong>, and produced <strong>content ranking #1 and #0</strong>. Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B Tech from early to growth stages.
-              <br /><br />
-              Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to narratives, and translating data into insight and strategy.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <p className="font-secondary text-base md:text-lg leading-relaxed mb-6">
+              Head of Content with <strong>5+ years of experience</strong> generating demand and high-quality leads in
+              SaaS and B2B Tech companies. Generated <strong>$12M+ in client revenue</strong>, boosted email engagement
+              (<strong>open rate +52%, CTOR +5%, registration +194%</strong>), and produced content{" "}
+              <strong>ranking #1 and #0</strong>.
+              <br />
+              <br />
+              Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B
+              Tech from early to growth stages.
+              <br />
+              <br />
+              Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to
+              narratives, and translating data into insight and strategy.
             </p>
-            
           </PixelCard>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 px-4 relative" style={{
-      backgroundImage: `url(${servicesBg})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }}>
+      <section
+        id="services"
+        className="py-24 px-4 relative"
+        style={{
+          backgroundImage: `url(${servicesBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="absolute inset-0 bg-muted/90"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Services</h2>
@@ -168,11 +174,15 @@ const Index = () => {
       </section>
 
       {/* Work Section */}
-      <section id="work" className="py-24 px-4 relative" style={{
-      backgroundImage: `url(${workBg})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }}>
+      <section
+        id="work"
+        className="py-24 px-4 relative"
+        style={{
+          backgroundImage: `url(${workBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="absolute inset-0 bg-background/90"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Featured Work</h2>
@@ -241,11 +251,15 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-4 relative" style={{
-      backgroundImage: `url(${contactBg})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }}>
+      <section
+        id="contact"
+        className="py-24 px-4 relative"
+        style={{
+          backgroundImage: `url(${contactBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="absolute inset-0 bg-muted/90"></div>
         <div className="container mx-auto max-w-4xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Let's Work Together</h2>
@@ -257,7 +271,10 @@ const Index = () => {
               <PixelButton variant="primary" onClick={() => window.open("mailto:4rminp4rvin@gmail.com", "_blank")}>
                 Send Email
               </PixelButton>
-              <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}>
+              <PixelButton
+                variant="accent"
+                onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}
+              >
                 LinkedIn
               </PixelButton>
             </div>
@@ -276,6 +293,7 @@ const Index = () => {
           </p>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
 export default Index;
