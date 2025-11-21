@@ -88,7 +88,11 @@ export default function About() {
               </div>
 
               <div className="pixel-border pixel-shadow bg-card/30 p-6 mb-6">
-                <div className="relative overflow-hidden mb-4">
+                <div className="text-center mb-6">
+                  <h3 className="font-primary text-2xl md:text-3xl text-secondary mb-2">5+ Years</h3>
+                  <p className="font-secondary text-lg text-muted-foreground">of Professional Experience</p>
+                </div>
+                <div className="relative overflow-hidden">
                   <div className="flex gap-3 animate-marquee whitespace-nowrap">
                     <Badge variant="secondary" className="pixel-border inline-block">Email Marketing</Badge>
                     <Badge variant="secondary" className="pixel-border inline-block">Content Strategy</Badge>
@@ -129,7 +133,6 @@ export default function About() {
                     <Badge variant="secondary" className="pixel-border inline-block">Sales</Badge>
                   </div>
                 </div>
-                <p className="font-secondary text-lg text-left text-white">5+ Years of Professional Experience</p>
               </div>
 
               <div className="space-y-6">
