@@ -98,7 +98,7 @@ export default function About() {
                     Copywriting
                   </Badge>
                   <Badge variant="secondary" className="pixel-border">
-                    Conversion Optimization
+                    Leadership
                   </Badge>
                 </div>
                 <p className="font-secondary text-lg text-left text-white">5+ Years of Professional Experience</p>
@@ -107,48 +107,100 @@ export default function About() {
               <div className="space-y-6">
                 <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="font-primary text-xl">Content Strategist & Copywriter</h3>
-                    <span className="font-secondary text-sm text-muted-foreground">2020 — Present</span>
+                    <h3 className="font-primary text-xl">Head of Content</h3>
+                    <span className="font-secondary text-sm text-muted-foreground">Mar. 2023 — Nov. 2025</span>
                   </div>
-                  <p className="font-primary text-secondary mb-3">Freelance</p>
+                  <p className="font-primary text-secondary mb-3">Renee Content · Remote</p>
                   <ul className="space-y-2 font-secondary text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">●</span>
-                      <span>Crafted high-converting email campaigns resulting in 40%+ open rates</span>
+                      <span>Generated $12M+ in measurable client revenue through ROI-focused content campaigns</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">●</span>
-                      <span>Developed content strategies that increased engagement by 60%</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">●</span>
-                      <span>Created conversion-focused copy that boosted sales by 35%</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">●</span>
-                      <span>Delivered data-driven content that resonates with target audiences</span>
+                      <span>Mentored and led a team of 12 writers and marketers, overseeing their deliverables and providing feedback and training materials to maintain high quality, authentic voice, and brand alignment</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="font-primary text-xl">Email Marketing Specialist</h3>
-                    <span className="font-secondary text-sm text-muted-foreground">2018 — 2020</span>
+                    <h3 className="font-primary text-xl">Content Marketing Mentor</h3>
+                    <span className="font-secondary text-sm text-muted-foreground">Mar. 2023 — Nov. 2025</span>
                   </div>
-                  <p className="font-primary text-secondary mb-3">Digital Marketing Agency</p>
+                  <p className="font-primary text-secondary mb-3">ADPList · Remote</p>
                   <ul className="space-y-2 font-secondary text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">●</span>
-                      <span>Managed email campaigns for 20+ clients across various industries</span>
+                      <span>Mentored global marketers and founders through 80+ sessions totaling 2,600+ minutes of 1:1 guidance</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="font-primary text-xl">Guest Speaker</h3>
+                    <span className="font-secondary text-sm text-muted-foreground">Apr. 2025</span>
+                  </div>
+                  <p className="font-primary text-secondary mb-3">ADPList's 2025 Don't Settle Conference · Remote</p>
+                  <ul className="space-y-2 font-secondary text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary mt-1">●</span>
+                      <span>Delivered a 1-hour speech on "The $100K Side Hustle Formula: A Step-by-Step Guide to Monetization"</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="font-primary text-xl">Senior Email Marketing Manager</h3>
+                    <span className="font-secondary text-sm text-muted-foreground">Nov. 2023 — Jan. 2025</span>
+                  </div>
+                  <p className="font-primary text-secondary mb-3">Roomvu · Vancouver, British Columbia, Canada (Remote)</p>
+                  <ul className="space-y-2 font-secondary text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary mt-1">●</span>
+                      <span>Strategized, developed, and sent cold emails to 1M+ leads weekly and marketing emails to brokerages</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">●</span>
-                      <span>Optimized email sequences to improve click-through rates by 50%</span>
+                      <span>Increased weekly registration by 194%+ (from an average of 170 to an average of 500)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="font-primary text-xl">Product Marketing Manager & Technical Content Specialist</h3>
+                    <span className="font-secondary text-sm text-muted-foreground">Nov. 2022 — Jun. 2023</span>
+                  </div>
+                  <p className="font-primary text-secondary mb-3">Nordic Defender · Gothenburg, Sweden (Remote)</p>
+                  <ul className="space-y-2 font-secondary text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary mt-1">●</span>
+                      <span>Initiated and conducted in-depth market analysis proactively to identify trends and competitive differentiators</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">●</span>
-                      <span>A/B tested subject lines and content to maximize performance</span>
+                      <span>Partnered with cross-functional teams to simplify complex cybersecurity concepts into white papers, press releases, case studies, blogs, articles, emails, LinkedIn posts, webpages, and landing pages</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="font-primary text-xl">Technical Content Writer</h3>
+                    <span className="font-secondary text-sm text-muted-foreground">Apr. 2022 — Sep. 2022</span>
+                  </div>
+                  <p className="font-primary text-secondary mb-3">Cloudzy · Dubai, United Arab Emirates (Remote)</p>
+                  <ul className="space-y-2 font-secondary text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary mt-1">●</span>
+                      <span>Wrote blog posts ranking #1 and position zero on Google, with 13+ min time on page</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary mt-1">●</span>
+                      <span>Increased webpage and landing page conversion rates by 3.7%</span>
                     </li>
                   </ul>
                 </div>
