@@ -3,6 +3,10 @@ import { PixelButton } from "@/components/PixelButton";
 import { PixelCard } from "@/components/PixelCard";
 import { Mail, FileText, PenTool, Target, TrendingUp, Users } from "lucide-react";
 import heroImage from "@/assets/hero-pixel-art.png";
+import aboutBg from "@/assets/about-bg-pixel.png";
+import servicesBg from "@/assets/services-bg-pixel.png";
+import workBg from "@/assets/work-bg-pixel.png";
+import contactBg from "@/assets/contact-bg-pixel.png";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
 import { Cursor } from "@/components/ui/inverted-cursor";
@@ -60,8 +64,9 @@ const Index = () => {
       </AuroraBackground>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-4">
-        <div className="container mx-auto max-w-4xl">
+      <section id="about" className="py-24 px-4 relative" style={{ backgroundImage: `url(${aboutBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-background/90"></div>
+        <div className="container mx-auto max-w-4xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">About Me</h2>
           <PixelCard>
             <p className="font-secondary text-base md:text-lg leading-relaxed mb-6">
@@ -109,8 +114,9 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
+      <section id="services" className="py-24 px-4 relative" style={{ backgroundImage: `url(${servicesBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-muted/90"></div>
+        <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PixelCard>
@@ -167,8 +173,9 @@ const Index = () => {
       </section>
 
       {/* Work Section */}
-      <section id="work" className="py-24 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <section id="work" className="py-24 px-4 relative" style={{ backgroundImage: `url(${workBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-background/90"></div>
+        <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Featured Work</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <PixelCard>
@@ -235,8 +242,9 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-4xl">
+      <section id="contact" className="py-24 px-4 relative" style={{ backgroundImage: `url(${contactBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-muted/90"></div>
+        <div className="container mx-auto max-w-4xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Let's Work Together</h2>
           <PixelCard className="text-center">
             <p className="font-secondary text-lg mb-8 leading-relaxed">
