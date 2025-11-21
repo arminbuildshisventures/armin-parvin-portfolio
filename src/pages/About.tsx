@@ -92,48 +92,30 @@ export default function About() {
                   <h3 className="font-primary text-2xl md:text-3xl text-secondary mb-2">5+ Years</h3>
                   <p className="font-secondary text-lg text-muted-foreground">of Professional Experience</p>
                 </div>
-                <div className="relative overflow-hidden">
-                  <div className="flex animate-marquee">
-                    <div className="flex gap-3 whitespace-nowrap flex-shrink-0">
-                      <Badge variant="secondary" className="pixel-border">Email Marketing</Badge>
-                      <Badge variant="secondary" className="pixel-border">Content Strategy</Badge>
-                      <Badge variant="secondary" className="pixel-border">Copywriting</Badge>
-                      <Badge variant="secondary" className="pixel-border">Ghostwriting</Badge>
-                      <Badge variant="secondary" className="pixel-border">Content Writing</Badge>
-                      <Badge variant="secondary" className="pixel-border">SEO</Badge>
-                      <Badge variant="secondary" className="pixel-border">Leadership</Badge>
-                      <Badge variant="secondary" className="pixel-border">Cryptocurrency Research Analysis</Badge>
-                      <Badge variant="secondary" className="pixel-border">Creative Writing</Badge>
-                      <Badge variant="secondary" className="pixel-border">Storytelling</Badge>
-                      <Badge variant="secondary" className="pixel-border">Technical Writing</Badge>
-                      <Badge variant="secondary" className="pixel-border">Content Editing</Badge>
-                      <Badge variant="secondary" className="pixel-border">Copy Editing</Badge>
-                      <Badge variant="secondary" className="pixel-border">Proofreading</Badge>
-                      <Badge variant="secondary" className="pixel-border">Campaign Management</Badge>
-                      <Badge variant="secondary" className="pixel-border">Research</Badge>
-                      <Badge variant="secondary" className="pixel-border">Marketing</Badge>
-                      <Badge variant="secondary" className="pixel-border">Sales</Badge>
-                    </div>
-                    <div className="flex gap-3 whitespace-nowrap flex-shrink-0 ml-3" aria-hidden="true">
-                      <Badge variant="secondary" className="pixel-border">Email Marketing</Badge>
-                      <Badge variant="secondary" className="pixel-border">Content Strategy</Badge>
-                      <Badge variant="secondary" className="pixel-border">Copywriting</Badge>
-                      <Badge variant="secondary" className="pixel-border">Ghostwriting</Badge>
-                      <Badge variant="secondary" className="pixel-border">Content Writing</Badge>
-                      <Badge variant="secondary" className="pixel-border">SEO</Badge>
-                      <Badge variant="secondary" className="pixel-border">Leadership</Badge>
-                      <Badge variant="secondary" className="pixel-border">Cryptocurrency Research Analysis</Badge>
-                      <Badge variant="secondary" className="pixel-border">Creative Writing</Badge>
-                      <Badge variant="secondary" className="pixel-border">Storytelling</Badge>
-                      <Badge variant="secondary" className="pixel-border">Technical Writing</Badge>
-                      <Badge variant="secondary" className="pixel-border">Content Editing</Badge>
-                      <Badge variant="secondary" className="pixel-border">Copy Editing</Badge>
-                      <Badge variant="secondary" className="pixel-border">Proofreading</Badge>
-                      <Badge variant="secondary" className="pixel-border">Campaign Management</Badge>
-                      <Badge variant="secondary" className="pixel-border">Research</Badge>
-                      <Badge variant="secondary" className="pixel-border">Marketing</Badge>
-                      <Badge variant="secondary" className="pixel-border">Sales</Badge>
-                    </div>
+                <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+                  <div className="flex gap-3">
+                    {[...Array(3)].map((_, i) => (
+                      <div key={i} className="flex gap-3 animate-marquee shrink-0">
+                        <Badge variant="secondary" className="pixel-border">Email Marketing</Badge>
+                        <Badge variant="secondary" className="pixel-border">Content Strategy</Badge>
+                        <Badge variant="secondary" className="pixel-border">Copywriting</Badge>
+                        <Badge variant="secondary" className="pixel-border">Ghostwriting</Badge>
+                        <Badge variant="secondary" className="pixel-border">Content Writing</Badge>
+                        <Badge variant="secondary" className="pixel-border">SEO</Badge>
+                        <Badge variant="secondary" className="pixel-border">Leadership</Badge>
+                        <Badge variant="secondary" className="pixel-border">Cryptocurrency Research Analysis</Badge>
+                        <Badge variant="secondary" className="pixel-border">Creative Writing</Badge>
+                        <Badge variant="secondary" className="pixel-border">Storytelling</Badge>
+                        <Badge variant="secondary" className="pixel-border">Technical Writing</Badge>
+                        <Badge variant="secondary" className="pixel-border">Content Editing</Badge>
+                        <Badge variant="secondary" className="pixel-border">Copy Editing</Badge>
+                        <Badge variant="secondary" className="pixel-border">Proofreading</Badge>
+                        <Badge variant="secondary" className="pixel-border">Campaign Management</Badge>
+                        <Badge variant="secondary" className="pixel-border">Research</Badge>
+                        <Badge variant="secondary" className="pixel-border">Marketing</Badge>
+                        <Badge variant="secondary" className="pixel-border">Sales</Badge>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
