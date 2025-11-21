@@ -262,48 +262,75 @@ export default function About() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="pixel-border pixel-shadow bg-card/30 p-6">
-                  <h3 className="font-primary text-xl mb-4">Writing & Strategy</h3>
+                  <h3 className="font-primary text-xl mb-4">Finance</h3>
                   <div className="flex flex-wrap gap-2">
-                    <Badge className="pixel-border">Email Copywriting</Badge>
-                    <Badge className="pixel-border">Content Strategy</Badge>
-                    <Badge className="pixel-border">SEO Writing</Badge>
-                    <Badge className="pixel-border">Storytelling</Badge>
-                    <Badge className="pixel-border">Brand Voice</Badge>
-                    <Badge className="pixel-border">Ghostwriting</Badge>
+                    <Badge className="pixel-border">Macroeconomics</Badge>
+                    <Badge className="pixel-border">Cryptocurrency Analysis</Badge>
+                    <Badge className="pixel-border">Fundamental Analysis</Badge>
+                    <Badge className="pixel-border">On-Chain Analysis</Badge>
+                    <Badge className="pixel-border">Tokenomics</Badge>
+                    <Badge className="pixel-border">Technical Analysis</Badge>
+                    <Badge className="pixel-border">DeFi</Badge>
+                    <Badge className="pixel-border">Risk Management</Badge>
+                    <Badge className="pixel-border">Portfolio Management</Badge>
                   </div>
                 </div>
 
                 <div className="pixel-border pixel-shadow bg-card/30 p-6">
-                  <h3 className="font-primary text-xl mb-4">Marketing Tools</h3>
+                  <h3 className="font-primary text-xl mb-4">Marketing & Sales</h3>
                   <div className="flex flex-wrap gap-2">
-                    <Badge className="pixel-border">Mailchimp</Badge>
-                    <Badge className="pixel-border">HubSpot</Badge>
-                    <Badge className="pixel-border">ConvertKit</Badge>
+                    <Badge className="pixel-border">SEO Content Writing</Badge>
+                    <Badge className="pixel-border">Email Marketing</Badge>
+                    <Badge className="pixel-border">LinkedIn Executive Branding</Badge>
+                    <Badge className="pixel-border">Webpage Copywriting</Badge>
+                    <Badge className="pixel-border">Landing Page Copywriting</Badge>
+                    <Badge className="pixel-border">Direct-Response Copywriting</Badge>
+                    <Badge className="pixel-border">Sales Email Writing</Badge>
+                    <Badge className="pixel-border">Negotiation</Badge>
+                    <Badge className="pixel-border">B2B Sales</Badge>
+                  </div>
+                </div>
+
+                <div className="pixel-border pixel-shadow bg-card/30 p-6">
+                  <h3 className="font-primary text-xl mb-4">Tools</h3>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge className="pixel-border">TradingView</Badge>
+                    <Badge className="pixel-border">Token Terminal</Badge>
+                    <Badge className="pixel-border">CoinMarketCap</Badge>
+                    <Badge className="pixel-border">DefiLlama</Badge>
+                    <Badge className="pixel-border">Tokenomist</Badge>
+                    <Badge className="pixel-border">RootData</Badge>
+                    <Badge className="pixel-border">Dune</Badge>
+                    <Badge className="pixel-border">Excel</Badge>
+                    <Badge className="pixel-border">Power BI</Badge>
+                    <Badge className="pixel-border">Metabase</Badge>
+                    <Badge className="pixel-border">GA4</Badge>
                     <Badge className="pixel-border">ActiveCampaign</Badge>
-                    <Badge className="pixel-border">Google Analytics</Badge>
-                    <Badge className="pixel-border">WordPress</Badge>
+                    <Badge className="pixel-border">Customer.io</Badge>
+                    <Badge className="pixel-border">Mautic</Badge>
+                    <Badge className="pixel-border">Ahrefs</Badge>
+                    <Badge className="pixel-border">Semrush</Badge>
                   </div>
                 </div>
 
                 <div className="pixel-border pixel-shadow bg-card/30 p-6">
-                  <h3 className="font-primary text-xl mb-4">Conversion & Testing</h3>
+                  <h3 className="font-primary text-xl mb-4">Soft Skills</h3>
                   <div className="flex flex-wrap gap-2">
-                    <Badge className="pixel-border">A/B Testing</Badge>
-                    <Badge className="pixel-border">CRO</Badge>
-                    <Badge className="pixel-border">Landing Pages</Badge>
-                    <Badge className="pixel-border">Lead Magnets</Badge>
-                    <Badge className="pixel-border">Sales Funnels</Badge>
+                    <Badge className="pixel-border">Cross-Functional Team Leadership</Badge>
+                    <Badge className="pixel-border">Stakeholder Communication</Badge>
+                    <Badge className="pixel-border">Team Collaboration</Badge>
+                    <Badge className="pixel-border">Adaptability</Badge>
+                    <Badge className="pixel-border">Quick Learning</Badge>
+                    <Badge className="pixel-border">Time Management</Badge>
                   </div>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card/30 p-6">
-                  <h3 className="font-primary text-xl mb-4">Specializations</h3>
+                <div className="pixel-border pixel-shadow bg-card/30 p-6 md:col-span-2">
+                  <h3 className="font-primary text-xl mb-4">Languages</h3>
                   <div className="flex flex-wrap gap-2">
-                    <Badge className="pixel-border">B2B Marketing</Badge>
-                    <Badge className="pixel-border">SaaS Content</Badge>
-                    <Badge className="pixel-border">Newsletter Writing</Badge>
-                    <Badge className="pixel-border">Case Studies</Badge>
-                    <Badge className="pixel-border">Whitepapers</Badge>
+                    <Badge className="pixel-border">English (Native Proficiency)</Badge>
+                    <Badge className="pixel-border">French (Elementary)</Badge>
+                    <Badge className="pixel-border">Farsi (Native)</Badge>
                   </div>
                 </div>
               </div>
