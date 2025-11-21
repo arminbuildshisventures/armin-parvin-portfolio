@@ -91,8 +91,8 @@ const handler = async (req: Request): Promise<Response> => {
         'Authorization': `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Contact Form <onboarding@resend.dev>",
-        to: ["arminbuildshisventures@gmail.com"],
+        from: "Contact Form <contact@arminparvin.me>",
+        to: ["4rminp4rvin@gmail.com"],
         reply_to: email,
         subject: `Portfolio Contact: ${escapeHtml(subject)}`,
         html: `
