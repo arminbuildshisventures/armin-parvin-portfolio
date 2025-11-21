@@ -2,8 +2,31 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Quote } from "lucide-react";
 import { PixelCard } from "@/components/PixelCard";
+import cloudzyLogo from "@/assets/clients/cloudzy.svg";
+import convertLogo from "@/assets/clients/convert.svg";
+import hoothemesLogo from "@/assets/clients/hoothemes.png";
+import lorenzocpaLogo from "@/assets/clients/lorenzocpa.png";
+import nordicLogo from "@/assets/clients/nordic.svg";
+import rahmaniniaLogo from "@/assets/clients/rahmaninia.png";
+import roomvuLogo from "@/assets/clients/roomvu.svg";
+import veronalabsLogo from "@/assets/clients/veronalabs.png";
+import wpsmsLogo from "@/assets/clients/wpsms.png";
+import watchthemlive from "@/assets/clients/watchthemlive.png";
 
 const Testimonials = () => {
+  const clientLogos = [
+    { src: cloudzyLogo, alt: "Cloudzy" },
+    { src: convertLogo, alt: "Convert" },
+    { src: hoothemesLogo, alt: "Hoothemes" },
+    { src: lorenzocpaLogo, alt: "Lorenzo CPA" },
+    { src: nordicLogo, alt: "Nordic Defender" },
+    { src: rahmaniniaLogo, alt: "Mehdi Rahmaninia" },
+    { src: roomvuLogo, alt: "Roomvu" },
+    { src: veronalabsLogo, alt: "Verona Labs" },
+    { src: wpsmsLogo, alt: "WP SMS" },
+    { src: watchthemlive, alt: "WatchThemLive" },
+  ];
+
   const testimonials = [
     {
       name: "Client Name",
@@ -41,6 +64,33 @@ const Testimonials = () => {
           <p className="text-lg md:text-xl text-muted-foreground text-center mb-12 font-secondary max-w-2xl mx-auto">
             What clients say about working with me
           </p>
+
+          {/* Client Logos Carousel */}
+          <div className="mb-16 overflow-hidden">
+            <p className="text-center text-muted-foreground font-secondary mb-6">
+              Trusted by leading brands
+            </p>
+            <div className="relative w-full overflow-hidden">
+              <div className="flex gap-12 animate-marquee">
+                {[...Array(3)].map((_, setIndex) => (
+                  <div key={setIndex} className="flex gap-12 flex-shrink-0">
+                    {clientLogos.map((logo, index) => (
+                      <div
+                        key={`${setIndex}-${index}`}
+                        className="flex items-center justify-center h-16 w-40 flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300"
+                      >
+                        <img
+                          src={logo.src}
+                          alt={logo.alt}
+                          className="max-h-12 max-w-full object-contain"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
