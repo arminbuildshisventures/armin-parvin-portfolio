@@ -11,12 +11,11 @@ const Index = () => {
     const element = document.getElementById("contact");
     if (element) {
       element.scrollIntoView({
-        behavior: "smooth",
+        behavior: "smooth"
       });
     }
   };
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Cursor />
       <Header />
 
@@ -25,22 +24,17 @@ const Index = () => {
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <img src={heroImage} alt="Pixel art marketing" className="w-full h-full object-cover" />
         </div>
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 40,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="container mx-auto relative z-10"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 40
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        delay: 0.3,
+        duration: 0.8,
+        ease: "easeInOut"
+      }} className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-block pixel-border bg-secondary px-6 py-2">
               <p className="font-primary text-xs">Copywriter • Ghostwriter • Content Marketer • Email Marketer</p>
@@ -55,14 +49,9 @@ const Index = () => {
               <PixelButton variant="primary" onClick={scrollToContact}>
                 Work With Me
               </PixelButton>
-              <PixelButton
-                variant="accent"
-                onClick={() =>
-                  document.getElementById("work")?.scrollIntoView({
-                    behavior: "smooth",
-                  })
-                }
-              >
+              <PixelButton variant="accent" onClick={() => document.getElementById("work")?.scrollIntoView({
+              behavior: "smooth"
+            })}>
                 View Portfolio
               </PixelButton>
             </div>
@@ -76,9 +65,27 @@ const Index = () => {
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">About Me</h2>
           <PixelCard>
             <p className="font-secondary text-base md:text-lg leading-relaxed mb-6">
-              I'm a content strategist and copywriter who believes in the power of words to drive action. With expertise
-              in email marketing, content creation, and conversion optimization, I help businesses communicate their
-              value effectively.
+              Head of Content with 5+ years of experience generating demand and high-quality leads in SaaS and B2B Tech companies. Generated $12M+ in client revenue, boosted email engagement (open rate +52%, CTOR +5%, registration +194%), and produced content ranking #1 and #0. Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B Tech from early to growth stages. Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to narratives, and translating data into insight and strategy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </p>
             <p className="font-secondary text-base md:text-lg leading-relaxed">
               My approach combines data-driven insights with creative storytelling to deliver campaigns that resonate
@@ -226,10 +233,7 @@ const Index = () => {
               <PixelButton variant="primary" onClick={() => window.open("mailto:4rminp4rvin@gmail.com", "_blank")}>
                 Send Email
               </PixelButton>
-              <PixelButton
-                variant="accent"
-                onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}
-              >
+              <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}>
                 LinkedIn
               </PixelButton>
             </div>
@@ -248,7 +252,6 @@ const Index = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
 export default Index;
