@@ -9,23 +9,26 @@ export default function Contact() {
     <div className="min-h-screen">
       <Cursor />
       <Header />
-      
+
       <section className="py-24 px-4 pt-32">
         <div className="container mx-auto max-w-4xl">
           <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Get In Touch</h1>
-          
+
           <PixelCard>
             <div className="text-center space-y-6">
               <p className="font-secondary text-lg">
                 Ready to elevate your content and drive real results? Let's discuss how I can help your business grow.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center py-6">
-                <PixelButton variant="primary" onClick={() => window.location.href = "mailto:4rminp4rvin@gmail.com"}>
+                <PixelButton variant="primary" onClick={() => window.open("mailto:4rminp4rvin@gmail.com", "_blank")}>
                   <Mail className="w-4 h-4 mr-2" />
                   Email Me
                 </PixelButton>
-                <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}>
+                <PixelButton
+                  variant="accent"
+                  onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}
+                >
                   <Linkedin className="w-4 h-4 mr-2" />
                   LinkedIn
                 </PixelButton>
