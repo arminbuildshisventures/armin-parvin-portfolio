@@ -244,7 +244,7 @@ const Index = () => {
           <p className="font-secondary text-sm text-muted-foreground">
             4rminp4rvin@gmail.com
             <br />
-            © {new Date().getFullYear()} All Rights Reserved
+            <br />© {new Date().getFullYear()} All Rights Reserved
           </p>
         </div>
       </footer>
