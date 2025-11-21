@@ -21,11 +21,11 @@ export default function Contact() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center py-6">
-                <PixelButton variant="primary">
+                <PixelButton variant="primary" onClick={() => window.location.href = "mailto:4rminp4rvin@gmail.com"}>
                   <Mail className="w-4 h-4 mr-2" />
                   Email Me
                 </PixelButton>
-                <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com/arminparvin/", "_blank")}>
+                <PixelButton variant="accent" onClick={() => window.open("https://linkedin.com/in/arminparvin/", "_blank")}>
                   <Linkedin className="w-4 h-4 mr-2" />
                   LinkedIn
                 </PixelButton>
