@@ -66,7 +66,7 @@ const Testimonials = () => {
           </p>
 
           {/* Client Logos Carousel */}
-          <div className="mb-16 pixel-border bg-card/50 backdrop-blur-sm p-8 rounded-lg">
+          <div className="mb-16 pixel-border bg-white/95 backdrop-blur-sm p-8 rounded-lg">
             <p className="text-center text-muted-foreground font-secondary mb-6">
               Trusted by leading brands
             </p>
