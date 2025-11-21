@@ -81,11 +81,16 @@ const Testimonials = () => {
           </p>
 
           {/* Client Logos Carousel */}
-          <div className="mb-16 pixel-border bg-white/95 backdrop-blur-sm p-8 rounded-lg">
+          <div className="mb-16 pixel-border bg-white/95 backdrop-blur-sm p-8 rounded-lg relative">
             <p className="text-center text-muted-foreground font-secondary mb-6">
               Trusted by leading brands
             </p>
             <div className="relative w-full overflow-hidden">
+              {/* Left fade */}
+              <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white/95 to-transparent z-10 pointer-events-none"></div>
+              {/* Right fade */}
+              <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white/95 to-transparent z-10 pointer-events-none"></div>
+              
               <div className="flex">
                 {[...Array(3)].map((_, setIndex) => <div key={setIndex} className="flex gap-12 flex-shrink-0 animate-marquee">
                     {clientLogos.map((logo, index) => <div key={`${setIndex}-${index}`} className="flex items-center justify-center h-16 w-40 flex-shrink-0 hover:scale-110 transition-transform duration-300">
