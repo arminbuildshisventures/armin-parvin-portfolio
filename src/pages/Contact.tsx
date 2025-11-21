@@ -51,11 +51,11 @@ export default function Contact() {
     }
   };
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Cursor />
       <Header />
 
-      <section className="py-24 px-4 pt-32">
+      <section className="flex-grow py-24 px-4 pt-32">
         <div className="container mx-auto max-w-4xl">
           <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Get In Touch</h1>
 
