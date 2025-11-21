@@ -240,41 +240,64 @@ export default function About() {
                 <h2 className="font-primary text-2xl md:text-3xl text-pixel">Education</h2>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-6">
                 <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
-                  <h3 className="font-primary text-xl mb-2">Marketing Certification</h3>
-                  <p className="font-primary text-secondary mb-2">HubSpot Academy</p>
-                  <p className="font-secondary text-sm text-muted-foreground mb-4">2021</p>
+                  <h3 className="font-primary text-xl mb-2">Kharazmi University</h3>
+                  <p className="font-primary text-secondary mb-2">Bachelor of Arts - BA, English Language and Literature</p>
+                  <p className="font-secondary text-sm text-muted-foreground mb-4">2017 - 2021</p>
                   <p className="font-secondary text-muted-foreground">
-                    Advanced certification in inbound marketing, content strategy, and email marketing best practices.
+                    Studied and analyzed major works of English literature and philosophy, history, and elementary French language.
                   </p>
                 </div>
-
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
-                  <h3 className="font-primary text-xl mb-2">Copywriting Mastery</h3>
-                  <p className="font-primary text-secondary mb-2">AWAI (American Writers & Artists Institute)</p>
-                  <p className="font-secondary text-sm text-muted-foreground mb-4">2019</p>
-                  <p className="font-secondary text-muted-foreground">
-                    Comprehensive training in direct response copywriting and conversion optimization techniques.
-                  </p>
-                </div>
-
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
-                  <h3 className="font-primary text-xl mb-2">Bachelor of Arts in Communications</h3>
-                  <p className="font-primary text-secondary mb-2">University Name</p>
-                  <p className="font-secondary text-sm text-muted-foreground mb-4">2014 — 2018</p>
-                  <p className="font-secondary text-muted-foreground">
-                    Focus on digital media, persuasive writing, and marketing communications.
-                  </p>
-                </div>
-
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg transition-all">
-                  <h3 className="font-primary text-xl mb-2">Google Analytics Certification</h3>
-                  <p className="font-primary text-secondary mb-2">Google</p>
-                  <p className="font-secondary text-sm text-muted-foreground mb-4">2020</p>
-                  <p className="font-secondary text-muted-foreground">
-                    Certified in Google Analytics for tracking and optimizing marketing performance.
-                  </p>
+                
+                <div className="pixel-border pixel-shadow bg-card/30 p-6">
+                  <h3 className="font-primary text-xl mb-6">Professional Certifications</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 font-secondary">
+                    <div>
+                      <p className="font-semibold">Digital Skills: Web Analytics</p>
+                      <p className="text-muted-foreground text-sm">Accenture | Issued Dec 2021</p>
+                    </div>
+                    
+                    <div>
+                      <p className="font-semibold">Successful Negotiation: Essential Strategies and Skills</p>
+                      <p className="text-muted-foreground text-sm">Coursera | Issued Dec 2021</p>
+                      <p className="text-xs text-muted-foreground">Credential ID: AQQT4SSWMYM2</p>
+                    </div>
+                    
+                    <div>
+                      <p className="font-semibold">Digital Skills: Digital Marketing</p>
+                      <p className="text-muted-foreground text-sm">Accenture | Issued Nov 2021</p>
+                    </div>
+                    
+                    <div>
+                      <p className="font-semibold">Essential Skills for Your Career Development</p>
+                      <p className="text-muted-foreground text-sm">University of Leeds | Issued Nov 2021</p>
+                    </div>
+                    
+                    <div>
+                      <p className="font-semibold">Learning Python (2020)</p>
+                      <p className="text-muted-foreground text-sm">LinkedIn | Issued Nov 2021</p>
+                      <p className="text-xs text-muted-foreground">Credential ID: AcXR1nPYplQDz7S17VPq01atgnhj</p>
+                    </div>
+                    
+                    <div>
+                      <p className="font-semibold">The Fundamentals of Digital Marketing</p>
+                      <p className="text-muted-foreground text-sm">Google | Issued Nov 2021</p>
+                      <p className="text-xs text-muted-foreground">Credential ID: TKU 5TS KJX</p>
+                    </div>
+                    
+                    <div>
+                      <p className="font-semibold">Inbound Marketing</p>
+                      <p className="text-muted-foreground text-sm">HubSpot Academy | Issued Sep 2021</p>
+                      <p className="text-xs text-muted-foreground">Credential ID: 19725d86b52b4b828f77c3189524c998</p>
+                    </div>
+                    
+                    <div>
+                      <p className="font-semibold">Digital Advertising</p>
+                      <p className="text-muted-foreground text-sm">HubSpot Academy | Issued Oct 2021</p>
+                      <p className="text-xs text-muted-foreground">Credential ID: e2f041055da847699222539df93e4e13</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </TabsContent>
