@@ -389,7 +389,7 @@ export default function About() {
 
                   <div className="flex items-start gap-3">
                     <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">Coffee Culture: Exploring specialty coffee (Third0Wave)            </p>
+                    <p className="font-secondary text-lg">Coffee Culture: Exploring specialty (third-wave) coffee and different brewing methods                                                                                                                                                                                                                                                                                       </p>
                   </div>
 
                   <div className="flex items-start gap-3">
