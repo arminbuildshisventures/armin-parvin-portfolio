@@ -25,14 +25,13 @@ export default function About() {
               in email marketing, content creation, and conversion optimization, I help businesses communicate their
               value effectively.
             </p>
-            <p className="font-secondary text-base md:text-lg leading-relaxed mb-6">
-              My approach combines data-driven insights with creative storytelling to deliver campaigns that resonate
-              with your audience and achieve measurable results.
-            </p>
+            
             <p className="font-secondary text-base md:text-lg leading-relaxed">
-              Whether you need compelling email sequences, engaging blog content, or conversion-focused copy, I bring
-              a strategic mindset and proven techniques to every project. Let's work together to make your brand stand
-              out in a skeptical market.
+              Head of Content with 5+ years of experience generating demand and high-quality leads in SaaS and B2B Tech companies. Generated $12M+ in client revenue, boosted email engagement (open rate +52%, CTOR +5%, registration +194%), and produced content ranking #1 and #0.
+
+Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B Tech from early to growth stages.
+
+Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to narratives, and translating data into insight and strategy.
             </p>
           </div>
           
