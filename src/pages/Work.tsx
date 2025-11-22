@@ -8,6 +8,7 @@ import workBg from "@/assets/work-bg-pixel.png";
 import roomvuResults1 from "@/assets/work/roomvu-results-1.png";
 import roomvuResults2 from "@/assets/work/roomvu-results-2.jpg";
 import roomvuResults3 from "@/assets/work/roomvu-results-3.jpg";
+import watchthemLiveResults1 from "@/assets/work/watchthemlive-results-1.jpg";
 import trinaMoitra from "@/assets/testimonials/trina-moitra.png";
 import avatar7 from "@/assets/testimonials/avatar-7.png";
 import { Star } from "lucide-react";
@@ -131,7 +132,7 @@ export default function Work() {
       challenge: "WatchThemLive is a user-tracking tool that enables business owners to watch their user behaviors through session recordings and heatmaps. WatchThemLive had low email engagement rates and struggled to convert subscribers into active users. Their email campaigns weren't delivering the expected ROI. I was responsible for all marketing channels including email marketing, content marketing, technical content writing, and landing page copywriting.",
       process: "I set up their email marketing system and used winning copywriting and storytelling techniques to bring in the clients effectively and efficiently. Completely redesigned email campaign strategy with focus on personalization and value delivery. Implemented advanced segmentation based on user behavior and preferences. A/B tested every element from subject lines to CTAs. Created compelling copy that emphasized benefits over features. Optimized email design for better mobile experience.",
       outcome: "Achieved 52% increase in email open rates and 23% improvement in click-through rates, delivering 11X ROI. Crafted 630+ emails, wrote 62+ blog posts, and developed 18+ landing pages. Email campaigns became a primary driver of user activation and retention. The improved engagement led to measurable increases in product usage and customer lifetime value.",
-      images: [],
+      images: [watchthemLiveResults1],
       testimonial: {
         name: "Negar Farazmand",
         title: "Business Design Expert, UI/UX Designer, Digital Marketer",
