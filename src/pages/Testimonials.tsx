@@ -160,7 +160,7 @@ const Testimonials = () => {
       role: "Business Design Expert, UI/UX Designer, Digital Marketer",
       content: "Armin is smart and a fast learner. His knowledge in many fields helps him find his way in almost any role you give him. Moreover, Armin's ambition and enthusiasm are absolutely remarkable, which lead him to achieve continued progress. His technical skills, coding knowledge, and brilliant ideas were a great help to the team. Working with Armin on the same team was a great experience.",
       rating: 5,
-      avatar: avatar7,
+      avatar: avatar8,
       caseStudyUrl: "#",
     },
     {
@@ -184,7 +184,7 @@ const Testimonials = () => {
       role: "Creative Director",
       content: "My mentorship session with Armin Parvin was incredibly insightful. It illuminated aspects I had overlooked, lighting up the path I thought I already knew.",
       rating: 5,
-      avatar: avatar10,
+      avatar: avatar11,
       caseStudyUrl: "#",
     },
     {
