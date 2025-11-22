@@ -4,7 +4,7 @@ import { Quote } from "lucide-react";
 import { PixelCard } from "@/components/PixelCard";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import testimonialsBg from "@/assets/testimonials-bg-pixel.png";
-import avatar1 from "@/assets/testimonials/avatar-1.png";
+import trinaMoitra from "@/assets/testimonials/trina-moitra.png";
 import avatar2 from "@/assets/testimonials/avatar-2.png";
 import avatar3 from "@/assets/testimonials/avatar-3.png";
 import avatar4 from "@/assets/testimonials/avatar-4.png";
@@ -74,12 +74,12 @@ const Testimonials = () => {
   ];
   const featuredTestimonials = [
     {
-      name: "Sarah Mitchell",
-      role: "CEO, TechVenture Inc",
+      name: "Trina Moitra",
+      role: "CMO, Convert.com",
       content:
-        "Working with Armin transformed our content strategy completely. Our blog traffic increased by 340% in just 6 months, and we're now ranking #1 for our primary keywords. His deep understanding of SEO combined with compelling storytelling is unmatched. Every piece of content he creates not only ranks well but genuinely resonates with our audience.",
+        "Armin impressed me with his attention to detail & his knowledge of the industry from day 1. We needed someone to take on the production of bottom-of-the-funnel focused content and to seed Convert's name in the SERPs for our brand new features. Our collaboration was very pleasant. Renee Content has a good process and they really give 110% to understand your requirements. Thank you for being such consummate professionals!",
       rating: 5,
-      avatar: avatar1,
+      avatar: trinaMoitra,
     },
     {
       name: "Michael Rodriguez",
