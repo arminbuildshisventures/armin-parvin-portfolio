@@ -48,7 +48,7 @@ const Insights = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <PixelCard className="h-full flex flex-col cursor-pointer hover:transform hover:scale-105 transition-transform">
+                <PixelCard className="h-full flex flex-col cursor-pointer">
                   <div className="flex items-center gap-2 mb-3">
                     <FileText className="w-5 h-5 text-accent" />
                     <span className="text-sm text-accent font-secondary font-semibold">
@@ -72,7 +72,7 @@ const Insights = () => {
         </motion.div>
       </main>
 
-      <footer className="py-8 px-4 pixel-border border-b-0 border-x-0">
+      <footer className="py-8 px-4 pixel-border border-b-0 border-x-0 relative z-10 bg-background">
         <div className="container mx-auto text-center">
           <p className="font-primary text-xs mb-2">Armin Parvin</p>
           <p className="font-secondary text-sm text-muted-foreground">
