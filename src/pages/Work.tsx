@@ -342,7 +342,7 @@ Definitely I recommend it, actually because they're really experienced and they 
     },
     {
       title: "Boutique",
-      category: "Fashion & Home Decor E-commerce",
+      category: "E-commerce Content",
       description: "Created content marketing strategy for online boutique specializing in trendy fashion and home decor items.",
       results: "Website Traffic Skyrocketed | Leads Increase: 3X | Revenue Increase: 60%",
       challenge: "Primary challenge was generating enough online traffic to boost sales and expand reach to connect with a larger audience of potential customers for the small online boutique specializing in trendy fashion and home decor items.",
