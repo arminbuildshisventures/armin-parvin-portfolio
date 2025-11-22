@@ -30,6 +30,9 @@ interface CaseStudy {
     rating: number;
     text: string;
   };
+  interview?: {
+    url: string;
+  };
 }
 
 export default function Work() {
@@ -144,13 +147,16 @@ export default function Work() {
     },
     {
       title: "Influencer Marketing Business",
-      category: "Content Strategy",
+      category: "Content Marketing",
       description: "Developed content strategy and materials for influencer marketing platform launch and growth.",
       results: "Platform launch success",
       challenge: "Launching a new influencer marketing platform required establishing credibility and attracting both brands and influencers to a two-sided marketplace. The platform needed content that would appeal to both audiences simultaneously.",
       process: "Developed dual-audience content strategy addressing both brands and influencers. Created launch materials including website copy, pitch decks, and educational resources. Produced thought leadership content about influencer marketing trends. Developed case studies and success stories as the platform gained traction.",
       outcome: "Successfully launched the platform with strong initial adoption from both sides. The content effectively communicated value propositions to different audience segments. Platform grew steadily with content serving as a key driver of user acquisition.",
-      images: ["/placeholder.svg"],
+      images: [],
+      interview: {
+        url: "https://www.youtube.com/watch?v=d6C_mqxejlU"
+      },
     },
     {
       title: "Rahmaninia Digital Marketing Agency",
@@ -476,6 +482,25 @@ export default function Work() {
                       <p className="font-secondary text-sm leading-relaxed">
                         {selectedCaseStudy.testimonial.text}
                       </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Interview Section */}
+                {selectedCaseStudy.interview && (
+                  <div className="space-y-3">
+                    <h3 className="font-primary text-xl text-accent pixel-border inline-block px-3 py-1 bg-accent/10">
+                      Interview
+                    </h3>
+                    <div className="pixel-border p-6 bg-secondary/5">
+                      <a 
+                        href={selectedCaseStudy.interview.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-secondary text-sm text-accent hover:underline"
+                      >
+                        Watch the interview on YouTube →
+                      </a>
                     </div>
                   </div>
                 )}
