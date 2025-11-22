@@ -11,6 +11,7 @@ import roomvuResults3 from "@/assets/work/roomvu-results-3.jpg";
 import watchthemLiveResults1 from "@/assets/work/watchthemlive-results-1.jpg";
 import trinaMoitra from "@/assets/testimonials/trina-moitra.png";
 import parandSh from "@/assets/testimonials/parand-sh.png";
+import mehdiRahmaninia from "@/assets/testimonials/avatar-3.png";
 import avatar7 from "@/assets/testimonials/avatar-7.png";
 import { Star } from "lucide-react";
 
@@ -196,11 +197,51 @@ Given the quality of the service, I would definitely recommend Renée Content to
       title: "Rahmaninia Digital Marketing Agency",
       category: "Agency Content",
       description: "Created comprehensive content suite for digital marketing agency brand positioning.",
-      results: "Brand positioning achieved",
+      results: "Increased Traffic | Improved SEO | Better Conversion Rates",
       challenge: "The agency needed to establish a strong brand identity and differentiate themselves in a competitive digital marketing landscape. They required a complete content suite that would showcase their expertise and attract high-value clients.",
       process: "Developed comprehensive brand positioning strategy and created full content suite including website copy, service descriptions, case studies, and thought leadership content. Crafted unique brand voice that balanced professionalism with approachability. Created portfolio presentations and client-facing materials.",
-      outcome: "Successfully positioned the agency with a distinct brand identity. The content suite helped attract larger, more profitable clients. Agency credibility increased significantly, leading to improved close rates and higher-value contracts.",
-      images: ["/placeholder.svg"],
+      outcome: "The content delivered increased website traffic with rich SEO optimization and excellent copywriting. Articles targeting the bottom funnel converted particularly well. Successfully positioned the agency with a distinct brand identity, helping attract larger, more profitable clients. Agency credibility increased significantly, leading to improved close rates and higher-value contracts.",
+      images: [],
+      testimonial: {
+        name: "Mehdi Rahmaninia",
+        title: "Founder, CEO, and Marketing Management Consultant",
+        company: "",
+        avatar: mehdiRahmaninia,
+        rating: 5,
+        text: "They really deliver what they are promising. I had an increased traffic since the contents were rich in terms of SEO, and the copy was good too. So, in the articles that were targeting my bottom funnel, the content and copy were converting pretty well. The overall experience of working with Renée Content was pretty great, and I was confident that they understood what I needed from them every step of the way."
+      },
+      interview: {
+        url: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID_HERE",
+        content: `**Can you briefly introduce yourself and your business?**
+Hey everybody. I'm Mehdi, and I'm a marketing consultant for micro- and small-sized businesses.
+
+**What were the specific challenges or goals you had when you approached Renée Content for content writing services?**
+So, the main challenge that I was facing when I contacted Renée agency was finding people who are both good at English and also can understand the gist of the project very well, and deliver exactly what I wanted in the first place.
+
+**Did Renée Content address those challenges or help you achieve your goals?**
+Yes, I had Renée in a few projects, and in all of them, I felt really comfortable working with them, and the end result was pretty satisfying.
+
+**What results did you experience after working with Renée Content? (e.g., increase in website traffic, higher engagement, etc.)**
+I had somehow an increased traffic since the contents were rich in terms of SEO, and the copy was good too. So, in a few articles that were targeting my bottom funnel, the content and copy were converting pretty good.
+
+**How would you describe the quality of the content provided by Renée Content? Did it meet or exceed your expectations?**
+They are a really young and talented group of people and I would be happy to work with them again in the future.
+
+**How was the overall experience of working with Renée Content? Was the communication smooth and efficient?**
+The overall experience of working with Renée was pretty great, and I was confident that they understand what I need from them in every step of the way. So, it was a really good experience for me on my side.
+
+**What sets Renée Content apart from other content writing service providers you have worked with in the past?**
+I think their pricing is pretty reasonable, and they really deliver what they are promising on their proposal stage.
+
+**Did you feel that Renée Content truly understood your brand's voice and style?**
+Yes, I'm pretty confident that they understood my tone and theme, and it actually didn't take much of a time to get it. So, that's one of the things that made me really happy about working with them.
+
+**How has the content provided by Renée Content contributed to your overall business growth and success?**
+Actually, having high-quality content not only helped my SEO and generating new visitors for my website, but also did a great job in terms of branding and creating valid content that can be looked upon as a reference, really.
+
+**Would you recommend Renée Content to other businesses looking for content writing services? If so, why?**
+I definitely recommend using Renée agency services as they give you an overally good experience of collaboration, and also they understand the needs of the clients and the needs of the project pretty well.`
+      },
     },
     {
       title: "Digital Marketing Agency",
