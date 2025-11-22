@@ -114,7 +114,9 @@ const Testimonials = () => {
                     {clientLogos.map((logo, index) => (
                       <div
                         key={`${setIndex}-${index}`}
-                        className="flex items-center justify-center h-20 w-52 flex-shrink-0 hover:scale-110 transition-transform duration-300"
+                        className={`flex items-center justify-center h-20 w-52 flex-shrink-0 hover:scale-110 transition-transform duration-300 ${
+                          logo.alt === "WP SMS" || logo.alt === "Lorenzo CPA" ? "px-8" : ""
+                        }`}
                       >
                         <img 
                           src={logo.src} 
