@@ -90,6 +90,12 @@ export default function Work() {
       description: "Created e-commerce content strategy increasing website traffic by 38% and conversion rate by 23%.",
       results: "38% traffic growth",
     },
+    {
+      title: "C-Level Executives, Coaches, and Speakers",
+      category: "Ghostwriting",
+      description: "Ghostwrote thought leadership content for C-level executives, coaches, and speakers to build their personal brands.",
+      results: "Personal brand authority established",
+    },
   ];
 
   const selectedWorkByCategory = {
@@ -181,6 +187,14 @@ export default function Work() {
         results: "User onboarding improved",
       },
     ],
+    "Ghostwriting": [
+      {
+        title: "Executive Thought Leadership",
+        category: "Ghostwriting",
+        description: "Ghostwrote LinkedIn posts, articles, and keynote content for C-level executives, coaches, and speakers.",
+        results: "Brand authority enhanced",
+      },
+    ],
     "Miscellaneous": [
       {
         title: "B2B Newsletter",
@@ -249,6 +263,7 @@ export default function Work() {
                 <TabsTrigger value="Conversion Rate Optimization (CRO)" className="font-primary text-xs md:text-sm">CRO</TabsTrigger>
                 <TabsTrigger value="User Behavior" className="font-primary text-xs md:text-sm">User Behavior</TabsTrigger>
                 <TabsTrigger value="Software" className="font-primary text-xs md:text-sm">Software</TabsTrigger>
+                <TabsTrigger value="Ghostwriting" className="font-primary text-xs md:text-sm">Ghostwriting</TabsTrigger>
                 <TabsTrigger value="Miscellaneous" className="font-primary text-xs md:text-sm">Miscellaneous</TabsTrigger>
               </TabsList>
 
