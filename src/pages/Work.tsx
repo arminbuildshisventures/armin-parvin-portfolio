@@ -75,12 +75,12 @@ export default function Work() {
     {
       title: "Cloudzy",
       category: "Technical Content",
-      description: "Wrote technical blog posts achieving #1 rankings and position zero on Google for target keywords.",
-      results: "#1 Google rankings",
-      challenge: "Cloudzy needed to improve their organic search visibility in a competitive cloud hosting market. Their existing content wasn't ranking well, and they were losing potential customers to competitors who dominated the search results.",
-      process: "Researched high-value keywords with commercial intent. Created in-depth technical blog posts that provided genuine value to readers while incorporating SEO best practices. Focused on comprehensive coverage of topics, proper heading structure, internal linking, and user experience. Ensured technical accuracy while maintaining readability.",
-      outcome: "Achieved #1 rankings and featured snippets (position zero) on Google for multiple target keywords. Organic traffic increased significantly, leading to more qualified leads. The technical blog posts became valuable resources frequently shared within the cloud hosting community.",
-      images: ["/placeholder.svg"],
+      description: "Cloudzy is a VPS and Cloud Service Provider serving hundreds of thousands of users worldwide. Developed technical blog content, knowledge base, and landing pages to maximize conversion rates and website visitors.",
+      results: "Technical Articles Written: 23+ | Minutes Time on Page: 13+ | Landing Pages Copy Developed: 37+ | Better SERP Position: 7X | Conversion Rates: 5X | Users Acquired: 2,360+",
+      challenge: "Cloudzy is a VPS and Cloud Service Provider serving hundreds of thousands of users worldwide. They needed to improve their organic search visibility and conversion rates in a competitive cloud hosting market. I was responsible for developing their technical blog content, knowledge base, and landing pages and webpages copy to ensure the maximum conversion rate.",
+      process: "I used winning copywriting and storytelling techniques to maximize Cloudzy's website visitors, conversion rates, and added revenue. Researched high-value keywords with commercial intent and created in-depth technical blog posts that provided genuine value to readers while incorporating SEO best practices. Focused on comprehensive coverage of topics, proper heading structure, internal linking, and user experience. Ensured technical accuracy while maintaining readability. Developed landing page copy optimized for conversions.",
+      outcome: "Achieved significant improvements across all metrics: wrote 23+ technical articles with an average time on page of 13+ minutes, developed copy for 37+ landing pages and webpages, improved SERP position by 7X, increased conversion rates by 5X, and helped acquire 2,360+ new users. The technical blog posts became valuable resources frequently shared within the cloud hosting community.",
+      images: [],
     },
     {
       title: "WP SMS Pro",
