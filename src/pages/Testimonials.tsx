@@ -112,20 +112,12 @@ const Testimonials = () => {
                 {[...Array(3)].map((_, setIndex) => (
                   <div key={setIndex} className="flex gap-16 flex-shrink-0 animate-marquee">
                     {clientLogos.map((logo, index) => (
-                  <div
-                    key={`${setIndex}-${index}`}
-                    className="flex items-center justify-center h-20 w-52 flex-shrink-0 hover:scale-110 transition-transform duration-300"
-                  >
-                    <img 
-                      src={logo.src} 
-                      alt={logo.alt} 
-                      className={`w-auto object-contain brightness-0 invert ${
-                        logo.alt === "WP SMS" || logo.alt === "Lorenzo CPA" 
-                          ? "h-10" 
-                          : "h-14"
-                      }`} 
-                    />
-                  </div>
+                      <div
+                        key={`${setIndex}-${index}`}
+                        className="flex items-center justify-center h-20 w-52 flex-shrink-0 hover:scale-110 transition-transform duration-300"
+                      >
+                        <img src={logo.src} alt={logo.alt} className="h-14 w-auto object-contain brightness-0 invert" />
+                      </div>
                     ))}
                   </div>
                 ))}
