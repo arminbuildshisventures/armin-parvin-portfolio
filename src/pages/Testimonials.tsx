@@ -22,7 +22,7 @@ import avatar13 from "@/assets/testimonials/avatar-13.png";
 import masoudRezaei from "@/assets/testimonials/masoud-rezaei.png";
 import shadiAvatar from "@/assets/testimonials/shadi-avatar.png";
 import lorenzoLogo from "@/assets/clients/LorenzoLogo.png";
-import rahmaniniaLogo from "@/assets/clients/rahmaninia-logo.png";
+import rahmaniniaLogo from "@/assets/clients/Rahmaninia Logo 1.png";
 import wtlLogo from "@/assets/clients/WTL.png";
 import bsuiteLogo from "@/assets/clients/bsuite-logo.svg";
 import citronityLogo from "@/assets/clients/citronity.svg";
