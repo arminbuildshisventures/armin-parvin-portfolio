@@ -26,11 +26,11 @@ export function Header() {
             <Link to="/work" className="font-secondary text-sm hover:text-accent transition-colors">
               Work
             </Link>
-            <Link to="/insights" className="font-secondary text-sm hover:text-accent transition-colors">
-              Insights
-            </Link>
             <Link to="/testimonials" className="font-secondary text-sm hover:text-accent transition-colors">
               Testimonials
+            </Link>
+            <Link to="/insights" className="font-secondary text-sm hover:text-accent transition-colors">
+              Insights
             </Link>
             <Link to="/contact" className="font-secondary text-sm hover:text-accent transition-colors">
               Contact
@@ -76,18 +76,18 @@ export function Header() {
               Work
             </Link>
             <Link 
-              to="/insights" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="block w-full text-left font-secondary text-sm hover:text-accent transition-colors"
-            >
-              Insights
-            </Link>
-            <Link 
               to="/testimonials" 
               onClick={() => setMobileMenuOpen(false)}
               className="block w-full text-left font-secondary text-sm hover:text-accent transition-colors"
             >
               Testimonials
+            </Link>
+            <Link 
+              to="/insights" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block w-full text-left font-secondary text-sm hover:text-accent transition-colors"
+            >
+              Insights
             </Link>
             <Link 
               to="/contact" 
