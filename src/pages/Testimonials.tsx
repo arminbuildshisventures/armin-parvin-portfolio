@@ -114,7 +114,7 @@ const Testimonials = () => {
                     {clientLogos.map((logo, index) => (
                       <div
                         key={`${setIndex}-${index}`}
-                        className="flex items-center justify-center h-20 w-auto flex-shrink-0 hover:scale-110 transition-transform duration-300"
+                        className="flex items-center justify-center h-20 w-52 flex-shrink-0 hover:scale-110 transition-transform duration-300"
                       >
                         <img src={logo.src} alt={logo.alt} className="h-14 w-auto object-contain brightness-0 invert" />
                       </div>
