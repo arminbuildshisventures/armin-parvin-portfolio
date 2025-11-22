@@ -37,7 +37,7 @@ export default function Work() {
     {
       title: "Convert.com",
       category: "Content Marketing",
-      description: "Created bottom-of-funnel content strategy and production to establish brand presence in SERPs for new features.",
+      description: "Created bottom-of-funnel content strategy and wrote multi-perspective articles to establish brand presence in SERPs for new features.",
       results: "SERP Rankings Achieved | Organic Traffic Increased | Brand Recognition Established",
       challenge: "Convert.com needed to establish a strong brand presence in search results for their brand new features and seed Convert's name in the SERPs. The challenge was creating content that would rank well while also providing value to potential customers at the bottom of the funnel. They specifically needed multi-perspective, journalistic articles about a new space called Full-Stack Experimentation.",
       process: "Developed a comprehensive content strategy focusing on feature-specific content and Full-Stack Experimentation thought leadership. Conducted keyword research, competitor analysis, and created detailed content briefs. Worked closely with the product team to understand technical specifications and translated them into accessible, SEO-optimized content. Produced multi-perspective, journalistic articles that positioned Convert as leaders in the Full-Stack Experimentation space.",
