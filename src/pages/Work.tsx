@@ -60,7 +60,7 @@ export default function Portfolio() {
         <div className="absolute inset-0 bg-background/80" />
         
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Portfolio</h1>
+          <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Work</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <PixelCard key={index}>
