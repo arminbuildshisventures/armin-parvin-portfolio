@@ -10,6 +10,7 @@ import roomvuResults2 from "@/assets/work/roomvu-results-2.jpg";
 import roomvuResults3 from "@/assets/work/roomvu-results-3.jpg";
 import watchthemLiveResults1 from "@/assets/work/watchthemlive-results-1.jpg";
 import trinaMoitra from "@/assets/testimonials/trina-moitra.png";
+import parandSh from "@/assets/testimonials/parand-sh.png";
 import avatar7 from "@/assets/testimonials/avatar-7.png";
 import { Star } from "lucide-react";
 
@@ -156,30 +157,38 @@ export default function Work() {
       process: "Developed dual-audience content strategy addressing both brands and influencers. Created launch materials including website copy, pitch decks, and educational resources. Produced thought leadership content about influencer marketing trends. Developed case studies and success stories as the platform gained traction.",
       outcome: "Successfully launched the platform with strong initial adoption from both sides. The content effectively communicated value propositions to different audience segments. Platform grew steadily with content serving as a key driver of user acquisition.",
       images: [],
+      testimonial: {
+        name: "Parand Sh.",
+        title: "Business Owner",
+        company: "",
+        avatar: parandSh,
+        rating: 5,
+        text: "The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%. The quality of the delivered content has been excellent. It has definitely exceeded my expectations. Our collaboration has been an absolute pleasure, a decision I would make over and over again. They made sure that all my requirements were understood fully and executed flawlessly."
+      },
       interview: {
         url: "https://www.youtube.com/watch?v=d6C_mqxejlU",
-        content: `Can you briefly introduce yourself and your business?
+        content: `**Can you briefly introduce yourself and your business?**
 Hi, this is Parand and I'm a business owner. I would like to take a moment to share my experience with Renée Content.
 
-What were the specific challenges or goals you had when you approached Renée Content for content writing services?
+**What were the specific challenges or goals you had when you approached Renée Content for content writing services?**
 Before I left the task of content writing to Renée Content, I was facing some challenges in my online business. What I was actually looking for was engaging content in the niche of influencer marketing, but every time I outsourced the task to freelancers, they would just disappoint because as good as they were, they just failed to capture the essence of my business or bring me any closer to my business objectives, not to mention that their content sometimes really lacked the human touch I just really wanted to see.
 
-How did Renée Content address those challenges or help you achieve your goals?
+**How did Renée Content address those challenges or help you achieve your goals?**
 When I first approached Renée Content, I shared my concerns and expectactions, and ever since, they've done everything within their means to help me overcome the obstacles.
 
-What results did you experience after working with Renée Content? (e.g., increase in website traffic, higher engagement, etc.)
+**What results did you experience after working with Renée Content? (e.g., increase in website traffic, higher engagement, etc.)**
 The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%.
 
-How would you describe the quality of the content provided by Renée Content? Did it meet or exceed your expectations?
+**How would you describe the quality of the content provided by Renée Content? Did it meet or exceed your expectations?**
 The quality of the delivered content has been excellent. It has definitely exceeded my expectations.
 
-How was the overall experience of working with Renée Content? Was the communication smooth and efficient?
+**How was the overall experience of working with Renée Content? Was the communication smooth and efficient?**
 In general, working with Renée Content has been an absolute pleasure, a decision I would make over and over again. The communication was smooth and efficient and they made sure that all my requirements were understood fully and executed flawlessly.
 
-What sets Renée Content apart from other content writing service providers you have worked with in the past?
+**What sets Renée Content apart from other content writing service providers you have worked with in the past?**
 The personalized experience alongside the highly customized content that reflected my business values and resonated with my audience really sets them apart from every other service I have tried.
 
-Would you recommend Renée Content to other businesses looking for content writing services?
+**Would you recommend Renée Content to other businesses looking for content writing services?**
 Given the quality of the service, I would definitely recommend Renée Content to any business seeking content writing services, and I would definitely be coming back for more.`
       },
     },
@@ -518,7 +527,7 @@ Given the quality of the service, I would definitely recommend Renée Content to
                 {selectedCaseStudy.interview && (
                   <div className="space-y-3">
                     <h3 className="font-primary text-xl text-accent pixel-border inline-block px-3 py-1 bg-accent/10">
-                      Interview
+                      Full Interview
                     </h3>
                     <div className="pixel-border p-6 bg-secondary/5 space-y-4">
                       <a 
@@ -531,9 +540,15 @@ Given the quality of the service, I would definitely recommend Renée Content to
                       </a>
                       {selectedCaseStudy.interview.content && (
                         <div className="space-y-3">
-                          <div className={`font-secondary text-sm leading-relaxed whitespace-pre-line ${!showFullInterview ? 'line-clamp-6' : ''}`}>
-                            {selectedCaseStudy.interview.content}
-                          </div>
+                          <div 
+                            className={`font-secondary text-sm leading-relaxed whitespace-pre-line ${!showFullInterview ? 'line-clamp-6' : ''}`}
+                            dangerouslySetInnerHTML={{
+                              __html: selectedCaseStudy.interview.content.replace(
+                                /\*\*(.*?)\*\*/g,
+                                '<strong>$1</strong>'
+                              )
+                            }}
+                          />
                           <button
                             onClick={() => setShowFullInterview(!showFullInterview)}
                             className="font-secondary text-sm text-accent hover:underline"
