@@ -118,13 +118,7 @@ const Testimonials = () => {
                           logo.alt === "WP SMS" || logo.alt === "Lorenzo CPA" ? "px-10" : ""
                         }`}
                       >
-                        <img
-                          src={logo.src}
-                          alt={logo.alt}
-                          className={`w-auto object-contain brightness-0 invert ${
-                            logo.alt === "WP SMS" || logo.alt === "Lorenzo CPA" ? "h-10" : "h-14"
-                          }`}
-                        />
+                        <img src={logo.src} alt={logo.alt} className={`w-auto object-contain brightness-0 invert`} />
                       </div>
                     ))}
                   </div>
