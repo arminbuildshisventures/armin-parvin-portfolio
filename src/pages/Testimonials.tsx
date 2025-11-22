@@ -356,7 +356,7 @@ const Testimonials = () => {
                   </div>
                   <Quote className="w-6 h-6 text-accent mb-3 opacity-50" />
                   <p className="text-foreground mb-4 flex-grow font-secondary text-sm">"{testimonial.content}"</p>
-                  {testimonial.caseStudyUrl && testimonial.caseStudyUrl !== "#" && (
+                  {testimonial.caseStudyUrl && (
                     <a 
                       href={testimonial.caseStudyUrl}
                       className="mt-3 inline-block text-accent hover:text-accent/80 font-primary text-xs font-semibold transition-colors"
