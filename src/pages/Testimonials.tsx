@@ -81,6 +81,7 @@ const Testimonials = () => {
         "Armin impressed me with his attention to detail & his knowledge of the industry from day 1. We needed someone to take on the production of bottom-of-the-funnel focused content and to seed Convert's name in the SERPs for our brand new features. Our collaboration was very pleasant. Renee Content has a good process and they really give 110% to understand your requirements. Thank you for being such consummate professionals!",
       rating: 5,
       avatar: trinaMoitra,
+      caseStudyUrl: "#",
     },
     {
       name: "Parand Sh.",
