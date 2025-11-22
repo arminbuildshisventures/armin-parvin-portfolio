@@ -14,6 +14,7 @@ import parandSh from "@/assets/testimonials/parand-sh.png";
 import mehdiRahmaninia from "@/assets/testimonials/avatar-3.png";
 import niloofar from "@/assets/testimonials/avatar-6.png";
 import avatar7 from "@/assets/testimonials/avatar-7.png";
+import mahmoudValanejad from "@/assets/testimonials/avatar-9.png";
 import { Star } from "lucide-react";
 
 interface CaseStudy {
@@ -292,11 +293,51 @@ I can't recommend Renée Content enough. If you're looking for content writing s
       title: "MV Production",
       category: "Creative Content",
       description: "Developed creative content and copy for media production company brand storytelling.",
-      results: "Brand story developed",
-      challenge: "MV Production needed to articulate their unique creative vision and attract high-end clients. Their existing content didn't capture the quality and creativity of their work.",
-      process: "Developed brand storytelling approach that highlighted their creative process and portfolio. Crafted compelling project descriptions and case studies. Created website copy that balanced artistic vision with commercial appeal. Wrote client-facing materials that demonstrated production expertise.",
-      outcome: "Successfully communicated MV Production's creative capabilities through engaging brand storytelling. The new content attracted higher-quality client inquiries and improved conversion rates. Portfolio presentations became more effective at closing deals.",
-      images: ["/placeholder.svg"],
+      results: "Business Growth: 105% | Website Traffic Increased 3X | Leads Multiplied 3X",
+      challenge: "MV Production, a media creation company specializing in film scores, background music, jingles, and advertisement media, faced significant challenges dealing with content creation, website traffic, and producing quality material for customers. These content and traffic issues were impacting their ability to attract and convert clients effectively.",
+      process: "Leveraged deep expertise in content marketing to address the challenges with precision. Quickly identified the core issues and implemented strategic content solutions. Created engaging content that showcased MV Production's creative capabilities across film scoring, music production, and media creation. Developed content strategy focused on demonstrating their expertise and attracting the right clientele. Provided exceptional customer service support throughout the process, treating the client's business with care and attention to detail.",
+      outcome: "The results were astonishing. Website traffic increased significantly, leads multiplied three times more than expected, and the business experienced 105% growth. The quality content exceeded expectations and effectively communicated MV Production's value proposition. The comprehensive content strategy successfully attracted higher-quality client inquiries and contributed to substantial business growth and success.",
+      images: [],
+      testimonial: {
+        name: "Mahmoud Valanejad",
+        title: "Media Creation Company Owner",
+        company: "MV Production",
+        avatar: mahmoudValanejad,
+        rating: 5,
+        text: "I think they really care more about your business than you do. They are really experienced and they have a great customer support. You know, you can leave your business to them without any concern, and that's the point."
+      },
+      interview: {
+        url: "https://www.youtube.com/watch?v=-jQwk7mCeyA",
+        content: `**Can you briefly introduce yourself and your business?**
+My name is Mahmoud Valanejad, I'm the founder and owner of MV Production company. I have a media creation company. We do film score stuff, background music stuff, and jingles, and many other stuff in relation with media and advertisement.
+
+**What were the specific challenges or goals you had when you approached Renée Content for content writing services?**
+To be honest, it was really hard to deal with the content and with site traffic and producing good stuff for customers. And actually, these were our main issues in the company and that was why we contacted the Renée Content creation company.
+
+**How did Renée Content address those challenges or help you achieve your goals?**
+I think they're really experienced in what they're doing. Actually, they know the tricks of the rope, and they address the issues within a glance, and they will help me.
+
+**What results did you experience after working with Renée Content? (e.g., increase in website traffic, higher engagement, etc.)**
+The results were really astonishing, you know, the website traffic increased, we have a lot of more leads, and actually, they multiplied the leads and customers and traffic three times more than what we expected, and that was really great. I appreciate it.
+
+**How would you describe the quality of the content provided by Renée Content? Did it meet or exceed your expectations?**
+Briefly I can say, it was great, and yes, it exceed our expectation. They know what they're doing. That's all.
+
+**How was the overall experience of working with Renée Content? Was the communication smooth and efficient?**
+It was really pleasant, you know, the customer service support. I think they really care more about your business than you do. And that's really a great point.
+
+**What sets Renée Content apart from other content writing service providers you have worked with in the past?**
+They're really smart and responsive, and more important, they pay attention to any aspects and I think that's all you need.
+
+**Did you feel that Renée Content truly understood your brand's voice and style?**
+Of course they did. Otherwise, I wouldn't ask them for help.
+
+**How has the content provided by Renée Content contributed to your overall business growth and success?**
+It was efficient and very effective, and it encompassed our desire and every aspects that a business needs. And actually, it resulted in 105% of growth in the company, and it was great.
+
+**Would you recommend Renée Content to other businesses looking for content writing services? If so, why?**
+Definitely I recommend it, actually because they're really experienced and they have a great customer support, and, you know, you can leave your business to them without any concern. And that's the point, I think.`
+      },
     },
     {
       title: "Boutique",
