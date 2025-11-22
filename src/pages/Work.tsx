@@ -104,7 +104,7 @@ export default function Work() {
     },
     {
       title: "Citronity",
-      category: "Email Marketing",
+      category: "Digital Marketing",
       description: "citronity is a custom software development company offering software development, Team as a Service (TaaS), MVP building, product discovery, and UI/UX design. Generated and nurtured leads through email marketing to book sales calls.",
       results: "Email Open Rate Increase: 40% | Email CTOR Increase: 10% | Emails Crafted: 40+ | ROI: 4X",
       challenge: "citronity is a custom software development company that offers software development, Team as a Service (TaaS), MVP building, product discovery, and UI/UX design to businesses of all sorts. citronity lacked a cohesive digital marketing presence across channels. They needed an integrated strategy to improve brand visibility and generate quality leads across multiple platforms. I was responsible for their email marketing efforts, generating and nurturing leads, and booking sales calls.",
@@ -124,7 +124,7 @@ export default function Work() {
     },
     {
       title: "WatchThemLive",
-      category: "Email Marketing",
+      category: "Digital Marketing",
       description: "Executed email campaigns increasing open rates by 50%+ and click-through rates by 23%+.",
       results: "50%+ open rate increase",
       challenge: "WatchThemLive had low email engagement rates and struggled to convert subscribers into active users. Their email campaigns weren't delivering the expected ROI.",
