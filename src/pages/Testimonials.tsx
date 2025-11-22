@@ -353,17 +353,17 @@ const Testimonials = () => {
                     <div>
                       <p className="font-primary font-bold text-foreground">{testimonial.name}</p>
                       <p className="text-xs text-muted-foreground font-secondary">{testimonial.role}</p>
+                      <div className="flex gap-1 mt-1">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <span key={i} className="text-accent text-sm">
+                            ★
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                   <Quote className="w-6 h-6 text-accent mb-3 opacity-50" />
                   <p className="text-foreground mb-4 flex-grow font-secondary text-sm">"{testimonial.content}"</p>
-                  <div className="flex gap-1 mt-auto">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-accent">
-                        ★
-                      </span>
-                    ))}
-                  </div>
                   {testimonial.caseStudyUrl && (
                     <a 
                       href={testimonial.caseStudyUrl}
