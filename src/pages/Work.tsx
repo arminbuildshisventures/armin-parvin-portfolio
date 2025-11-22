@@ -6,22 +6,88 @@ import workBg from "@/assets/work-bg-pixel.png";
 export default function Work() {
   const caseStudies = [
     {
-      title: "E-commerce Email Campaign",
+      title: "Convert.com",
+      category: "Content Marketing",
+      description: "Created bottom-of-funnel content strategy and production to establish brand presence in SERPs for new features.",
+      results: "Industry recognition achieved",
+    },
+    {
+      title: "Roomvu",
       category: "Email Marketing",
-      description: "Designed and executed a 12-email sequence that increased customer retention by 45% for a fashion retailer.",
-      results: "45% increase in retention",
+      description: "Led email marketing campaigns that increased user registration by 194% through strategic automation and optimization.",
+      results: "194% registration increase",
     },
     {
-      title: "SaaS Blog Strategy",
-      category: "Content Writing",
-      description: "Created a content strategy and wrote 24 blog posts that drove 300% growth in organic traffic over 6 months.",
-      results: "300% traffic growth",
+      title: "Nordic Defender",
+      category: "Product Marketing",
+      description: "Conducted market analysis and created content strategy to position cybersecurity products in competitive landscape.",
+      results: "Market positioning established",
     },
     {
-      title: "Product Launch Copy",
+      title: "Cloudzy",
+      category: "Technical Content",
+      description: "Wrote technical blog posts achieving #1 rankings and position zero on Google for target keywords.",
+      results: "#1 Google rankings",
+    },
+    {
+      title: "WP SMS Pro",
+      category: "Content Strategy",
+      description: "Developed comprehensive content strategy to drive product awareness and user engagement.",
+      results: "Brand awareness increased",
+    },
+    {
+      title: "LorenzoCPA",
       category: "Copywriting",
-      description: "Crafted landing page and ad copy for a tech startup's product launch, resulting in $500K revenue in the first month.",
-      results: "$500K first month revenue",
+      description: "Crafted professional service copy and content to establish authority in accounting and tax services.",
+      results: "Authority positioning",
+    },
+    {
+      title: "Citronity",
+      category: "Digital Marketing",
+      description: "Developed digital marketing strategies for brand visibility and lead generation across channels.",
+      results: "Multi-channel presence",
+    },
+    {
+      title: "BSuite365",
+      category: "B2B Content",
+      description: "Created B2B content marketing materials to drive enterprise client engagement and conversions.",
+      results: "Enterprise engagement",
+    },
+    {
+      title: "WatchThemLive",
+      category: "Email Marketing",
+      description: "Executed email campaigns increasing open rates by 50%+ and click-through rates by 23%+.",
+      results: "50%+ open rate increase",
+    },
+    {
+      title: "Influencer Marketing Business",
+      category: "Content Strategy",
+      description: "Developed content strategy and materials for influencer marketing platform launch and growth.",
+      results: "Platform launch success",
+    },
+    {
+      title: "Rahmaninia Digital Marketing Agency",
+      category: "Agency Content",
+      description: "Created comprehensive content suite for digital marketing agency brand positioning.",
+      results: "Brand positioning achieved",
+    },
+    {
+      title: "Digital Marketing Agency",
+      category: "Content Marketing",
+      description: "Executed content marketing strategy to establish thought leadership and drive client acquisition.",
+      results: "Thought leadership established",
+    },
+    {
+      title: "MV Production",
+      category: "Creative Content",
+      description: "Developed creative content and copy for media production company brand storytelling.",
+      results: "Brand story developed",
+    },
+    {
+      title: "Boutique",
+      category: "E-commerce Content",
+      description: "Created e-commerce content strategy increasing website traffic by 38% and conversion rate by 23%.",
+      results: "38% traffic growth",
     },
   ];
 
