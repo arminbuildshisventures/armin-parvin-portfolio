@@ -114,7 +114,7 @@ export default function Work() {
     },
     {
       title: "BSuite365",
-      category: "Technical Content Writing",
+      category: "Technical Content",
       description: "BSUITE365 is a team of Microsoft Excel Consultants and Programmers offering tailored solutions for business efficiency and accurate reporting. Wrote technical blog content covering Excel tips, tricks, and complexities.",
       results: "Technical Articles Written: 50+ | Minutes Time on Page: 8+ | Better SERP Position: 2X | Conversion Rates: 5X",
       challenge: "BSUITE365 is a team of Microsoft Excel Consultants and Programmers that offer tailored solutions to help businesses and brands ensure efficiency and accurate reporting. BSuite365 struggled to engage enterprise clients with their existing content. They needed sophisticated B2B content that would resonate with decision-makers and demonstrate clear ROI. I was responsible for their technical blog writing that covered a wide range of topics related to Microsoft Excel tips, tricks, and complexities.",
