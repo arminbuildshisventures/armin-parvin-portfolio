@@ -121,7 +121,7 @@ export default function About() {
               </div>
 
               <div className="space-y-6">
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:-translate-y-1 transition-all">
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="font-primary text-xl">Head of Content</h3>
                     <span className="font-secondary text-sm text-muted-foreground">Mar. 2023 — Nov. 2025</span>
@@ -142,7 +142,7 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:-translate-y-1 transition-all">
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="font-primary text-xl">Content Marketing Mentor</h3>
                     <span className="font-secondary text-sm text-muted-foreground">Mar. 2023 — Nov. 2025</span>
@@ -159,7 +159,7 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:-translate-y-1 transition-all">
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="font-primary text-xl">Guest Speaker</h3>
                     <span className="font-secondary text-sm text-muted-foreground">Apr. 2025</span>
@@ -176,7 +176,7 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:-translate-y-1 transition-all">
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="font-primary text-xl">Senior Email Marketing Manager</h3>
                     <span className="font-secondary text-sm text-muted-foreground">Nov. 2023 — Jan. 2025</span>
@@ -199,7 +199,7 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:-translate-y-1 transition-all">
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="font-primary text-xl">Digital Marketing Manager</h3>
                     <span className="font-secondary text-sm text-muted-foreground">Jun. 2023 — Sep. 2023</span>
@@ -217,7 +217,7 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:-translate-y-1 transition-all">
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex justify-between items-start gap-4 mb-4">
                     <h3 className="font-primary text-xl flex-1">
                       Product Marketing Manager & Technical Content Specialist
@@ -246,7 +246,7 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:-translate-y-1 transition-all">
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="font-primary text-xl">Technical Content Writer</h3>
                     <span className="font-secondary text-sm text-muted-foreground">Apr. 2022 — Sep. 2022</span>
@@ -264,7 +264,7 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:-translate-y-1 transition-all">
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="font-primary text-xl">Content Marketer & Email Marketer</h3>
                     <span className="font-secondary text-sm text-muted-foreground">Sep. 2021 — Apr. 2022</span>
@@ -292,7 +292,7 @@ export default function About() {
               </div>
 
               <div className="space-y-6">
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:-translate-y-1 transition-all">
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <h3 className="font-primary text-xl mb-2">Kharazmi University</h3>
                   <p className="font-primary text-secondary mb-2">Bachelor of Arts - BA, English Language and Literature</p>
                   <p className="font-secondary text-sm text-muted-foreground mb-4">2017 - 2021</p>
@@ -444,7 +444,7 @@ export default function About() {
               </div>
 
               <div className="space-y-4">
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:-translate-y-1 transition-all flex items-center gap-4">
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all flex items-center gap-4">
                   <Award className="w-6 h-6 text-accent" />
                   <div className="flex-1">
                     <p className="font-secondary">
@@ -454,7 +454,7 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:-translate-y-1 transition-all flex items-center gap-4">
+                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all flex items-center gap-4">
                   <Award className="w-6 h-6 text-accent" />
                   <div className="flex-1">
                     <p className="font-secondary">
