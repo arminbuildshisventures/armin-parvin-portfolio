@@ -167,9 +167,9 @@ const Testimonials = () => {
           className="absolute inset-0 opacity-20 pointer-events-none"
           style={{
             backgroundImage: `url(${testimonialsBg})`,
-            backgroundSize: 'cover',
+            backgroundSize: 'auto',
             backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
+            backgroundRepeat: 'repeat',
           }}
         />
         <Header />
