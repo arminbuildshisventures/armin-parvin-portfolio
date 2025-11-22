@@ -84,7 +84,7 @@ export default function Work() {
     },
     {
       title: "WP SMS Pro",
-      category: "Content Strategy",
+      category: "Blog Content Writing",
       description: "WP SMS Pro is a subsidiary of VeronaLabs offering an all-in-one WordPress plugin for SMS Marketing. Developed blog content writing to increase website visitors and convert them into loyal users.",
       results: "Technical Articles Written: 24+ | Minutes Time on Page: 6.5+ | Better SERP Position: 3X | Conversion Rates: 3.2X",
       challenge: "WP SMS Pro is a subsidiary of the parent company VeronaLabs. They offer an all-in-one WordPress plugin that handles SMS Marketing for businesses, helping them grow efficiently. WP SMS Pro struggled with low brand awareness in a niche market. They needed a content strategy that would educate their target audience about SMS marketing for WordPress while driving product adoption. I was responsible for their blog content writing, increasing their website visitors, and converting the visitors into loyal users.",
