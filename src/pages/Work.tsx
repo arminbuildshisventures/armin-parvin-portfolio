@@ -8,9 +8,6 @@ import workBg from "@/assets/work-bg-pixel.png";
 import roomvuResults1 from "@/assets/work/roomvu-results-1.png";
 import roomvuResults2 from "@/assets/work/roomvu-results-2.jpg";
 import roomvuResults3 from "@/assets/work/roomvu-results-3.jpg";
-import nordicResults1 from "@/assets/work/nordic-defender-results-1.jpg";
-import nordicResults2 from "@/assets/work/nordic-defender-results-2.jpg";
-import nordicResults3 from "@/assets/work/nordic-defender-results-3.jpg";
 
 interface CaseStudy {
   title: string;
@@ -55,7 +52,7 @@ export default function Work() {
       challenge: "Nordic Defender is an all-in-one cybersecurity solution provider that serves organizations, companies, and businesses in different industries and sizes. Nordic Defender entered a highly competitive cybersecurity market with established players. They needed to differentiate their products and establish credibility quickly to gain market share. I was responsible for all marketing channels related to their Next-Gen Pentest Solution, including email marketing, content writing, landing page writing, white paper writing, and sales document writing.",
       process: "I initiated and conducted in-depth market analysis proactively to identify trends and competitive differentiators. Partnered with cross-functional teams to simplify complex cybersecurity concepts into white papers, press releases, case studies, blogs, articles, emails, LinkedIn posts, webpages, and landing pages. I set up their email marketing system and used winning copywriting and storytelling techniques to maximize Nordic Defender's ROI and added revenue.",
       outcome: "Successfully positioned Nordic Defender as a credible player in the cybersecurity space. Achieved 30% increase in email open rates and 10% improvement in email CTOR. Created 100+ emails, 50+ technical articles, 10+ sales documents, and 43+ landing pages. The content strategy generated qualified leads and established the brand as a thought leader. Market awareness increased significantly within the first six months.",
-      images: [nordicResults2, nordicResults1, nordicResults3],
+      images: [],
     },
     {
       title: "Cloudzy",
