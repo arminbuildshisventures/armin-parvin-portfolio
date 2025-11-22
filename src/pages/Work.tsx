@@ -152,10 +152,10 @@ export default function Work() {
       title: "Influencer Marketing Business",
       category: "Content Marketing",
       description: "Developed content strategy and materials for influencer marketing platform launch and growth.",
-      results: "Platform launch success",
+      results: "Website Traffic Increase: 38% | Conversion Rate Improvement: 23%",
       challenge: "Launching a new influencer marketing platform required establishing credibility and attracting both brands and influencers to a two-sided marketplace. The platform needed content that would appeal to both audiences simultaneously.",
       process: "Developed dual-audience content strategy addressing both brands and influencers. Created launch materials including website copy, pitch decks, and educational resources. Produced thought leadership content about influencer marketing trends. Developed case studies and success stories as the platform gained traction.",
-      outcome: "Successfully launched the platform with strong initial adoption from both sides. The content effectively communicated value propositions to different audience segments. Platform grew steadily with content serving as a key driver of user acquisition.",
+      outcome: "The content helped connect with the target audience effectively, resulting in a 38% boost in website traffic and a 23% improvement in conversion rate. Successfully launched the platform with strong initial adoption from both sides. The content effectively communicated value propositions to different audience segments, and the platform grew steadily with content serving as a key driver of user acquisition.",
       images: [],
       testimonial: {
         name: "Parand Sh.",
