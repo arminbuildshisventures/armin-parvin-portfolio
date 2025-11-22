@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Quote } from "lucide-react";
 import { PixelCard } from "@/components/PixelCard";
+import testimonialsBg from "@/assets/testimonials-bg-pixel.png";
 import lorenzoLogo from "@/assets/clients/LorenzoLogo.png";
 import rahmaniniaLogo from "@/assets/clients/Rahmaninia Logo 1.png";
 import wtlLogo from "@/assets/clients/WTL.png";
@@ -82,7 +83,16 @@ const Testimonials = () => {
     },
   ];
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-background relative">
+      <div 
+        className="fixed inset-0 opacity-10 pointer-events-none"
+        style={{
+          backgroundImage: `url(${testimonialsBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
       <Header />
 
       <main className="flex-grow container mx-auto px-4 pt-32 pb-16">
