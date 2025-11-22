@@ -152,7 +152,7 @@ const Testimonials = () => {
       role: "Founder and CEO, Casco Salon",
       content: "I'm very happy to meet Armin, and the mentoring session was enjoyable for me because Armin very professionally answered all my questions, examined the hidden aspects of my product, and gave me the best advice for it. I like to keep in touch with him in the future.",
       rating: 5,
-      avatar: avatar7,
+      avatar: avatar8,
       caseStudyUrl: "#",
     },
     {
@@ -160,7 +160,7 @@ const Testimonials = () => {
       role: "Business Design Expert, UI/UX Designer, Digital Marketer",
       content: "Armin is smart and a fast learner. His knowledge in many fields helps him find his way in almost any role you give him. Moreover, Armin's ambition and enthusiasm are absolutely remarkable, which lead him to achieve continued progress. His technical skills, coding knowledge, and brilliant ideas were a great help to the team. Working with Armin on the same team was a great experience.",
       rating: 5,
-      avatar: avatar8,
+      avatar: avatar7,
       caseStudyUrl: "#",
     },
     {
@@ -176,7 +176,7 @@ const Testimonials = () => {
       role: "Product Manager, Cafe Bazaar",
       content: "Armin is a great person with great experience in Copywriting and SEO. I had a good meeting with him. I like to keep in touch with him in the future.",
       rating: 5,
-      avatar: avatar10,
+      avatar: avatar11,
       caseStudyUrl: "#",
     },
     {
@@ -184,7 +184,7 @@ const Testimonials = () => {
       role: "Creative Director",
       content: "My mentorship session with Armin Parvin was incredibly insightful. It illuminated aspects I had overlooked, lighting up the path I thought I already knew.",
       rating: 5,
-      avatar: avatar11,
+      avatar: avatar10,
       caseStudyUrl: "#",
     },
     {
@@ -192,7 +192,7 @@ const Testimonials = () => {
       role: "Business Owner, Boutique",
       content: "In fact, our results were beyond my wildest dreams. Our website traffic skyrocketed, and we witnessed an impressive 3-fold increase in leads. Our content was engaging, informative, and perfectly aligned with our brand's message.",
       rating: 5,
-      avatar: avatar12,
+      avatar: avatar4,
       caseStudyUrl: "#",
     },
     {
