@@ -424,16 +424,27 @@ export default function Work() {
                     <h3 className="font-primary text-xl text-accent pixel-border inline-block px-3 py-1 bg-accent/10">
                       Results
                     </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {selectedCaseStudy.images.map((image, index) => (
-                        <div key={index} className="pixel-border p-2 bg-secondary/10">
-                          <img 
-                            src={image} 
-                            alt={`${selectedCaseStudy.title} result ${index + 1}`}
-                            className="w-full h-auto"
-                          />
+                    <div className="space-y-4">
+                      {selectedCaseStudy.images.length > 1 && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {selectedCaseStudy.images.slice(0, -1).map((image, index) => (
+                            <div key={index} className="pixel-border p-2 bg-secondary/10">
+                              <img 
+                                src={image} 
+                                alt={`${selectedCaseStudy.title} result ${index + 1}`}
+                                className="w-full h-auto"
+                              />
+                            </div>
+                          ))}
                         </div>
-                      ))}
+                      )}
+                      <div className="pixel-border p-2 bg-secondary/10">
+                        <img 
+                          src={selectedCaseStudy.images[selectedCaseStudy.images.length - 1]} 
+                          alt={`${selectedCaseStudy.title} result ${selectedCaseStudy.images.length}`}
+                          className="w-full h-auto"
+                        />
+                      </div>
                     </div>
                   </div>
                 )}
