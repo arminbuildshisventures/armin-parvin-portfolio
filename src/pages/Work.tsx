@@ -36,7 +36,7 @@ export default function Work() {
     },
     {
       title: "Roomvu",
-      category: "Email Marketing",
+      category: "Cold Email Marketing",
       description: "Roomvu is a PropTech platform offering hyper-local real estate video marketing. Through winning email marketing, copywriting, and storytelling techniques, brought them an added client base of 24,000+ users.",
       results: "Email Open Rate Increase: 10% | Email CTOR Increase: 2.5% | Emails Crafted: 1,000+ | Users Acquired: 24,000+",
       challenge: "Roomvu is a PropTech platform that offers hyper-local real estate video marketing. They acquire clients through different processes, including SEO, Cold Emails, paid ads, social media, organic, referrals, and Email Marketing. When we decided to work together, they already had a cold email marketing setup. However, the untapped potential was huge. Roomvu faced low user registration rates and needed to significantly improve conversion through their cold email marketing efforts. The existing campaigns weren't engaging enough and lacked strategic automation.",
