@@ -16,6 +16,9 @@ import avatar7 from "@/assets/testimonials/avatar-7.png";
 import avatar8 from "@/assets/testimonials/avatar-8.png";
 import avatar9 from "@/assets/testimonials/avatar-9.png";
 import avatar10 from "@/assets/testimonials/avatar-10.png";
+import avatar11 from "@/assets/testimonials/avatar-11.png";
+import avatar12 from "@/assets/testimonials/avatar-12.png";
+import avatar13 from "@/assets/testimonials/avatar-13.png";
 import lorenzoLogo from "@/assets/clients/LorenzoLogo.png";
 import rahmaniniaLogo from "@/assets/clients/Rahmaninia Logo 1.png";
 import wtlLogo from "@/assets/clients/WTL.png";
@@ -181,7 +184,7 @@ const Testimonials = () => {
       role: "Creative Director",
       content: "My mentorship session with Armin Parvin was incredibly insightful. It illuminated aspects I had overlooked, lighting up the path I thought I already knew.",
       rating: 5,
-      avatar: avatar1,
+      avatar: avatar11,
       caseStudyUrl: "#",
     },
     {
@@ -189,7 +192,7 @@ const Testimonials = () => {
       role: "Business Owner, Boutique",
       content: "In fact, our results were beyond my wildest dreams. Our website traffic skyrocketed, and we witnessed an impressive 3-fold increase in leads. Our content was engaging, informative, and perfectly aligned with our brand's message.",
       rating: 5,
-      avatar: avatar2,
+      avatar: avatar12,
       caseStudyUrl: "#",
     },
     {
@@ -197,7 +200,7 @@ const Testimonials = () => {
       role: "Founder & Art Director/Designer, Pixel Hangar",
       content: "Armin was great at advising on my content strategy and how to approach new business. I really appreciate the time and I look forward to the next session.",
       rating: 5,
-      avatar: avatar3,
+      avatar: avatar13,
       caseStudyUrl: "#",
     },
     {
