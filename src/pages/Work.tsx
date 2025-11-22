@@ -95,12 +95,12 @@ export default function Work() {
     {
       title: "LorenzoCPA",
       category: "Copywriting",
-      description: "Crafted professional service copy and content to establish authority in accounting and tax services.",
-      results: "Authority positioning",
-      challenge: "LorenzoCPA needed to differentiate themselves in a crowded accounting services market. Their existing website copy didn't effectively communicate their expertise or build trust with potential clients.",
-      process: "Rewrote all website copy with a focus on establishing authority and building client trust. Created service page copy that clearly explained complex tax concepts in accessible language. Developed a professional yet approachable brand voice. Crafted compelling calls-to-action and trust-building elements throughout the site.",
-      outcome: "Successfully positioned LorenzoCPA as a trusted authority in accounting and tax services. The new copy improved website engagement metrics and increased consultation bookings. Client feedback indicated the website now effectively communicated the firm's expertise and professionalism.",
-      images: ["/placeholder.svg"],
+      description: "Lorenzo Abbatiello is a Certified Public Accountant (CPA) who advises clients on tax strategy, including crypto tax. Developed blog content to increase website visitors and convert them into loyal users.",
+      results: "Technical Articles Written: 16+ | Minutes Time on Page: 14+ | Better SERP Position: 2X | Conversion Rates: 3X",
+      challenge: "Lorenzo Abbatiello is a Certified Public Accountant (CPA) who advises clients on tax strategy, including crypto tax. LorenzoCPA needed to differentiate themselves in a crowded accounting services market. Their existing website copy didn't effectively communicate their expertise or build trust with potential clients. I was responsible for their blog content writing, increasing their website visitors, and converting the visitors into loyal users.",
+      process: "I used winning copywriting and storytelling techniques to maximize the time on page and conversion rates of the users. Rewrote all website copy with a focus on establishing authority and building client trust. Created service page copy that clearly explained complex tax concepts in accessible language. Developed a professional yet approachable brand voice. Crafted compelling calls-to-action and trust-building elements throughout the site.",
+      outcome: "Successfully positioned LorenzoCPA as a trusted authority in accounting and tax services. Wrote 16+ technical articles with an average time on page of 14+ minutes, improved SERP position by 2X, and increased conversion rates by 3X. The new copy improved website engagement metrics and increased consultation bookings. Client feedback indicated the website now effectively communicated the firm's expertise and professionalism.",
+      images: [],
     },
     {
       title: "Citronity",
