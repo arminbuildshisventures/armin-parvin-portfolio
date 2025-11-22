@@ -28,7 +28,7 @@ export default function Services() {
   }, {
     icon: PenTool,
     title: "Ghostwriting",
-    description: "Authentic social content that builds your personal brand and grows your following."
+    description: "Authentic social content that builds your personal brand and grows your following on LinkedIn and X."
   }, {
     icon: TrendingUp,
     title: "SEO-Optimized Content Writing",
