@@ -12,6 +12,7 @@ import watchthemLiveResults1 from "@/assets/work/watchthemlive-results-1.jpg";
 import trinaMoitra from "@/assets/testimonials/trina-moitra.png";
 import parandSh from "@/assets/testimonials/parand-sh.png";
 import mehdiRahmaninia from "@/assets/testimonials/avatar-3.png";
+import niloofar from "@/assets/testimonials/avatar-6.png";
 import avatar7 from "@/assets/testimonials/avatar-7.png";
 import { Star } from "lucide-react";
 
@@ -247,11 +248,45 @@ I definitely recommend using Renée agency services as they give you an overally
       title: "Digital Marketing Agency",
       category: "Content Marketing",
       description: "Executed content marketing strategy to establish thought leadership and drive client acquisition.",
-      results: "Thought leadership established",
-      challenge: "The agency needed to establish thought leadership in a crowded market to attract premium clients. Their existing content wasn't positioning them as industry experts or generating quality leads.",
-      process: "Developed thought leadership content strategy focusing on insights and industry trends. Created in-depth articles, research pieces, and commentary on marketing innovations. Established consistent publishing schedule and promoted content across channels. Positioned agency executives as industry voices through bylined articles and speaking opportunities.",
-      outcome: "Successfully established the agency as thought leaders in digital marketing. Content generated consistent flow of inbound leads from qualified prospects. Industry recognition increased with several pieces being featured in major marketing publications.",
+      results: "Leads and Revenue Increase: 480% | Improved Brand Visibility | Enhanced Personal Brand",
+      challenge: "The agency founder struggled to consistently produce engaging content that truly resonated with her audience. As a digital marketing agency owner, she knew the importance of having a strong online presence but needed support with LinkedIn ghostwriting, copywriting, and content writing services to establish thought leadership and drive client acquisition.",
+      process: "Developed comprehensive content strategy focusing on LinkedIn ghostwriting, copywriting, and content writing. Created engaging thought leadership content that perfectly captured the brand's voice and style. Implemented consistent publishing schedule across LinkedIn and website. Crafted in-depth articles and insights that resonated with the target audience. Focused on building both personal brand visibility and agency growth through strategic content that contributed to overall business success.",
+      outcome: "The results were incredible. Working with Renée Content not only improved the founder's personal brand visibility on LinkedIn, but it also had a significant impact on the agency's growth, achieving a remarkable 480% increase in leads and revenue. The quality of content exceeded expectations, perfectly capturing the brand's voice while significantly strengthening the online presence.",
       images: ["/placeholder.svg"],
+      testimonial: {
+        name: "Niloofar Sh.",
+        title: "Founder and CEO",
+        company: "Digital Marketing Agency",
+        avatar: niloofar,
+        rating: 5,
+        text: "The quality of the content they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations. They went above and beyond to deliver content that genuinely resonated with my audience and contributed to our overall business growth and success."
+      },
+      interview: {
+        url: "https://www.youtube.com/watch?v=i2BPHd_y2jw",
+        content: `**Can you briefly introduce yourself and your business?**
+Hi there. My name is Niloofar, and I am the founder and CEO of a leading digital marketing agency. Today, I want to take a moment to share my amazing experience working with Renée Content.
+
+**What were the specific challenges or goals you had when you approached Renée Content for content writing services?**
+When I approached Renée Content, I had specific challenges I needed to overcome. As a digital marketing agency owner, I knew the importance of having a strong online presence, but I struggled to consistently produce engaging content that truly resonated with my audience. That's when I decided to try their LinkedIn ghostwriting, copywriting, and content writing services, and oh boy, was that a game-changer!
+
+**What results did you experience after working with Renée Content? (e.g., increase in website traffic, higher engagement, etc.)**
+The results were incredible. Working with Renée Content not only improved my personal brand's visibility on LinkedIn,  but it also had a significant impact on my agency's growth. We saw a remarkable 480% increase in leads and revenue.
+
+**How would you describe the quality of the content provided by Renée Content? Did it meet or exceed your expectations?**
+The quality of the contents they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations.
+
+**How was the overall experience of working with Renée Content? Was the communication smooth and efficient?**
+Communication with the team was always smooth and efficient, making the entire process enjoyable and stress-free.
+
+**What sets Renée Content apart from other content writing service providers you have worked with in the past?**
+What truly sets Renée Content apart is their dedication to understanding my business's unique needs. They went above and beyond to deliver content that generally resonated with my audience and contributed to our overall business growth and success.
+
+**How has the content provided by Renée Content contributed to your overall business growth and success?**
+Thanks to Renée Content's expertise, our online presence has never been stronger. Their services have become an invaluable asset to both my personal brand and my agency.
+
+**Would you recommend Renée Content to other businesses looking for content writing services? If so, why?**
+I can't recommend Renée Content enough. If you're looking for content writing services that drive real results, look no further. Trust me, they'll take your brand to new heights. If you want to boost your online presence and experience significant growth like I did, don't hesitate; reach out to Renée Content and see the magic unfold. Thank you Renée Content for being an incredible partner in our success story.`
+      },
     },
     {
       title: "MV Production",
