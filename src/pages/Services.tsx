@@ -27,7 +27,7 @@ export default function Services() {
     description: "Compelling stories that resonate emotionally and connect with your audience."
   }, {
     icon: PenTool,
-    title: "LinkedIn and X Ghostwriting",
+    title: "Ghostwriting",
     description: "Authentic social content that builds your personal brand and grows your following."
   }, {
     icon: TrendingUp,
