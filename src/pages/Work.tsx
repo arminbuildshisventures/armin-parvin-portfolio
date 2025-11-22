@@ -85,12 +85,12 @@ export default function Work() {
     {
       title: "WP SMS Pro",
       category: "Content Strategy",
-      description: "Developed comprehensive content strategy to drive product awareness and user engagement.",
-      results: "Brand awareness increased",
-      challenge: "WP SMS Pro struggled with low brand awareness in a niche market. They needed a content strategy that would educate their target audience about SMS marketing for WordPress while driving product adoption.",
-      process: "Developed a multi-channel content strategy targeting WordPress site owners and developers. Created educational content about SMS marketing benefits, use cases, and implementation guides. Produced tutorials, comparison articles, and integration guides. Established a content calendar with consistent publishing schedule.",
-      outcome: "Significantly increased brand awareness within the WordPress community. Organic traffic grew steadily, and product sign-ups improved. The educational content positioned WP SMS Pro as the go-to solution for WordPress SMS integration.",
-      images: ["/placeholder.svg"],
+      description: "WP SMS Pro is a subsidiary of VeronaLabs offering an all-in-one WordPress plugin for SMS Marketing. Developed blog content writing to increase website visitors and convert them into loyal users.",
+      results: "Technical Articles Written: 24+ | Minutes Time on Page: 6.5+ | Better SERP Position: 3X | Conversion Rates: 3.2X",
+      challenge: "WP SMS Pro is a subsidiary of the parent company VeronaLabs. They offer an all-in-one WordPress plugin that handles SMS Marketing for businesses, helping them grow efficiently. WP SMS Pro struggled with low brand awareness in a niche market. They needed a content strategy that would educate their target audience about SMS marketing for WordPress while driving product adoption. We were responsible for their blog content writing, increasing their website visitors, and converting the visitors into loyal users.",
+      process: "We used winning copywriting and storytelling techniques to maximize the time on page and conversion rates of the users. Developed a multi-channel content strategy targeting WordPress site owners and developers. Created educational content about SMS marketing benefits, use cases, and implementation guides. Produced tutorials, comparison articles, and integration guides. Established a content calendar with consistent publishing schedule.",
+      outcome: "Significantly increased brand awareness within the WordPress community. Wrote 24+ technical articles with an average time on page of 6.5+ minutes, improved SERP position by 3X, and increased conversion rates by 3.2X. Organic traffic grew steadily, and product sign-ups improved. The educational content positioned WP SMS Pro as the go-to solution for WordPress SMS integration.",
+      images: [],
     },
     {
       title: "LorenzoCPA",
