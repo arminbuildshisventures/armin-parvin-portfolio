@@ -9,6 +9,7 @@ import roomvuResults1 from "@/assets/work/roomvu-results-1.png";
 import roomvuResults2 from "@/assets/work/roomvu-results-2.jpg";
 import roomvuResults3 from "@/assets/work/roomvu-results-3.jpg";
 import trinaMoitra from "@/assets/testimonials/trina-moitra.png";
+import avatar7 from "@/assets/testimonials/avatar-7.png";
 import { Star } from "lucide-react";
 
 interface CaseStudy {
@@ -131,6 +132,14 @@ export default function Work() {
       process: "I set up their email marketing system and used winning copywriting and storytelling techniques to bring in the clients effectively and efficiently. Completely redesigned email campaign strategy with focus on personalization and value delivery. Implemented advanced segmentation based on user behavior and preferences. A/B tested every element from subject lines to CTAs. Created compelling copy that emphasized benefits over features. Optimized email design for better mobile experience.",
       outcome: "Achieved 52% increase in email open rates and 23% improvement in click-through rates, delivering 11X ROI. Crafted 630+ emails, wrote 62+ blog posts, and developed 18+ landing pages. Email campaigns became a primary driver of user activation and retention. The improved engagement led to measurable increases in product usage and customer lifetime value.",
       images: [],
+      testimonial: {
+        name: "Negar Farazmand",
+        title: "Business Design Expert, UI/UX Designer, Digital Marketer",
+        company: "WatchThemLive",
+        avatar: avatar7,
+        rating: 5,
+        text: "Armin is smart and a fast learner. His knowledge in many fields helps him find his way in almost any role you give him. Moreover, Armin's ambition and enthusiasm are absolutely remarkable, which lead him to achieve continued progress. His technical skills, coding knowledge, and brilliant ideas were a great help to the team. Working with Armin on the same team was a great experience."
+      },
     },
     {
       title: "Influencer Marketing Business",
