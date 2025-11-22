@@ -19,6 +19,7 @@ import avatar10 from "@/assets/testimonials/avatar-10.png";
 import avatar11 from "@/assets/testimonials/avatar-11.png";
 import avatar12 from "@/assets/testimonials/avatar-12.png";
 import avatar13 from "@/assets/testimonials/avatar-13.png";
+import masoudRezaei from "@/assets/testimonials/masoud-rezaei.png";
 import lorenzoLogo from "@/assets/clients/LorenzoLogo.png";
 import rahmaniniaLogo from "@/assets/clients/Rahmaninia Logo 1.png";
 import wtlLogo from "@/assets/clients/WTL.png";
@@ -208,7 +209,7 @@ const Testimonials = () => {
       role: "Social Media Specialist",
       content: "Conversation was great. Armin has very high and rich knowledge and experience in the fields of content, copywriting and marketing. And as I expected, it helped and clarified my work path.",
       rating: 5,
-      avatar: avatar4,
+      avatar: masoudRezaei,
       caseStudyUrl: "#",
     },
   ];
@@ -346,7 +347,7 @@ const Testimonials = () => {
                 <PixelCard className="h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-4">
                     <Avatar className="w-16 h-16 pixel-border">
-                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} className="object-cover" />
                       <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                     </Avatar>
                     <div>
