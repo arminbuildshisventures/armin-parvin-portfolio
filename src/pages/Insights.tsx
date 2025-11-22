@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { FileText, Calendar } from "lucide-react";
 import { PixelCard } from "@/components/PixelCard";
+import insightsBg from "@/assets/insights-bg-pixel.png";
 
 const Insights = () => {
   const insights = [
@@ -14,10 +15,19 @@ const Insights = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div 
+      className="min-h-screen flex flex-col relative"
+      style={{
+        backgroundImage: `url(${insightsBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
+      <div className="absolute inset-0 bg-background/80" />
       <Header />
       
-      <main className="flex-grow container mx-auto px-4 pt-32 pb-16">
+      <main className="flex-grow container mx-auto px-4 pt-32 pb-16 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
