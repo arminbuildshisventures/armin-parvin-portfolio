@@ -83,19 +83,20 @@ const Testimonials = () => {
     },
   ];
   return (
-    <div className="min-h-screen flex flex-col bg-background relative">
-      <div 
-        className="fixed inset-0 opacity-10 pointer-events-none"
-        style={{
-          backgroundImage: `url(${testimonialsBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      />
-      <Header />
+    <div className="min-h-screen flex flex-col bg-background">
+      <div className="flex-grow relative">
+        <div 
+          className="absolute inset-0 opacity-20 pointer-events-none"
+          style={{
+            backgroundImage: `url(${testimonialsBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        <Header />
 
-      <main className="flex-grow container mx-auto px-4 pt-32 pb-16">
+        <main className="relative container mx-auto px-4 pt-32 pb-16">
         <motion.div
           initial={{
             opacity: 0,
@@ -176,7 +177,8 @@ const Testimonials = () => {
             ))}
           </div>
         </motion.div>
-      </main>
+        </main>
+      </div>
 
       <footer className="py-8 px-4 pixel-border border-b-0 border-x-0">
         <div className="container mx-auto text-center">
