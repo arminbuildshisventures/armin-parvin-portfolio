@@ -104,40 +104,28 @@ const Testimonials = () => {
             What clients say about working with me
           </p>
 
-          {/* Client Logos Carousel - FIXED & PERFECTLY EVEN */}
-          <div className="mb-16 pixel-border bg-zinc-800 backdrop-blur-sm p-8 rounded-lg relative overflow-hidden">
+          {/* Client Logos Carousel */}
+          <div className="mb-16 pixel-border bg-zinc-800 backdrop-blur-sm p-8 rounded-lg relative">
             <p className="text-center text-zinc-400 font-secondary mb-6">Trusted by leading brands</p>
-
-            <div className="relative">
-              <div className="flex animate-marquee whitespace-nowrap">
-                {/* Duplicate the logos 3 times for seamless infinite scroll */}
+            <div className="relative w-full overflow-hidden">
+              <div className="flex">
                 {[...Array(3)].map((_, setIndex) => (
-                  <div key={setIndex} className="flex items-center gap-12 lg:gap-20 flex-shrink-0">
+                  <div key={setIndex} className="flex gap-16 flex-shrink-0 animate-marquee">
                     {clientLogos.map((logo, index) => (
                       <div
                         key={`${setIndex}-${index}`}
-                        className="flex items-center justify-center w-48 lg:w-56 flex-shrink-0"
+                        className="flex items-center justify-center h-20 w-52 flex-shrink-0 hover:scale-110 transition-transform duration-300"
                       >
-                        <img
-                          src={logo.src}
-                          alt={logo.alt}
-                          className="max-h-12 w-auto max-w-full object-contain brightness-0 invert 
-                                   transition-transform duration-300 hover:scale-110"
-                          // This forces wide logos (WP SMS & Lorenzo) to shrink gracefully
-                          style={{
-                            maxWidth: logo.alt.includes("WP SMS") || logo.alt.includes("Lorenzo") ? "140px" : "180px",
-                          }}
-                        />
+                        <img src={logo.src} alt={logo.alt} className="h-14 w-auto object-contain brightness-0 invert" />
                       </div>
                     ))}
                   </div>
                 ))}
               </div>
             </div>
-
             {/* Fade overlays */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-zinc-800 to-transparent pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-zinc-800 to-transparent pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-zinc-800 to-transparent pointer-events-none rounded-l-lg" />
+            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-zinc-800 to-transparent pointer-events-none rounded-r-lg" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
