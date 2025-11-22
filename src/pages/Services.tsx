@@ -88,7 +88,7 @@ export default function Services() {
           </div>
 
           <Tabs defaultValue="content-marketing" className="w-full">
-            <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 mb-12 pixel-border bg-card">
+            <TabsList className="grid w-full grid-cols-3 mb-12 pixel-border bg-card">
               <TabsTrigger value="content-marketing" className="font-primary text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
                 Content Marketing
               </TabsTrigger>
