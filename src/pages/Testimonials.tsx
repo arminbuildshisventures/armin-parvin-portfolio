@@ -5,6 +5,7 @@ import { PixelCard } from "@/components/PixelCard";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import testimonialsBg from "@/assets/testimonials-bg-pixel.png";
 import trinaMoitra from "@/assets/testimonials/trina-moitra.png";
+import parandSh from "@/assets/testimonials/parand-sh.png";
 import avatar2 from "@/assets/testimonials/avatar-2.png";
 import avatar3 from "@/assets/testimonials/avatar-3.png";
 import avatar4 from "@/assets/testimonials/avatar-4.png";
@@ -82,12 +83,13 @@ const Testimonials = () => {
       avatar: trinaMoitra,
     },
     {
-      name: "Michael Rodriguez",
-      role: "Marketing Director, CloudSolutions",
+      name: "Parand Sh.",
+      role: "Business Owner",
       content:
-        "Armin's email marketing campaigns delivered results beyond our expectations. Open rates jumped from 18% to 47%, click-through rates increased by 190%, and most importantly, our email-attributed revenue grew by $2.3M in one quarter. His ability to craft compelling subject lines and personalized content sequences is exceptional. He understands the psychology of email marketing at a level I've rarely seen.",
+        "The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%. Our collaboration has been an absolute pleasure, a decision I would make over and over again. They made sure that all my requirements were understood fully and executed flawlessly.",
       rating: 5,
-      avatar: avatar2,
+      avatar: parandSh,
+      caseStudyUrl: "#", // Placeholder for case study link
     },
   ];
 
@@ -248,6 +250,14 @@ const Testimonials = () => {
                     </div>
                     <Quote className="w-10 h-10 text-accent mb-4 opacity-50" />
                     <p className="text-foreground text-base leading-relaxed flex-grow font-secondary">"{testimonial.content}"</p>
+                    {testimonial.caseStudyUrl && (
+                      <a 
+                        href={testimonial.caseStudyUrl}
+                        className="mt-4 inline-block text-accent hover:text-accent/80 font-primary text-sm font-semibold transition-colors"
+                      >
+                        Read Case Study →
+                      </a>
+                    )}
                   </PixelCard>
                 </motion.div>
               ))}
