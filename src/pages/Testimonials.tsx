@@ -4,7 +4,7 @@ import { Quote } from "lucide-react";
 import { PixelCard } from "@/components/PixelCard";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import testimonialsBg from "@/assets/testimonials-bg-pixel.png";
-import trinaMoitra from "@/assets/testimonials/trina-moitra.png";
+import trinaMoitra from "@/assets/testimonials/trina-moitra-pixel.png";
 import avatar2 from "@/assets/testimonials/avatar-2.png";
 import avatar3 from "@/assets/testimonials/avatar-3.png";
 import avatar4 from "@/assets/testimonials/avatar-4.png";
