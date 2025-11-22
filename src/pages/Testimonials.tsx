@@ -2,35 +2,46 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Quote } from "lucide-react";
 import { PixelCard } from "@/components/PixelCard";
+import hoothemesLogo from "@/assets/clients/HooThemesLogo.svg";
+import lorenzoLogo from "@/assets/clients/LorenzoLogo.png";
+import rahmaniniaLogo from "@/assets/clients/Rahmaninia Logo 1.png";
+import wtlLogo from "@/assets/clients/WTL.png";
+import bsuiteLogo from "@/assets/clients/bsuite-logo.svg";
+import citronityLogo from "@/assets/clients/citronity.svg";
 import cloudzyLogo from "@/assets/clients/cloudzy.svg";
 import convertLogo from "@/assets/clients/convert.svg";
-import hoothemesLogo from "@/assets/clients/hoothemes.png";
-import lorenzocpaLogo from "@/assets/clients/lorenzocpa.png";
 import nordicLogo from "@/assets/clients/nordic.svg";
-import rahmaniniaLogo from "@/assets/clients/rahmaninia.png";
 import roomvuLogo from "@/assets/clients/roomvu.svg";
 import veronalabsLogo from "@/assets/clients/veronalabs.png";
 import wpsmsLogo from "@/assets/clients/wpsms.png";
-import watchthemlive from "@/assets/clients/watchthemlive.png";
 const Testimonials = () => {
   const clientLogos = [{
+    src: hoothemesLogo,
+    alt: "HooThemes"
+  }, {
+    src: lorenzoLogo,
+    alt: "Lorenzo CPA"
+  }, {
+    src: rahmaniniaLogo,
+    alt: "Mehdi Rahmaninia"
+  }, {
+    src: wtlLogo,
+    alt: "WatchThemLive"
+  }, {
+    src: bsuiteLogo,
+    alt: "BSuite"
+  }, {
+    src: citronityLogo,
+    alt: "Citronity"
+  }, {
     src: cloudzyLogo,
     alt: "Cloudzy"
   }, {
     src: convertLogo,
     alt: "Convert"
   }, {
-    src: hoothemesLogo,
-    alt: "Hoothemes"
-  }, {
-    src: lorenzocpaLogo,
-    alt: "Lorenzo CPA"
-  }, {
     src: nordicLogo,
     alt: "Nordic Defender"
-  }, {
-    src: rahmaniniaLogo,
-    alt: "Mehdi Rahmaninia"
   }, {
     src: roomvuLogo,
     alt: "Roomvu"
@@ -40,9 +51,6 @@ const Testimonials = () => {
   }, {
     src: wpsmsLogo,
     alt: "WP SMS"
-  }, {
-    src: watchthemlive,
-    alt: "WatchThemLive"
   }];
   const testimonials = [{
     name: "Client Name",
