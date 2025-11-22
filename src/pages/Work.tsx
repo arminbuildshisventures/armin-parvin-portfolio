@@ -15,6 +15,7 @@ import mehdiRahmaninia from "@/assets/testimonials/avatar-3.png";
 import niloofar from "@/assets/testimonials/avatar-6.png";
 import avatar7 from "@/assets/testimonials/avatar-7.png";
 import mahmoudValanejad from "@/assets/testimonials/avatar-9.png";
+import shadiV from "@/assets/testimonials/shadi-avatar.png";
 import { Star } from "lucide-react";
 
 interface CaseStudy {
@@ -341,13 +342,53 @@ Definitely I recommend it, actually because they're really experienced and they 
     },
     {
       title: "Boutique",
-      category: "E-commerce Content",
-      description: "Created e-commerce content strategy increasing website traffic by 38% and conversion rate by 23%.",
-      results: "38% traffic growth",
-      challenge: "The boutique struggled with low website traffic and poor conversion rates. Their product descriptions were generic, and the site lacked engaging content that would drive purchases.",
-      process: "Developed comprehensive e-commerce content strategy including compelling product descriptions, category pages, and blog content. Implemented SEO best practices for product pages. Created lifestyle content that showcased products in context. Optimized calls-to-action and checkout copy to reduce friction.",
-      outcome: "Achieved 38% increase in website traffic and 23% improvement in conversion rate. The enhanced product descriptions and content significantly improved user engagement and reduced bounce rates. Average order value increased as customers discovered more products through improved navigation and content.",
-      images: ["/placeholder.svg"],
+      category: "Fashion & Home Decor E-commerce",
+      description: "Created content marketing strategy for online boutique specializing in trendy fashion and home decor items.",
+      results: "Website Traffic Skyrocketed | Leads Increase: 3X | Revenue Increase: 60%",
+      challenge: "Primary challenge was generating enough online traffic to boost sales and expand reach to connect with a larger audience of potential customers for the small online boutique specializing in trendy fashion and home decor items.",
+      process: "Implemented content strategies and SEO expertise to elevate website visibility. Created well-researched, beautifully written articles and blog posts that resonated with target audience. Captured brand's voice and style flawlessly, making content genuinely authentic and appealing. Focused on driving organic traffic and increasing online presence.",
+      outcome: "Website traffic skyrocketed with impressive 3-fold increase in leads. Content was engaging, informative, and perfectly aligned with brand's message, driving more conversions than ever before. Revenue increased by remarkable 60%, with business flourishing and attracting more loyal customers. Positioned business as industry leader through well-crafted content that boosted website performance.",
+      images: [],
+      testimonial: {
+        name: "Shadi V.",
+        title: "Business Owner",
+        company: "Boutique",
+        avatar: shadiV,
+        rating: 5,
+        text: "In fact, our results were beyond my wildest dreams. Our website traffic skyrocketed, and we witnessed an impressive 3-fold increase in leads. Our content was engaging, informative, and perfectly aligned with our brand's message."
+      },
+      interview: {
+        url: "https://www.youtube.com/watch?v=UmOkyLqzXZs",
+        content: `**Can you briefly introduce yourself and your business?**
+Hello. I'm the proud owner of a small online boutique. We specialize in trendy fashion and home decor items that cater to our unique audience.
+
+**What were the specific challenges or goals you had when you approached Renée Content for content writing services?**
+Well, when I approached Renée Content, my primary challenge was generating enough online traffic to boost sales. I wanted to expand our reach and connect with a larger audience of potential customers.
+
+**How did Renée Content address those challenges or help you achieve your goals?**
+Renée Content worked wonders for us! Their content strategies and SEO expertise elevated our website's visibility, attracting a stream of organic traffic and increasing our online presence.
+
+**What results did you experience after working with Renée Content?**
+In fact, our results were beyond my wildest dreams. Our website traffic skyrocketed, and we witnessed an impressive 3-fold increase in leads. Our content was engaging, informative, and perfectly aligned with our brand's message, driving more conversations than ever before.
+
+**How would you describe the quality of the content provided by Renée Content? Did it meet or exceed your expectations?**
+The content provided by Renée Content was exceptional and not only met but exceeded my expectations. The articles and blog posts were well-researched, beautifully written, and resonated perfectly with our target audience.
+
+**How was the overall experience of working with Renée Content? Was the communication smooth and efficient?**
+Honestly, working with Renée Content was an absolute pleasure. Their team was professional, attentive, and always open to discussing ideas and suggestions. Well, communication was smooth and efficient, and they made the entire process effortless for us.
+
+**What sets Renée Content apart from other content writing service providers you have worked with in the past?**
+Well, what sets Renée Content apart is their deep understanding of our brand's voice and style. They captured the essence of my business flawlessly, making our content genuinely authentic and appealing to our audience.
+
+**What was the business growth like after working with Renée Content?**
+Thanks to Renée Content's efforts, our revenue increased by a remarkable 60%. We saw our business flourishing and attracting more loyal customers, leading to sustainable growth.
+
+**How has the content provided by Renée Content contributed to your overall business growth and success?**
+Actually, Renée Content played a pivotal role in our overall success. Their well-crafted content not only boosted our website's performance, but also positioned us as a leader in our industry.
+
+**Would you recommend Renée Content to other businesses looking for content writing services? If so, why?**
+Yes, I highly recommend Renée Content to fellow small business owners because their dedication, expertise, and remarkable results make them a valuable partner for a business looking to grow and thrive online. In conclusion, working with Renée Content was a game-changer for us. They delivered exceptional content that drove substantial results, and I can confidently say they are the reason behind our incredible growth and success.`
+      },
     },
     {
       title: "C-Level Executives, Coaches, and Speakers",
