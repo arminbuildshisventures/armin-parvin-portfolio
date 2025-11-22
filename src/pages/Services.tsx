@@ -5,12 +5,7 @@ import { Cursor } from "@/components/ui/inverted-cursor";
 import servicesBg from "@/assets/services-bg-pixel.png";
 
 export default function Services() {
-  const services = [
-    {
-      icon: Mail,
-      title: "Email Marketing",
-      description: "Engaging email campaigns that convert subscribers into customers.",
-    },
+  const writingServices = [
     {
       icon: FileText,
       title: "Content Writing",
@@ -22,19 +17,106 @@ export default function Services() {
       description: "Persuasive copy that drives action and boosts conversions.",
     },
     {
+      icon: FileText,
+      title: "Technical Writing",
+      description: "Clear, precise documentation and technical content.",
+    },
+    {
+      icon: PenTool,
+      title: "Creative Writing",
+      description: "Engaging narratives that captivate and inspire your audience.",
+    },
+    {
+      icon: FileText,
+      title: "Storytelling",
+      description: "Compelling stories that connect emotionally with your readers.",
+    },
+  ];
+
+  const ghostwritingServices = [
+    {
+      icon: Users,
+      title: "Ghostwriting",
+      description: "Professional ghostwriting that captures your unique voice and vision.",
+    },
+    {
+      icon: Users,
+      title: "LinkedIn Ghostwriting",
+      description: "Authentic LinkedIn content that builds your personal brand.",
+    },
+    {
+      icon: Users,
+      title: "X Ghostwriting",
+      description: "Engaging X/Twitter content that grows your following.",
+    },
+  ];
+
+  const editingServices = [
+    {
+      icon: FileText,
+      title: "Content Editing",
+      description: "Polishing content for clarity, flow, and impact.",
+    },
+    {
+      icon: PenTool,
+      title: "Copy Editing",
+      description: "Precision editing for grammar, style, and consistency.",
+    },
+    {
+      icon: FileText,
+      title: "Proofreading",
+      description: "Final quality checks to ensure error-free content.",
+    },
+    {
+      icon: Target,
+      title: "SEO",
+      description: "Strategic optimization to improve search rankings and visibility.",
+    },
+  ];
+
+  const marketingServices = [
+    {
+      icon: Mail,
+      title: "Email Marketing",
+      description: "Engaging email campaigns that convert subscribers into customers.",
+    },
+    {
       icon: Target,
       title: "Content Strategy",
       description: "Data-driven content plans that align with your business goals.",
     },
     {
       icon: TrendingUp,
-      title: "Conversion Optimization",
-      description: "Strategic improvements to turn more visitors into customers.",
+      title: "Campaign Management",
+      description: "End-to-end campaign execution that delivers results.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Marketing",
+      description: "Comprehensive marketing solutions to grow your brand.",
+    },
+    {
+      icon: Target,
+      title: "Sales",
+      description: "Strategic sales content that closes deals and drives revenue.",
+    },
+  ];
+
+  const specializedServices = [
+    {
+      icon: TrendingUp,
+      title: "Cryptocurrency Research Analysis",
+      description: "In-depth crypto market research and analysis.",
     },
     {
       icon: Users,
-      title: "Ghostwriting",
-      description: "Professional ghostwriting that captures your unique voice and vision.",
+      title: "Leadership",
+      description: "Thought leadership content that establishes authority.",
+    },
+    {
+      icon: FileText,
+      title: "Research",
+      description: "Thorough research to support data-driven content.",
     },
   ];
 
@@ -55,18 +137,91 @@ export default function Services() {
         <div className="absolute inset-0 bg-background/80" />
         
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Services</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <PixelCard key={index}>
-                  <Icon className="w-12 h-12 mb-4 text-accent" />
-                  <h3 className="font-primary text-lg mb-3">{service.title}</h3>
-                  <p className="font-secondary text-sm">{service.description}</p>
-                </PixelCard>
-              );
-            })}
+          <h1 className="font-primary text-3xl md:text-5xl mb-16 text-center text-pixel">Services</h1>
+          
+          {/* Writing Services */}
+          <div className="mb-16">
+            <h2 className="font-primary text-2xl md:text-3xl mb-8 text-accent text-pixel">Writing Services</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {writingServices.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <PixelCard key={index}>
+                    <Icon className="w-12 h-12 mb-4 text-accent" />
+                    <h3 className="font-primary text-lg mb-3">{service.title}</h3>
+                    <p className="font-secondary text-sm">{service.description}</p>
+                  </PixelCard>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Ghostwriting Services */}
+          <div className="mb-16">
+            <h2 className="font-primary text-2xl md:text-3xl mb-8 text-accent text-pixel">Ghostwriting</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {ghostwritingServices.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <PixelCard key={index}>
+                    <Icon className="w-12 h-12 mb-4 text-accent" />
+                    <h3 className="font-primary text-lg mb-3">{service.title}</h3>
+                    <p className="font-secondary text-sm">{service.description}</p>
+                  </PixelCard>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Editing & SEO Services */}
+          <div className="mb-16">
+            <h2 className="font-primary text-2xl md:text-3xl mb-8 text-accent text-pixel">Editing & SEO</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {editingServices.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <PixelCard key={index}>
+                    <Icon className="w-12 h-12 mb-4 text-accent" />
+                    <h3 className="font-primary text-lg mb-3">{service.title}</h3>
+                    <p className="font-secondary text-sm">{service.description}</p>
+                  </PixelCard>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Marketing & Strategy Services */}
+          <div className="mb-16">
+            <h2 className="font-primary text-2xl md:text-3xl mb-8 text-accent text-pixel">Marketing & Strategy</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {marketingServices.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <PixelCard key={index}>
+                    <Icon className="w-12 h-12 mb-4 text-accent" />
+                    <h3 className="font-primary text-lg mb-3">{service.title}</h3>
+                    <p className="font-secondary text-sm">{service.description}</p>
+                  </PixelCard>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Specialized Services */}
+          <div className="mb-8">
+            <h2 className="font-primary text-2xl md:text-3xl mb-8 text-accent text-pixel">Specialized Expertise</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {specializedServices.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <PixelCard key={index}>
+                    <Icon className="w-12 h-12 mb-4 text-accent" />
+                    <h3 className="font-primary text-lg mb-3">{service.title}</h3>
+                    <p className="font-secondary text-sm">{service.description}</p>
+                  </PixelCard>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
