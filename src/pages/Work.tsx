@@ -5,6 +5,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useState } from "react";
 import workBg from "@/assets/work-bg-pixel.png";
+import roomvuResults1 from "@/assets/work/roomvu-results-1.png";
+import roomvuResults2 from "@/assets/work/roomvu-results-2.jpg";
+import roomvuResults3 from "@/assets/work/roomvu-results-3.jpg";
 
 interface CaseStudy {
   title: string;
@@ -34,12 +37,12 @@ export default function Work() {
     {
       title: "Roomvu",
       category: "Email Marketing",
-      description: "Led email marketing campaigns that increased user registration by 194% through strategic automation and optimization.",
-      results: "194% registration increase",
-      challenge: "Roomvu faced low user registration rates and needed to significantly improve conversion through their email marketing efforts. The existing campaigns weren't engaging enough and lacked strategic automation.",
-      process: "Redesigned the entire email marketing strategy from the ground up. Implemented advanced segmentation, created personalized drip campaigns, A/B tested subject lines and content, and developed automated workflows based on user behavior. Optimized send times and refined messaging to resonate with the real estate professional audience.",
-      outcome: "Achieved a remarkable 194% increase in user registration rates. Email open rates improved by 50%+ and click-through rates increased by 23%+. The automated campaigns continued to drive consistent registrations with minimal manual intervention.",
-      images: ["/placeholder.svg"],
+      description: "Roomvu is a PropTech platform offering hyper-local real estate video marketing. Through winning email marketing, copywriting, and storytelling techniques, brought them an added client base of 24,000+ users.",
+      results: "Email Open Rate Increase: 10% | Email CTOR Increase: 2.5% | Emails Crafted: 1,000+ | Users Acquired: 24,000+",
+      challenge: "Roomvu is a PropTech platform that offers hyper-local real estate video marketing. They acquire clients through different processes, including SEO, Cold Emails, paid ads, social media, organic, referrals, and Email Marketing. When we decided to work together, they already had a cold email marketing setup. However, the untapped potential was huge. Roomvu faced low user registration rates and needed to significantly improve conversion through their cold email marketing efforts. The existing campaigns weren't engaging enough and lacked strategic automation.",
+      process: "I redesigned the entire email marketing strategy from the ground up. Implemented advanced segmentation, created hyper-personalized drip campaigns, A/B tested subject lines and copy, and developed automated workflows based on user behavior. I also optimized send times and refined messaging to resonate with the real estate professional audience.",
+      outcome: "Through winning email marketing, copywriting, and storytelling techniques, I brought roomvu an added client base of 24,000+ users, increasing their weekly registrations from an average of 170 to an average of 500. Email open rate increased by 10%, email CTOR increased by 2.5%, and over 1,000+ emails were crafted throughout the engagement.",
+      images: [roomvuResults1, roomvuResults2, roomvuResults3],
     },
     {
       title: "Nordic Defender",
