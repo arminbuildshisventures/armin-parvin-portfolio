@@ -100,6 +100,7 @@ const Testimonials = () => {
       content: "The copywriting quality is exceptional. Armin captured our brand voice perfectly and every landing page he wrote converts at 23% higher than our previous pages. Worth every penny.",
       rating: 5,
       avatar: avatar3,
+      caseStudyUrl: "#",
     },
     {
       name: "David Thompson",
@@ -107,6 +108,7 @@ const Testimonials = () => {
       content: "Outstanding content strategy and execution. Our engagement metrics have tripled since working with Armin. He's not just a writer, he's a strategic partner who understands business goals.",
       rating: 5,
       avatar: avatar4,
+      caseStudyUrl: "#",
     },
     {
       name: "Amanda Foster",
@@ -114,6 +116,7 @@ const Testimonials = () => {
       content: "Armin's ghostwriting services helped me maintain a consistent LinkedIn presence while managing my team. His posts consistently get 10x more engagement than what I wrote myself. Highly recommended!",
       rating: 5,
       avatar: avatar5,
+      caseStudyUrl: "#",
     },
     {
       name: "Robert Kim",
@@ -121,6 +124,7 @@ const Testimonials = () => {
       content: "Professional, responsive, and incredibly talented. Our email nurture sequences are now industry-leading thanks to Armin's expertise. Customer retention improved by 34% within 3 months.",
       rating: 5,
       avatar: avatar6,
+      caseStudyUrl: "#",
     },
     {
       name: "Emily Watson",
@@ -128,6 +132,7 @@ const Testimonials = () => {
       content: "Working with Armin was seamless. He delivered high-quality blog content that perfectly aligned with our SEO strategy. Traffic from organic search increased 280% year-over-year.",
       rating: 5,
       avatar: avatar7,
+      caseStudyUrl: "#",
     },
     {
       name: "James Patterson",
@@ -135,6 +140,7 @@ const Testimonials = () => {
       content: "The product descriptions and category pages Armin wrote for us are converting at rates we've never seen before. Sales increased 42% in the first quarter. Exceptional copywriting skills!",
       rating: 5,
       avatar: avatar8,
+      caseStudyUrl: "#",
     },
     {
       name: "Lisa Anderson",
@@ -142,6 +148,7 @@ const Testimonials = () => {
       content: "Armin's ability to simplify complex topics while maintaining engagement is remarkable. Our content is now accessible to a broader audience and our lead generation has doubled.",
       rating: 5,
       avatar: avatar9,
+      caseStudyUrl: "#",
     },
     {
       name: "Chris Martinez",
@@ -149,6 +156,7 @@ const Testimonials = () => {
       content: "Best decision we made was hiring Armin for our content needs. His writing is engaging, SEO-optimized, and always delivered on time. Our content marketing ROI has never been better.",
       rating: 5,
       avatar: avatar10,
+      caseStudyUrl: "#",
     },
   ];
   return (
@@ -212,7 +220,7 @@ const Testimonials = () => {
 
           {/* Featured Testimonials */}
           <div className="mb-16">
-            <h2 className="text-2xl md:text-3xl font-primary text-center mb-8 text-accent">Featured Testimonials</h2>
+            <h2 className="text-2xl md:text-3xl font-primary text-center mb-8 text-accent">Client Success Stories</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
               {featuredTestimonials.map((testimonial, index) => (
                 <motion.div
@@ -302,6 +310,14 @@ const Testimonials = () => {
                       </span>
                     ))}
                   </div>
+                  {testimonial.caseStudyUrl && (
+                    <a 
+                      href={testimonial.caseStudyUrl}
+                      className="mt-3 inline-block text-accent hover:text-accent/80 font-primary text-xs font-semibold transition-colors"
+                    >
+                      Read Case Study →
+                    </a>
+                  )}
                 </PixelCard>
               </motion.div>
             ))}
