@@ -81,8 +81,8 @@ export default function Services() {
           
           <div className="mb-12 text-center max-w-3xl mx-auto">
             <p className="font-secondary text-lg text-muted-foreground">
-              From strategy to execution, I create content that drives results. I write{" "}
-              <span className="text-accent font-semibold">blogs, articles, emails, white papers, press releases, case studies, LinkedIn and X posts, webpages, and landing pages</span>{" "}
+              From strategy to execution, I create content and copy that drive results. I write{" "}
+              <span className="text-accent font-semibold">blogs, articles, emails, white papers, press releases, case studies, LinkedIn and X posts, and webpages and landing pages copy</span>{" "}
               that convert.
             </p>
           </div>
