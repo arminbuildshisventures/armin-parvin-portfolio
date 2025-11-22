@@ -252,7 +252,7 @@ I definitely recommend using Renée agency services as they give you an overally
       challenge: "The agency founder struggled to consistently produce engaging content that truly resonated with her audience. As a digital marketing agency owner, she knew the importance of having a strong online presence but needed support with LinkedIn ghostwriting, copywriting, and content writing services to establish thought leadership and drive client acquisition.",
       process: "Developed comprehensive content strategy focusing on LinkedIn ghostwriting, copywriting, and content writing. Created engaging thought leadership content that perfectly captured the brand's voice and style. Implemented consistent publishing schedule across LinkedIn and website. Crafted in-depth articles and insights that resonated with the target audience. Focused on building both personal brand visibility and agency growth through strategic content that contributed to overall business success.",
       outcome: "The results were incredible. Working with Renée Content not only improved the founder's personal brand visibility on LinkedIn, but it also had a significant impact on the agency's growth, achieving a remarkable 480% increase in leads and revenue. The quality of content exceeded expectations, perfectly capturing the brand's voice while significantly strengthening the online presence.",
-      images: ["/placeholder.svg"],
+      images: [],
       testimonial: {
         name: "Niloofar Sh.",
         title: "Founder and CEO",
