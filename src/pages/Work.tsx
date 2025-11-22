@@ -94,7 +94,7 @@ export default function Work() {
     },
     {
       title: "LorenzoCPA",
-      category: "Blog Content Writing",
+      category: "Copywriting",
       description: "Lorenzo Abbatiello is a Certified Public Accountant (CPA) who advises clients on tax strategy, including crypto tax. Developed blog content, X posts, and newsletters to increase website visitors and convert them into loyal users.",
       results: "Technical Articles Written: 16+ | Minutes Time on Page: 14+ | Better SERP Position: 2X | Conversion Rates: 3X",
       challenge: "Lorenzo Abbatiello is a Certified Public Accountant (CPA) who advises clients on tax strategy, including crypto tax. LorenzoCPA needed to differentiate themselves in a crowded accounting services market. Their existing website copy didn't effectively communicate their expertise or build trust with potential clients. I was responsible for their blog content writing, X and newsletter ghostwriting, increasing their website visitors, and converting the visitors into loyal users.",
