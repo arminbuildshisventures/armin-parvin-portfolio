@@ -110,7 +110,7 @@ export default function Work() {
       challenge: "Citronity lacked a cohesive digital marketing presence across channels. They needed an integrated strategy to improve brand visibility and generate quality leads across multiple platforms.",
       process: "Developed a comprehensive multi-channel digital marketing strategy. Coordinated content across social media, blog, email, and paid channels. Created consistent brand messaging and visual identity. Implemented tracking and analytics to measure performance across all channels. Optimized campaigns based on data-driven insights.",
       outcome: "Established strong multi-channel presence with consistent brand messaging. Lead generation increased across all channels with improved quality of leads. The integrated approach created synergy between channels, amplifying overall marketing effectiveness.",
-      images: ["/placeholder.svg"],
+      images: [],
     },
     {
       title: "BSuite365",
@@ -120,7 +120,7 @@ export default function Work() {
       challenge: "BSuite365 struggled to engage enterprise clients with their existing content. They needed sophisticated B2B content that would resonate with decision-makers and demonstrate clear ROI.",
       process: "Developed enterprise-focused content strategy with emphasis on ROI and business value. Created whitepapers, case studies, and thought leadership pieces. Collaborated with sales team to understand buyer pain points and objections. Crafted content for each stage of the enterprise buying cycle.",
       outcome: "Significantly improved engagement with enterprise prospects. The content assets became valuable tools for the sales team, shortening sales cycles. Multiple enterprise clients cited the content as influential in their decision-making process.",
-      images: ["/placeholder.svg"],
+      images: [],
     },
     {
       title: "WatchThemLive",
