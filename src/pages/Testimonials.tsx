@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Quote } from "lucide-react";
 import { PixelCard } from "@/components/PixelCard";
-import hoothemesLogo from "@/assets/clients/HooThemesLogo.svg";
 import lorenzoLogo from "@/assets/clients/LorenzoLogo.png";
 import rahmaniniaLogo from "@/assets/clients/Rahmaninia Logo 1.png";
 import wtlLogo from "@/assets/clients/WTL.png";
@@ -16,9 +15,6 @@ import veronalabsLogo from "@/assets/clients/veronalabs.png";
 import wpsmsLogo from "@/assets/clients/wpsms.png";
 const Testimonials = () => {
   const clientLogos = [{
-    src: hoothemesLogo,
-    alt: "HooThemes"
-  }, {
     src: lorenzoLogo,
     alt: "Lorenzo CPA"
   }, {
