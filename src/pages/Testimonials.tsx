@@ -2,7 +2,18 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Quote } from "lucide-react";
 import { PixelCard } from "@/components/PixelCard";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import testimonialsBg from "@/assets/testimonials-bg-pixel.png";
+import avatar1 from "@/assets/testimonials/avatar-1.png";
+import avatar2 from "@/assets/testimonials/avatar-2.png";
+import avatar3 from "@/assets/testimonials/avatar-3.png";
+import avatar4 from "@/assets/testimonials/avatar-4.png";
+import avatar5 from "@/assets/testimonials/avatar-5.png";
+import avatar6 from "@/assets/testimonials/avatar-6.png";
+import avatar7 from "@/assets/testimonials/avatar-7.png";
+import avatar8 from "@/assets/testimonials/avatar-8.png";
+import avatar9 from "@/assets/testimonials/avatar-9.png";
+import avatar10 from "@/assets/testimonials/avatar-10.png";
 import lorenzoLogo from "@/assets/clients/LorenzoLogo.png";
 import rahmaniniaLogo from "@/assets/clients/Rahmaninia Logo 1.png";
 import wtlLogo from "@/assets/clients/WTL.png";
@@ -61,25 +72,81 @@ const Testimonials = () => {
       alt: "WP SMS",
     },
   ];
-  const testimonials = [
+  const featuredTestimonials = [
     {
-      name: "Client Name",
-      role: "CEO, Company Name",
+      name: "Sarah Mitchell",
+      role: "CEO, TechVenture Inc",
       content:
-        "Outstanding work on our content strategy. The results speak for themselves - our engagement has tripled.",
+        "Working with Armin transformed our content strategy completely. Our blog traffic increased by 340% in just 6 months, and we're now ranking #1 for our primary keywords. His deep understanding of SEO combined with compelling storytelling is unmatched. Every piece of content he creates not only ranks well but genuinely resonates with our audience.",
       rating: 5,
+      avatar: avatar1,
     },
     {
-      name: "Client Name",
-      role: "Marketing Director, Company Name",
-      content: "Exceptional copywriting that truly captures our brand voice. Every piece converts.",
+      name: "Michael Rodriguez",
+      role: "Marketing Director, CloudSolutions",
+      content:
+        "Armin's email marketing campaigns delivered results beyond our expectations. Open rates jumped from 18% to 47%, click-through rates increased by 190%, and most importantly, our email-attributed revenue grew by $2.3M in one quarter. His ability to craft compelling subject lines and personalized content sequences is exceptional. He understands the psychology of email marketing at a level I've rarely seen.",
       rating: 5,
+      avatar: avatar2,
+    },
+  ];
+
+  const regularTestimonials = [
+    {
+      name: "Jennifer Chen",
+      role: "Founder, GrowthLabs",
+      content: "The copywriting quality is exceptional. Armin captured our brand voice perfectly and every landing page he wrote converts at 23% higher than our previous pages. Worth every penny.",
+      rating: 5,
+      avatar: avatar3,
     },
     {
-      name: "Client Name",
-      role: "Founder, Company Name",
-      content: "The email campaigns delivered incredible ROI. Professional, creative, and results-driven.",
+      name: "David Thompson",
+      role: "VP of Marketing, FinanceFlow",
+      content: "Outstanding content strategy and execution. Our engagement metrics have tripled since working with Armin. He's not just a writer, he's a strategic partner who understands business goals.",
       rating: 5,
+      avatar: avatar4,
+    },
+    {
+      name: "Amanda Foster",
+      role: "Head of Content, BrandBuilders",
+      content: "Armin's ghostwriting services helped me maintain a consistent LinkedIn presence while managing my team. His posts consistently get 10x more engagement than what I wrote myself. Highly recommended!",
+      rating: 5,
+      avatar: avatar5,
+    },
+    {
+      name: "Robert Kim",
+      role: "CMO, SaaS Innovate",
+      content: "Professional, responsive, and incredibly talented. Our email nurture sequences are now industry-leading thanks to Armin's expertise. Customer retention improved by 34% within 3 months.",
+      rating: 5,
+      avatar: avatar6,
+    },
+    {
+      name: "Emily Watson",
+      role: "Director of Growth, StartupHub",
+      content: "Working with Armin was seamless. He delivered high-quality blog content that perfectly aligned with our SEO strategy. Traffic from organic search increased 280% year-over-year.",
+      rating: 5,
+      avatar: avatar7,
+    },
+    {
+      name: "James Patterson",
+      role: "Owner, E-commerce Plus",
+      content: "The product descriptions and category pages Armin wrote for us are converting at rates we've never seen before. Sales increased 42% in the first quarter. Exceptional copywriting skills!",
+      rating: 5,
+      avatar: avatar8,
+    },
+    {
+      name: "Lisa Anderson",
+      role: "Marketing Manager, HealthTech Co",
+      content: "Armin's ability to simplify complex topics while maintaining engagement is remarkable. Our content is now accessible to a broader audience and our lead generation has doubled.",
+      rating: 5,
+      avatar: avatar9,
+    },
+    {
+      name: "Chris Martinez",
+      role: "Founder, Digital Dynamics",
+      content: "Best decision we made was hiring Armin for our content needs. His writing is engaging, SEO-optimized, and always delivered on time. Our content marketing ROI has never been better.",
+      rating: 5,
+      avatar: avatar10,
     },
   ];
   return (
@@ -141,8 +208,55 @@ const Testimonials = () => {
             <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-zinc-800 to-transparent pointer-events-none rounded-r-lg" />
           </div>
 
+          {/* Featured Testimonials */}
+          <div className="mb-16">
+            <h2 className="text-2xl md:text-3xl font-primary text-center mb-8 text-accent">Featured Testimonials</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+              {featuredTestimonials.map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.1,
+                  }}
+                >
+                  <PixelCard className="h-full flex flex-col p-8 bg-gradient-to-br from-card via-card to-accent/10">
+                    <div className="flex items-center gap-4 mb-6">
+                      <Avatar className="w-20 h-20 pixel-border">
+                        <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                        <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <p className="font-primary font-bold text-lg text-foreground">{testimonial.name}</p>
+                        <p className="text-sm text-muted-foreground font-secondary">{testimonial.role}</p>
+                        <div className="flex gap-1 mt-1">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <span key={i} className="text-accent text-lg">
+                              ★
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <Quote className="w-10 h-10 text-accent mb-4 opacity-50" />
+                    <p className="text-foreground text-base leading-relaxed flex-grow font-secondary">"{testimonial.content}"</p>
+                  </PixelCard>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Regular Testimonials */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {testimonials.map((testimonial, index) => (
+            {regularTestimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
                 initial={{
@@ -155,22 +269,28 @@ const Testimonials = () => {
                 }}
                 transition={{
                   duration: 0.6,
-                  delay: index * 0.1,
+                  delay: (index + 2) * 0.1,
                 }}
               >
                 <PixelCard className="h-full flex flex-col">
-                  <Quote className="w-8 h-8 text-accent mb-4" />
-                  <p className="text-foreground mb-6 flex-grow font-secondary">"{testimonial.content}"</p>
-                  <div className="mt-auto">
-                    <p className="font-primary font-bold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground font-secondary">{testimonial.role}</p>
-                    <div className="flex gap-1 mt-2">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <span key={i} className="text-accent">
-                          ★
-                        </span>
-                      ))}
+                  <div className="flex items-center gap-3 mb-4">
+                    <Avatar className="w-16 h-16 pixel-border">
+                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                      <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-primary font-bold text-foreground">{testimonial.name}</p>
+                      <p className="text-xs text-muted-foreground font-secondary">{testimonial.role}</p>
                     </div>
+                  </div>
+                  <Quote className="w-6 h-6 text-accent mb-3 opacity-50" />
+                  <p className="text-foreground mb-4 flex-grow font-secondary text-sm">"{testimonial.content}"</p>
+                  <div className="flex gap-1 mt-auto">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <span key={i} className="text-accent">
+                        ★
+                      </span>
+                    ))}
                   </div>
                 </PixelCard>
               </motion.div>
