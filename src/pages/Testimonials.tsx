@@ -102,22 +102,6 @@ const Testimonials = () => {
 
   const regularTestimonials = [
     {
-      name: "Ines Cid Blasco",
-      role: "VP of Sales, Sales for Good",
-      content: "Absolutely loved my session with Armin. You can tell he really knows his stuff: content writing. And on top of that, he genuinely wants to help. He has a very reciprocal approach to business, meaning he is as keen to give value as he is to receive it. Would highly recommend working with Armin!",
-      rating: 5,
-      avatar: avatar1,
-      caseStudyUrl: "#",
-    },
-    {
-      name: "Julia Doronina",
-      role: "Chief Marketing & Growth Leader, G-71",
-      content: "The session went great! Armin shared many insights and was very helpful in my research, also suggested solutions to the problem and assisted with evaluating the product's functionality.",
-      rating: 5,
-      avatar: avatar2,
-      caseStudyUrl: "#",
-    },
-    {
       name: "Mehdi Rahmaninia",
       role: "Founder, CEO, and Marketing Management Consultant",
       content: "They really deliver what they are promising. I had an increased traffic since the contents were rich in terms of SEO, and the copy was good too. So, in the articles that were targeting my bottom funnel, the content and copy were converting pretty well. The overall experience of working with Renée Content was pretty great, and I was confident that they understood what I needed from them every step of the way.",
@@ -126,35 +110,11 @@ const Testimonials = () => {
       caseStudyUrl: "#",
     },
     {
-      name: "Aria Sadeghian",
-      role: "CEO, Mirex Technologies",
-      content: "It was a great honor to meet Armin about the barriers in our company, his sense of giving hints for solving your issues will cheer you up. Thanks, Armin for your support and time.",
-      rating: 5,
-      avatar: avatar4,
-      caseStudyUrl: "#",
-    },
-    {
-      name: "Uju Okoye",
-      role: "Content Writer, Invoice.ng",
-      content: "Armin was well-prepared and knowledgeable about content marketing. He was able to answer all of my questions and provided practical advice. He was patient and understanding. He took the time to listen to my goals and concerns, and he tailored his advice to my specific needs. Honestly, he was very helpful, he provided me with lots of resources to aid my learning and career, and offered to help more should the need be. Overall his session was absolutely awesome. Thank you, Armin.",
-      rating: 5,
-      avatar: avatar5,
-      caseStudyUrl: "#",
-    },
-    {
       name: "Niloofar Sh.",
       role: "Founder and CEO, Digital Marketing Agency",
       content: "The quality of the content they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations. They went above and beyond to deliver content that genuinely resonated with my audience and contributed to our overall business growth and success.",
       rating: 5,
       avatar: avatar6,
-      caseStudyUrl: "#",
-    },
-    {
-      name: "Mojtaba Tavazo",
-      role: "Founder and CEO, Casco Salon",
-      content: "I'm very happy to meet Armin, and the mentoring session was enjoyable for me because Armin very professionally answered all my questions, examined the hidden aspects of my product, and gave me the best advice for it. I like to keep in touch with him in the future.",
-      rating: 5,
-      avatar: avatar8,
       caseStudyUrl: "#",
     },
     {
@@ -174,22 +134,6 @@ const Testimonials = () => {
       caseStudyUrl: "#",
     },
     {
-      name: "Mohammad Akhlaghi",
-      role: "Product Manager, Cafe Bazaar",
-      content: "Armin is a great person with great experience in Copywriting and SEO. I had a good meeting with him. I like to keep in touch with him in the future.",
-      rating: 5,
-      avatar: avatar11,
-      caseStudyUrl: "#",
-    },
-    {
-      name: "AmirAli Piroozbakhsh",
-      role: "Creative Director",
-      content: "My mentorship session with Armin Parvin was incredibly insightful. It illuminated aspects I had overlooked, lighting up the path I thought I already knew.",
-      rating: 5,
-      avatar: avatar10,
-      caseStudyUrl: "#",
-    },
-    {
       name: "Shadi V.",
       role: "Business Owner, Boutique",
       content: "In fact, our results were beyond my wildest dreams. Our website traffic skyrocketed, and we witnessed an impressive 3-fold increase in leads. Our content was engaging, informative, and perfectly aligned with our brand's message.",
@@ -198,12 +142,60 @@ const Testimonials = () => {
       caseStudyUrl: "#",
     },
     {
+      name: "Ines Cid Blasco",
+      role: "VP of Sales, Sales for Good",
+      content: "Absolutely loved my session with Armin. You can tell he really knows his stuff: content writing. And on top of that, he genuinely wants to help. He has a very reciprocal approach to business, meaning he is as keen to give value as he is to receive it. Would highly recommend working with Armin!",
+      rating: 5,
+      avatar: avatar1,
+    },
+    {
+      name: "Julia Doronina",
+      role: "Chief Marketing & Growth Leader, G-71",
+      content: "The session went great! Armin shared many insights and was very helpful in my research, also suggested solutions to the problem and assisted with evaluating the product's functionality.",
+      rating: 5,
+      avatar: avatar2,
+    },
+    {
+      name: "Aria Sadeghian",
+      role: "CEO, Mirex Technologies",
+      content: "It was a great honor to meet Armin about the barriers in our company, his sense of giving hints for solving your issues will cheer you up. Thanks, Armin for your support and time.",
+      rating: 5,
+      avatar: avatar4,
+    },
+    {
+      name: "Uju Okoye",
+      role: "Content Writer, Invoice.ng",
+      content: "Armin was well-prepared and knowledgeable about content marketing. He was able to answer all of my questions and provided practical advice. He was patient and understanding. He took the time to listen to my goals and concerns, and he tailored his advice to my specific needs. Honestly, he was very helpful, he provided me with lots of resources to aid my learning and career, and offered to help more should the need be. Overall his session was absolutely awesome. Thank you, Armin.",
+      rating: 5,
+      avatar: avatar5,
+    },
+    {
+      name: "Mojtaba Tavazo",
+      role: "Founder and CEO, Casco Salon",
+      content: "I'm very happy to meet Armin, and the mentoring session was enjoyable for me because Armin very professionally answered all my questions, examined the hidden aspects of my product, and gave me the best advice for it. I like to keep in touch with him in the future.",
+      rating: 5,
+      avatar: avatar8,
+    },
+    {
+      name: "Mohammad Akhlaghi",
+      role: "Product Manager, Cafe Bazaar",
+      content: "Armin is a great person with great experience in Copywriting and SEO. I had a good meeting with him. I like to keep in touch with him in the future.",
+      rating: 5,
+      avatar: avatar11,
+    },
+    {
+      name: "AmirAli Piroozbakhsh",
+      role: "Creative Director",
+      content: "My mentorship session with Armin Parvin was incredibly insightful. It illuminated aspects I had overlooked, lighting up the path I thought I already knew.",
+      rating: 5,
+      avatar: avatar10,
+    },
+    {
       name: "Luis Acoltzi",
       role: "Founder & Art Director/Designer, Pixel Hangar",
       content: "Armin was great at advising on my content strategy and how to approach new business. I really appreciate the time and I look forward to the next session.",
       rating: 5,
       avatar: avatar13,
-      caseStudyUrl: "#",
     },
     {
       name: "Masoud Rezaei",
@@ -211,7 +203,6 @@ const Testimonials = () => {
       content: "Conversation was great. Armin has very high and rich knowledge and experience in the fields of content, copywriting and marketing. And as I expected, it helped and clarified my work path.",
       rating: 5,
       avatar: masoudRezaei,
-      caseStudyUrl: "#",
     },
   ];
   return (
@@ -365,7 +356,7 @@ const Testimonials = () => {
                   </div>
                   <Quote className="w-6 h-6 text-accent mb-3 opacity-50" />
                   <p className="text-foreground mb-4 flex-grow font-secondary text-sm">"{testimonial.content}"</p>
-                  {testimonial.caseStudyUrl && (
+                  {testimonial.caseStudyUrl && testimonial.caseStudyUrl !== "#" && (
                     <a 
                       href={testimonial.caseStudyUrl}
                       className="mt-3 inline-block text-accent hover:text-accent/80 font-primary text-xs font-semibold transition-colors"
