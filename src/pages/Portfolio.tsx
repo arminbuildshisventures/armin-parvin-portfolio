@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { PixelCard } from "@/components/PixelCard";
 import { Cursor } from "@/components/ui/inverted-cursor";
+import workBg from "@/assets/work-bg-pixel.png";
 
 export default function Portfolio() {
   const projects = [
@@ -47,8 +48,18 @@ export default function Portfolio() {
       <Cursor />
       <Header />
       
-      <section className="flex-grow py-24 px-4 pt-32">
-        <div className="container mx-auto max-w-6xl">
+      <section 
+        className="flex-grow py-24 px-4 pt-32 relative"
+        style={{
+          backgroundImage: `url(${workBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="absolute inset-0 bg-background/80" />
+        
+        <div className="container mx-auto max-w-6xl relative z-10">
           <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Portfolio</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
