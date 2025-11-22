@@ -1,14 +1,14 @@
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { ReactNode } from "react";
+import { ReactNode, HTMLAttributes } from "react";
 
-interface PixelCardProps {
+interface PixelCardProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
   className?: string;
   hover?: boolean;
 }
 
-export function PixelCard({ children, className, hover = true }: PixelCardProps) {
+export function PixelCard({ children, className, hover = true, ...props }: PixelCardProps) {
   return (
     <Card
       className={cn(
@@ -16,6 +16,7 @@ export function PixelCard({ children, className, hover = true }: PixelCardProps)
         hover && "hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px]",
         className
       )}
+      {...props}
     >
       {children}
     </Card>
