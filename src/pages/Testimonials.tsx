@@ -115,15 +115,15 @@ const Testimonials = () => {
                       <div
                         key={`${setIndex}-${index}`}
                         className={`flex items-center justify-center h-20 w-52 flex-shrink-0 hover:scale-110 transition-transform duration-300 ${
-                          logo.alt === "WP SMS" || logo.alt === "Lorenzo CPA" ? "px-8" : ""
+                          logo.alt === "WP SMS" || logo.alt === "Lorenzo CPA" ? "px-6" : ""
                         }`}
                       >
-                        <img 
-                          src={logo.src} 
-                          alt={logo.alt} 
+                        <img
+                          src={logo.src}
+                          alt={logo.alt}
                           className={`w-auto object-contain brightness-0 invert ${
                             logo.alt === "WP SMS" || logo.alt === "Lorenzo CPA" ? "h-10" : "h-14"
-                          }`} 
+                          }`}
                         />
                       </div>
                     ))}
