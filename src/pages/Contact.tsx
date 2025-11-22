@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import contactBg from "@/assets/contact-bg-pixel.png";
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters").max(100),
   email: z.string().email("Invalid email address").max(255),
@@ -55,7 +56,13 @@ export default function Contact() {
       <Cursor />
       <Header />
 
-      <section className="flex-grow py-24 px-4 pt-32">
+      <section 
+        className="flex-grow py-24 px-4 pt-32 bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: `url(${contactBg})`,
+          imageRendering: 'pixelated'
+        }}
+      >
         <div className="container mx-auto max-w-4xl">
           <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Get In Touch</h1>
 
