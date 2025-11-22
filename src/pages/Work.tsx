@@ -8,6 +8,8 @@ import workBg from "@/assets/work-bg-pixel.png";
 import roomvuResults1 from "@/assets/work/roomvu-results-1.png";
 import roomvuResults2 from "@/assets/work/roomvu-results-2.jpg";
 import roomvuResults3 from "@/assets/work/roomvu-results-3.jpg";
+import trinaMoitra from "@/assets/testimonials/trina-moitra.png";
+import { Star } from "lucide-react";
 
 interface CaseStudy {
   title: string;
@@ -18,6 +20,14 @@ interface CaseStudy {
   process: string;
   outcome: string;
   images: string[];
+  testimonial?: {
+    name: string;
+    title: string;
+    company: string;
+    avatar: string;
+    rating: number;
+    text: string;
+  };
 }
 
 export default function Work() {
@@ -33,6 +43,14 @@ export default function Work() {
       process: "Developed a comprehensive content strategy focusing on feature-specific content and Full-Stack Experimentation thought leadership. Conducted keyword research, competitor analysis, and created detailed content briefs. Worked closely with the product team to understand technical specifications and translated them into accessible, SEO-optimized content. Produced multi-perspective, journalistic articles that positioned Convert as leaders in the Full-Stack Experimentation space.",
       outcome: "Successfully established Convert.com's presence in SERPs for target keywords. The content strategy led to increased organic traffic and improved brand recognition within the industry. Content pieces consistently ranked in top positions for competitive keywords. Produced 50+ articles focused on Full-Stack Experimentation, positioning Convert as thought leaders in this emerging space.",
       images: [],
+      testimonial: {
+        name: "Trina Moitra",
+        title: "CMO",
+        company: "Convert.com",
+        avatar: trinaMoitra,
+        rating: 5,
+        text: "Armin impressed me with his attention to detail & his knowledge of the industry from day 1. We needed someone to take on the production of bottom-of-the-funnel focused content and to seed Convert's name in the SERPs for our brand new features. Our collaboration was very pleasant. Renee Content has a good process and they really give 110% to understand your requirements. Thank you for being such consummate professionals!"
+      },
     },
     {
       title: "Roomvu",
@@ -417,6 +435,40 @@ export default function Work() {
                     {selectedCaseStudy.outcome}
                   </p>
                 </div>
+
+                {/* Testimonial Section */}
+                {selectedCaseStudy.testimonial && (
+                  <div className="space-y-3">
+                    <h3 className="font-primary text-xl text-accent pixel-border inline-block px-3 py-1 bg-accent/10">
+                      Testimonial
+                    </h3>
+                    <div className="pixel-border p-6 bg-secondary/5">
+                      <div className="flex items-start gap-4 mb-4">
+                        <img 
+                          src={selectedCaseStudy.testimonial.avatar} 
+                          alt={selectedCaseStudy.testimonial.name}
+                          className="w-16 h-16 pixel-border"
+                        />
+                        <div className="flex-1">
+                          <h4 className="font-primary text-lg mb-1">
+                            {selectedCaseStudy.testimonial.name}
+                          </h4>
+                          <p className="font-secondary text-sm text-muted-foreground mb-2">
+                            {selectedCaseStudy.testimonial.title}, {selectedCaseStudy.testimonial.company}
+                          </p>
+                          <div className="flex gap-1">
+                            {Array.from({ length: selectedCaseStudy.testimonial.rating }).map((_, i) => (
+                              <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                      <p className="font-secondary text-sm leading-relaxed">
+                        {selectedCaseStudy.testimonial.text}
+                      </p>
+                    </div>
+                  </div>
+                )}
 
                 {/* Results Images */}
                 {selectedCaseStudy.images.length > 0 && (
