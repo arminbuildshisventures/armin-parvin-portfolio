@@ -471,7 +471,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
     {
       title: "Kubernetes Penetration Testing",
       description: "One-page service overview explaining Kubernetes penetration testing services, security assessment process, and what the testing includes.",
-      results: "Service Positioning | Clear Value Proposition | Technical Service Description",
+      results: "Service Positioning | Clear Value Proposition | Simplification",
       workType: ["White Paper"],
       industry: ["Cybersecurity"],
       format: ["Service Page", "One-Pager"],
