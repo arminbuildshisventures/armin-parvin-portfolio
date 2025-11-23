@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { PixelCard } from "@/components/PixelCard";
+import { ClientLogos } from "@/components/ClientLogos";
 import { PixelButton } from "@/components/PixelButton";
 import { Mail, Linkedin } from "lucide-react";
 import { Cursor } from "@/components/ui/inverted-cursor";
@@ -189,6 +190,9 @@ export default function Contact() {
           </PixelCard>
         </div>
       </section>
+
+      {/* Client Logos Section */}
+      <ClientLogos />
 
       {/* Footer */}
       <footer className="py-8 px-4 pixel-border border-b-0 border-x-0">

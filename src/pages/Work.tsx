@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { PixelCard } from "@/components/PixelCard";
+import { ClientLogos } from "@/components/ClientLogos";
 import { Cursor } from "@/components/ui/inverted-cursor";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -1470,6 +1471,9 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
           )}
         </DialogContent>
       </Dialog>
+
+      {/* Client Logos Section */}
+      <ClientLogos />
 
       {/* Footer */}
       <footer className="py-8 px-4 pixel-border border-b-0 border-x-0 relative z-10 bg-background">
