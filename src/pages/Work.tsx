@@ -915,6 +915,15 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/securebug-announces-rebrand",
     },
     {
+      title: "ADPList Don't Settle Conference - Guest Speaker Presentation",
+      description: "Guest speaker presentation at ADPList's Don't Settle Conference 2025. Shared insights on content marketing, personal branding, and professional growth strategies with the ADPList community.",
+      results: "Thought Leadership | Community Education | Professional Speaking",
+      workType: ["Presentation"],
+      industry: ["Professional Services", "Marketing"],
+      format: ["Presentation"],
+      downloadUrl: "/work/adplist-dont-settle-conference.pdf",
+    },
+    {
       title: "New CEO Vincent Heidarinia",
       description: "Press release announcing Vincent Heidarinia's appointment as CEO of Nordic Defender, highlighting his journey from founder to chief executive officer.",
       results: "Leadership Announcement | Executive Promotion | Company Growth",
