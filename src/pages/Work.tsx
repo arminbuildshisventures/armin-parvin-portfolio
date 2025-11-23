@@ -6,6 +6,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown, X } from "lucide-react";
+import { useSearchParams } from "react-router-dom";
 import workBg from "@/assets/work-bg-pixel.png";
 import roomvuResults1 from "@/assets/work/roomvu-results-1.png";
 import roomvuResults2 from "@/assets/work/roomvu-results-2.jpg";
@@ -21,6 +22,7 @@ import shadiV from "@/assets/testimonials/shadi-avatar.png";
 import { Star } from "lucide-react";
 
 interface CaseStudy {
+  slug: string;
   title: string;
   category: string;
   description: string;
@@ -44,6 +46,7 @@ interface CaseStudy {
 }
 
 interface WorkItem {
+  slug?: string;
   title: string;
   description: string;
   results: string;
@@ -66,9 +69,11 @@ const getButtonText = (workTypes: string[]) => {
 };
 
 export default function Work() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy | null>(null);
   const [showFullInterview, setShowFullInterview] = useState(false);
   const [viewImageUrl, setViewImageUrl] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<string>("case-studies");
   
   // Filter states
   const [selectedWorkTypes, setSelectedWorkTypes] = useState<string[]>([]);
@@ -97,8 +102,59 @@ export default function Work() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Utility functions for deep linking
+  const findCaseStudyBySlug = (slug: string): CaseStudy | null => {
+    return caseStudies.find(cs => cs.slug === slug) || null;
+  };
+
+  const findWorkItemBySlug = (slug: string): WorkItem | null => {
+    return selectedWork.find(w => w.slug === slug) || null;
+  };
+
+  // Handle URL parameters for deep linking
+  useEffect(() => {
+    const caseSlug = searchParams.get('case');
+    const workSlug = searchParams.get('work');
+
+    if (caseSlug) {
+      const caseStudy = findCaseStudyBySlug(caseSlug);
+      if (caseStudy) {
+        setSelectedCaseStudy(caseStudy);
+        setActiveTab('case-studies');
+      } else {
+        // Invalid slug, clear parameter
+        setSearchParams({});
+      }
+    } else if (workSlug) {
+      // For work items, just switch to the tab
+      const workItem = findWorkItemBySlug(workSlug);
+      if (workItem) {
+        setActiveTab('featured-work');
+      } else {
+        // Invalid slug, clear parameter
+        setSearchParams({});
+      }
+    }
+  }, [searchParams]);
+
+  // Update click handlers to add URL param
+  const handleCaseStudyClick = (caseStudy: CaseStudy) => {
+    setSelectedCaseStudy(caseStudy);
+    if (caseStudy.slug) {
+      setSearchParams({ case: caseStudy.slug });
+    }
+  };
+
+  // Update close handler to clear URL param
+  const handleCaseStudyClose = () => {
+    setSelectedCaseStudy(null);
+    setShowFullInterview(false);
+    setSearchParams({});
+  };
+
   const caseStudies: CaseStudy[] = [
     {
+      slug: "convert-com",
       title: "Convert.com",
       category: "Content Marketing",
       description: "Created bottom-of-funnel content strategy and wrote multi-perspective articles to establish brand presence in SERPs for new features.",
@@ -117,6 +173,7 @@ export default function Work() {
       },
     },
     {
+      slug: "roomvu",
       title: "Roomvu",
       category: "Cold Email Marketing",
       description: "Roomvu is a PropTech platform offering hyper-local real estate video marketing. Through winning email marketing, copywriting, and storytelling techniques, brought them an added client base of 24,000+ users.",
@@ -127,6 +184,7 @@ export default function Work() {
       images: [roomvuResults2, roomvuResults3, roomvuResults1],
     },
     {
+      slug: "nordic-defender",
       title: "Nordic Defender",
       category: "Product Marketing",
       description: "Managed all marketing channels for Next-Gen Pentest Solution including email marketing, content writing, white papers, and sales documents.",
@@ -137,6 +195,7 @@ export default function Work() {
       images: [],
     },
     {
+      slug: "cloudzy",
       title: "Cloudzy",
       category: "Technical Content",
       description: "Cloudzy is a VPS and Cloud Service Provider serving hundreds of thousands of users worldwide. Developed technical blog content, knowledge base, and landing pages to maximize conversion rates and website visitors.",
@@ -147,6 +206,7 @@ export default function Work() {
       images: [],
     },
     {
+      slug: "wp-sms-pro",
       title: "WP SMS Pro",
       category: "Blog Content Writing",
       description: "WP SMS Pro is a subsidiary of VeronaLabs offering an all-in-one WordPress plugin for SMS Marketing. Developed blog content writing to increase website visitors and convert them into loyal users.",
@@ -157,6 +217,7 @@ export default function Work() {
       images: [],
     },
     {
+      slug: "lorenzo-cpa",
       title: "LorenzoCPA",
       category: "Copywriting",
       description: "Lorenzo Abbatiello is a Certified Public Accountant (CPA) who advises clients on tax strategy, including crypto tax. Developed blog content, X posts, and newsletters to increase website visitors and convert them into loyal users.",
@@ -167,6 +228,7 @@ export default function Work() {
       images: [],
     },
     {
+      slug: "citronity",
       title: "Citronity",
       category: "Digital Marketing",
       description: "citronity is a custom software development company offering software development, Team as a Service (TaaS), MVP building, product discovery, and UI/UX design. Generated and nurtured leads through email marketing to book sales calls.",
@@ -177,6 +239,7 @@ export default function Work() {
       images: [],
     },
     {
+      slug: "bsuite365",
       title: "BSuite365",
       category: "Technical Content",
       description: "BSUITE365 is a team of Microsoft Excel Consultants and Programmers offering tailored solutions for business efficiency and accurate reporting. Wrote technical blog content covering Excel tips, tricks, and complexities.",
@@ -187,6 +250,7 @@ export default function Work() {
       images: [],
     },
     {
+      slug: "watchthemlive",
       title: "WatchThemLive",
       category: "Digital Marketing",
       description: "WatchThemLive is a user-tracking tool that enables business owners to watch their user behaviors through session recordings and heatmaps. Managed all marketing channels including email marketing, content marketing, technical content writing, and landing page copywriting.",
@@ -205,6 +269,7 @@ export default function Work() {
       },
     },
     {
+      slug: "influencer-marketing-business",
       title: "Influencer Marketing Business",
       category: "Content Marketing",
       description: "Developed content strategy and materials for influencer marketing platform launch and growth.",
@@ -249,6 +314,7 @@ Given the quality of the service, I would definitely recommend Renée Content to
       },
     },
     {
+      slug: "rahmaninia-digital-marketing-agency",
       title: "Rahmaninia Digital Marketing Agency",
       category: "Agency Content",
       description: "Created comprehensive content suite for digital marketing agency brand positioning.",
@@ -299,6 +365,7 @@ I definitely recommend using Renée agency services as they give you an overally
       },
     },
     {
+      slug: "digital-marketing-agency",
       title: "Digital Marketing Agency",
       category: "Content Marketing",
       description: "Executed content marketing strategy to establish thought leadership and drive client acquisition.",
@@ -343,6 +410,7 @@ I can't recommend Renée Content enough. If you're looking for content writing s
       },
     },
     {
+      slug: "mv-production",
       title: "MV Production",
       category: "Creative Content",
       description: "Developed creative content and copy for media production company brand storytelling.",
@@ -393,6 +461,7 @@ Definitely I recommend it, actually because they're really experienced and they 
       },
     },
     {
+      slug: "boutique",
       title: "Boutique",
       category: "E-commerce Content",
       description: "Created content marketing strategy for online boutique specializing in trendy fashion and home decor items.",
@@ -443,6 +512,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       },
     },
     {
+      slug: "c-level-executives-coaches-speakers",
       title: "C-Level Executives, Coaches, and Speakers",
       category: "Ghostwriting",
       description: "Ghostwrote thought leadership content for C-level executives, coaches, and speakers to build their personal brands.",
@@ -456,6 +526,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
 
   const selectedWork: WorkItem[] = [
     {
+      slug: "next-gen-ptaas-roi",
       title: "Next-Gen PTaaS ROI",
       description: "Comprehensive white paper analyzing Return on Investment for Next-Gen Pentest as a Service, comparing traditional vs. next-gen pentesting with detailed cost-benefit analysis.",
       results: "35% Cost Reduction | 350% Higher ROI | Detailed ROI Framework",
@@ -465,6 +536,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/next-gen-pentest-roi.pdf",
     },
     {
+      slug: "next-gen-pentest-buyers-guide",
       title: "Next-Gen Pentest Buyer's Guide",
       description: "Educational buyer's guide helping potential clients understand penetration testing services, types of providers, and how to choose the right solution.",
       results: "14-Page Comprehensive Guide | Client Education Tool | Lead Generation Asset",
@@ -474,6 +546,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/pentest-buyers-guide.pdf",
     },
     {
+      slug: "kubernetes-penetration-testing",
       title: "Kubernetes Penetration Testing",
       description: "One-page service overview explaining Kubernetes penetration testing services, security assessment process, and what the testing includes.",
       results: "Service Positioning | Clear Value Proposition | Simplification",
@@ -483,6 +556,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/kubernetes-penetration-testing.pdf",
     },
     {
+      slug: "secdevops-vs-devsecops",
       title: "SecDevOps vs DevSecOps",
       description: "In-depth comparison of SecDevOps and DevSecOps approaches in the Systems Development Life Cycle, exploring security-first methodologies for modern software development.",
       results: "Comprehensive Analysis | Security Best Practices | SDLC Integration Guide",
@@ -492,6 +566,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/secdevops-vs-devsecops",
     },
     {
+      slug: "directadmin-vs-cpanel",
       title: "DirectAdmin vs. cPanel",
       description: "Comprehensive comparison guide helping you choose the right control panel for web hosting between DirectAdmin and cPanel, analyzing features, pricing, and usability.",
       results: "Detailed Comparison | Feature Analysis | Decision Framework",
@@ -501,6 +576,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://cloudzy.com/blog/directadmin-vs-cpanel/",
     },
     {
+      slug: "protect-fivem-server-ddos",
       title: "How to Protect FiveM Server from DDoS",
       description: "Step-by-step guide explaining DDoS attacks and proven methods to protect your FiveM server from malicious traffic and maintain server availability.",
       results: "Security Implementation | DDoS Protection Strategies | Server Hardening",
@@ -510,6 +586,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://cloudzy.com/blog/protect-fivem-server-from-ddos-attack/",
     },
     {
+      slug: "install-webmin-vps",
       title: "How to Install Webmin on a VPS",
       description: "Complete step-by-step installation guide for Webmin web-based system administration interface on CentOS and Ubuntu VPS servers.",
       results: "Detailed Installation Guide | System Management Setup | VPS Configuration",
@@ -519,6 +596,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://cloudzy.com/blog/install-webmin-on-vps/",
     },
     {
+      slug: "self-hosted-gitlab-alternative",
       title: "Best Self-Hosted GitLab Alternative",
       description: "Comprehensive review of top open-source DevOps tools and self-hosted GitLab alternatives for collaborative software development and version control.",
       results: "Platform Comparison | DevOps Tool Analysis | Migration Guide",
@@ -528,6 +606,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://cloudzy.com/blog/self-hosted-gitlab-alternatives/",
     },
     {
+      slug: "list-running-services-linux",
       title: "List Running Services on Linux",
       description: "Practical guide to listing and managing running services on Linux systems including Ubuntu, Debian, and CentOS distributions.",
       results: "System Administration Guide | Service Management | Linux Commands",
@@ -537,6 +616,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://cloudzy.com/blog/list-running-services-on-linux/",
     },
     {
+      slug: "trade-metatrader-4",
       title: "How to Trade Using MetaTrader 4",
       description: "Complete beginner-to-advanced guide for Forex trading using MetaTrader 4 platform, covering installation, trading strategies, and advanced features.",
       results: "Trading Guide | Platform Mastery | Strategy Implementation",
@@ -546,6 +626,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://cloudzy.com/blog/how-to-use-metatrader-4/",
     },
     {
+      slug: "nvme-vs-ssd",
       title: "NVMe vs SSD",
       description: "Detailed technical comparison of NVMe and SSD storage technologies, analyzing speed, cost, use cases, and features to help you choose the right solution.",
       results: "Hardware Comparison | Performance Analysis | Buying Guide",
@@ -555,6 +636,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://cloudzy.com/blog/nvme-vs-ssd/",
     },
     {
+      slug: "trade-on-binance",
       title: "How to Trade on Binance",
       description: "Comprehensive beginner-friendly guide to cryptocurrency trading on Binance, covering account setup, funding, and different trading types.",
       results: "Crypto Trading Guide | Platform Navigation | Trading Strategies",
@@ -564,6 +646,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://cloudzy.com/blog/trade-on-binance/",
     },
     {
+      slug: "beginners-guide-sms-marketing",
       title: "Beginner's Guide to SMS Marketing",
       description: "Complete beginner's guide to SMS marketing for WordPress, covering setup, best practices, and strategies to engage your audience.",
       results: "SMS Marketing Foundation | WordPress Integration | Engagement Strategies",
@@ -573,6 +656,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://wp-sms-pro.com/24687/beginners-guide-sms-marketing-wordpress/",
     },
     {
+      slug: "drive-traffic-sms-marketing",
       title: "Drive Traffic with SMS Marketing",
       description: "Proven strategies to drive traffic using SMS marketing campaigns, increasing website visits and customer engagement.",
       results: "Traffic Generation | SMS Campaign Strategy | Audience Growth",
@@ -582,6 +666,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://wp-sms-pro.com/24905/drive-traffic-with-sms-marketing/",
     },
     {
+      slug: "conversion-rates-sms-marketing",
       title: "Conversion Rates with SMS Marketing",
       description: "Effective techniques to boost conversion rates through targeted SMS marketing campaigns and optimized messaging.",
       results: "Conversion Optimization | Campaign Performance | Message Targeting",
@@ -591,6 +676,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://wp-sms-pro.com/24971/conversion-rates-with-sms-marketing/",
     },
     {
+      slug: "future-sms-marketing",
       title: "The Future of SMS Marketing",
       description: "Insights into emerging trends and the future landscape of SMS marketing, including automation and personalization.",
       results: "Industry Trends | Future Predictions | Marketing Innovation",
@@ -600,6 +686,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://wp-sms-pro.com/25138/future-of-sms-marketing/",
     },
     {
+      slug: "wp-sms-two-way",
       title: "WP SMS Two-Way",
       description: "Guide to implementing two-way SMS communication in WordPress for enhanced customer interaction and engagement.",
       results: "Two-Way Communication | Customer Interaction | WordPress Setup",
@@ -609,6 +696,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://wp-sms-pro.com/25324/wp-sms-two-way/",
     },
     {
+      slug: "analyzing-sms-campaign",
       title: "Analyzing SMS Campaign",
       description: "Comprehensive guide to analyzing SMS campaign performance, tracking metrics, and optimizing for better results.",
       results: "Campaign Analytics | Performance Metrics | Data-Driven Optimization",
@@ -618,6 +706,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://wp-sms-pro.com/25425/analyzing-sms-campaign-for-blog/",
     },
     {
+      slug: "text-message-marketing-practices",
       title: "Text Message Marketing Practices",
       description: "Essential best practices for text message marketing to maximize engagement, compliance, and campaign effectiveness.",
       results: "Best Practices | Compliance Guidelines | Campaign Excellence",
@@ -627,6 +716,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://wp-sms-pro.com/25486/text-message-marketing-practices/",
     },
     {
+      slug: "find-accredited-nft-tax-accountant",
       title: "How to Find an Accredited NFT Tax Accountant",
       description: "Comprehensive guide to finding reliable NFT tax accountants, covering NFT taxation basics, blockchain technology, and key qualities to look for in a tax professional.",
       results: "Tax Professional Selection | NFT Compliance | Expert Guidance",
@@ -636,6 +726,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/how-to-find-accredited-nft-tax-accountant.pdf",
     },
     {
+      slug: "florida-bitcoin-taxes",
       title: "How & When Should You Pay Florida Bitcoin Taxes",
       description: "Detailed guide on Florida Bitcoin tax regulations, explaining when cryptocurrency transactions are taxable and how to properly report them.",
       results: "State Tax Compliance | Bitcoin Regulations | Tax Timing Strategy",
@@ -1067,7 +1158,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
         <div className="absolute inset-0 bg-background/80" />
         
         <div className="container mx-auto max-w-6xl relative z-20">
-          <Tabs defaultValue="case-studies" className="w-full">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <div className="mb-16 flex justify-center">
               <TabsList className="md:pixel-border md:bg-background/60 md:backdrop-blur-md md:p-1.5 md:pixel-shadow-lg bg-transparent flex flex-col md:flex-row gap-0 md:gap-2 w-full md:w-auto p-0 mt-8 md:mt-0 items-stretch">
                 <TabsTrigger 
@@ -1092,7 +1183,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                 <PixelCard 
                   key={index}
                   className="cursor-pointer transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg group relative overflow-hidden flex flex-col"
-                  onClick={() => setSelectedCaseStudy(project)}
+                  onClick={() => handleCaseStudyClick(project)}
                 >
                   {/* Gradient accent line at top */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-secondary to-accent opacity-60 group-hover:opacity-100 transition-opacity" />
@@ -1310,10 +1401,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       </Dialog>
 
       {/* Case Study Modal */}
-      <Dialog open={!!selectedCaseStudy} onOpenChange={() => {
-        setSelectedCaseStudy(null);
-        setShowFullInterview(false);
-      }}>
+      <Dialog open={!!selectedCaseStudy} onOpenChange={handleCaseStudyClose}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto pixel-border bg-background">
           {selectedCaseStudy && (
             <>
