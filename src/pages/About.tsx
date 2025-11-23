@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Cursor } from "@/components/ui/inverted-cursor";
+import { ClientLogos } from "@/components/ClientLogos";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Briefcase, GraduationCap, Code, Award, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -525,6 +526,9 @@ export default function About() {
           </Tabs>
         </div>
       </section>
+
+      {/* Client Logos Section */}
+      <ClientLogos />
 
       {/* Footer */}
       <footer className="py-8 px-4 pixel-border border-b-0 border-x-0">

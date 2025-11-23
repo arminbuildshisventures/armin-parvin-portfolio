@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
+import { ClientLogos } from "@/components/ClientLogos";
 import { FileText, Calendar } from "lucide-react";
 import { PixelCard } from "@/components/PixelCard";
 import insightsBg from "@/assets/insights-bg-pixel.png";
@@ -71,6 +72,9 @@ const Insights = () => {
           </div>
         </motion.div>
       </main>
+
+      {/* Client Logos Section */}
+      <ClientLogos />
 
       <footer className="py-8 px-4 pixel-border border-b-0 border-x-0 relative z-10 bg-background">
         <div className="container mx-auto text-center">
