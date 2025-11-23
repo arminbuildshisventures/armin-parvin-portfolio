@@ -756,7 +756,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
             <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Featured Work</h1>
             
             {/* Filter Component */}
-            <div className="mb-8 space-y-4">
+            <div className="mb-8 space-y-4 relative z-50">
               <div className="flex flex-wrap gap-4">
                 {/* Work Type Filter */}
                 <div className="relative" ref={workTypeRef}>
