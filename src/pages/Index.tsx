@@ -203,63 +203,63 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Featured Work</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Case Study 1: Roomvu */}
             <PixelCard>
               <div className="bg-accent/20 pixel-border h-48 mb-6 flex items-center justify-center">
-                <span className="font-primary text-xs text-accent">E-Commerce Campaign</span>
+                <span className="font-primary text-xs text-accent">Cold Email Marketing</span>
               </div>
-              <h3 className="font-primary text-sm mb-3">Email Series: 42% Open Rate</h3>
+              <h3 className="font-primary text-sm mb-3">Roomvu: 24,000+ Users Acquired</h3>
               <p className="font-secondary text-sm leading-relaxed mb-4">
-                Developed a 5-part welcome series for an e-commerce brand, resulting in 42% open rates and 18%
-                click-through rates.
+                Redesigned email marketing strategy with advanced segmentation and hyper-personalized campaigns, increasing weekly registrations from 170 to 500.
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Email</span>
-                <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Automation</span>
+                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
+                <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Real Estate</span>
               </div>
             </PixelCard>
 
+            {/* Case Study 2: WatchThemLive */}
             <PixelCard>
               <div className="bg-secondary/20 pixel-border h-48 mb-6 flex items-center justify-center">
-                <span className="font-primary text-xs text-secondary">SaaS Content</span>
+                <span className="font-primary text-xs text-secondary">Digital Marketing</span>
               </div>
-              <h3 className="font-primary text-sm mb-3">Blog Content: 3x Traffic Growth</h3>
+              <h3 className="font-primary text-sm mb-3">WatchThemLive: 11X ROI</h3>
               <p className="font-secondary text-sm leading-relaxed mb-4">
-                Created SEO-optimized blog content strategy that tripled organic traffic in 6 months for a B2B SaaS
-                company.
+                Managed all marketing channels achieving 52% increase in email open rates, 23% CTOR improvement, and 11X ROI through strategic campaigns.
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Content</span>
-                <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">SEO</span>
+                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
+                <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Technology</span>
               </div>
             </PixelCard>
 
+            {/* Featured Work 1: White Paper */}
             <PixelCard>
               <div className="bg-accent/20 pixel-border h-48 mb-6 flex items-center justify-center">
-                <span className="font-primary text-xs text-accent">Landing Page</span>
+                <span className="font-primary text-xs text-accent">White Paper</span>
               </div>
-              <h3 className="font-primary text-sm mb-3">Landing Page: 28% Conversion</h3>
+              <h3 className="font-primary text-sm mb-3">Next-Gen PTaaS ROI Analysis</h3>
               <p className="font-secondary text-sm leading-relaxed mb-4">
-                Rewrote landing page copy and optimized CTAs, increasing conversion rate from 12% to 28% for a lead
-                generation campaign.
+                Comprehensive white paper analyzing Return on Investment for Next-Gen Pentest as a Service with detailed cost-benefit analysis.
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Copywriting</span>
-                <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">CRO</span>
+                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">White Paper</span>
+                <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Cybersecurity</span>
               </div>
             </PixelCard>
 
+            {/* Featured Work 2: Blog */}
             <PixelCard>
               <div className="bg-secondary/20 pixel-border h-48 mb-6 flex items-center justify-center">
-                <span className="font-primary text-xs text-secondary">Newsletter</span>
+                <span className="font-primary text-xs text-secondary">Technical Blog</span>
               </div>
-              <h3 className="font-primary text-sm mb-3">Newsletter: 10K Subscribers</h3>
+              <h3 className="font-primary text-sm mb-3">DirectAdmin vs. cPanel Guide</h3>
               <p className="font-secondary text-sm leading-relaxed mb-4">
-                Launched and grew a weekly industry newsletter to 10,000 engaged subscribers with consistent 35%+ open
-                rates.
+                Comprehensive comparison guide helping readers choose the right control panel for web hosting with detailed feature analysis.
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Email</span>
-                <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Growth</span>
+                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Blog</span>
+                <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Technology</span>
               </div>
             </PixelCard>
           </div>
