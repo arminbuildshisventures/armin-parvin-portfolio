@@ -1096,7 +1096,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                         <p className="font-secondary text-xs font-semibold leading-relaxed">{project.results}</p>
                       </div>
                       <div className="flex items-center gap-2 text-accent group-hover:gap-4 transition-all">
-                        <span className="font-primary text-sm uppercase tracking-wider">View Case Study</span>
+                        <span className="font-primary text-[11px] uppercase tracking-wider">View Case Study</span>
                         <span className="text-lg">→</span>
                       </div>
                     </div>
@@ -1238,7 +1238,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                               <a
                                 href={project.downloadUrl}
                                 download
-                                className="pixel-border bg-gradient-to-br from-accent/30 to-accent/10 text-accent px-4 py-2 text-xs font-secondary uppercase tracking-wide hover:from-accent/40 hover:to-accent/20 hover:pixel-shadow transition-all font-semibold"
+                                className="pixel-border bg-gradient-to-br from-accent/30 to-accent/10 text-accent px-4 py-2 text-[11px] font-secondary uppercase tracking-wide hover:from-accent/40 hover:to-accent/20 hover:pixel-shadow transition-all font-semibold"
                               >
                                 {project.downloadUrl.endsWith('.html') ? 'Download HTML' : 'Download PDF'}
                               </a>
@@ -1248,7 +1248,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                                 href={project.beforeAfterImage}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="pixel-border bg-gradient-to-br from-primary/30 to-primary/10 text-primary px-4 py-2 text-xs font-secondary uppercase tracking-wide hover:from-primary/40 hover:to-primary/20 hover:pixel-shadow transition-all font-semibold"
+                                className="pixel-border bg-gradient-to-br from-primary/30 to-primary/10 text-primary px-4 py-2 text-[11px] font-secondary uppercase tracking-wide hover:from-primary/40 hover:to-primary/20 hover:pixel-shadow transition-all font-semibold"
                               >
                                 See Before/After
                               </a>
@@ -1256,7 +1256,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                             {project.viewImageUrl && (
                               <button
                                 onClick={() => setViewImageUrl(project.viewImageUrl!)}
-                                className="pixel-border bg-gradient-to-br from-primary/30 to-primary/10 text-primary px-4 py-2 text-xs font-secondary uppercase tracking-wide hover:from-primary/40 hover:to-primary/20 hover:pixel-shadow transition-all font-semibold"
+                                className="pixel-border bg-gradient-to-br from-primary/30 to-primary/10 text-primary px-4 py-2 text-[11px] font-secondary uppercase tracking-wide hover:from-primary/40 hover:to-primary/20 hover:pixel-shadow transition-all font-semibold"
                               >
                                 View Diagram
                               </button>
@@ -1266,7 +1266,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                                 href={project.externalUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="pixel-border bg-gradient-to-br from-accent/30 to-accent/10 text-accent px-4 py-2 text-xs font-secondary uppercase tracking-wide hover:from-accent/40 hover:to-accent/20 hover:pixel-shadow transition-all font-semibold"
+                                className="pixel-border bg-gradient-to-br from-accent/30 to-accent/10 text-accent px-4 py-2 text-[11px] font-secondary uppercase tracking-wide hover:from-accent/40 hover:to-accent/20 hover:pixel-shadow transition-all font-semibold"
                               >
                                 {getButtonText(project.workType)}
                               </a>
