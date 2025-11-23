@@ -106,7 +106,7 @@ const Testimonials = () => {
     // Testimonials with case studies first
     {
       name: "Parand Sh.",
-      role: "Business Owner, Influencer Marketing Agency",
+      role: "Founder, Influencer Marketing Agency",
       content:
         "The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%. The quality of the delivered content has been excellent. It has definitely exceeded my expectations. Our collaboration has been an absolute pleasure, a decision I would make over and over again. They made sure that all my requirements were understood fully and executed flawlessly.",
       rating: 5,
@@ -115,7 +115,7 @@ const Testimonials = () => {
     },
     {
       name: "Mehdi Rahmaninia",
-      role: "Founder, CEO, and Marketing Management Consultant",
+      role: "Head of Marketing, WatchThemLive",
       content: "They really deliver what they are promising. I had an increased traffic since the contents were rich in terms of SEO, and the copy was good too. So, in the articles that were targeting my bottom funnel, the content and copy were converting pretty well. The overall experience of working with Renée Content was pretty great, and I was confident that they understood what I needed from them every step of the way.",
       rating: 5,
       avatar: avatar3,
@@ -131,7 +131,7 @@ const Testimonials = () => {
     },
     {
       name: "Negar Farazmand",
-      role: "Business Design Expert, UI/UX Designer, Digital Marketer",
+      role: "Content and SEO Manager, WatchThemLive",
       content: "Armin is smart and a fast learner. His knowledge in many fields helps him find his way in almost any role you give him. Moreover, Armin's ambition and enthusiasm are absolutely remarkable, which lead him to achieve continued progress. His technical skills, coding knowledge, and brilliant ideas were a great help to the team. Working with Armin on the same team was a great experience.",
       rating: 5,
       avatar: avatar7,
@@ -139,7 +139,7 @@ const Testimonials = () => {
     },
     {
       name: "Mahmoud Valanejad",
-      role: "Media Creation Company Owner, MV Production",
+      role: "Founder, Media Creation Company",
       content: "I think they really care more about your business than you do. They are really experienced and they have a great customer support. You know, you can leave your business to them without any concern, and that's the point.",
       rating: 5,
       avatar: avatar9,
@@ -147,7 +147,7 @@ const Testimonials = () => {
     },
     {
       name: "Shadi V.",
-      role: "Business Owner, Boutique",
+      role: "Founder, Boutique",
       content: "In fact, our results were beyond my wildest dreams. Our website traffic skyrocketed, and we witnessed an impressive 3-fold increase in leads. Our content was engaging, informative, and perfectly aligned with our brand's message.",
       rating: 5,
       avatar: shadiAvatar,
