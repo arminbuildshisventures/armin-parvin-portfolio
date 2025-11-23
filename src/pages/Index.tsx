@@ -10,7 +10,10 @@ import contactBg from "@/assets/contact-bg-pixel.png";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
 import { Cursor } from "@/components/ui/inverted-cursor";
+import { useState } from "react";
 const Index = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -88,20 +91,33 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">About Me</h2>
           <PixelCard>
-            <p className="font-secondary text-base md:text-lg leading-relaxed mb-6">
-              Head of Content with <strong>5+ years of experience</strong> generating demand and high-quality leads in
-              SaaS and B2B Tech companies. Generated <strong>$12M+ in client revenue</strong>, boosted email engagement
-              (<strong>open rate +52%, CTOR +5%, registration +194%</strong>), and produced content{" "}
-              <strong>ranking #1 and #0</strong>.
-              <br />
-              <br />
-              Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B
-              Tech from early to growth stages.
-              <br />
-              <br />
-              Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to
-              narratives, and translating data into insight and strategy.
-            </p>
+            <div className="font-secondary text-base md:text-lg leading-relaxed">
+              <p className={`mb-6 ${!isExpanded ? "md:block" : ""}`}>
+                Head of Content with <strong className="text-accent">5+ years of experience</strong> generating demand and high-quality leads in
+                SaaS and B2B Tech companies. Generated <strong className="text-accent">$12M+ in client revenue</strong>, boosted email engagement
+                (<strong className="text-accent">open rate +52%, CTOR +5%, registration +194%</strong>), and produced content{" "}
+                <strong className="text-accent">ranking #1 and #0</strong>.
+              </p>
+              
+              <div className={`${isExpanded ? "block" : "hidden md:block"}`}>
+                <p className="mb-6">
+                  Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B
+                  Tech from early to growth stages.
+                </p>
+                
+                <p>
+                  Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to
+                  narratives, and translating data into insight and strategy.
+                </p>
+              </div>
+              
+              <button 
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="md:hidden mt-4 text-accent font-primary text-sm hover:underline"
+              >
+                {isExpanded ? "Read Less" : "Read More"}
+              </button>
+            </div>
           </PixelCard>
         </div>
       </section>
