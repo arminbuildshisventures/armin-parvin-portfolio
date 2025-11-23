@@ -628,7 +628,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       workType: ["Blog"],
       industry: ["Finance"],
       format: ["Blog"],
-      externalUrl: "https://lorenzocpa.com/blog/how-to-find-an-accredited-nft-tax-accountant",
+      downloadUrl: "/work/how-to-find-accredited-nft-tax-accountant.pdf",
     },
     {
       title: "How & When Should You Pay Florida Bitcoin Taxes",
@@ -637,7 +637,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       workType: ["Blog"],
       industry: ["Finance"],
       format: ["Blog"],
-      externalUrl: "https://lorenzocpa.com/blog/how-when-should-you-pay-florida-bitcoin-taxes",
+      downloadUrl: "/work/how-when-should-you-pay-florida-bitcoin-taxes.pdf",
     },
     {
       title: "Top 5 Global Havens to Avoid Taxes on Bitcoin",
@@ -646,7 +646,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       workType: ["Blog"],
       industry: ["Finance"],
       format: ["Blog"],
-      externalUrl: "https://lorenzocpa.com/blog/top-5-global-havens-to-avoid-taxes-on-bitcoin",
+      downloadUrl: "/work/top-5-global-havens-avoid-taxes-bitcoin.pdf",
     },
     {
       title: "Characteristics of Top Crypto Tax Software",
@@ -655,7 +655,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       workType: ["Blog"],
       industry: ["Finance"],
       format: ["Blog"],
-      externalUrl: "https://lorenzocpa.com/blog/characteristics-of-top-crypto-tax-software",
+      downloadUrl: "/work/characteristics-top-crypto-tax-software.pdf",
     },
     {
       title: "Common Questions to Ask Your NFT Tax Accountant",
@@ -664,7 +664,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       workType: ["Blog"],
       industry: ["Finance"],
       format: ["Blog"],
-      externalUrl: "https://lorenzocpa.com/blog/common-questions-to-ask-your-nft-tax-accountant",
+      downloadUrl: "/work/common-questions-nft-tax-accountant.pdf",
     },
     {
       title: "Which Crypto Tax Software is Best",
@@ -673,7 +673,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       workType: ["Blog"],
       industry: ["Finance"],
       format: ["Blog"],
-      externalUrl: "https://lorenzocpa.com/blog/which-crypto-tax-software-is-best",
+      downloadUrl: "/work/which-crypto-tax-software-best.pdf",
     },
     {
       title: "Crypto Tax Software: Manage Your Crypto Income Like a Pro",
@@ -682,7 +682,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       workType: ["Blog"],
       industry: ["Finance"],
       format: ["Blog"],
-      externalUrl: "https://lorenzocpa.com/blog/crypto-tax-software-manage-your-crypto-income-like-a-pro",
+      downloadUrl: "/work/crypto-tax-software-manage-income-pro.pdf",
     },
     {
       title: "Nordic Defender at IT-Sikkerhetsdagen",
