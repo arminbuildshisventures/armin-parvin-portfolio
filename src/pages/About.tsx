@@ -507,30 +507,30 @@ export default function About() {
                     </p>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">
+                  <div className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-accent text-lg sm:text-xl mt-1 flex-shrink-0">●</span>
+                    <p className="font-secondary text-sm sm:text-base md:text-lg">
                       Entrepreneurship: Problem-solving, leadership, and high-level strategizing
                     </p>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">
+                  <div className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-accent text-lg sm:text-xl mt-1 flex-shrink-0">●</span>
+                    <p className="font-secondary text-sm sm:text-base md:text-lg">
                       Reading: Business books, finance literature, and marketing classics
                     </p>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">
-                      Coffee: Exploring specialty (third-wave) coffee and different brewing methods
+                  <div className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-accent text-lg sm:text-xl mt-1 flex-shrink-0">●</span>
+                    <p className="font-secondary text-sm sm:text-base md:text-lg">
+                      Coffee: Exploring specialty (third-wave) coffee and different brewing methods
                     </p>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">
+                  <div className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-accent text-lg sm:text-xl mt-1 flex-shrink-0">●</span>
+                    <p className="font-secondary text-sm sm:text-base md:text-lg">
                       Music: Listening to Classical and Jazz music and playing Flamenco and Classical Guitar
                     </p>
                   </div>
