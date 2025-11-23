@@ -1067,23 +1067,25 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
         
         <div className="container mx-auto max-w-6xl relative z-20">
           <Tabs defaultValue="case-studies" className="w-full">
-            <TabsList className="mb-12 w-full max-w-md mx-auto grid grid-cols-2">
-              <TabsTrigger value="case-studies" className="font-primary text-sm uppercase tracking-wider">
-                Case Studies
-              </TabsTrigger>
-              <TabsTrigger value="featured-work" className="font-primary text-sm uppercase tracking-wider">
-                Featured Work
-              </TabsTrigger>
-            </TabsList>
+            <div className="mb-16 flex justify-center">
+              <TabsList className="pixel-border pixel-shadow-lg bg-card/50 backdrop-blur-sm p-2 inline-flex gap-2">
+                <TabsTrigger 
+                  value="case-studies" 
+                  className="font-primary text-base md:text-lg uppercase tracking-wider px-8 py-4 data-[state=active]:pixel-border data-[state=active]:bg-gradient-to-br data-[state=active]:from-accent/40 data-[state=active]:to-accent/20 data-[state=active]:text-accent data-[state=active]:pixel-shadow transition-all hover:-translate-y-1 data-[state=active]:translate-y-0"
+                >
+                  Case Studies
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="featured-work" 
+                  className="font-primary text-base md:text-lg uppercase tracking-wider px-8 py-4 data-[state=active]:pixel-border data-[state=active]:bg-gradient-to-br data-[state=active]:from-secondary/40 data-[state=active]:to-secondary/20 data-[state=active]:text-secondary data-[state=active]:pixel-shadow transition-all hover:-translate-y-1 data-[state=active]:translate-y-0"
+                >
+                  Featured Work
+                </TabsTrigger>
+              </TabsList>
+            </div>
 
             <TabsContent value="case-studies">
               <div>
-                <div className="text-center mb-16">
-                  <div className="inline-block pixel-border bg-gradient-to-r from-accent/30 via-secondary/30 to-accent/30 px-6 py-2 mb-6">
-                    <span className="font-primary text-sm tracking-wider uppercase">Portfolio Highlights</span>
-                  </div>
-                  <h1 className="font-primary text-4xl md:text-6xl text-pixel">Case Studies</h1>
-                </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {caseStudies.map((project, index) => (
                 <PixelCard 
@@ -1120,12 +1122,6 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
 
             <TabsContent value="featured-work">
               <div>
-                <div className="text-center mb-16">
-                  <div className="inline-block pixel-border bg-gradient-to-r from-secondary/30 via-accent/30 to-secondary/30 px-6 py-2 mb-6">
-                    <span className="font-primary text-sm tracking-wider uppercase">Selected Projects</span>
-                  </div>
-                  <h1 className="font-primary text-4xl md:text-6xl text-pixel">Featured Work</h1>
-                </div>
             
             {/* Filter Component */}
             <div className="mb-12 space-y-4 relative z-50">
