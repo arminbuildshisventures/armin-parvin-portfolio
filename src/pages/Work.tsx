@@ -1068,16 +1068,16 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
         <div className="container mx-auto max-w-6xl relative z-20">
           <Tabs defaultValue="case-studies" className="w-full">
         <div className="mb-16 flex justify-center px-4">
-          <TabsList className="bg-transparent p-0 grid grid-cols-2 gap-3 w-full max-w-md md:inline-flex md:w-auto md:pixel-border md:pixel-shadow-lg md:bg-card md:backdrop-blur-sm md:p-2 md:gap-2">
+          <TabsList className="bg-transparent p-0 grid grid-cols-2 gap-4 w-full max-w-md md:inline-flex md:w-auto md:pixel-border md:pixel-shadow-lg md:bg-card md:backdrop-blur-sm md:p-2 md:gap-2">
             <TabsTrigger 
               value="case-studies"
-              className="font-primary text-xs md:text-lg uppercase tracking-wider px-4 py-3 md:px-8 md:py-4 pixel-border bg-card/80 text-foreground data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:pixel-shadow transition-all"
+              className="font-primary text-xs md:text-lg uppercase tracking-wider px-3 py-3 md:px-8 md:py-4 pixel-border bg-card/80 text-foreground data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:pixel-shadow transition-all whitespace-nowrap"
             >
               Case Studies
             </TabsTrigger>
             <TabsTrigger 
               value="featured-work"
-              className="font-primary text-xs md:text-lg uppercase tracking-wider px-4 py-3 md:px-8 md:py-4 pixel-border bg-card/80 text-foreground data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground data-[state=active]:pixel-shadow transition-all"
+              className="font-primary text-xs md:text-lg uppercase tracking-wider px-3 py-3 md:px-8 md:py-4 pixel-border bg-card/80 text-foreground data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground data-[state=active]:pixel-shadow transition-all whitespace-nowrap"
             >
               Featured Work
             </TabsTrigger>
