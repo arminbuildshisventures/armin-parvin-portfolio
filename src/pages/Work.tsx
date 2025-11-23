@@ -438,7 +438,32 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
     },
   ];
 
-  const selectedWork: WorkItem[] = [];
+  const selectedWork: WorkItem[] = [
+    {
+      title: "Next-Gen Pentest ROI Analysis",
+      description: "Comprehensive white paper analyzing Return on Investment for Next-Gen Pentest as a Service, comparing traditional vs. next-gen pentesting with detailed cost-benefit analysis.",
+      results: "35% Cost Reduction | 350% Higher ROI | Detailed ROI Framework",
+      workType: ["White Paper"],
+      industry: ["Cybersecurity"],
+      format: ["White Paper", "ROI Analysis"],
+    },
+    {
+      title: "Penetration Testing Buyer's Guide",
+      description: "Educational buyer's guide helping potential clients understand penetration testing services, types of providers, and how to choose the right solution.",
+      results: "14-Page Comprehensive Guide | Client Education Tool | Lead Generation Asset",
+      workType: ["White Paper"],
+      industry: ["Cybersecurity"],
+      format: ["Buyer's Guide", "Educational Content"],
+    },
+    {
+      title: "Kubernetes Penetration Testing Service Overview",
+      description: "One-page service overview explaining Kubernetes penetration testing services, security assessment process, and what the testing includes.",
+      results: "Service Positioning | Clear Value Proposition | Technical Service Description",
+      workType: ["Webpage"],
+      industry: ["Cybersecurity"],
+      format: ["Service Page", "One-Pager"],
+    },
+  ];
 
   // Define available filter options even when no work items exist
   const allWorkTypes = ["Blog", "Case Study", "Press Release", "White Paper", "Marketing Email", "Sales Email", "LinkedIn Post", "Webpage", "Landing Page"];
