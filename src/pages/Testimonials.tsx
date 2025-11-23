@@ -23,6 +23,7 @@ import avatar13 from "@/assets/testimonials/avatar-13.png";
 import masoudRezaei from "@/assets/testimonials/masoud-rezaei.png";
 import shadiAvatar from "@/assets/testimonials/shadi-avatar.png";
 import gabbieSanchez from "@/assets/testimonials/gabbie-sanchez.png";
+import manaBehzad from "@/assets/testimonials/mana-behzad.png";
 import lorenzoLogo from "@/assets/clients/LorenzoLogo.png";
 import rahmaniniaLogo from "@/assets/clients/Rahmaninia.png";
 import wtlLogo from "@/assets/clients/WTL.png";
@@ -216,6 +217,13 @@ const Testimonials = () => {
       content: "Conversation was great. Armin has very high and rich knowledge and experience in the fields of content, copywriting and marketing. And as I expected, it helped and clarified my work path.",
       rating: 5,
       avatar: masoudRezaei,
+    },
+    {
+      name: "Mana Behzad",
+      role: "Multidisciplinary Creative",
+      content: "Armin was incredibly generous, practical, and patient during our session. Drawing from his entrepreneurial background, he helped me better position my skills in areas that were unfamiliar to me. He encouraged me to stay open to possibilities I hadn't considered and equipped me with a range of valuable resources to take advantage of moving forward.",
+      rating: 5,
+      avatar: manaBehzad,
     },
     {
       name: "AmirAli Piroozbakhsh",
