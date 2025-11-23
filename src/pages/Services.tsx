@@ -69,7 +69,7 @@ export default function Services() {
       <Cursor />
       <Header />
       
-      <section className="flex-grow py-24 px-4 pt-32 relative" style={{
+      <section className="flex-grow py-12 sm:py-20 md:py-24 px-4 pt-24 sm:pt-28 md:pt-32 relative" style={{
       backgroundImage: `url(${servicesBg})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
@@ -78,10 +78,10 @@ export default function Services() {
         <div className="absolute inset-0 bg-background/80" />
         
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h1 className="font-primary text-3xl md:text-5xl mb-8 text-center text-pixel">Marketing Services</h1>
+          <h1 className="font-primary text-2xl sm:text-3xl md:text-5xl mb-6 sm:mb-8 text-center text-pixel">Marketing Services</h1>
           
-          <div className="mb-12 text-center max-w-3xl mx-auto">
-            <p className="font-secondary text-lg text-muted-foreground">
+          <div className="mb-8 sm:mb-10 md:mb-12 text-center max-w-3xl mx-auto">
+            <p className="font-secondary text-sm sm:text-base md:text-lg text-muted-foreground">
               From strategy to execution, I create content and copy that drive results. I write{" "}
               <span className="text-accent font-semibold">blogs, articles, emails, white papers, press releases, case studies, LinkedIn and X posts, and webpages and landing pages copy</span>{" "}
               that convert.
@@ -89,84 +89,84 @@ export default function Services() {
           </div>
 
           <Tabs defaultValue="content-marketing" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-12 pixel-border bg-card">
-              <TabsTrigger value="content-marketing" className="font-primary text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
+            <TabsList className="grid w-full grid-cols-3 mb-8 sm:mb-10 md:mb-12 pixel-border bg-card">
+              <TabsTrigger value="content-marketing" className="font-primary text-[10px] sm:text-xs md:text-sm text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-2 sm:px-3 md:px-4">
                 Content Marketing
               </TabsTrigger>
-              <TabsTrigger value="copywriting" className="font-primary text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
+              <TabsTrigger value="copywriting" className="font-primary text-[10px] sm:text-xs md:text-sm text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-2 sm:px-3 md:px-4">
                 Copywriting
               </TabsTrigger>
-              <TabsTrigger value="email-marketing" className="font-primary text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
+              <TabsTrigger value="email-marketing" className="font-primary text-[10px] sm:text-xs md:text-sm text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-2 sm:px-3 md:px-4">
                 Email Marketing
               </TabsTrigger>
             </TabsList>
 
-            <TabsContent value="content-marketing" className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <TabsContent value="content-marketing" className="mt-6 sm:mt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {contentMarketingServices.map((service, index) => {
                 const Icon = service.icon;
-                return <PixelCard key={index} className="flex gap-4">
+                return <PixelCard key={index} className="flex gap-3 sm:gap-4">
                       <div className="flex-shrink-0">
-                        <Icon className="w-10 h-10 text-accent" />
+                        <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
                       </div>
                       <div>
-                        <h3 className="font-primary text-lg mb-2 text-pixel">{service.title}</h3>
-                        <p className="font-secondary text-sm text-muted-foreground">{service.description}</p>
+                        <h3 className="font-primary text-base sm:text-lg mb-1 sm:mb-2 text-pixel">{service.title}</h3>
+                        <p className="font-secondary text-xs sm:text-sm text-muted-foreground">{service.description}</p>
                       </div>
                     </PixelCard>;
               })}
               </div>
-              <div className="mt-8">
+              <div className="mt-6 sm:mt-8">
                 <PixelCard className="bg-accent/10 border-accent">
-                  <p className="font-secondary text-sm">
+                  <p className="font-secondary text-xs sm:text-sm">
                     <span className="font-semibold text-accent">Deliverables include:</span> Blog posts, articles, white papers, case studies, press releases, LinkedIn posts, and SEO-optimized content.
                   </p>
                 </PixelCard>
               </div>
             </TabsContent>
 
-            <TabsContent value="copywriting" className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <TabsContent value="copywriting" className="mt-6 sm:mt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {copywritingServices.map((service, index) => {
                 const Icon = service.icon;
-                return <PixelCard key={index} className="flex gap-4">
+                return <PixelCard key={index} className="flex gap-3 sm:gap-4">
                       <div className="flex-shrink-0">
-                        <Icon className="w-10 h-10 text-accent" />
+                        <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
                       </div>
                       <div>
-                        <h3 className="font-primary text-lg mb-2 text-pixel">{service.title}</h3>
-                        <p className="font-secondary text-sm text-muted-foreground">{service.description}</p>
+                        <h3 className="font-primary text-base sm:text-lg mb-1 sm:mb-2 text-pixel">{service.title}</h3>
+                        <p className="font-secondary text-xs sm:text-sm text-muted-foreground">{service.description}</p>
                       </div>
                     </PixelCard>;
               })}
               </div>
-              <div className="mt-8">
+              <div className="mt-6 sm:mt-8">
                 <PixelCard className="bg-accent/10 border-accent">
-                  <p className="font-secondary text-sm">
+                  <p className="font-secondary text-xs sm:text-sm">
                     <span className="font-semibold text-accent">Deliverables include:</span> Webpage copy, landing pages, sales pages, product descriptions, and direct-response marketing materials.
                   </p>
                 </PixelCard>
               </div>
             </TabsContent>
 
-            <TabsContent value="email-marketing" className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <TabsContent value="email-marketing" className="mt-6 sm:mt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {emailMarketingServices.map((service, index) => {
                 const Icon = service.icon;
-                return <PixelCard key={index} className="flex gap-4">
+                return <PixelCard key={index} className="flex gap-3 sm:gap-4">
                       <div className="flex-shrink-0">
-                        <Icon className="w-10 h-10 text-accent" />
+                        <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
                       </div>
                       <div>
-                        <h3 className="font-primary text-lg mb-2 text-pixel">{service.title}</h3>
-                        <p className="font-secondary text-sm text-muted-foreground">{service.description}</p>
+                        <h3 className="font-primary text-base sm:text-lg mb-1 sm:mb-2 text-pixel">{service.title}</h3>
+                        <p className="font-secondary text-xs sm:text-sm text-muted-foreground">{service.description}</p>
                       </div>
                     </PixelCard>;
               })}
               </div>
-              <div className="mt-8">
+              <div className="mt-6 sm:mt-8">
                 <PixelCard className="bg-accent/10 border-accent">
-                  <p className="font-secondary text-sm">
+                  <p className="font-secondary text-xs sm:text-sm">
                     <span className="font-semibold text-accent">Deliverables include:</span> Email campaigns, newsletters, automated sequences, drip campaigns, and promotional emails.
                   </p>
                 </PixelCard>
