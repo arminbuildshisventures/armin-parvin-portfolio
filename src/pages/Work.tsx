@@ -47,7 +47,6 @@ interface WorkItem {
   results: string;
   workType: string[];
   industry: string[];
-  clientType: string[];
   format: string[];
 }
 
@@ -58,17 +57,14 @@ export default function Work() {
   // Filter states
   const [selectedWorkTypes, setSelectedWorkTypes] = useState<string[]>([]);
   const [selectedIndustries, setSelectedIndustries] = useState<string[]>([]);
-  const [selectedClientTypes, setSelectedClientTypes] = useState<string[]>([]);
   
   // Dropdown states
   const [workTypeOpen, setWorkTypeOpen] = useState(false);
   const [industryOpen, setIndustryOpen] = useState(false);
-  const [clientTypeOpen, setClientTypeOpen] = useState(false);
 
   // Refs for click-away
   const workTypeRef = useRef<HTMLDivElement>(null);
   const industryRef = useRef<HTMLDivElement>(null);
-  const clientTypeRef = useRef<HTMLDivElement>(null);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -78,9 +74,6 @@ export default function Work() {
       }
       if (industryRef.current && !industryRef.current.contains(event.target as Node)) {
         setIndustryOpen(false);
-      }
-      if (clientTypeRef.current && !clientTypeRef.current.contains(event.target as Node)) {
-        setClientTypeOpen(false);
       }
     };
 
@@ -451,8 +444,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "PropTech platform offering hyper-local real estate video marketing. Increased weekly registrations from 170 to 500 through strategic cold email campaigns.",
       results: "24,000+ Users Acquired | 10% Email Open Rate Increase | 2.5% CTOR Increase",
       workType: ["Cold Email Marketing"],
-      industry: ["PropTech", "Real Estate"],
-      clientType: ["Startup"],
+      industry: ["Real Estate"],
       format: ["Email Campaigns", "Drip Sequences"],
     },
     {
@@ -461,7 +453,6 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       results: "30% Email Open Rate Increase | 50+ Technical Articles | 43+ Landing Pages",
       workType: ["Product Marketing", "Email Marketing", "Content Marketing", "LinkedIn Ghostwriting"],
       industry: ["Cybersecurity"],
-      clientType: ["Startup"],
       format: ["White Papers", "Technical Articles", "Landing Pages", "Sales Documents", "Emails"],
     },
     {
@@ -469,8 +460,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "VPS and Cloud Service Provider. Developed technical content achieving #1 rankings and featured snippets on Google.",
       results: "23+ Technical Articles | 7X Better SERP Position | 5X Conversion Rates",
       workType: ["Technical Writing"],
-      industry: ["Technology", "Cloud Infrastructure", "Hosting"],
-      clientType: ["Tech Company"],
+      industry: ["Technology"],
       format: ["Blog Posts", "Knowledge Base", "Landing Pages"],
     },
     {
@@ -478,8 +468,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "WordPress SMS Marketing Plugin. Created educational blog content to drive awareness and adoption.",
       results: "24+ Technical Articles | 3X Better SERP Position | 3.2X Conversion Rates",
       workType: ["Content Marketing"],
-      industry: ["SaaS", "Communication Tools", "WordPress Plugins"],
-      clientType: ["SaaS Startup"],
+      industry: ["Technology"],
       format: ["Blog Posts", "Technical Guides"],
     },
     {
@@ -487,8 +476,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "Certified Public Accountant specializing in crypto tax. Developed content strategy to establish authority.",
       results: "16+ Technical Articles | 14+ Minutes Time on Page | 3X Conversion Rates",
       workType: ["Crypto Tax", "Content Writing"],
-      industry: ["Crypto", "Blockchain", "Accounting", "Tax Services"],
-      clientType: ["Professional Services Firm"],
+      industry: ["Finance"],
       format: ["Blog Posts", "X Posts", "Newsletters"],
     },
     {
@@ -496,8 +484,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "Microsoft Excel Consultants and Programmers. Created technical content on Excel tips and best practices.",
       results: "50+ Technical Articles | 2X Better SERP Position | 5X Conversion Rates",
       workType: ["Excel", "Content Writing"],
-      industry: ["Software", "Productivity Tools"],
-      clientType: ["Software Company"],
+      industry: ["Technology"],
       format: ["Blog Posts", "Technical Tutorials"],
     },
     {
@@ -505,8 +492,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "User-tracking tool with session recordings and heatmaps. Managed all marketing channels to drive user activation.",
       results: "52% Email Open Rate Increase | 630+ Emails | 62+ Blogs | 11X ROI",
       workType: ["Content Marketing", "Email Marketing"],
-      industry: ["Analytics", "User Behavior", "SaaS"],
-      clientType: ["SaaS Startup"],
+      industry: ["Technology"],
       format: ["Emails", "Blog Posts", "Landing Pages"],
     },
     {
@@ -514,8 +500,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "Experimentation and optimization platform. Created thought leadership content for Full-Stack Experimentation.",
       results: "SERP Rankings Achieved | Organic Traffic Increased | Brand Recognition Established",
       workType: ["Content Marketing"],
-      industry: ["Experimentation", "A/B Testing", "SaaS"],
-      clientType: ["SaaS Company"],
+      industry: ["Technology"],
       format: ["Technical Articles", "Thought Leadership"],
     },
     {
@@ -523,8 +508,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "Custom software development company. Set up email marketing to generate and nurture leads.",
       results: "40% Email Open Rate Increase | 10% CTOR Increase | 4X ROI",
       workType: ["Email Marketing"],
-      industry: ["Software Development", "Technology"],
-      clientType: ["Tech Company"],
+      industry: ["Technology"],
       format: ["Email Campaigns"],
     },
     {
@@ -532,8 +516,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "Content strategy for influencer marketing business that drove website traffic and conversions.",
       results: "38% Website Traffic Increase | 23% Conversion Rate Improvement",
       workType: ["Content Marketing"],
-      industry: ["Influencer Marketing", "Digital Marketing"],
-      clientType: ["Marketing Agency"],
+      industry: ["Marketing"],
       format: ["Blog Posts", "Website Copy"],
     },
     {
@@ -541,8 +524,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "LinkedIn ghostwriting and content creation for agency founder to build personal brand and generate leads.",
       results: "480% Increase in Leads and Revenue | Improved Brand Visibility",
       workType: ["LinkedIn Ghostwriting", "Copywriting"],
-      industry: ["Digital Marketing", "Marketing Services"],
-      clientType: ["Marketing Agency"],
+      industry: ["Marketing"],
       format: ["LinkedIn Posts", "Articles"],
     },
     {
@@ -550,8 +532,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "SEO-rich content targeting bottom-funnel conversion for marketing consulting firm.",
       results: "Increased Website Traffic | Improved Conversion Rates | Enhanced Brand Visibility",
       workType: ["Content Writing", "Copywriting"],
-      industry: ["Digital Marketing", "Consulting"],
-      clientType: ["Marketing Agency"],
+      industry: ["Marketing"],
       format: ["Blog Posts", "SEO Articles"],
     },
     {
@@ -559,8 +540,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "Fashion and home decor e-commerce. Content strategy and SEO to boost online sales.",
       results: "Website Traffic Skyrocketed | 3X Leads Increase | 60% Revenue Increase",
       workType: ["E-commerce Content"],
-      industry: ["E-commerce", "Fashion", "Home Decor"],
-      clientType: ["E-commerce Business"],
+      industry: ["E-commerce"],
       format: ["Product Descriptions", "Category Pages", "Blog Posts"],
     },
     {
@@ -568,8 +548,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "Media creation company. Content writing and email marketing to drive business growth.",
       results: "105% Business Growth | 3X Website Traffic | 3X Leads",
       workType: ["Content Writing", "Email Marketing"],
-      industry: ["Media Production", "Entertainment"],
-      clientType: ["Creative Agency"],
+      industry: ["Media & Entertainment"],
       format: ["Emails", "Blog Posts"],
     },
     {
@@ -577,8 +556,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "Ghostwrote LinkedIn posts, articles, and keynote content to build thought leadership and personal brands.",
       results: "Brand Authority Enhanced | Speaking Opportunities Secured | Consulting Contracts Won",
       workType: ["Ghostwriting", "LinkedIn Ghostwriting"],
-      industry: ["Executive Coaching", "Professional Services"],
-      clientType: ["Individual Professionals"],
+      industry: ["Professional Services"],
       format: ["LinkedIn Posts", "Articles", "Keynote Content"],
     },
     {
@@ -586,8 +564,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "Ghostwrote weekly newsletters for business consultant, dramatically growing subscriber base.",
       results: "1,500% Subscriber Growth (500 to 8,000)",
       workType: ["Ghostwriting"],
-      industry: ["Business Consulting", "B2B"],
-      clientType: ["Consultant"],
+      industry: ["Professional Services"],
       format: ["Newsletters"],
     },
     {
@@ -595,8 +572,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "Developed and executed comprehensive content campaign across multiple channels.",
       results: "1,200 Qualified Leads in 90 Days",
       workType: ["Content Marketing"],
-      industry: ["B2B", "Technology"],
-      clientType: ["Tech Company"],
+      industry: ["Technology"],
       format: ["Blog Posts", "White Papers", "Case Studies", "Social Media"],
     },
     {
@@ -604,8 +580,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "Audited and optimized website copy and CTAs to dramatically increase conversion rates.",
       results: "128% Conversion Increase (2.1% to 4.8%)",
       workType: ["Copywriting", "CRO"],
-      industry: ["SaaS", "Technology"],
-      clientType: ["SaaS Company"],
+      industry: ["Technology"],
       format: ["Website Copy", "Landing Pages", "CTAs"],
     },
   ];
@@ -613,14 +588,12 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
   // Get unique filter options
   const allWorkTypes = Array.from(new Set(selectedWork.flatMap(item => item.workType))).sort();
   const allIndustries = Array.from(new Set(selectedWork.flatMap(item => item.industry))).sort();
-  const allClientTypes = Array.from(new Set(selectedWork.flatMap(item => item.clientType))).sort();
 
   // Filter logic
   const filteredWork = selectedWork.filter(item => {
     const workTypeMatch = selectedWorkTypes.length === 0 || selectedWorkTypes.some(type => item.workType.includes(type));
     const industryMatch = selectedIndustries.length === 0 || selectedIndustries.some(ind => item.industry.includes(ind));
-    const clientTypeMatch = selectedClientTypes.length === 0 || selectedClientTypes.some(type => item.clientType.includes(type));
-    return workTypeMatch && industryMatch && clientTypeMatch;
+    return workTypeMatch && industryMatch;
   });
 
   const toggleFilter = (value: string, selectedArray: string[], setSelectedArray: (arr: string[]) => void) => {
@@ -634,7 +607,6 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
   const clearAllFilters = () => {
     setSelectedWorkTypes([]);
     setSelectedIndustries([]);
-    setSelectedClientTypes([]);
   };
 
   return (
@@ -753,81 +725,17 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                   )}
                 </div>
 
-                {/* Client Type Filter */}
-                <div className="relative" ref={clientTypeRef}>
-                  <button
-                    onClick={() => setClientTypeOpen(!clientTypeOpen)}
-                    className="pixel-border bg-background px-4 py-2 font-secondary text-sm flex items-center gap-2 min-w-[160px] justify-between"
-                  >
-                    <span>Client Type {selectedClientTypes.length > 0 && `(${selectedClientTypes.length})`}</span>
-                    <ChevronDown className="w-4 h-4" />
-                  </button>
-                  {clientTypeOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-64 pixel-border bg-background p-4 z-50 max-h-96 overflow-y-auto">
-                      {allClientTypes.map(type => (
-                        <label
-                          key={type}
-                          className="flex items-center gap-2 py-2 cursor-pointer hover:bg-accent/10 px-2"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            toggleFilter(type, selectedClientTypes, setSelectedClientTypes);
-                          }}
-                        >
-                          <input
-                            type="checkbox"
-                            checked={selectedClientTypes.includes(type)}
-                            onChange={() => {}}
-                            className="w-4 h-4"
-                            onClick={(e) => e.stopPropagation()}
-                          />
-                          <span className="font-secondary text-sm">{type}</span>
-                        </label>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
                 {/* Clear Filters Button */}
-                {(selectedWorkTypes.length > 0 || selectedIndustries.length > 0 || selectedClientTypes.length > 0) && (
+                {(selectedWorkTypes.length > 0 || selectedIndustries.length > 0) && (
                   <button
                     onClick={clearAllFilters}
-                    className="pixel-border bg-secondary/20 px-4 py-2 font-secondary text-sm flex items-center gap-2"
+                    className="pixel-border bg-secondary/20 px-4 py-2 font-secondary text-sm flex items-center gap-2 hover:bg-secondary/30"
                   >
                     <X className="w-4 h-4" />
-                    Clear All
+                    <span>Clear All</span>
                   </button>
                 )}
               </div>
-
-              {/* Active Filters Display */}
-              {(selectedWorkTypes.length > 0 || selectedIndustries.length > 0 || selectedClientTypes.length > 0) && (
-                <div className="flex flex-wrap gap-2">
-                  {selectedWorkTypes.map(type => (
-                    <div key={type} className="pixel-border bg-accent/20 px-3 py-1 flex items-center gap-2">
-                      <span className="font-secondary text-xs">{type}</span>
-                      <button onClick={() => toggleFilter(type, selectedWorkTypes, setSelectedWorkTypes)}>
-                        <X className="w-3 h-3" />
-                      </button>
-                    </div>
-                  ))}
-                  {selectedIndustries.map(industry => (
-                    <div key={industry} className="pixel-border bg-accent/20 px-3 py-1 flex items-center gap-2">
-                      <span className="font-secondary text-xs">{industry}</span>
-                      <button onClick={() => toggleFilter(industry, selectedIndustries, setSelectedIndustries)}>
-                        <X className="w-3 h-3" />
-                      </button>
-                    </div>
-                  ))}
-                  {selectedClientTypes.map(type => (
-                    <div key={type} className="pixel-border bg-accent/20 px-3 py-1 flex items-center gap-2">
-                      <span className="font-secondary text-xs">{type}</span>
-                      <button onClick={() => toggleFilter(type, selectedClientTypes, setSelectedClientTypes)}>
-                        <X className="w-3 h-3" />
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              )}
             </div>
 
             {/* Work Cards Grid - Masonry Layout */}
@@ -847,8 +755,8 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                     {project.workType.length > 0 && (
                       <div className="flex flex-wrap gap-1">
                         {project.workType.map(type => (
-                          <span key={type} className="inline-block pixel-border bg-accent/20 px-2 py-0.5">
-                            <span className="font-secondary text-xs">{type}</span>
+                          <span key={type} className="pixel-border bg-primary/20 text-primary px-2 py-1 text-xs font-secondary">
+                            {type}
                           </span>
                         ))}
                       </div>
@@ -856,17 +764,8 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                     {project.industry.length > 0 && (
                       <div className="flex flex-wrap gap-1">
                         {project.industry.map(ind => (
-                          <span key={ind} className="inline-block pixel-border bg-secondary/20 px-2 py-0.5">
-                            <span className="font-secondary text-xs">{ind}</span>
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                    {project.clientType.length > 0 && (
-                      <div className="flex flex-wrap gap-1">
-                        {project.clientType.map(type => (
-                          <span key={type} className="inline-block pixel-border bg-primary/20 px-2 py-0.5">
-                            <span className="font-secondary text-xs">{type}</span>
+                          <span key={ind} className="pixel-border bg-accent/20 text-accent px-2 py-1 text-xs font-secondary">
+                            {ind}
                           </span>
                         ))}
                       </div>
@@ -875,12 +774,6 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                 </PixelCard>
               ))}
             </div>
-
-            {filteredWork.length === 0 && (
-              <div className="text-center py-12">
-                <p className="font-secondary text-muted-foreground">No work items match your filters. Try adjusting your selection.</p>
-              </div>
-            )}
           </div>
         </div>
       </section>
