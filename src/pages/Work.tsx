@@ -440,9 +440,9 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
 
   const selectedWork: WorkItem[] = [];
 
-  // Get unique filter options
-  const allWorkTypes = Array.from(new Set(selectedWork.flatMap(item => item.workType))).sort();
-  const allIndustries = Array.from(new Set(selectedWork.flatMap(item => item.industry))).sort();
+  // Define available filter options even when no work items exist
+  const allWorkTypes = ["Blog", "Case Study", "Press Release", "White Paper", "Marketing Email", "Sales Email", "LinkedIn Post", "Webpage", "Landing Page"];
+  const allIndustries = ["Technology", "Real Estate", "Cybersecurity", "Finance", "Marketing", "E-commerce", "Media & Entertainment", "Professional Services"];
 
   // Filter logic
   const filteredWork = selectedWork.filter(item => {
@@ -593,41 +593,47 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
               </div>
             </div>
 
-            {/* Work Cards Grid - Masonry Layout */}
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-              {filteredWork.map((project, index) => (
-                <PixelCard key={index} className="break-inside-avoid mb-8">
-                  <h3 className="font-primary text-lg mb-3">{project.title}</h3>
-                  
-                  <p className="font-secondary text-sm mb-4">{project.description}</p>
-                  
-                  <div className="pixel-border bg-secondary/20 px-3 py-2 mb-4">
-                    <p className="font-secondary text-xs font-semibold">{project.results}</p>
-                  </div>
+            {/* Work Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredWork.length === 0 ? (
+                <div className="col-span-full text-center py-16">
+                  <p className="font-secondary text-muted-foreground">No work items yet. Upload your work to get started.</p>
+                </div>
+              ) : (
+                filteredWork.map((project, index) => (
+                  <PixelCard key={index} className="transition-transform hover:-translate-x-1 hover:-translate-y-1">
+                    <h3 className="font-primary text-lg mb-3">{project.title}</h3>
+                    
+                    <p className="font-secondary text-sm mb-4">{project.description}</p>
+                    
+                    <div className="pixel-border bg-secondary/20 px-3 py-2 mb-4">
+                      <p className="font-secondary text-xs font-semibold">{project.results}</p>
+                    </div>
 
-                  {/* Tags at bottom */}
-                  <div className="space-y-2 pt-4 border-t border-border/20">
-                    {project.workType.length > 0 && (
-                      <div className="flex flex-wrap gap-1">
-                        {project.workType.map(type => (
-                          <span key={type} className="pixel-border bg-primary/20 text-primary px-2 py-1 text-xs font-secondary">
-                            {type}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                    {project.industry.length > 0 && (
-                      <div className="flex flex-wrap gap-1">
-                        {project.industry.map(ind => (
-                          <span key={ind} className="pixel-border bg-accent/20 text-accent px-2 py-1 text-xs font-secondary">
-                            {ind}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </PixelCard>
-              ))}
+                    {/* Tags at bottom */}
+                    <div className="space-y-2 pt-4 border-t border-border/20">
+                      {project.workType.length > 0 && (
+                        <div className="flex flex-wrap gap-1">
+                          {project.workType.map(type => (
+                            <span key={type} className="pixel-border bg-primary/20 text-primary px-2 py-1 text-xs font-secondary">
+                              {type}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                      {project.industry.length > 0 && (
+                        <div className="flex flex-wrap gap-1">
+                          {project.industry.map(ind => (
+                            <span key={ind} className="pixel-border bg-accent/20 text-accent px-2 py-1 text-xs font-secondary">
+                              {ind}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </PixelCard>
+                ))
+              )}
             </div>
           </div>
         </div>
