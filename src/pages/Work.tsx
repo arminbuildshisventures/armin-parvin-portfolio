@@ -13,6 +13,7 @@ import roomvuResults2 from "@/assets/work/roomvu-results-2.jpg";
 import roomvuResults3 from "@/assets/work/roomvu-results-3.jpg";
 import watchthemLiveResults1 from "@/assets/work/watchthemlive-results-1.jpg";
 import trinaMoitra from "@/assets/testimonials/trina-moitra.png";
+import alirezaKhorshidi from "@/assets/testimonials/alireza-khorshidi.png";
 import parandSh from "@/assets/testimonials/parand-sh.png";
 import mehdiRahmaninia from "@/assets/testimonials/avatar-3.png";
 import niloofar from "@/assets/testimonials/avatar-6.png";
@@ -197,6 +198,14 @@ export default function Work() {
       process: "I redesigned the entire email marketing strategy from the ground up. Implemented advanced segmentation, created hyper-personalized drip campaigns, A/B tested subject lines and copy, and developed automated workflows based on user behavior. I also optimized send times and refined messaging to resonate with the real estate professional audience.",
       outcome: "Through winning email marketing, copywriting, and storytelling techniques, I brought roomvu an added client base of 24,000+ users, increasing their weekly registrations from an average of 170 to an average of 500. Email open rate increased by 10%, email CTOR increased by 2.5%, and over 1,000+ emails were crafted throughout the engagement.",
       images: [roomvuResults2, roomvuResults3, roomvuResults1],
+      testimonial: {
+        name: "Alireza Khorshidi",
+        title: "Head of Growth & Lifecycle Marketing",
+        company: "Roomvu",
+        avatar: alirezaKhorshidi,
+        rating: 5,
+        text: "Armin approached cold email with a level of discipline that made a measurable impact on our pipeline. He developed targeting logic, personalization angles, and value-led messaging that aligned tightly with our ICPs. His ability to combine concise copy with relevant insights helped our campaigns stand out in crowded inboxes. He didn't just write strong emails; he built sequences that generated predictable registrations with prospects across multiple segments. His work contributed directly to higher outbound engagement and stronger funnel activity for the team."
+      },
     },
     {
       slug: "nordic-defender",
