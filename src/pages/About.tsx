@@ -8,6 +8,7 @@ import aboutBgPixel from "@/assets/about-bg-pixel.png";
 import youngGuitar1 from "@/assets/journey/young-guitar-1.png";
 import youngPractice from "@/assets/journey/young-practice.png";
 import youngSmile from "@/assets/journey/young-smile.png";
+import youngGlasses from "@/assets/journey/young-glasses.png";
 import professionalPerformance from "@/assets/journey/professional-performance-updated.png";
 import professionalPortraitTech from "@/assets/journey/professional-portrait-tech.png";
 import discoveryProfessional1 from "@/assets/journey/discovery-professional-1.png";
@@ -98,10 +99,11 @@ export default function About() {
                     Music made me thrive, so I went on to become a professional Classical and Flamenco guitar player and instructor.
                   </p>
                 </div>
-                <div className="flex gap-3 order-1 md:order-2 justify-center">
-                  <img src={youngGuitar1} alt="Young musician with guitar" className="pixel-border pixel-shadow w-28 h-28 md:w-36 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
-                  <img src={youngSmile} alt="Young artist" className="pixel-border pixel-shadow w-28 h-28 md:w-36 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
-                  <img src={youngPractice} alt="Practicing music" className="pixel-border pixel-shadow w-28 h-28 md:w-36 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
+                <div className="grid grid-cols-2 gap-3 order-1 md:order-2">
+                  <img src={youngGuitar1} alt="Young musician with guitar" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={youngSmile} alt="Young artist" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={youngPractice} alt="Practicing music" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={youngGlasses} alt="Young portrait with glasses" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
                 </div>
               </div>
               <div className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
