@@ -58,6 +58,7 @@ const getButtonText = (workTypes: string[]) => {
   if (workTypes.includes("Case Study")) return "Read Case Study";
   if (workTypes.includes("Blog")) return "Read Blog";
   if (workTypes.includes("Research Analysis")) return "Download PDF";
+  if (workTypes.includes("LinkedIn Post")) return "View Post";
   return "Read Article";
 };
 
@@ -738,6 +739,69 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       industry: ["Finance"],
       format: ["Research Analysis"],
       downloadUrl: "/work/large-cap-investment-opportunity.pdf",
+    },
+    {
+      title: "Want to Keep Losing Leads With Bad Copy?",
+      description: "LinkedIn carousel post breaking down the critical mistakes in copywriting that cause businesses to lose leads and how to fix them with proven conversion principles.",
+      results: "Marketing Education | Lead Generation | Copywriting Tips",
+      workType: ["LinkedIn Post"],
+      industry: ["Marketing"],
+      format: ["LinkedIn Post"],
+      downloadUrl: "/work/losing-leads-bad-copy-carousel.pdf",
+    },
+    {
+      title: "Not All SaaS Welcome Emails Work",
+      description: "LinkedIn carousel analyzing what makes SaaS welcome emails effective, with examples of common pitfalls and best practices for onboarding sequences.",
+      results: "Email Marketing | SaaS Strategy | User Onboarding",
+      workType: ["LinkedIn Post"],
+      industry: ["Marketing"],
+      format: ["LinkedIn Post"],
+      downloadUrl: "/work/saas-welcome-emails-carousel.pdf",
+    },
+    {
+      title: "Reason Most SaaS Startups Burn $50K on Content",
+      description: "LinkedIn carousel revealing the costly content marketing mistakes SaaS startups make and strategic approaches to maximize content ROI.",
+      results: "Content Strategy | SaaS Marketing | Budget Optimization",
+      workType: ["LinkedIn Post"],
+      industry: ["Marketing"],
+      format: ["LinkedIn Post"],
+      downloadUrl: "/work/saas-burn-50k-content-carousel.pdf",
+    },
+    {
+      title: "Content Must Have Purpose",
+      description: "LinkedIn carousel exploring the fundamental principle that all effective content needs clear strategic purpose aligned with business objectives.",
+      results: "Content Strategy | Marketing Philosophy | Business Goals",
+      workType: ["LinkedIn Post"],
+      industry: ["Marketing"],
+      format: ["LinkedIn Post"],
+      downloadUrl: "/work/content-must-have-purpose-carousel.pdf",
+    },
+    {
+      title: "5 Killer Hooks Jasmin Alic Wrote to Double His Results",
+      description: "LinkedIn carousel analyzing five high-performing copywriting hooks from Jasmin Alic that dramatically improved engagement and conversion rates.",
+      results: "Copywriting | Hook Writing | Engagement Strategy",
+      workType: ["LinkedIn Post"],
+      industry: ["Marketing"],
+      format: ["LinkedIn Post"],
+      downloadUrl: "/work/jasmin-alic-killer-hooks-carousel.pdf",
+    },
+    {
+      title: "The Future of Content Marketing",
+      description: "LinkedIn carousel exploring emerging trends, technologies, and strategies shaping the future landscape of content marketing.",
+      results: "Industry Trends | Content Strategy | Future Planning",
+      workType: ["LinkedIn Post"],
+      industry: ["Marketing"],
+      format: ["LinkedIn Post"],
+      downloadUrl: "/work/future-content-marketing-carousel.pdf",
+    },
+    {
+      title: "The Rise of Storytelling in Content Creation",
+      description: "LinkedIn carousel examining how storytelling has become essential in content marketing and techniques for crafting compelling narratives.",
+      results: "Storytelling | Content Creation | Audience Engagement",
+      workType: ["LinkedIn Post"],
+      industry: ["Marketing"],
+      format: ["LinkedIn Post"],
+      downloadUrl: "/work/rise-storytelling-content-carousel.pdf",
     },
     {
       title: "Nordic Defender at IT-Sikkerhetsdagen",
