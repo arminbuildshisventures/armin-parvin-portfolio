@@ -25,6 +25,7 @@ import shadiAvatar from "@/assets/testimonials/shadi-avatar.png";
 import gabbieSanchez from "@/assets/testimonials/gabbie-sanchez.png";
 import manaBehzad from "@/assets/testimonials/mana-behzad.png";
 import abbyNduta from "@/assets/testimonials/abby-nduta.png";
+import cissyZhao from "@/assets/testimonials/cissy-zhao.png";
 import lorenzoLogo from "@/assets/clients/LorenzoLogo.png";
 import rahmaniniaLogo from "@/assets/clients/Rahmaninia.png";
 import wtlLogo from "@/assets/clients/WTL.png";
@@ -232,6 +233,13 @@ const Testimonials = () => {
       content: "I can tell Armin's a professional and the approach of the lesson was helpful and memorable. He has helped me A LOT in understanding the basics of copy and improve my storytelling. Thank you Armin, I will forever be grateful!",
       rating: 5,
       avatar: abbyNduta,
+    },
+    {
+      name: "Cissy Zhao",
+      role: "Founder, Cissy Zhao Consulting",
+      content: "This is probably one of the best spent one hour of my life. Armin understands what it takes to build a personal brand and shares valuable techniques and strategies patiently and systematically. He is also positive and friendly. Amazing vibe. Thank you so much for this.",
+      rating: 5,
+      avatar: cissyZhao,
     },
     {
       name: "AmirAli Piroozbakhsh",
