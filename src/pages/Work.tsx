@@ -1190,24 +1190,24 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                     <div className="mb-2">
                       <div className="flex flex-wrap gap-1">
                         {project.workType.map(type => (
-                          <span key={type} className="bg-primary/10 text-primary px-2 py-0.5 text-xs font-secondary rounded">
+                          <span key={type} className="bg-primary/10 text-primary px-1.5 py-0.5 text-[10px] font-secondary rounded">
                             {type}
                           </span>
                         ))}
                         {project.industry.map(ind => (
-                          <span key={ind} className="bg-accent/10 text-accent px-2 py-0.5 text-xs font-secondary rounded">
+                          <span key={ind} className="bg-accent/10 text-accent px-1.5 py-0.5 text-[10px] font-secondary rounded">
                             {ind}
                           </span>
                         ))}
                       </div>
                     </div>
 
-                    <h3 className="font-primary text-sm mb-2">{project.title}</h3>
+                    <h3 className="font-primary text-xs mb-2 leading-tight">{project.title}</h3>
                     
                     {/* Bottom section with results and buttons */}
-                    <div className="mt-auto space-y-3">
-                      <div className="pixel-border bg-secondary/20 px-2 py-1.5">
-                        <p className="font-secondary text-xs font-semibold">{project.results}</p>
+                    <div className="mt-auto space-y-2">
+                      <div className="pixel-border bg-secondary/20 px-2 py-1">
+                        <p className="font-secondary text-[10px] font-semibold leading-tight">{project.results}</p>
                       </div>
 
                       {/* Action Buttons */}
