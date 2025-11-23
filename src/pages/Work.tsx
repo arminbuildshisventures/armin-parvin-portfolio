@@ -51,6 +51,7 @@ interface WorkItem {
   downloadUrl?: string;
   viewImageUrl?: string;
   externalUrl?: string;
+  beforeAfterImage?: string;
 }
 
 const getButtonText = (workTypes: string[]) => {
@@ -813,6 +814,26 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/convert-traffic-carousel.pdf",
     },
     {
+      title: "Jessica Horkan - LinkedIn Profile Revamp",
+      description: "Complete LinkedIn profile transformation for Jessica Horkan, Co-Founder at empatiX Consulting. Transformed generic profile into compelling professional brand showcasing expertise in customer experience and growth strategies.",
+      results: "Profile Optimization | Professional Branding | Personal Marketing",
+      workType: ["LinkedIn Post"],
+      industry: ["Professional Services"],
+      format: ["LinkedIn Post"],
+      downloadUrl: "/work/jessica-horkan-linkedin-revamp.pdf",
+      beforeAfterImage: "/work/jessica-horkan-before-after.png",
+    },
+    {
+      title: "Jamila Musayeva - LinkedIn Profile Revamp",
+      description: "Strategic LinkedIn profile redesign for Jamila Musayeva, Etiquette Consultant & Author with 1M YouTube subscribers. Elevated profile to reflect expertise, elegance, and thought leadership in modern etiquette.",
+      results: "Personal Brand Enhancement | Thought Leadership | Professional Positioning",
+      workType: ["LinkedIn Post"],
+      industry: ["Professional Services"],
+      format: ["LinkedIn Post"],
+      downloadUrl: "/work/jamila-musayeva-linkedin-revamp.pdf",
+      beforeAfterImage: "/work/jamila-musayeva-before-after.png",
+    },
+    {
       title: "You Don't Need vs. You Just Need - Copywriting Essentials",
       description: "LinkedIn infographic contrasting common copywriting misconceptions with what truly drives results: precise language, structured copy, and strategic messaging.",
       results: "Copywriting Principles | Marketing Strategy | Brand Voice",
@@ -1156,8 +1177,8 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                       </div>
 
                       {/* Action Buttons */}
-                      {(project.downloadUrl || project.viewImageUrl || project.externalUrl) && (
-                        <div className="flex gap-2">
+                      {(project.downloadUrl || project.viewImageUrl || project.externalUrl || project.beforeAfterImage) && (
+                        <div className="flex flex-wrap gap-2">
                           {project.downloadUrl && (
                             <a
                               href={project.downloadUrl}
@@ -1166,6 +1187,14 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                             >
                               Download PDF
                             </a>
+                          )}
+                          {project.beforeAfterImage && (
+                            <button
+                              onClick={() => setViewImageUrl(project.beforeAfterImage!)}
+                              className="pixel-border bg-primary/20 text-primary px-3 py-2 text-xs font-secondary hover:bg-primary/30 transition-colors"
+                            >
+                              See Before/After
+                            </button>
                           )}
                           {project.viewImageUrl && (
                             <button
