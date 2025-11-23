@@ -101,6 +101,7 @@ export default function About() {
                 <div className="flex gap-3 order-1 md:order-2 justify-center">
                   <img src={youngGuitar1} alt="Young musician with guitar" className="pixel-border pixel-shadow w-28 h-28 md:w-36 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
                   <img src={youngSmile} alt="Young artist" className="pixel-border pixel-shadow w-28 h-28 md:w-36 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={youngPractice} alt="Practicing music" className="pixel-border pixel-shadow w-28 h-28 md:w-36 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
                 </div>
               </div>
               <div className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
@@ -110,8 +111,7 @@ export default function About() {
             <div className="relative mb-12 md:mb-16">
               <div className="grid md:grid-cols-2 gap-6 items-center">
                 <div className="flex gap-3 justify-center">
-                  <img src={youngPractice} alt="Practicing music" className="pixel-border pixel-shadow w-36 h-48 md:w-44 md:h-56 object-cover rounded-lg hover:scale-105 transition-transform" />
-                  <img src={professionalPerformance} alt="Professional performance" className="pixel-border pixel-shadow w-36 h-48 md:w-44 md:h-56 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={professionalPerformance} alt="Professional performance" className="pixel-border pixel-shadow w-44 h-56 md:w-52 md:h-64 object-cover rounded-lg hover:scale-105 transition-transform" />
                 </div>
                 <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🎸 The Dedication</h3>
