@@ -1077,24 +1077,28 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
               {caseStudies.map((project, index) => (
                 <PixelCard 
                   key={index}
-                  className="cursor-pointer transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg group relative overflow-hidden"
+                  className="cursor-pointer transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg group relative overflow-hidden flex flex-col"
                   onClick={() => setSelectedCaseStudy(project)}
                 >
                   {/* Gradient accent line at top */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-secondary to-accent opacity-60 group-hover:opacity-100 transition-opacity" />
                   
-                  <div className="relative z-10">
-                    <div className="inline-block pixel-border bg-gradient-to-br from-accent/30 to-accent/10 px-4 py-2 mb-4 group-hover:from-accent/40 group-hover:to-accent/20 transition-all">
+                  <div className="relative z-10 flex flex-col h-full">
+                    <div className="inline-block pixel-border bg-gradient-to-br from-accent/30 to-accent/10 px-4 py-2 mb-4 group-hover:from-accent/40 group-hover:to-accent/20 transition-all w-fit">
                       <span className="font-primary text-xs uppercase tracking-wide">{project.category}</span>
                     </div>
                     <h3 className="font-primary text-xl mb-4 group-hover:text-accent transition-colors">{project.title}</h3>
                     <p className="font-secondary text-sm mb-6 leading-relaxed text-foreground/90">{project.description}</p>
-                    <div className="pixel-border bg-gradient-to-br from-secondary/30 to-secondary/10 px-4 py-3 mt-6 group-hover:from-secondary/40 group-hover:to-secondary/20 transition-all">
-                      <p className="font-secondary text-xs font-semibold leading-relaxed">{project.results}</p>
-                    </div>
-                    <div className="flex items-center gap-2 mt-6 text-accent group-hover:gap-4 transition-all">
-                      <span className="font-primary text-sm uppercase tracking-wider">View Case Study</span>
-                      <span className="text-lg">→</span>
+                    
+                    {/* Bottom section - sticks to bottom */}
+                    <div className="mt-auto space-y-4">
+                      <div className="pixel-border bg-gradient-to-br from-secondary/30 to-secondary/10 px-4 py-3 group-hover:from-secondary/40 group-hover:to-secondary/20 transition-all">
+                        <p className="font-secondary text-xs font-semibold leading-relaxed">{project.results}</p>
+                      </div>
+                      <div className="flex items-center gap-2 text-accent group-hover:gap-4 transition-all">
+                        <span className="font-primary text-sm uppercase tracking-wider">View Case Study</span>
+                        <span className="text-lg">→</span>
+                      </div>
                     </div>
                   </div>
                 </PixelCard>
@@ -1198,11 +1202,11 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                 </div>
               ) : (
                 filteredWork.map((project, index) => (
-                  <PixelCard key={index} className="transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg flex flex-col h-full group relative overflow-hidden">
+                  <PixelCard key={index} className="transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg flex flex-col group relative overflow-hidden">
                     {/* Gradient accent at top */}
                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent/50 via-secondary/50 to-accent/50 opacity-60 group-hover:opacity-100 transition-opacity" />
                     
-                    <div className="relative z-10">
+                    <div className="relative z-10 flex flex-col h-full">
                       {/* Tags at top */}
                       <div className="mb-4 pt-2">
                         <div className="flex flex-wrap gap-2">
@@ -1221,7 +1225,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
 
                       <h3 className="font-primary text-xl mb-4 group-hover:text-accent transition-colors">{project.title}</h3>
                       
-                      {/* Bottom section with results and buttons */}
+                      {/* Bottom section with results and buttons - sticks to bottom */}
                       <div className="mt-auto space-y-4">
                         <div className="pixel-border bg-gradient-to-br from-secondary/30 to-secondary/10 px-4 py-3 group-hover:from-secondary/40 group-hover:to-secondary/20 transition-all">
                           <p className="font-secondary text-xs font-semibold leading-relaxed">{project.results}</p>
