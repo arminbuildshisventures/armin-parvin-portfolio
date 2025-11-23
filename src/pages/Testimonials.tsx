@@ -101,6 +101,7 @@ const Testimonials = () => {
   ];
 
   const regularTestimonials = [
+    // Testimonials with case studies first
     {
       name: "Mehdi Rahmaninia",
       role: "Founder, CEO, and Marketing Management Consultant",
@@ -141,6 +142,7 @@ const Testimonials = () => {
       avatar: shadiAvatar,
       caseStudyUrl: "#",
     },
+    // Testimonials without case studies
     {
       name: "Ines Cid Blasco",
       role: "VP of Sales, Sales for Good",
