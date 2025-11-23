@@ -50,6 +50,7 @@ interface WorkItem {
   format: string[];
   downloadUrl?: string;
   viewImageUrl?: string;
+  externalUrl?: string;
 }
 
 export default function Work() {
@@ -469,6 +470,87 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       format: ["Service Page", "One-Pager"],
       downloadUrl: "/work/kubernetes-penetration-testing.pdf",
     },
+    {
+      title: "SecDevOps vs DevSecOps",
+      description: "In-depth comparison of SecDevOps and DevSecOps approaches in the Systems Development Life Cycle, exploring security-first methodologies for modern software development.",
+      results: "Comprehensive Analysis | Security Best Practices | SDLC Integration Guide",
+      workType: ["Blog"],
+      industry: ["Cybersecurity"],
+      format: ["Blog"],
+      externalUrl: "https://nordicdefender.com/blog/secdevops-vs-devsecops",
+    },
+    {
+      title: "DirectAdmin vs. cPanel",
+      description: "Comprehensive comparison guide helping you choose the right control panel for web hosting between DirectAdmin and cPanel, analyzing features, pricing, and usability.",
+      results: "Detailed Comparison | Feature Analysis | Decision Framework",
+      workType: ["Blog"],
+      industry: ["Technology"],
+      format: ["Blog"],
+      externalUrl: "https://cloudzy.com/blog/directadmin-vs-cpanel/",
+    },
+    {
+      title: "How to Protect FiveM Server from DDoS",
+      description: "Step-by-step guide explaining DDoS attacks and proven methods to protect your FiveM server from malicious traffic and maintain server availability.",
+      results: "Security Implementation | DDoS Protection Strategies | Server Hardening",
+      workType: ["Blog"],
+      industry: ["Cybersecurity"],
+      format: ["Blog"],
+      externalUrl: "https://cloudzy.com/blog/protect-fivem-server-from-ddos-attack/",
+    },
+    {
+      title: "How to Install Webmin on a VPS",
+      description: "Complete step-by-step installation guide for Webmin web-based system administration interface on CentOS and Ubuntu VPS servers.",
+      results: "Detailed Installation Guide | System Management Setup | VPS Configuration",
+      workType: ["Blog"],
+      industry: ["Technology"],
+      format: ["Blog"],
+      externalUrl: "https://cloudzy.com/blog/install-webmin-on-vps/",
+    },
+    {
+      title: "Best Self-Hosted GitLab Alternative",
+      description: "Comprehensive review of top open-source DevOps tools and self-hosted GitLab alternatives for collaborative software development and version control.",
+      results: "Platform Comparison | DevOps Tool Analysis | Migration Guide",
+      workType: ["Blog"],
+      industry: ["Technology"],
+      format: ["Blog"],
+      externalUrl: "https://cloudzy.com/blog/self-hosted-gitlab-alternatives/",
+    },
+    {
+      title: "List Running Services on Linux",
+      description: "Practical guide to listing and managing running services on Linux systems including Ubuntu, Debian, and CentOS distributions.",
+      results: "System Administration Guide | Service Management | Linux Commands",
+      workType: ["Blog"],
+      industry: ["Technology"],
+      format: ["Blog"],
+      externalUrl: "https://cloudzy.com/blog/list-running-services-on-linux/",
+    },
+    {
+      title: "How to Trade Using MetaTrader 4",
+      description: "Complete beginner-to-advanced guide for Forex trading using MetaTrader 4 platform, covering installation, trading strategies, and advanced features.",
+      results: "Trading Guide | Platform Mastery | Strategy Implementation",
+      workType: ["Blog"],
+      industry: ["Finance"],
+      format: ["Blog"],
+      externalUrl: "https://cloudzy.com/blog/how-to-use-metatrader-4/",
+    },
+    {
+      title: "NVMe vs SSD",
+      description: "Detailed technical comparison of NVMe and SSD storage technologies, analyzing speed, cost, use cases, and features to help you choose the right solution.",
+      results: "Hardware Comparison | Performance Analysis | Buying Guide",
+      workType: ["Blog"],
+      industry: ["Technology"],
+      format: ["Blog"],
+      externalUrl: "https://cloudzy.com/blog/nvme-vs-ssd/",
+    },
+    {
+      title: "How to Trade on Binance",
+      description: "Comprehensive beginner-friendly guide to cryptocurrency trading on Binance, covering account setup, funding, and different trading types.",
+      results: "Crypto Trading Guide | Platform Navigation | Trading Strategies",
+      workType: ["Blog"],
+      industry: ["Finance"],
+      format: ["Blog"],
+      externalUrl: "https://cloudzy.com/blog/trade-on-binance/",
+    },
   ];
 
   // Define available filter options even when no work items exist
@@ -660,7 +742,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                       </div>
 
                       {/* Action Buttons */}
-                      {(project.downloadUrl || project.viewImageUrl) && (
+                      {(project.downloadUrl || project.viewImageUrl || project.externalUrl) && (
                         <div className="flex gap-2">
                           {project.downloadUrl && (
                             <a
@@ -678,6 +760,16 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                             >
                               View Diagram
                             </button>
+                          )}
+                          {project.externalUrl && (
+                            <a
+                              href={project.externalUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="pixel-border bg-primary/20 text-primary px-3 py-2 text-xs font-secondary hover:bg-primary/30 transition-colors"
+                            >
+                              Read Blog
+                            </a>
                           )}
                         </div>
                       )}
