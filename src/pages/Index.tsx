@@ -289,9 +289,9 @@ const Index = () => {
                 }}
               />
               <div className="relative z-10">
-                <div className="bg-accent/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-3">
+                <div className="bg-accent/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-4">
                   <img src={convertLogo} alt="Convert.com" className="h-12 brightness-0 invert" />
-                  <span className="font-primary text-xs text-accent">Content Marketing</span>
+                  <span className="font-primary text-sm text-accent text-center">Content Marketing</span>
                 </div>
                 <h3 className="font-primary text-sm mb-3">Convert.com: SERP Rankings Achieved</h3>
                 <p className="font-secondary text-sm leading-relaxed mb-4">
@@ -315,9 +315,9 @@ const Index = () => {
                 }}
               />
               <div className="relative z-10">
-                <div className="bg-secondary/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-3">
+                <div className="bg-secondary/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-4">
                   <img src={roomvuLogo} alt="Roomvu" className="h-12 brightness-0 invert" />
-                  <span className="font-primary text-xs text-secondary">Cold Email Marketing</span>
+                  <span className="font-primary text-sm text-secondary text-center">Cold Email Marketing</span>
                 </div>
                 <h3 className="font-primary text-sm mb-3">Roomvu: 24,000+ Users Acquired</h3>
                 <p className="font-secondary text-sm leading-relaxed mb-4">
@@ -341,9 +341,9 @@ const Index = () => {
                 }}
               />
               <div className="relative z-10">
-                <div className="bg-accent/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-3">
+                <div className="bg-accent/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-4">
                   <img src={nordicLogo} alt="Nordic Defender" className="h-12 brightness-0 invert" />
-                  <span className="font-primary text-xs text-accent">Product Marketing</span>
+                  <span className="font-primary text-sm text-accent text-center">Product Marketing</span>
                 </div>
                 <h3 className="font-primary text-sm mb-3">Nordic Defender: 30% Email Open Rate Increase</h3>
                 <p className="font-secondary text-sm leading-relaxed mb-4">
@@ -367,9 +367,9 @@ const Index = () => {
                 }}
               />
               <div className="relative z-10">
-                <div className="bg-secondary/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-3">
+                <div className="bg-secondary/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-4">
                   <img src={cloudzyLogo} alt="Cloudzy" className="h-12 brightness-0 invert" />
-                  <span className="font-primary text-xs text-secondary">Technical Content</span>
+                  <span className="font-primary text-sm text-secondary text-center">Technical Content</span>
                 </div>
                 <h3 className="font-primary text-sm mb-3">Cloudzy: #1 Rankings & 5X Conversion</h3>
                 <p className="font-secondary text-sm leading-relaxed mb-4">
