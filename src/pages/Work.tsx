@@ -1068,7 +1068,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
         <div className="container mx-auto max-w-6xl relative z-20">
           <Tabs defaultValue="case-studies" className="w-full">
             <div className="mb-16 flex justify-center">
-              <TabsList className="md:pixel-border md:pixel-shadow-lg bg-transparent md:bg-card/50 md:backdrop-blur-sm md:p-2 flex flex-col md:flex-row gap-3 md:gap-2 w-full md:w-auto p-0">
+              <TabsList className="md:pixel-border md:pixel-shadow-lg bg-transparent md:bg-card/50 md:backdrop-blur-sm md:p-2 flex flex-col md:flex-row gap-0 md:gap-2 w-full md:w-auto p-0 mt-8 md:mt-0">
                 <TabsTrigger 
                   value="case-studies" 
                   className="font-primary text-base md:text-lg uppercase tracking-wider px-8 py-4 border border-border/50 data-[state=active]:border-accent data-[state=active]:bg-accent/20 data-[state=active]:text-accent md:border-0 md:data-[state=active]:pixel-border md:data-[state=active]:bg-gradient-to-br md:data-[state=active]:from-accent/40 md:data-[state=active]:to-accent/20 md:data-[state=active]:pixel-shadow transition-all md:hover:-translate-y-1 data-[state=active]:translate-y-0"
