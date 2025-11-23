@@ -89,14 +89,14 @@ export default function Services() {
           </div>
 
           <Tabs defaultValue="content-marketing" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-8 sm:mb-10 md:mb-12 pixel-border bg-card h-auto">
-              <TabsTrigger value="content-marketing" className="font-primary text-[9px] sm:text-xs md:text-sm text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-1 sm:px-3 md:px-4 py-3 sm:py-2 h-auto whitespace-normal leading-tight">
+            <TabsList className="flex flex-col sm:grid sm:grid-cols-3 w-full mb-8 sm:mb-10 md:mb-12 pixel-border bg-card h-auto gap-2 sm:gap-0 p-2">
+              <TabsTrigger value="content-marketing" className="font-primary text-xs sm:text-sm md:text-base text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-4 py-3 w-full">
                 Content Marketing
               </TabsTrigger>
-              <TabsTrigger value="copywriting" className="font-primary text-[9px] sm:text-xs md:text-sm text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-1 sm:px-3 md:px-4 py-3 sm:py-2 h-auto whitespace-normal leading-tight">
+              <TabsTrigger value="copywriting" className="font-primary text-xs sm:text-sm md:text-base text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-4 py-3 w-full">
                 Copywriting
               </TabsTrigger>
-              <TabsTrigger value="email-marketing" className="font-primary text-[9px] sm:text-xs md:text-sm text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-1 sm:px-3 md:px-4 py-3 sm:py-2 h-auto whitespace-normal leading-tight">
+              <TabsTrigger value="email-marketing" className="font-primary text-xs sm:text-sm md:text-base text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-4 py-3 w-full">
                 Email Marketing
               </TabsTrigger>
             </TabsList>
