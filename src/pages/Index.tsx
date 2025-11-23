@@ -189,7 +189,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Work Section */}
+      {/* Case Studies Section */}
       <section
         id="work"
         className="py-24 px-4 relative"
@@ -201,12 +201,27 @@ const Index = () => {
       >
         <div className="absolute inset-0 bg-background/90"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Featured Work</h2>
+          <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Case Studies</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Case Study 1: Roomvu */}
+            {/* Convert.com */}
             <PixelCard>
               <div className="bg-accent/20 pixel-border h-48 mb-6 flex items-center justify-center">
-                <span className="font-primary text-xs text-accent">Cold Email Marketing</span>
+                <span className="font-primary text-xs text-accent">Content Marketing</span>
+              </div>
+              <h3 className="font-primary text-sm mb-3">Convert.com: SERP Rankings Achieved</h3>
+              <p className="font-secondary text-sm leading-relaxed mb-4">
+                Created bottom-of-funnel content strategy and wrote multi-perspective articles to establish brand presence in SERPs for new features.
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
+                <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Technology</span>
+              </div>
+            </PixelCard>
+
+            {/* Roomvu */}
+            <PixelCard>
+              <div className="bg-secondary/20 pixel-border h-48 mb-6 flex items-center justify-center">
+                <span className="font-primary text-xs text-secondary">Cold Email Marketing</span>
               </div>
               <h3 className="font-primary text-sm mb-3">Roomvu: 24,000+ Users Acquired</h3>
               <p className="font-secondary text-sm leading-relaxed mb-4">
@@ -218,47 +233,32 @@ const Index = () => {
               </div>
             </PixelCard>
 
-            {/* Case Study 2: WatchThemLive */}
+            {/* Nordic Defender */}
             <PixelCard>
-              <div className="bg-secondary/20 pixel-border h-48 mb-6 flex items-center justify-center">
-                <span className="font-primary text-xs text-secondary">Digital Marketing</span>
+              <div className="bg-accent/20 pixel-border h-48 mb-6 flex items-center justify-center">
+                <span className="font-primary text-xs text-accent">Product Marketing</span>
               </div>
-              <h3 className="font-primary text-sm mb-3">WatchThemLive: 11X ROI</h3>
+              <h3 className="font-primary text-sm mb-3">Nordic Defender: 30% Email Open Rate Increase</h3>
               <p className="font-secondary text-sm leading-relaxed mb-4">
-                Managed all marketing channels achieving 52% increase in email open rates, 23% CTOR improvement, and 11X ROI through strategic campaigns.
+                Managed all marketing channels for Next-Gen Pentest Solution including 100+ emails, 50+ technical articles, and 43+ landing pages.
               </p>
               <div className="flex gap-2 flex-wrap">
                 <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
-                <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Technology</span>
-              </div>
-            </PixelCard>
-
-            {/* Featured Work 1: White Paper */}
-            <PixelCard>
-              <div className="bg-accent/20 pixel-border h-48 mb-6 flex items-center justify-center">
-                <span className="font-primary text-xs text-accent">White Paper</span>
-              </div>
-              <h3 className="font-primary text-sm mb-3">Next-Gen PTaaS ROI Analysis</h3>
-              <p className="font-secondary text-sm leading-relaxed mb-4">
-                Comprehensive white paper analyzing Return on Investment for Next-Gen Pentest as a Service with detailed cost-benefit analysis.
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">White Paper</span>
                 <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Cybersecurity</span>
               </div>
             </PixelCard>
 
-            {/* Featured Work 2: Blog */}
+            {/* Cloudzy */}
             <PixelCard>
               <div className="bg-secondary/20 pixel-border h-48 mb-6 flex items-center justify-center">
-                <span className="font-primary text-xs text-secondary">Technical Blog</span>
+                <span className="font-primary text-xs text-secondary">Technical Content</span>
               </div>
-              <h3 className="font-primary text-sm mb-3">DirectAdmin vs. cPanel Guide</h3>
+              <h3 className="font-primary text-sm mb-3">Cloudzy: #1 Rankings & 5X Conversion</h3>
               <p className="font-secondary text-sm leading-relaxed mb-4">
-                Comprehensive comparison guide helping readers choose the right control panel for web hosting with detailed feature analysis.
+                Developed technical blog content and landing pages achieving #1 rankings, featured snippets, 5X conversion rates, and 2,360+ users acquired.
               </p>
               <div className="flex gap-2 flex-wrap">
-                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Blog</span>
+                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
                 <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Technology</span>
               </div>
             </PixelCard>
