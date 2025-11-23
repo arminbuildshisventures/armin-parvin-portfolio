@@ -57,55 +57,55 @@ export default function About() {
           </div>
 
           <Tabs defaultValue="experience" className="w-full">
-            <TabsList className="grid w-full grid-cols-5 mb-8 pixel-border h-auto gap-2 p-2 bg-card/50">
+            <TabsList className="grid sm:grid-cols-5 grid-cols-3 mb-8 pixel-border h-auto gap-2 p-2 bg-card/50">
               <TabsTrigger
                 value="experience"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm"
               >
-                <Briefcase className="w-4 h-4 mr-2" />
+                <Briefcase className="w-4 h-4 sm:mr-2" />
                 <span className="hidden sm:inline">Experience</span>
               </TabsTrigger>
               <TabsTrigger
                 value="education"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm"
               >
-                <GraduationCap className="w-4 h-4 mr-2" />
+                <GraduationCap className="w-4 h-4 sm:mr-2" />
                 <span className="hidden sm:inline">Education</span>
               </TabsTrigger>
               <TabsTrigger
                 value="skills"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm"
               >
-                <Code className="w-4 h-4 mr-2" />
+                <Code className="w-4 h-4 sm:mr-2" />
                 <span className="hidden sm:inline">Skills</span>
               </TabsTrigger>
               <TabsTrigger
                 value="recognition"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm col-span-3 sm:col-span-1"
               >
-                <Award className="w-4 h-4 mr-2" />
+                <Award className="w-4 h-4 sm:mr-2" />
                 <span className="hidden sm:inline">Recognition</span>
               </TabsTrigger>
               <TabsTrigger
                 value="interests"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground"
+                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm col-span-3 sm:col-span-1"
               >
-                <Target className="w-4 h-4 mr-2" />
+                <Target className="w-4 h-4 sm:mr-2" />
                 <span className="hidden sm:inline">Interests</span>
               </TabsTrigger>
             </TabsList>
 
             {/* Experience Tab */}
             <TabsContent value="experience" className="space-y-6">
-              <div className="flex items-center gap-4 mb-8">
-                <Briefcase className="w-8 h-8 text-secondary" />
-                <h2 className="font-primary text-2xl md:text-3xl text-pixel">Professional Experience</h2>
+              <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+                <Briefcase className="w-6 h-6 sm:w-8 sm:h-8 text-secondary flex-shrink-0" />
+                <h2 className="font-primary text-lg sm:text-2xl md:text-3xl text-pixel">Professional Experience</h2>
               </div>
 
-              <div className="pixel-border pixel-shadow bg-card/30 p-6 mb-6">
-                <div className="text-center mb-6">
-                  <h3 className="font-primary text-2xl md:text-3xl text-secondary mb-2">5+ Years</h3>
-                  <p className="font-secondary text-lg text-muted-foreground">of Professional Experience</p>
+              <div className="pixel-border pixel-shadow bg-card/30 p-4 sm:p-6 mb-6">
+                <div className="text-center mb-4 sm:mb-6">
+                  <h3 className="font-primary text-xl sm:text-2xl md:text-3xl text-secondary mb-2">5+ Years</h3>
+                  <p className="font-secondary text-base sm:text-lg text-muted-foreground">of Professional Experience</p>
                 </div>
                 <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
                   <div className="flex gap-3">
@@ -136,19 +136,19 @@ export default function About() {
               </div>
 
               <div className="space-y-6">
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="font-primary text-xl">Head of Content</h3>
-                    <span className="font-secondary text-sm text-muted-foreground">Mar. 2023 — Nov. 2025</span>
+                <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
+                    <h3 className="font-primary text-base sm:text-xl">Head of Content</h3>
+                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Mar. 2023 — Nov. 2025</span>
                   </div>
-                  <p className="font-primary text-secondary mb-3">Renee Content · Remote</p>
-                  <ul className="space-y-2 font-secondary text-muted-foreground">
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">Renee Content · Remote</p>
+                  <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">●</span>
+                      <span className="text-secondary mt-1 flex-shrink-0">●</span>
                       <span>Generated $12M+ in measurable client revenue through ROI-focused content campaigns</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">●</span>
+                      <span className="text-secondary mt-1 flex-shrink-0">●</span>
                       <span>
                         Mentored and led a team of 12 writers and marketers, overseeing their deliverables and providing
                         feedback and training materials to maintain high quality, authentic voice, and brand alignment
@@ -157,15 +157,15 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="font-primary text-xl">Content Marketing Mentor</h3>
-                    <span className="font-secondary text-sm text-muted-foreground">Mar. 2023 — Nov. 2025</span>
+                <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
+                    <h3 className="font-primary text-base sm:text-xl">Content Marketing Mentor</h3>
+                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Mar. 2023 — Nov. 2025</span>
                   </div>
-                  <p className="font-primary text-secondary mb-3">ADPList · Remote</p>
-                  <ul className="space-y-2 font-secondary text-muted-foreground">
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">ADPList · Remote</p>
+                  <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">●</span>
+                      <span className="text-secondary mt-1 flex-shrink-0">●</span>
                       <span>
                         Mentored global marketers and founders through 80+ sessions totaling 2,600+ minutes of 1:1
                         guidance
@@ -174,15 +174,15 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="font-primary text-xl">Guest Speaker</h3>
-                    <span className="font-secondary text-sm text-muted-foreground">Apr. 2025</span>
+                <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
+                    <h3 className="font-primary text-base sm:text-xl">Guest Speaker</h3>
+                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Apr. 2025</span>
                   </div>
-                  <p className="font-primary text-secondary mb-3">ADPList's 2025 Don't Settle Conference · Remote</p>
-                  <ul className="space-y-2 font-secondary text-muted-foreground">
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">ADPList's 2025 Don't Settle Conference · Remote</p>
+                  <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">●</span>
+                      <span className="text-secondary mt-1 flex-shrink-0">●</span>
                       <span>
                         Delivered a 1-hour speech on "The $100K Side Hustle Formula: A Step-by-Step Guide to
                         Monetization"
@@ -191,40 +191,40 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="font-primary text-xl">Senior Email Marketing Manager</h3>
-                    <span className="font-secondary text-sm text-muted-foreground">Nov. 2023 — Jan. 2025</span>
+                <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
+                    <h3 className="font-primary text-base sm:text-xl">Senior Email Marketing Manager</h3>
+                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Nov. 2023 — Jan. 2025</span>
                   </div>
-                  <p className="font-primary text-secondary mb-3">
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">
                     Roomvu · Vancouver, British Columbia, Canada (Remote)
                   </p>
-                  <ul className="space-y-2 font-secondary text-muted-foreground">
+                  <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">●</span>
+                      <span className="text-secondary mt-1 flex-shrink-0">●</span>
                       <span>
                         Strategized, developed, and sent cold emails to 1M+ leads weekly and marketing emails to
                         brokerages
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">●</span>
+                      <span className="text-secondary mt-1 flex-shrink-0">●</span>
                       <span>Increased weekly registration by 194%+ (from an average of 170 to an average of 500)</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="font-primary text-xl">Digital Marketing Manager</h3>
-                    <span className="font-secondary text-sm text-muted-foreground">Jun. 2023 — Sep. 2023</span>
+                <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
+                    <h3 className="font-primary text-base sm:text-xl">Digital Marketing Manager</h3>
+                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Jun. 2023 — Sep. 2023</span>
                   </div>
-                  <p className="font-primary text-secondary mb-3">
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">
                     Citronity · Vancouver, British Columbia, Canada (Remote)
                   </p>
-                  <ul className="space-y-2 font-secondary text-muted-foreground">
+                  <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">●</span>
+                      <span className="text-secondary mt-1 flex-shrink-0">●</span>
                       <span>
                         Developed and implemented comprehensive digital marketing strategies to enhance the company's brand visibility, generating qualified leads, driving customer acquisition, identifying target audiences, creating engaging campaigns, and leveraging various digital channels to maximize reach and engagement
                       </span>
@@ -232,26 +232,26 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                  <div className="flex justify-between items-start gap-4 mb-4">
-                    <h3 className="font-primary text-xl flex-1">
+                <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
+                    <h3 className="font-primary text-base sm:text-xl">
                       Product Marketing Manager & Technical Content Specialist
                     </h3>
-                    <span className="font-secondary text-sm text-muted-foreground whitespace-nowrap flex-shrink-0">
+                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground flex-shrink-0">
                       Nov. 2022 — Jun. 2023
                     </span>
                   </div>
-                  <p className="font-primary text-secondary mb-3">Nordic Defender · Gothenburg, Sweden (Remote)</p>
-                  <ul className="space-y-2 font-secondary text-muted-foreground">
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">Nordic Defender · Gothenburg, Sweden (Remote)</p>
+                  <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">●</span>
+                      <span className="text-secondary mt-1 flex-shrink-0">●</span>
                       <span>
                         Initiated and conducted in-depth market analysis proactively to identify trends and competitive
                         differentiators
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">●</span>
+                      <span className="text-secondary mt-1 flex-shrink-0">●</span>
                       <span>
                         Partnered with cross-functional teams to simplify complex cybersecurity concepts into white
                         papers, press releases, case studies, blogs, articles, emails, LinkedIn posts, webpages, and
@@ -261,35 +261,35 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="font-primary text-xl">Technical Content Writer</h3>
-                    <span className="font-secondary text-sm text-muted-foreground">Apr. 2022 — Sep. 2022</span>
+                <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
+                    <h3 className="font-primary text-base sm:text-xl">Technical Content Writer</h3>
+                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Apr. 2022 — Sep. 2022</span>
                   </div>
-                  <p className="font-primary text-secondary mb-3">Cloudzy · Dubai, United Arab Emirates (Remote)</p>
-                  <ul className="space-y-2 font-secondary text-muted-foreground">
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">Cloudzy · Dubai, United Arab Emirates (Remote)</p>
+                  <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">●</span>
+                      <span className="text-secondary mt-1 flex-shrink-0">●</span>
                       <span>Wrote blog posts ranking #1 and position zero on Google, with 13+ min time on page</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">●</span>
+                      <span className="text-secondary mt-1 flex-shrink-0">●</span>
                       <span>Increased webpage and landing page conversion rates by 3.7%</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="font-primary text-xl">Content Marketer & Email Marketer</h3>
-                    <span className="font-secondary text-sm text-muted-foreground">Sep. 2021 — Apr. 2022</span>
+                <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
+                    <h3 className="font-primary text-base sm:text-xl">Content Marketer & Email Marketer</h3>
+                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Sep. 2021 — Apr. 2022</span>
                   </div>
-                  <p className="font-primary text-secondary mb-3">
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">
                     WatchThemLive · Toronto, Ontario, Canada (Remote)
                   </p>
-                  <ul className="space-y-2 font-secondary text-muted-foreground">
+                  <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary mt-1">●</span>
+                      <span className="text-secondary mt-1 flex-shrink-0">●</span>
                       <span>
                         Developed and executed targeted email marketing campaigns to nurture leads, drive engagement, and grow conversions, increasing open rates by 50%+ and CTRs by 23%+
                       </span>
@@ -301,24 +301,24 @@ export default function About() {
 
             {/* Education Tab */}
             <TabsContent value="education" className="space-y-6">
-              <div className="flex items-center gap-4 mb-8">
-                <GraduationCap className="w-8 h-8 text-secondary" />
-                <h2 className="font-primary text-2xl md:text-3xl text-pixel">Education</h2>
+              <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+                <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-secondary flex-shrink-0" />
+                <h2 className="font-primary text-lg sm:text-2xl md:text-3xl text-pixel">Education</h2>
               </div>
 
               <div className="space-y-6">
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                  <h3 className="font-primary text-xl mb-2">Kharazmi University</h3>
-                  <p className="font-primary text-secondary mb-2">Bachelor of Arts - BA, English Language and Literature</p>
-                  <p className="font-secondary text-sm text-muted-foreground mb-4">2017 - 2021</p>
-                  <p className="font-secondary text-muted-foreground">
+                <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                  <h3 className="font-primary text-base sm:text-xl mb-2">Kharazmi University</h3>
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-2">Bachelor of Arts - BA, English Language and Literature</p>
+                  <p className="font-secondary text-xs sm:text-sm text-muted-foreground mb-4">2017 - 2021</p>
+                  <p className="font-secondary text-sm sm:text-base text-muted-foreground">
                     Studied and analyzed major works of English literature and philosophy, history, and elementary French language.
                   </p>
                 </div>
                 
-                <div className="pixel-border pixel-shadow bg-card/30 p-6">
-                  <h3 className="font-primary text-xl mb-6">Professional Certifications</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 font-secondary">
+                <div className="pixel-border pixel-shadow bg-card/30 p-4 sm:p-6">
+                  <h3 className="font-primary text-base sm:text-xl mb-4 sm:mb-6">Professional Certifications</h3>
+                  <div className="grid grid-cols-1 gap-4 font-secondary text-sm sm:text-base">
                     <div>
                       <p className="font-semibold">Digital Skills: Web Analytics</p>
                       <p className="text-muted-foreground text-sm">Accenture | Issued Dec 2021</p>
@@ -370,14 +370,14 @@ export default function About() {
 
             {/* Skills Tab */}
             <TabsContent value="skills" className="space-y-6">
-              <div className="flex items-center gap-4 mb-8">
-                <Code className="w-8 h-8 text-secondary" />
-                <h2 className="font-primary text-2xl md:text-3xl text-pixel">Skills & Expertise</h2>
+              <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+                <Code className="w-6 h-6 sm:w-8 sm:h-8 text-secondary flex-shrink-0" />
+                <h2 className="font-primary text-lg sm:text-2xl md:text-3xl text-pixel">Skills & Expertise</h2>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="pixel-border pixel-shadow bg-card/30 p-6">
-                  <h3 className="font-primary text-xl mb-4">Finance</h3>
+              <div className="grid grid-cols-1 gap-6">
+                <div className="pixel-border pixel-shadow bg-card/30 p-4 sm:p-6">
+                  <h3 className="font-primary text-base sm:text-xl mb-4">Finance</h3>
                   <div className="flex flex-wrap gap-2">
                     <Badge className="pixel-border">Macroeconomics</Badge>
                     <Badge className="pixel-border">Cryptocurrency Analysis</Badge>
@@ -391,8 +391,8 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card/30 p-6">
-                  <h3 className="font-primary text-xl mb-4">Marketing & Sales</h3>
+                <div className="pixel-border pixel-shadow bg-card/30 p-4 sm:p-6">
+                  <h3 className="font-primary text-base sm:text-xl mb-4">Marketing & Sales</h3>
                   <div className="flex flex-wrap gap-2">
                     <Badge className="pixel-border">SEO Content Writing</Badge>
                     <Badge className="pixel-border">Email Marketing</Badge>
@@ -406,8 +406,8 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card/30 p-6">
-                  <h3 className="font-primary text-xl mb-4">Tools</h3>
+                <div className="pixel-border pixel-shadow bg-card/30 p-4 sm:p-6">
+                  <h3 className="font-primary text-base sm:text-xl mb-4">Tools</h3>
                   <div className="flex flex-wrap gap-2">
                     <Badge className="pixel-border">TradingView</Badge>
                     <Badge className="pixel-border">Token Terminal</Badge>
@@ -428,8 +428,8 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card/30 p-6">
-                  <h3 className="font-primary text-xl mb-4">Soft Skills</h3>
+                <div className="pixel-border pixel-shadow bg-card/30 p-4 sm:p-6">
+                  <h3 className="font-primary text-base sm:text-xl mb-4">Soft Skills</h3>
                   <div className="flex flex-wrap gap-2">
                     <Badge className="pixel-border">Cross-Functional Team Leadership</Badge>
                     <Badge className="pixel-border">Stakeholder Communication</Badge>
@@ -440,8 +440,8 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card/30 p-6 md:col-span-2">
-                  <h3 className="font-primary text-xl mb-4">Languages</h3>
+                <div className="pixel-border pixel-shadow bg-card/30 p-4 sm:p-6 col-span-full">
+                  <h3 className="font-primary text-base sm:text-xl mb-4">Languages</h3>
                   <div className="flex flex-wrap gap-2">
                     <Badge className="pixel-border">English (Native Proficiency)</Badge>
                     <Badge className="pixel-border">French (Elementary)</Badge>
@@ -453,26 +453,26 @@ export default function About() {
 
             {/* Recognition Tab */}
             <TabsContent value="recognition" className="space-y-6">
-              <div className="flex items-center gap-4 mb-8">
-                <Award className="w-8 h-8 text-secondary" />
-                <h2 className="font-primary text-2xl md:text-3xl text-pixel">Awards & Recognition</h2>
+              <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+                <Award className="w-6 h-6 sm:w-8 sm:h-8 text-secondary flex-shrink-0" />
+                <h2 className="font-primary text-lg sm:text-2xl md:text-3xl text-pixel">Awards & Recognition</h2>
               </div>
 
               <div className="space-y-4">
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all flex items-center gap-4">
-                  <Award className="w-6 h-6 text-accent" />
+                <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all flex items-center gap-3 sm:gap-4">
+                  <Award className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
                   <div className="flex-1">
-                    <p className="font-secondary">
+                    <p className="font-secondary text-sm sm:text-base">
                       <span className="font-primary">2025 — </span>
                       Guest Speaker | ADPList's Don't Settle Conference
                     </p>
                   </div>
                 </div>
 
-                <div className="pixel-border pixel-shadow bg-card p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all flex items-center gap-4">
-                  <Award className="w-6 h-6 text-accent" />
+                <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all flex items-center gap-3 sm:gap-4">
+                  <Award className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
                   <div className="flex-1">
-                    <p className="font-secondary">
+                    <p className="font-secondary text-sm sm:text-base">
                       <span className="font-primary">2025 — </span>
                       ADPList Top 50 Mentor
                     </p>
@@ -488,21 +488,21 @@ export default function About() {
                 <h2 className="font-primary text-2xl md:text-3xl text-pixel">Interests</h2>
               </div>
 
-              <div className="pixel-border pixel-shadow bg-card/30 p-8">
-                <h3 className="font-primary text-xl mb-6">Hobbies & Passions</h3>
+              <div className="pixel-border pixel-shadow bg-card/30 p-4 sm:p-6 md:p-8">
+                <h3 className="font-primary text-base sm:text-xl mb-4 sm:mb-6">Hobbies & Passions</h3>
 
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-accent text-lg sm:text-xl mt-1 flex-shrink-0">●</span>
+                    <p className="font-secondary text-sm sm:text-base md:text-lg">
                       Finance and Economics:  Connecting numbers to narratives, and translating data into insight and
                       strategy
                     </p>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <span className="text-accent text-xl mt-1">●</span>
-                    <p className="font-secondary text-lg">
+                  <div className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-accent text-lg sm:text-xl mt-1 flex-shrink-0">●</span>
+                    <p className="font-secondary text-sm sm:text-base md:text-lg">
                       Marketing Psychology: Understanding consumer behavior, decision-making, and influence
                     </p>
                   </div>
