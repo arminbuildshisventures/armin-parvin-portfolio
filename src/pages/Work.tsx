@@ -71,6 +71,7 @@ const getButtonText = (workTypes: string[]) => {
 export default function Work() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy | null>(null);
+  const [selectedWorkItem, setSelectedWorkItem] = useState<WorkItem | null>(null);
   const [showFullInterview, setShowFullInterview] = useState(false);
   const [viewImageUrl, setViewImageUrl] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<string>("case-studies");
@@ -126,9 +127,9 @@ export default function Work() {
         setSearchParams({});
       }
     } else if (workSlug) {
-      // For work items, just switch to the tab
       const workItem = findWorkItemBySlug(workSlug);
       if (workItem) {
+        setSelectedWorkItem(workItem);
         setActiveTab('featured-work');
       } else {
         // Invalid slug, clear parameter
@@ -149,6 +150,20 @@ export default function Work() {
   const handleCaseStudyClose = () => {
     setSelectedCaseStudy(null);
     setShowFullInterview(false);
+    setSearchParams({});
+  };
+
+  // Handle work item click
+  const handleWorkItemClick = (workItem: WorkItem) => {
+    setSelectedWorkItem(workItem);
+    if (workItem.slug) {
+      setSearchParams({ work: workItem.slug });
+    }
+  };
+
+  // Handle work item close
+  const handleWorkItemClose = () => {
+    setSelectedWorkItem(null);
     setSearchParams({});
   };
 
@@ -1302,7 +1317,11 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                 </div>
               ) : (
                 filteredWork.map((project, index) => (
-                  <PixelCard key={index} className="transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg flex flex-col group relative overflow-hidden">
+                  <PixelCard 
+                    key={index} 
+                    className="transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg flex flex-col group relative overflow-hidden cursor-pointer"
+                    onClick={() => handleWorkItemClick(project)}
+                  >
                     {/* Gradient accent at top */}
                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent/50 via-secondary/50 to-accent/50 opacity-60 group-hover:opacity-100 transition-opacity" />
                     
