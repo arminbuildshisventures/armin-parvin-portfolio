@@ -633,7 +633,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                 </div>
               ) : (
                 filteredWork.map((project, index) => (
-                  <PixelCard key={index} className="transition-transform hover:-translate-x-1 hover:-translate-y-1">
+                  <PixelCard key={index} className="transition-transform hover:-translate-x-1 hover:-translate-y-1 flex flex-col h-full">
                     <h3 className="font-primary text-lg mb-3">{project.title}</h3>
                     
                     <p className="font-secondary text-sm mb-4">{project.description}</p>
@@ -666,7 +666,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                     )}
 
                     {/* Tags at bottom */}
-                    <div className="space-y-2 pt-4 border-t border-border/20">
+                    <div className="space-y-2 pt-4 border-t border-border/20 mt-auto">
                       {project.workType.length > 0 && (
                         <div className="flex flex-wrap gap-1">
                           {project.workType.map(type => (
