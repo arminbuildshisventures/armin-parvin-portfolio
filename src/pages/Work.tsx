@@ -1067,23 +1067,36 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
         <div className="container mx-auto max-w-6xl relative z-20 space-y-24">
           {/* Case Studies Section */}
           <div>
-            <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Case Studies</h1>
+            <div className="text-center mb-16">
+              <div className="inline-block pixel-border bg-gradient-to-r from-accent/30 via-secondary/30 to-accent/30 px-6 py-2 mb-6">
+                <span className="font-primary text-sm tracking-wider uppercase">Portfolio Highlights</span>
+              </div>
+              <h1 className="font-primary text-4xl md:text-6xl text-pixel">Case Studies</h1>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {caseStudies.map((project, index) => (
                 <PixelCard 
                   key={index}
-                  className="cursor-pointer transition-transform hover:-translate-x-1 hover:-translate-y-1"
+                  className="cursor-pointer transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg group relative overflow-hidden"
                   onClick={() => setSelectedCaseStudy(project)}
                 >
-                  <div className="inline-block pixel-border bg-accent/20 px-3 py-1 mb-4">
-                    <span className="font-primary text-xs">{project.category}</span>
+                  {/* Gradient accent line at top */}
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-secondary to-accent opacity-60 group-hover:opacity-100 transition-opacity" />
+                  
+                  <div className="relative z-10">
+                    <div className="inline-block pixel-border bg-gradient-to-br from-accent/30 to-accent/10 px-4 py-2 mb-4 group-hover:from-accent/40 group-hover:to-accent/20 transition-all">
+                      <span className="font-primary text-xs uppercase tracking-wide">{project.category}</span>
+                    </div>
+                    <h3 className="font-primary text-xl mb-4 group-hover:text-accent transition-colors">{project.title}</h3>
+                    <p className="font-secondary text-sm mb-6 leading-relaxed text-foreground/90">{project.description}</p>
+                    <div className="pixel-border bg-gradient-to-br from-secondary/30 to-secondary/10 px-4 py-3 mt-6 group-hover:from-secondary/40 group-hover:to-secondary/20 transition-all">
+                      <p className="font-secondary text-xs font-semibold leading-relaxed">{project.results}</p>
+                    </div>
+                    <div className="flex items-center gap-2 mt-6 text-accent group-hover:gap-4 transition-all">
+                      <span className="font-primary text-sm uppercase tracking-wider">View Case Study</span>
+                      <span className="text-lg">→</span>
+                    </div>
                   </div>
-                  <h3 className="font-primary text-lg mb-3">{project.title}</h3>
-                  <p className="font-secondary text-sm mb-4">{project.description}</p>
-                  <div className="pixel-border bg-secondary/20 px-3 py-2 mt-4">
-                    <p className="font-secondary text-xs font-semibold">{project.results}</p>
-                  </div>
-                  <p className="font-primary text-xs text-accent mt-4">Click to read full case study →</p>
                 </PixelCard>
               ))}
             </div>
@@ -1091,39 +1104,40 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
 
           {/* Featured Work Section */}
           <div>
-            <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Featured Work</h1>
+            <div className="text-center mb-16">
+              <div className="inline-block pixel-border bg-gradient-to-r from-secondary/30 via-accent/30 to-secondary/30 px-6 py-2 mb-6">
+                <span className="font-primary text-sm tracking-wider uppercase">Selected Projects</span>
+              </div>
+              <h1 className="font-primary text-4xl md:text-6xl text-pixel">Featured Work</h1>
+            </div>
             
             {/* Filter Component */}
-            <div className="mb-8 space-y-4 relative z-50">
+            <div className="mb-12 space-y-4 relative z-50">
               <div className="flex flex-wrap gap-4">
                 {/* Work Type Filter */}
                 <div className="relative" ref={workTypeRef}>
                   <button
                     onClick={() => setWorkTypeOpen(!workTypeOpen)}
-                    className="pixel-border bg-background px-4 py-2 font-secondary text-sm flex items-center gap-2 min-w-[160px] justify-between"
+                    className="pixel-border pixel-shadow bg-card hover:bg-accent/10 hover:pixel-shadow-lg hover:-translate-x-1 hover:-translate-y-1 px-5 py-3 font-secondary text-sm flex items-center gap-3 min-w-[180px] justify-between transition-all group"
                   >
-                    <span>Work Type {selectedWorkTypes.length > 0 && `(${selectedWorkTypes.length})`}</span>
-                    <ChevronDown className="w-4 h-4" />
+                    <span className="font-semibold">Work Type {selectedWorkTypes.length > 0 && <span className="text-accent">({selectedWorkTypes.length})</span>}</span>
+                    <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
                   </button>
                   {workTypeOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-64 pixel-border bg-background p-4 z-[100] max-h-96 overflow-y-auto shadow-lg">
+                    <div className="absolute top-full left-0 mt-2 w-72 pixel-border pixel-shadow-lg bg-card p-4 z-[100] max-h-96 overflow-y-auto">
                       {allWorkTypes.map(type => (
                         <label
                           key={type}
-                          className="flex items-center gap-2 py-2 cursor-pointer hover:bg-accent/10 px-2"
+                          className="flex items-center gap-3 py-3 px-3 cursor-pointer hover:bg-accent/10 transition-colors rounded-sm group"
                           onClick={(e) => {
                             e.stopPropagation();
                             toggleFilter(type, selectedWorkTypes, setSelectedWorkTypes);
                           }}
                         >
-                          <input
-                            type="checkbox"
-                            checked={selectedWorkTypes.includes(type)}
-                            onChange={() => {}}
-                            className="w-4 h-4"
-                            onClick={(e) => e.stopPropagation()}
-                          />
-                          <span className="font-secondary text-sm">{type}</span>
+                          <div className={`w-5 h-5 pixel-border flex items-center justify-center transition-colors ${selectedWorkTypes.includes(type) ? 'bg-accent' : 'bg-background'}`}>
+                            {selectedWorkTypes.includes(type) && <span className="text-background text-xs">✓</span>}
+                          </div>
+                          <span className="font-secondary text-sm group-hover:text-accent transition-colors">{type}</span>
                         </label>
                       ))}
                     </div>
@@ -1134,30 +1148,26 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                 <div className="relative" ref={industryRef}>
                   <button
                     onClick={() => setIndustryOpen(!industryOpen)}
-                    className="pixel-border bg-background px-4 py-2 font-secondary text-sm flex items-center gap-2 min-w-[160px] justify-between"
+                    className="pixel-border pixel-shadow bg-card hover:bg-secondary/10 hover:pixel-shadow-lg hover:-translate-x-1 hover:-translate-y-1 px-5 py-3 font-secondary text-sm flex items-center gap-3 min-w-[180px] justify-between transition-all group"
                   >
-                    <span>Industry {selectedIndustries.length > 0 && `(${selectedIndustries.length})`}</span>
-                    <ChevronDown className="w-4 h-4" />
+                    <span className="font-semibold">Industry {selectedIndustries.length > 0 && <span className="text-secondary">({selectedIndustries.length})</span>}</span>
+                    <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
                   </button>
                   {industryOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-64 pixel-border bg-background p-4 z-[100] max-h-96 overflow-y-auto shadow-lg">
+                    <div className="absolute top-full left-0 mt-2 w-72 pixel-border pixel-shadow-lg bg-card p-4 z-[100] max-h-96 overflow-y-auto">
                       {allIndustries.map(industry => (
                         <label
                           key={industry}
-                          className="flex items-center gap-2 py-2 cursor-pointer hover:bg-accent/10 px-2"
+                          className="flex items-center gap-3 py-3 px-3 cursor-pointer hover:bg-secondary/10 transition-colors rounded-sm group"
                           onClick={(e) => {
                             e.stopPropagation();
                             toggleFilter(industry, selectedIndustries, setSelectedIndustries);
                           }}
                         >
-                          <input
-                            type="checkbox"
-                            checked={selectedIndustries.includes(industry)}
-                            onChange={() => {}}
-                            className="w-4 h-4"
-                            onClick={(e) => e.stopPropagation()}
-                          />
-                          <span className="font-secondary text-sm">{industry}</span>
+                          <div className={`w-5 h-5 pixel-border flex items-center justify-center transition-colors ${selectedIndustries.includes(industry) ? 'bg-secondary' : 'bg-background'}`}>
+                            {selectedIndustries.includes(industry) && <span className="text-background text-xs">✓</span>}
+                          </div>
+                          <span className="font-secondary text-sm group-hover:text-secondary transition-colors">{industry}</span>
                         </label>
                       ))}
                     </div>
@@ -1168,10 +1178,10 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                 {(selectedWorkTypes.length > 0 || selectedIndustries.length > 0) && (
                   <button
                     onClick={clearAllFilters}
-                    className="pixel-border bg-secondary/20 px-4 py-2 font-secondary text-sm flex items-center gap-2 hover:bg-secondary/30"
+                    className="pixel-border pixel-shadow bg-gradient-to-br from-secondary/30 to-secondary/10 hover:from-secondary/40 hover:to-secondary/20 hover:pixel-shadow-lg hover:-translate-x-1 hover:-translate-y-1 px-5 py-3 font-secondary text-sm flex items-center gap-2 transition-all"
                   >
                     <X className="w-4 h-4" />
-                    <span>Clear All</span>
+                    <span className="font-semibold">Clear All</span>
                   </button>
                 )}
               </div>
@@ -1180,82 +1190,87 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
             {/* Work Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredWork.length === 0 ? (
-                <div className="col-span-full text-center py-16">
-                  <p className="font-secondary text-muted-foreground">No work items yet. Upload your work to get started.</p>
+                <div className="col-span-full text-center py-20">
+                  <div className="pixel-border bg-muted/20 px-8 py-12 inline-block">
+                    <p className="font-secondary text-muted-foreground text-lg">No matching work items found.</p>
+                    <p className="font-secondary text-muted-foreground/70 text-sm mt-2">Try adjusting your filters.</p>
+                  </div>
                 </div>
               ) : (
                 filteredWork.map((project, index) => (
-                  <PixelCard key={index} className="transition-transform hover:-translate-x-1 hover:-translate-y-1 flex flex-col h-full">
-                    {/* Tags at top */}
-                    <div className="mb-3">
-                      <div className="flex flex-wrap gap-1">
-                        {project.workType.map(type => (
-                          <span key={type} className="bg-primary/10 text-primary px-2 py-0.5 text-xs font-secondary rounded">
-                            {type}
-                          </span>
-                        ))}
-                        {project.industry.map(ind => (
-                          <span key={ind} className="bg-accent/10 text-accent px-2 py-0.5 text-xs font-secondary rounded">
-                            {ind}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <h3 className="font-primary text-lg mb-3">{project.title}</h3>
+                  <PixelCard key={index} className="transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg flex flex-col h-full group relative overflow-hidden">
+                    {/* Gradient accent at top */}
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent/50 via-secondary/50 to-accent/50 opacity-60 group-hover:opacity-100 transition-opacity" />
                     
-                    <p className="font-secondary text-sm mb-4">{project.description}</p>
-                    
-                    {/* Bottom section with results and buttons */}
-                    <div className="mt-auto space-y-4">
-                      <div className="pixel-border bg-secondary/20 px-3 py-2">
-                        <p className="font-secondary text-xs font-semibold">{project.results}</p>
-                      </div>
-
-                      {/* Action Buttons */}
-                      {(project.downloadUrl || project.viewImageUrl || project.externalUrl || project.beforeAfterImage) && (
+                    <div className="relative z-10">
+                      {/* Tags at top */}
+                      <div className="mb-4 pt-2">
                         <div className="flex flex-wrap gap-2">
-                          {project.downloadUrl && (
-                            <a
-                              href={project.downloadUrl}
-                              download
-                              className="pixel-border bg-accent/20 text-accent px-3 py-2 text-xs font-secondary hover:bg-accent/30 transition-colors"
-                            >
-                              {project.downloadUrl.endsWith('.html') ? 'Download HTML' : 'Download PDF'}
-                            </a>
-                          )}
-                          {project.beforeAfterImage && (
-                            <a
-                              href={project.beforeAfterImage}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="pixel-border bg-primary/20 text-primary px-3 py-2 text-xs font-secondary hover:bg-primary/30 transition-colors"
-                            >
-                              See Before/After
-                            </a>
-                          )}
-                          {project.viewImageUrl && (
-                            <button
-                              onClick={() => setViewImageUrl(project.viewImageUrl!)}
-                              className="pixel-border bg-primary/20 text-primary px-3 py-2 text-xs font-secondary hover:bg-primary/30 transition-colors"
-                            >
-                              View Diagram
-                            </button>
-                          )}
-                          {project.externalUrl && (
-                            <a
-                              href={project.externalUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="pixel-border bg-accent/20 text-accent px-3 py-2 text-xs font-secondary hover:bg-accent/30 transition-colors"
-                            >
-                              {getButtonText(project.workType)}
-                            </a>
-                          )}
+                          {project.workType.map(type => (
+                            <span key={type} className="pixel-border bg-gradient-to-br from-primary/20 to-primary/5 text-primary px-3 py-1 text-xs font-secondary uppercase tracking-wide">
+                              {type}
+                            </span>
+                          ))}
+                          {project.industry.map(ind => (
+                            <span key={ind} className="pixel-border bg-gradient-to-br from-accent/20 to-accent/5 text-accent px-3 py-1 text-xs font-secondary uppercase tracking-wide">
+                              {ind}
+                            </span>
+                          ))}
                         </div>
-                      )}
-                    </div>
+                      </div>
 
+                      <h3 className="font-primary text-xl mb-4 group-hover:text-accent transition-colors">{project.title}</h3>
+                      
+                      {/* Bottom section with results and buttons */}
+                      <div className="mt-auto space-y-4">
+                        <div className="pixel-border bg-gradient-to-br from-secondary/30 to-secondary/10 px-4 py-3 group-hover:from-secondary/40 group-hover:to-secondary/20 transition-all">
+                          <p className="font-secondary text-xs font-semibold leading-relaxed">{project.results}</p>
+                        </div>
+
+                        {/* Action Buttons */}
+                        {(project.downloadUrl || project.viewImageUrl || project.externalUrl || project.beforeAfterImage) && (
+                          <div className="flex flex-wrap gap-2">
+                            {project.downloadUrl && (
+                              <a
+                                href={project.downloadUrl}
+                                download
+                                className="pixel-border bg-gradient-to-br from-accent/30 to-accent/10 text-accent px-4 py-2 text-xs font-secondary uppercase tracking-wide hover:from-accent/40 hover:to-accent/20 hover:pixel-shadow transition-all font-semibold"
+                              >
+                                {project.downloadUrl.endsWith('.html') ? 'Download HTML' : 'Download PDF'}
+                              </a>
+                            )}
+                            {project.beforeAfterImage && (
+                              <a
+                                href={project.beforeAfterImage}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="pixel-border bg-gradient-to-br from-primary/30 to-primary/10 text-primary px-4 py-2 text-xs font-secondary uppercase tracking-wide hover:from-primary/40 hover:to-primary/20 hover:pixel-shadow transition-all font-semibold"
+                              >
+                                See Before/After
+                              </a>
+                            )}
+                            {project.viewImageUrl && (
+                              <button
+                                onClick={() => setViewImageUrl(project.viewImageUrl!)}
+                                className="pixel-border bg-gradient-to-br from-primary/30 to-primary/10 text-primary px-4 py-2 text-xs font-secondary uppercase tracking-wide hover:from-primary/40 hover:to-primary/20 hover:pixel-shadow transition-all font-semibold"
+                              >
+                                View Diagram
+                              </button>
+                            )}
+                            {project.externalUrl && (
+                              <a
+                                href={project.externalUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="pixel-border bg-gradient-to-br from-accent/30 to-accent/10 text-accent px-4 py-2 text-xs font-secondary uppercase tracking-wide hover:from-accent/40 hover:to-accent/20 hover:pixel-shadow transition-all font-semibold"
+                              >
+                                {getButtonText(project.workType)}
+                              </a>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    </div>
                   </PixelCard>
                 ))
               )}
