@@ -9,6 +9,11 @@ import youngGuitar1 from "@/assets/journey/young-guitar-1.png";
 import youngPractice from "@/assets/journey/young-practice.png";
 import youngSmile from "@/assets/journey/young-smile.png";
 import professionalPerformance from "@/assets/journey/professional-performance.png";
+import discoveryProfessional1 from "@/assets/journey/discovery-professional-1.png";
+import discoveryProfessional2 from "@/assets/journey/discovery-professional-2.png";
+import discoveryProfessional3 from "@/assets/journey/discovery-professional-3.png";
+import discoveryProfessional4 from "@/assets/journey/discovery-professional-4.png";
+import discoveryTeam from "@/assets/journey/discovery-team.png";
 import { useState } from "react";
 export default function About() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -112,14 +117,29 @@ export default function About() {
 
             {/* Segment 3: The Discovery */}
             <div className="relative mb-12 md:mb-16">
-              <div className="pixel-border pixel-shadow bg-accent/10 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                <h3 className="font-primary text-xl md:text-2xl text-accent mb-4">💡 The Discovery</h3>
-                <p className="font-secondary text-base md:text-lg leading-relaxed">
-                  I discovered marketing, and content immediately caught my attention (well, I am quite the storyteller, right?). 
-                  I started writing blogs, landing page and webpage copy, emails, and LinkedIn posts. The blogs started ranking #1 
-                  and #0 on Google, landing page conversion rates tripled, emails started getting too many signups, and LinkedIn 
-                  posts started generating leads.
-                </p>
+              <div className="grid md:grid-cols-2 gap-6 items-start">
+                <div className="pixel-border pixel-shadow bg-accent/10 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-2 md:order-1">
+                  <h3 className="font-primary text-xl md:text-2xl text-accent mb-4">💡 The Discovery</h3>
+                  <p className="font-secondary text-base md:text-lg leading-relaxed">
+                    I discovered marketing, and content immediately caught my attention (well, I am quite the storyteller, right?). 
+                    I started writing blogs, landing page and webpage copy, emails, and LinkedIn posts. The blogs started ranking #1 
+                    and #0 on Google, landing page conversion rates tripled, emails started getting too many signups, and LinkedIn 
+                    posts started generating leads.
+                  </p>
+                </div>
+                <div className="order-1 md:order-2">
+                  {/* Professional portraits in a creative grid */}
+                  <div className="grid grid-cols-3 gap-3 mb-3">
+                    <img src={discoveryProfessional1} alt="Professional portrait 1" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover rounded-lg hover:scale-105 transition-transform" />
+                    <img src={discoveryProfessional2} alt="Professional portrait 2" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover rounded-lg hover:scale-105 transition-transform" />
+                    <img src={discoveryProfessional3} alt="Professional portrait 3" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  </div>
+                  {/* Team collaboration and individual portrait */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <img src={discoveryTeam} alt="Team collaboration" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover rounded-lg hover:scale-105 transition-transform" />
+                    <img src={discoveryProfessional4} alt="Professional portrait 4" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  </div>
+                </div>
               </div>
               <div className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
             </div>
