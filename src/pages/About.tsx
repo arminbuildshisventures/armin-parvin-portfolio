@@ -15,6 +15,9 @@ import discoveryProfessional2 from "@/assets/journey/discovery-professional-2.pn
 import discoveryProfessional3 from "@/assets/journey/discovery-professional-3.png";
 import discoveryProfessional4 from "@/assets/journey/discovery-professional-4.png";
 import discoveryTeam from "@/assets/journey/discovery-team.png";
+import presentDayHat from "@/assets/journey/present-day-hat.png";
+import presentDaySuit from "@/assets/journey/present-day-suit.png";
+import presentDayChair from "@/assets/journey/present-day-chair.png";
 import { useState } from "react";
 export default function About() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -168,17 +171,29 @@ export default function About() {
 
             {/* Segment 5: Present Day */}
             <div className="relative">
-              <div className="pixel-border pixel-shadow bg-secondary/10 border-secondary/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">📊 Present Day</h3>
-                <p className="font-secondary text-base md:text-lg leading-relaxed mb-4">
-                  Recently, I have immersed myself in finance, economics, and especially Web3, blockchain, and cryptocurrency 
-                  research analysis. As a former math nerd, I can connect numbers to narratives and translate data into insight 
-                  and strategy.
-                </p>
-                <p className="font-secondary text-base md:text-lg leading-relaxed text-accent font-medium italic border-l-4 border-accent pl-4">
-                  When I'm not working (does that even happen?), I'm sipping on too much specialty coffee and working. Yes, I'm 
-                  working even when I'm not.
-                </p>
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                <div className="order-1 md:order-1 pixel-border pixel-shadow bg-secondary/10 border-secondary/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                  <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">📊 Present Day</h3>
+                  <p className="font-secondary text-base md:text-lg leading-relaxed mb-4">
+                    Recently, I have immersed myself in finance, economics, and especially Web3, blockchain, and cryptocurrency 
+                    research analysis. As a former math nerd, I can connect numbers to narratives and translate data into insight 
+                    and strategy.
+                  </p>
+                  <p className="font-secondary text-base md:text-lg leading-relaxed text-accent font-medium italic border-l-4 border-accent pl-4">
+                    When I'm not working (does that even happen?), I'm sipping on too much specialty coffee and working. Yes, I'm 
+                    working even when I'm not.
+                  </p>
+                </div>
+                <div className="order-2 md:order-2">
+                  {/* Present day portraits in creative grid */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <img src={presentDayHat} alt="Present day portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
+                    <img src={presentDaySuit} alt="Present day professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
+                  </div>
+                  <div className="mt-3">
+                    <img src={presentDayChair} alt="Present day portrait with red hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
+                  </div>
+                </div>
               </div>
               <div className="absolute -right-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
             </div>
