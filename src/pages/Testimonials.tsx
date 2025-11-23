@@ -163,6 +163,13 @@ const Testimonials = () => {
       rating: 5,
       avatar: gabbieSanchez,
     },
+    {
+      name: "Cissy Zhao",
+      role: "Founder, Cissy Zhao Consulting",
+      content: "This is probably one of the best spent one hour of my life. Armin understands what it takes to build a personal brand and shares valuable techniques and strategies patiently and systematically. He is also positive and friendly. Amazing vibe. Thank you so much for this.",
+      rating: 5,
+      avatar: cissyZhao,
+    },
     // Testimonials without case studies
     {
       name: "Ines Cid Blasco",
@@ -170,6 +177,13 @@ const Testimonials = () => {
       content: "Absolutely loved my session with Armin. You can tell he really knows his stuff: content writing. And on top of that, he genuinely wants to help. He has a very reciprocal approach to business, meaning he is as keen to give value as he is to receive it. Would highly recommend working with Armin!",
       rating: 5,
       avatar: avatar1,
+    },
+    {
+      name: "Mana Behzad",
+      role: "Multidisciplinary Creative",
+      content: "Armin was incredibly generous, practical, and patient during our session. Drawing from his entrepreneurial background, he helped me better position my skills in areas that were unfamiliar to me. He encouraged me to stay open to possibilities I hadn't considered and equipped me with a range of valuable resources to take advantage of moving forward.",
+      rating: 5,
+      avatar: manaBehzad,
     },
     {
       name: "Julia Doronina",
@@ -221,25 +235,11 @@ const Testimonials = () => {
       avatar: masoudRezaei,
     },
     {
-      name: "Mana Behzad",
-      role: "Multidisciplinary Creative",
-      content: "Armin was incredibly generous, practical, and patient during our session. Drawing from his entrepreneurial background, he helped me better position my skills in areas that were unfamiliar to me. He encouraged me to stay open to possibilities I hadn't considered and equipped me with a range of valuable resources to take advantage of moving forward.",
-      rating: 5,
-      avatar: manaBehzad,
-    },
-    {
       name: "Abby Nduta",
       role: "Developer, Technical Writer",
       content: "I can tell Armin's a professional and the approach of the lesson was helpful and memorable. He has helped me A LOT in understanding the basics of copy and improve my storytelling. Thank you Armin, I will forever be grateful!",
       rating: 5,
       avatar: abbyNduta,
-    },
-    {
-      name: "Cissy Zhao",
-      role: "Founder, Cissy Zhao Consulting",
-      content: "This is probably one of the best spent one hour of my life. Armin understands what it takes to build a personal brand and shares valuable techniques and strategies patiently and systematically. He is also positive and friendly. Amazing vibe. Thank you so much for this.",
-      rating: 5,
-      avatar: cissyZhao,
     },
     {
       name: "AmirAli Piroozbakhsh",
