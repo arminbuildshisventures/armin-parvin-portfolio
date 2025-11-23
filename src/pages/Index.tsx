@@ -47,7 +47,7 @@ const Index = () => {
         >
           <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
             <div className="pixel-border bg-secondary px-3 py-2 max-w-[90vw] mx-auto">
-              <p className="font-primary text-[9px] sm:text-xs whitespace-nowrap overflow-hidden text-ellipsis">Copywriter • Ghostwriter • Content Marketer • Email Marketer</p>
+              <p className="font-primary text-[9px] sm:text-xs text-center leading-tight sm:whitespace-nowrap">Copywriter • Ghostwriter • Content Marketer • Email Marketer</p>
             </div>
             <h1 className="font-primary text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-pixel-inverted leading-tight sm:leading-relaxed px-2">
               Words That Convert
