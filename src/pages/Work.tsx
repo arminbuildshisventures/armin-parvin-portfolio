@@ -53,6 +53,13 @@ interface WorkItem {
   externalUrl?: string;
 }
 
+const getButtonText = (workTypes: string[]) => {
+  if (workTypes.includes("Press Release")) return "Read Press Release";
+  if (workTypes.includes("Case Study")) return "Read Case Study";
+  if (workTypes.includes("Blog")) return "Read Blog";
+  return "Read Article";
+};
+
 export default function Work() {
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy | null>(null);
   const [showFullInterview, setShowFullInterview] = useState(false);
@@ -894,7 +901,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                               rel="noopener noreferrer"
                               className="pixel-border bg-accent/20 text-accent px-3 py-2 text-xs font-secondary hover:bg-accent/30 transition-colors"
                             >
-                              Read Blog
+                              {getButtonText(project.workType)}
                             </a>
                           )}
                         </div>
