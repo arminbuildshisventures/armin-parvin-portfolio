@@ -48,11 +48,14 @@ interface WorkItem {
   workType: string[];
   industry: string[];
   format: string[];
+  downloadUrl?: string;
+  viewImageUrl?: string;
 }
 
 export default function Work() {
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy | null>(null);
   const [showFullInterview, setShowFullInterview] = useState(false);
+  const [viewImageUrl, setViewImageUrl] = useState<string | null>(null);
   
   // Filter states
   const [selectedWorkTypes, setSelectedWorkTypes] = useState<string[]>([]);
@@ -446,6 +449,8 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       workType: ["White Paper"],
       industry: ["Cybersecurity"],
       format: ["White Paper", "ROI Analysis"],
+      downloadUrl: "/work/next-gen-pentest-roi.pdf",
+      viewImageUrl: "/work/next-gen-pentest-diagram.png",
     },
     {
       title: "Penetration Testing Buyer's Guide",
@@ -454,6 +459,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       workType: ["White Paper"],
       industry: ["Cybersecurity"],
       format: ["Buyer's Guide", "Educational Content"],
+      downloadUrl: "/work/pentest-buyers-guide.pdf",
     },
     {
       title: "Kubernetes Penetration Testing Service Overview",
@@ -462,6 +468,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       workType: ["Webpage"],
       industry: ["Cybersecurity"],
       format: ["Service Page", "One-Pager"],
+      downloadUrl: "/work/kubernetes-penetration-testing.pdf",
     },
   ];
 
@@ -635,6 +642,29 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                       <p className="font-secondary text-xs font-semibold">{project.results}</p>
                     </div>
 
+                    {/* Action Buttons */}
+                    {(project.downloadUrl || project.viewImageUrl) && (
+                      <div className="flex gap-2 mb-4">
+                        {project.downloadUrl && (
+                          <a
+                            href={project.downloadUrl}
+                            download
+                            className="pixel-border bg-accent/20 text-accent px-3 py-2 text-xs font-secondary hover:bg-accent/30 transition-colors"
+                          >
+                            Download PDF
+                          </a>
+                        )}
+                        {project.viewImageUrl && (
+                          <button
+                            onClick={() => setViewImageUrl(project.viewImageUrl!)}
+                            className="pixel-border bg-primary/20 text-primary px-3 py-2 text-xs font-secondary hover:bg-primary/30 transition-colors"
+                          >
+                            View Diagram
+                          </button>
+                        )}
+                      </div>
+                    )}
+
                     {/* Tags at bottom */}
                     <div className="space-y-2 pt-4 border-t border-border/20">
                       {project.workType.length > 0 && (
@@ -663,6 +693,21 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
           </div>
         </div>
       </section>
+
+      {/* Image Viewer Modal */}
+      <Dialog open={!!viewImageUrl} onOpenChange={() => setViewImageUrl(null)}>
+        <DialogContent className="max-w-6xl max-h-[90vh] pixel-border bg-background p-0">
+          {viewImageUrl && (
+            <div className="relative w-full h-full overflow-auto p-6">
+              <img 
+                src={viewImageUrl} 
+                alt="Work diagram" 
+                className="w-full h-auto"
+              />
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       {/* Case Study Modal */}
       <Dialog open={!!selectedCaseStudy} onOpenChange={() => {
