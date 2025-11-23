@@ -7,6 +7,12 @@ import aboutBg from "@/assets/about-bg-pixel.png";
 import servicesBg from "@/assets/services-bg-pixel.png";
 import workBg from "@/assets/work-bg-pixel.png";
 import contactBg from "@/assets/contact-bg-pixel.png";
+import emailMarketingBg from "@/assets/services/email-marketing-bg.png";
+import contentWritingBg from "@/assets/services/content-writing-bg.png";
+import copywritingBg from "@/assets/services/copywriting-bg.png";
+import strategyBg from "@/assets/services/strategy-bg.png";
+import optimizationBg from "@/assets/services/optimization-bg.png";
+import consultingBg from "@/assets/services/consulting-bg.png";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
 import { Cursor } from "@/components/ui/inverted-cursor";
@@ -136,54 +142,114 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <PixelCard>
-              <Mail className="w-12 h-12 mb-4 text-accent" />
-              <h3 className="font-primary text-sm mb-3">Email Marketing</h3>
-              <p className="font-secondary text-sm leading-relaxed">
-                Strategic email campaigns that nurture leads and drive conversions through targeted messaging and
-                automation.
-              </p>
+            <PixelCard className="relative overflow-hidden">
+              <div 
+                className="absolute inset-0 opacity-20"
+                style={{
+                  backgroundImage: `url(${emailMarketingBg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+              <div className="relative z-10">
+                <Mail className="w-12 h-12 mb-4 text-accent" />
+                <h3 className="font-primary text-sm mb-3">Email Marketing</h3>
+                <p className="font-secondary text-sm leading-relaxed">
+                  Strategic email campaigns that nurture leads and drive conversions through targeted messaging and
+                  automation.
+                </p>
+              </div>
             </PixelCard>
 
-            <PixelCard>
-              <FileText className="w-12 h-12 mb-4 text-secondary" />
-              <h3 className="font-primary text-sm mb-3">Content Writing</h3>
-              <p className="font-secondary text-sm leading-relaxed">
-                SEO-optimized blog posts, articles, and web content that engage readers and establish thought
-                leadership.
-              </p>
+            <PixelCard className="relative overflow-hidden">
+              <div 
+                className="absolute inset-0 opacity-20"
+                style={{
+                  backgroundImage: `url(${contentWritingBg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+              <div className="relative z-10">
+                <FileText className="w-12 h-12 mb-4 text-secondary" />
+                <h3 className="font-primary text-sm mb-3">Content Writing</h3>
+                <p className="font-secondary text-sm leading-relaxed">
+                  SEO-optimized blog posts, articles, and web content that engage readers and establish thought
+                  leadership.
+                </p>
+              </div>
             </PixelCard>
 
-            <PixelCard>
-              <PenTool className="w-12 h-12 mb-4 text-accent" />
-              <h3 className="font-primary text-sm mb-3">Copywriting</h3>
-              <p className="font-secondary text-sm leading-relaxed">
-                Persuasive copy for landing pages, ads, and sales materials that converts visitors into customers.
-              </p>
+            <PixelCard className="relative overflow-hidden">
+              <div 
+                className="absolute inset-0 opacity-20"
+                style={{
+                  backgroundImage: `url(${copywritingBg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+              <div className="relative z-10">
+                <PenTool className="w-12 h-12 mb-4 text-accent" />
+                <h3 className="font-primary text-sm mb-3">Copywriting</h3>
+                <p className="font-secondary text-sm leading-relaxed">
+                  Persuasive copy for landing pages, ads, and sales materials that converts visitors into customers.
+                </p>
+              </div>
             </PixelCard>
 
-            <PixelCard>
-              <Target className="w-12 h-12 mb-4 text-secondary" />
-              <h3 className="font-primary text-sm mb-3">Strategy</h3>
-              <p className="font-secondary text-sm leading-relaxed">
-                Comprehensive content strategies aligned with business goals and audience needs.
-              </p>
+            <PixelCard className="relative overflow-hidden">
+              <div 
+                className="absolute inset-0 opacity-20"
+                style={{
+                  backgroundImage: `url(${strategyBg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+              <div className="relative z-10">
+                <Target className="w-12 h-12 mb-4 text-secondary" />
+                <h3 className="font-primary text-sm mb-3">Strategy</h3>
+                <p className="font-secondary text-sm leading-relaxed">
+                  Comprehensive content strategies aligned with business goals and audience needs.
+                </p>
+              </div>
             </PixelCard>
 
-            <PixelCard>
-              <TrendingUp className="w-12 h-12 mb-4 text-accent" />
-              <h3 className="font-primary text-sm mb-3">Optimization</h3>
-              <p className="font-secondary text-sm leading-relaxed">
-                A/B testing and analytics-driven improvements to maximize campaign performance.
-              </p>
+            <PixelCard className="relative overflow-hidden">
+              <div 
+                className="absolute inset-0 opacity-20"
+                style={{
+                  backgroundImage: `url(${optimizationBg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+              <div className="relative z-10">
+                <TrendingUp className="w-12 h-12 mb-4 text-accent" />
+                <h3 className="font-primary text-sm mb-3">Optimization</h3>
+                <p className="font-secondary text-sm leading-relaxed">
+                  A/B testing and analytics-driven improvements to maximize campaign performance.
+                </p>
+              </div>
             </PixelCard>
 
-            <PixelCard>
-              <Users className="w-12 h-12 mb-4 text-secondary" />
-              <h3 className="font-primary text-sm mb-3">Consulting</h3>
-              <p className="font-secondary text-sm leading-relaxed">
-                Expert guidance on content strategy, messaging, and marketing automation.
-              </p>
+            <PixelCard className="relative overflow-hidden">
+              <div 
+                className="absolute inset-0 opacity-20"
+                style={{
+                  backgroundImage: `url(${consultingBg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+              <div className="relative z-10">
+                <Users className="w-12 h-12 mb-4 text-secondary" />
+                <h3 className="font-primary text-sm mb-3">Consulting</h3>
+                <p className="font-secondary text-sm leading-relaxed">
+                  Expert guidance on content strategy, messaging, and marketing automation.
+                </p>
+              </div>
             </PixelCard>
           </div>
         </div>
