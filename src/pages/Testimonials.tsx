@@ -170,6 +170,13 @@ const Testimonials = () => {
       rating: 5,
       avatar: cissyZhao,
     },
+    {
+      name: "Luis Acoltzi",
+      role: "Founder & Art Director/Designer, Pixel Hangar",
+      content: "Armin was great at advising on my content strategy and how to approach new business. I really appreciate the time and I look forward to the next session.",
+      rating: 5,
+      avatar: avatar13,
+    },
     // Testimonials without case studies
     {
       name: "Ines Cid Blasco",
@@ -219,13 +226,6 @@ const Testimonials = () => {
       content: "Armin is a great person with great experience in Copywriting and SEO. I had a good meeting with him. I like to keep in touch with him in the future.",
       rating: 5,
       avatar: avatar11,
-    },
-    {
-      name: "Luis Acoltzi",
-      role: "Founder & Art Director/Designer, Pixel Hangar",
-      content: "Armin was great at advising on my content strategy and how to approach new business. I really appreciate the time and I look forward to the next session.",
-      rating: 5,
-      avatar: avatar13,
     },
     {
       name: "Masoud Rezaei",
