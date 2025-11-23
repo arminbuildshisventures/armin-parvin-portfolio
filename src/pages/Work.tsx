@@ -1233,7 +1233,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
 
                         {/* Action Buttons */}
                         {(project.downloadUrl || project.viewImageUrl || project.externalUrl || project.beforeAfterImage) && (
-                          <div className="flex flex-wrap gap-2">
+                          <div className="flex gap-2">
                             {project.downloadUrl && (
                               <a
                                 href={project.downloadUrl}
