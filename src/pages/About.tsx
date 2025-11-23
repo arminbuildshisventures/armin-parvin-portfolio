@@ -97,14 +97,14 @@ export default function About() {
             {/* Segment 1: Artistic Roots */}
             <div className="relative mb-12 md:mb-16">
               <div className="grid md:grid-cols-2 gap-6 items-center">
-                <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-2 md:order-1">
+                <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-1 md:order-1">
                   <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🎨 Artistic Roots</h3>
                   <p className="font-secondary text-base md:text-lg leading-relaxed">
                     I come from an artistic family, with my mom being a graphic designer and painter, and my dad an illustrator. 
                     Music made me thrive, so I went on to become a professional Classical and Flamenco guitar player and instructor.
                   </p>
                 </div>
-                <div className="grid grid-cols-2 gap-3 order-1 md:order-2">
+                <div className="grid grid-cols-2 gap-3 order-2 md:order-2">
                   <img src={youngGuitar1} alt="Young musician with guitar" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngGuitar1, alt: "Young musician with guitar" })} />
                   <img src={youngSmile} alt="Young artist" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngSmile, alt: "Young artist" })} />
                   <img src={youngPractice} alt="Practicing music" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngPractice, alt: "Practicing music" })} />
@@ -117,18 +117,18 @@ export default function About() {
             {/* Segment 2: The Dedication */}
             <div className="relative mb-12 md:mb-16">
               <div className="grid md:grid-cols-2 gap-6 items-center">
-                <div className="grid grid-cols-3 gap-3 justify-center">
-                  <img src={dedicationPiano} alt="Piano practice" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationPiano, alt: "Piano practice" })} />
-                  <img src={dedicationGuitarStudio} alt="Guitar studio session" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationGuitarStudio, alt: "Guitar studio session" })} />
-                  <img src={dedicationGuitarPerformance} alt="Guitar performance" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationGuitarPerformance, alt: "Guitar performance" })} />
-                </div>
-                <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-1 md:order-2">
                   <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🎸 The Dedication</h3>
                   <p className="font-secondary text-base md:text-lg leading-relaxed">
                     When people were mining and buying Bitcoin, I was practicing music for well over 16 hours a day (huh ....). 
                     At some point, I realized that teaching wasn't my passion (even though I still mentor many people), so I decided 
                     to explore different paths to find out what was.
                   </p>
+                </div>
+                <div className="grid grid-cols-3 gap-3 justify-center order-2 md:order-1">
+                  <img src={dedicationPiano} alt="Piano practice" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationPiano, alt: "Piano practice" })} />
+                  <img src={dedicationGuitarStudio} alt="Guitar studio session" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationGuitarStudio, alt: "Guitar studio session" })} />
+                  <img src={dedicationGuitarPerformance} alt="Guitar performance" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationGuitarPerformance, alt: "Guitar performance" })} />
                 </div>
               </div>
               <div className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{ transform: 'translate(-50%, -50%) rotate(45deg)' }} />
@@ -137,7 +137,7 @@ export default function About() {
             {/* Segment 3: The Discovery */}
             <div className="relative mb-12 md:mb-16">
               <div className="grid md:grid-cols-2 gap-6 items-start">
-                <div className="pixel-border pixel-shadow bg-accent/30 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-2 md:order-1">
+                <div className="pixel-border pixel-shadow bg-accent/30 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-1 md:order-1">
                   <h3 className="font-primary text-xl md:text-2xl text-accent mb-4">💡 The Discovery</h3>
                   <p className="font-secondary text-base md:text-lg leading-relaxed">
                     I discovered marketing, and content immediately caught my attention (well, I am quite the storyteller, right?). 
@@ -146,7 +146,7 @@ export default function About() {
                     posts started generating leads.
                   </p>
                 </div>
-                <div className="order-1 md:order-2">
+                <div className="order-2 md:order-2">
                   {/* Professional portraits in a creative grid */}
                   <div className="grid grid-cols-3 gap-3 mb-3">
                     <img src={discoveryProfessional1} alt="Professional portrait 1" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional1, alt: "Professional portrait 1" })} />
@@ -166,14 +166,14 @@ export default function About() {
             {/* Segment 4: Tech Immersion */}
             <div className="relative mb-12 md:mb-16">
               <div className="grid md:grid-cols-2 gap-6 items-center">
-                <div className="order-2 md:order-1 pixel-border pixel-shadow bg-card/80 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                <div className="order-1 md:order-1 pixel-border pixel-shadow bg-card/80 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🚀 Tech Immersion</h3>
                   <p className="font-secondary text-base md:text-lg leading-relaxed">
                     My technology nerdiness allowed me to work with clients across various tech sectors, including FinTech, PropTech, 
                     SaaS, MarCom, Cloud Infrastructure, Cybersecurity, and Software Development.
                   </p>
                 </div>
-                <div className="order-1 md:order-2">
+                <div className="order-2 md:order-2">
                   {/* Professional portraits grid */}
                   <div className="grid grid-cols-2 gap-3">
                     <img src={professionalPortraitTech} alt="Professional portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: professionalPortraitTech, alt: "Professional portrait with hat" })} />
