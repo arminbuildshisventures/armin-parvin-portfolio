@@ -103,10 +103,10 @@ export default function About() {
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-3 order-1 md:order-2">
-                  <img src={youngGuitar1} alt="Young musician with guitar" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
-                  <img src={youngSmile} alt="Young artist" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
-                  <img src={youngPractice} alt="Practicing music" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
-                  <img src={youngGlasses} alt="Young portrait with glasses" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={youngGuitar1} alt="Young musician with guitar" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform" />
+                  <img src={youngSmile} alt="Young artist" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform" />
+                  <img src={youngPractice} alt="Practicing music" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform" />
+                  <img src={youngGlasses} alt="Young portrait with glasses" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform" />
                 </div>
               </div>
               <div className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
@@ -116,9 +116,9 @@ export default function About() {
             <div className="relative mb-12 md:mb-16">
               <div className="grid md:grid-cols-2 gap-6 items-center">
                 <div className="grid grid-cols-3 gap-3 justify-center">
-                  <img src={dedicationPiano} alt="Piano practice" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
-                  <img src={dedicationGuitarStudio} alt="Guitar studio session" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
-                  <img src={dedicationGuitarPerformance} alt="Guitar performance" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={dedicationPiano} alt="Piano practice" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform" />
+                  <img src={dedicationGuitarStudio} alt="Guitar studio session" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform" />
+                  <img src={dedicationGuitarPerformance} alt="Guitar performance" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform" />
                 </div>
                 <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🎸 The Dedication</h3>
@@ -147,14 +147,14 @@ export default function About() {
                 <div className="order-1 md:order-2">
                   {/* Professional portraits in a creative grid */}
                   <div className="grid grid-cols-3 gap-3 mb-3">
-                    <img src={discoveryProfessional1} alt="Professional portrait 1" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
-                    <img src={discoveryProfessional2} alt="Professional portrait 2" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
-                    <img src={discoveryProfessional3} alt="Professional portrait 3" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
+                    <img src={discoveryProfessional1} alt="Professional portrait 1" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform" />
+                    <img src={discoveryProfessional2} alt="Professional portrait 2" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform" />
+                    <img src={discoveryProfessional3} alt="Professional portrait 3" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform" />
                   </div>
                   {/* Team collaboration and individual portrait */}
                   <div className="grid grid-cols-2 gap-3">
-                    <img src={discoveryTeam} alt="Team collaboration" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
-                    <img src={discoveryProfessional4} alt="Professional portrait 4" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
+                    <img src={discoveryTeam} alt="Team collaboration" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform" />
+                    <img src={discoveryProfessional4} alt="Professional portrait 4" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform" />
                   </div>
                 </div>
               </div>
@@ -174,8 +174,8 @@ export default function About() {
                 <div className="order-1 md:order-2">
                   {/* Professional portraits grid */}
                   <div className="grid grid-cols-2 gap-3">
-                    <img src={professionalPortraitTech} alt="Professional portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
-                    <img src={professionalPerformance} alt="Professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
+                    <img src={professionalPortraitTech} alt="Professional portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform" />
+                    <img src={professionalPerformance} alt="Professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform" />
                   </div>
                 </div>
               </div>
@@ -196,11 +196,11 @@ export default function About() {
                 <div className="order-2 md:order-2">
                   {/* Present day portraits in creative grid */}
                   <div className="grid grid-cols-2 gap-3">
-                    <img src={presentDayHat} alt="Present day portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
-                    <img src={presentDaySuit} alt="Present day professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
+                    <img src={presentDayHat} alt="Present day portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform" />
+                    <img src={presentDaySuit} alt="Present day professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform" />
                   </div>
                   <div className="mt-3">
-                    <img src={presentDayChair} alt="Present day portrait with red hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
+                    <img src={presentDayChair} alt="Present day portrait with red hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform" />
                   </div>
                 </div>
               </div>
@@ -217,12 +217,12 @@ export default function About() {
                 
                 {/* Coffee photos grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
-                  <img src={coffeeWorkspace1} alt="Workspace with coffee" className="pixel-border pixel-shadow w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
-                  <img src={coffeeWorkspace2} alt="Outdoor workspace" className="pixel-border pixel-shadow w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
-                  <img src={coffeeEspresso} alt="Espresso shot" className="pixel-border pixel-shadow w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
-                  <img src={coffeeHand} alt="Coffee in hand" className="pixel-border pixel-shadow w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
-                  <img src={coffeeTable1} alt="Coffee table setup" className="pixel-border pixel-shadow w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
-                  <img src={coffeeTable2} alt="Coffee table view" className="pixel-border pixel-shadow w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={coffeeWorkspace1} alt="Workspace with coffee" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform" />
+                  <img src={coffeeWorkspace2} alt="Outdoor workspace" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform" />
+                  <img src={coffeeEspresso} alt="Espresso shot" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform" />
+                  <img src={coffeeHand} alt="Coffee in hand" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform" />
+                  <img src={coffeeTable1} alt="Coffee table setup" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform" />
+                  <img src={coffeeTable2} alt="Coffee table view" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform" />
                 </div>
               </div>
             </div>
