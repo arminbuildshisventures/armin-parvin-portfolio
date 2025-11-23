@@ -1069,16 +1069,16 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
         <div className="container mx-auto max-w-6xl relative z-20">
           <Tabs defaultValue="case-studies" className="w-full">
             <div className="mb-12 flex justify-center">
-              <TabsList className="pixel-border pixel-shadow bg-card/80 backdrop-blur-sm p-1.5 inline-flex gap-1">
+              <TabsList className="bg-transparent md:pixel-border md:pixel-shadow md:bg-card/80 md:backdrop-blur-sm md:p-1.5 flex flex-col md:inline-flex gap-0 md:gap-1 w-full md:w-auto p-0 mt-8 md:mt-0">
                 <TabsTrigger 
                   value="case-studies" 
-                  className="font-primary text-sm md:text-base uppercase tracking-wider px-6 md:px-8 py-2.5 md:py-3 data-[state=active]:bg-accent/20 data-[state=active]:text-accent data-[state=active]:pixel-border transition-all"
+                  className="font-primary text-base md:text-base uppercase tracking-wider px-8 md:px-8 py-4 md:py-3 border-2 border-border data-[state=active]:border-accent data-[state=active]:bg-accent/20 data-[state=active]:text-accent md:border-0 md:data-[state=active]:pixel-border transition-all"
                 >
                   Case Studies
                 </TabsTrigger>
                 <TabsTrigger 
                   value="featured-work" 
-                  className="font-primary text-sm md:text-base uppercase tracking-wider px-6 md:px-8 py-2.5 md:py-3 data-[state=active]:bg-secondary/20 data-[state=active]:text-secondary data-[state=active]:pixel-border transition-all"
+                  className="font-primary text-base md:text-base uppercase tracking-wider px-8 md:px-8 py-4 md:py-3 border-2 border-border data-[state=active]:border-secondary data-[state=active]:bg-secondary/20 data-[state=active]:text-secondary md:border-0 md:data-[state=active]:pixel-border transition-all"
                 >
                   Featured Work
                 </TabsTrigger>
