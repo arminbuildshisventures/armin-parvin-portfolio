@@ -5,7 +5,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Briefcase, GraduationCap, Code, Award, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import aboutBgPixel from "@/assets/about-bg-pixel.png";
+import { useState } from "react";
 export default function About() {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Cursor />
@@ -26,20 +29,31 @@ export default function About() {
           <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">About Me</h1>
 
           <div className="pixel-border pixel-shadow bg-card p-6 mb-12 max-w-4xl mx-auto">
-            <p className="font-secondary text-base md:text-lg leading-relaxed mb-6">
-              Head of Content with <strong>5+ years of experience</strong> generating demand and high-quality leads in
-              SaaS and B2B Tech companies. Generated <strong>$12M+ in client revenue</strong>, boosted email engagement
-              (<strong>open rate +52%, CTOR +5%, registration +194%</strong>), and produced content{" "}
-              <strong>ranking #1 and #0</strong>.
-              <br />
-              <br />
-              Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B
-              Tech from early to growth stages.
-              <br />
-              <br />
-              Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to
-              narratives, and translating data into insight and strategy.
+            <p className={`font-secondary text-base md:text-lg leading-relaxed mb-6 ${!isExpanded ? "md:block" : ""}`}>
+              Head of Content with <strong className="text-accent">5+ years of experience</strong> generating demand and high-quality leads in
+              SaaS and B2B Tech companies. Generated <strong className="text-accent">$12M+ in client revenue</strong>, boosted email engagement
+              (<strong className="text-accent">open rate +52%, CTOR +5%, registration +194%</strong>), and produced content{" "}
+              <strong className="text-accent">ranking #1 and #0</strong>.
             </p>
+            
+            <div className={`${isExpanded ? "block" : "hidden md:block"}`}>
+              <p className="font-secondary text-base md:text-lg leading-relaxed mb-6">
+                Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B
+                Tech from early to growth stages.
+              </p>
+              
+              <p className="font-secondary text-base md:text-lg leading-relaxed">
+                Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to
+                narratives, and translating data into insight and strategy.
+              </p>
+            </div>
+            
+            <button 
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="md:hidden mt-4 text-accent font-primary text-sm hover:underline"
+            >
+              {isExpanded ? "Read Less" : "Read More"}
+            </button>
           </div>
 
           <Tabs defaultValue="experience" className="w-full">
