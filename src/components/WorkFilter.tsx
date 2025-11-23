@@ -45,8 +45,13 @@ export function WorkFilter({
     const selectedCount = selectedTags.length;
     const [isOpen, setIsOpen] = useState(false);
     
+    const handleTagClick = (tag: string) => {
+      onFilterChange(category, tag);
+      // Don't close the popover
+    };
+    
     return (
-      <Popover open={isOpen} onOpenChange={setIsOpen} modal={false}>
+      <Popover open={isOpen} onOpenChange={setIsOpen}>
         <PopoverTrigger asChild>
           <Button 
             variant="outline" 
@@ -64,19 +69,36 @@ export function WorkFilter({
         <PopoverContent 
           className="w-80 pixel-border bg-background z-50" 
           align="start"
-          onPointerDownOutside={(e) => {
-            e.preventDefault();
+          onOpenAutoFocus={(e) => e.preventDefault()}
+          onCloseAutoFocus={(e) => e.preventDefault()}
+          onInteractOutside={(e) => {
+            // Close when clicking outside
+            setIsOpen(false);
           }}
         >
-          <div className="space-y-2">
-            <h4 className="font-primary text-sm mb-3">{title}</h4>
+          <div 
+            className="space-y-2"
+            onPointerDownCapture={(e) => {
+              // Prevent popover from closing when clicking inside
+              e.stopPropagation();
+            }}
+          >
+            <div className="flex items-center justify-between mb-3">
+              <h4 className="font-primary text-sm">{title}</h4>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="font-secondary text-xs text-accent hover:underline"
+              >
+                Done
+              </button>
+            </div>
             <div className="flex flex-wrap gap-2 max-h-60 overflow-y-auto">
               {tags.map(tag => {
                 const isSelected = selectedTags.includes(tag);
                 return (
                   <Badge
                     key={tag}
-                    onClick={() => onFilterChange(category, tag)}
+                    onClick={() => handleTagClick(tag)}
                     className={`
                       cursor-pointer font-secondary text-xs pixel-border transition-all
                       ${isSelected 
