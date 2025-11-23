@@ -1,10 +1,9 @@
 import { Header } from "@/components/Header";
 import { PixelCard } from "@/components/PixelCard";
 import { Cursor } from "@/components/ui/inverted-cursor";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Badge } from "@/components/ui/badge";
-import { WorkFilter } from "@/components/WorkFilter";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import workBg from "@/assets/work-bg-pixel.png";
 import roomvuResults1 from "@/assets/work/roomvu-results-1.png";
 import roomvuResults2 from "@/assets/work/roomvu-results-2.jpg";
@@ -42,28 +41,9 @@ interface CaseStudy {
   };
 }
 
-interface SelectedWork {
-  title: string;
-  description: string;
-  results: string;
-  workTypes: string[];
-  industries: string[];
-  clientTypes: string[];
-  format: string[];
-}
-
 export default function Work() {
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy | null>(null);
   const [showFullInterview, setShowFullInterview] = useState(false);
-  const [selectedFilters, setSelectedFilters] = useState<{
-    workTypes: string[];
-    industries: string[];
-    clientTypes: string[];
-  }>({
-    workTypes: [],
-    industries: [],
-    clientTypes: [],
-  });
 
   const caseStudies: CaseStudy[] = [
     {
@@ -422,138 +402,117 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
     },
   ];
 
-  const selectedWork: SelectedWork[] = [
-    {
-      title: "Roomvu",
-      description: "PropTech platform offering hyper-local real estate video marketing. Through winning email marketing, copywriting, and storytelling techniques, brought them an added client base of 24,000+ users.",
-      results: "Email Open Rate Increase: 10% | Email CTOR Increase: 2.5% | Users Acquired: 24,000+",
-      workTypes: ["Cold Email Marketing"],
-      industries: ["PropTech", "Real Estate"],
-      clientTypes: ["Startup"],
-      format: ["Placeholder"],
-    },
-    {
-      title: "Nordic Defender",
-      description: "All-in-one cybersecurity solution provider. Managed all marketing channels for Next-Gen Pentest Solution including email marketing, content writing, white papers, and sales documents.",
-      results: "Email Open Rate Increase: 30% | Email CTOR Increase: 10% | Emails Crafted: 100+ | Technical Articles Written: 50+",
-      workTypes: ["Product Marketing", "Email Marketing", "Content Marketing", "LinkedIn Ghostwriting"],
-      industries: ["Cybersecurity"],
-      clientTypes: ["Startup"],
-      format: ["Placeholder"],
-    },
-    {
-      title: "Cloudzy",
-      description: "VPS and Cloud Service Provider serving hundreds of thousands of users worldwide. Developed technical blog content, knowledge base, and landing pages to maximize conversion rates.",
-      results: "Technical Articles Written: 23+ | Minutes Time on Page: 13+ | Better SERP Position: 7X | Conversion Rates: 5X",
-      workTypes: ["Technical Writing"],
-      industries: ["Technology", "Cloud Infrastructure", "Hosting"],
-      clientTypes: ["Tech Company"],
-      format: ["Placeholder"],
-    },
-    {
-      title: "WP SMS Pro",
-      description: "WordPress plugin for SMS Marketing. Developed blog content writing to increase website visitors and convert them into loyal users.",
-      results: "Technical Articles Written: 24+ | Minutes Time on Page: 6.5+ | Better SERP Position: 3X | Conversion Rates: 3.2X",
-      workTypes: ["Content Marketing"],
-      industries: ["SaaS", "Communication Tools", "WordPress Plugins"],
-      clientTypes: ["SaaS Startup"],
-      format: ["Placeholder"],
-    },
-    {
-      title: "LorenzoCPA",
-      description: "Certified Public Accountant (CPA) advising clients on tax strategy, including crypto tax. Developed blog content, X posts, and newsletters to increase website visitors and convert them into loyal users.",
-      results: "Technical Articles Written: 16+ | Minutes Time on Page: 14+ | Better SERP Position: 2X | Conversion Rates: 3X",
-      workTypes: ["Crypto Tax", "Content Writing"],
-      industries: ["Crypto", "Blockchain", "Accounting", "Tax Services"],
-      clientTypes: ["Professional Services Firm"],
-      format: ["Placeholder"],
-    },
-    {
-      title: "BSuite365",
-      description: "Team of Microsoft Excel Consultants and Programmers offering tailored solutions for business efficiency. Wrote technical blog content covering Excel tips, tricks, and complexities.",
-      results: "Technical Articles Written: 50+ | Minutes Time on Page: 8+ | Better SERP Position: 2X | Conversion Rates: 5X",
-      workTypes: ["Excel", "Content Writing"],
-      industries: ["Software", "Productivity Tools"],
-      clientTypes: ["Software Company"],
-      format: ["Placeholder"],
-    },
-    {
-      title: "WatchThemLive",
-      description: "User-tracking tool that enables business owners to watch user behaviors through session recordings and heatmaps. Managed all marketing channels including email marketing, content marketing, and landing pages.",
-      results: "Email Open Rate Increase: 52% | Email CTOR Increase: 23% | Emails Crafted: 630+ | Blogs Written: 62+ | ROI: 11X",
-      workTypes: ["Content Marketing", "Email Marketing"],
-      industries: ["Analytics", "User Behavior", "SaaS"],
-      clientTypes: ["SaaS Startup"],
-      format: ["Placeholder"],
-    },
-  ];
-
-  // Extract all unique tags for the filter
-  const availableTags = useMemo(() => {
-    const workTypes = new Set<string>();
-    const industries = new Set<string>();
-    const clientTypes = new Set<string>();
-
-    selectedWork.forEach(work => {
-      work.workTypes.forEach(type => workTypes.add(type));
-      work.industries.forEach(industry => industries.add(industry));
-      work.clientTypes.forEach(type => clientTypes.add(type));
-    });
-
-    return {
-      workTypes: Array.from(workTypes).sort(),
-      industries: Array.from(industries).sort(),
-      clientTypes: Array.from(clientTypes).sort(),
-    };
-  }, []);
-
-  // Filter the work items based on selected filters
-  const filteredWork = useMemo(() => {
-    if (
-      selectedFilters.workTypes.length === 0 &&
-      selectedFilters.industries.length === 0 &&
-      selectedFilters.clientTypes.length === 0
-    ) {
-      return selectedWork;
-    }
-
-    return selectedWork.filter(work => {
-      const matchesWorkType = 
-        selectedFilters.workTypes.length === 0 || 
-        work.workTypes.some(type => selectedFilters.workTypes.includes(type));
-      
-      const matchesIndustry = 
-        selectedFilters.industries.length === 0 || 
-        work.industries.some(industry => selectedFilters.industries.includes(industry));
-      
-      const matchesClientType = 
-        selectedFilters.clientTypes.length === 0 || 
-        work.clientTypes.some(type => selectedFilters.clientTypes.includes(type));
-
-      return matchesWorkType && matchesIndustry && matchesClientType;
-    });
-  }, [selectedFilters]);
-
-  const handleFilterChange = (category: 'workTypes' | 'industries' | 'clientTypes', value: string) => {
-    setSelectedFilters(prev => {
-      const currentFilters = prev[category];
-      const newFilters = currentFilters.includes(value)
-        ? currentFilters.filter(f => f !== value)
-        : [...currentFilters, value];
-      
-      return {
-        ...prev,
-        [category]: newFilters,
-      };
-    });
-  };
-
-  const handleClearAll = () => {
-    setSelectedFilters({
-      workTypes: [],
-      industries: [],
-      clientTypes: [],
-    });
+  const selectedWorkByCategory = {
+    "Cryptocurrency Taxes": [
+      {
+        title: "Tax Strategy Content",
+        category: "Cryptocurrency Taxes",
+        description: "Created educational content on cryptocurrency tax optimization and compliance strategies.",
+        results: "Expert positioning established",
+      },
+    ],
+    "PropTech": [
+      {
+        title: "Real Estate Technology Content",
+        category: "PropTech",
+        description: "Developed content strategy for property technology platform targeting real estate professionals.",
+        results: "Market awareness increased",
+      },
+    ],
+    "Cybersecurity": [
+      {
+        title: "Security Product Marketing",
+        category: "Cybersecurity",
+        description: "Created technical content and marketing materials for cybersecurity solutions.",
+        results: "Product adoption driven",
+      },
+    ],
+    "Customer Success Stories": [
+      {
+        title: "Client Testimonial Campaign",
+        category: "Customer Success Stories",
+        description: "Crafted compelling customer success narratives that showcased product value and ROI.",
+        results: "Social proof enhanced",
+      },
+    ],
+    "Technology": [
+      {
+        title: "Tech Platform Content",
+        category: "Technology",
+        description: "Produced technical documentation and marketing content for SaaS platforms.",
+        results: "User engagement increased",
+      },
+    ],
+    "Trading": [
+      {
+        title: "Trading Platform Content",
+        category: "Trading",
+        description: "Developed educational content and market analysis for trading platform users.",
+        results: "User education improved",
+      },
+    ],
+    "UI/UX": [
+      {
+        title: "Design Process Documentation",
+        category: "UI/UX",
+        description: "Created content explaining UI/UX design principles and best practices.",
+        results: "Design awareness built",
+      },
+    ],
+    "Marketing Strategies": [
+      {
+        title: "Marketing Framework Content",
+        category: "Marketing Strategies",
+        description: "Developed strategic marketing content and frameworks for B2B companies.",
+        results: "Strategic positioning achieved",
+      },
+    ],
+    "Conversion Rate Optimization (CRO)": [
+      {
+        title: "CRO Case Studies",
+        category: "CRO",
+        description: "Audited and optimized website copy and CTAs, increasing conversion rate from 2.1% to 4.8%.",
+        results: "128% conversion increase",
+      },
+    ],
+    "User Behavior": [
+      {
+        title: "Behavioral Analytics Content",
+        category: "User Behavior",
+        description: "Created content on user behavior analysis and optimization strategies.",
+        results: "Insights delivered",
+      },
+    ],
+    "Software": [
+      {
+        title: "Software Documentation",
+        category: "Software",
+        description: "Produced technical documentation and user guides for software products.",
+        results: "User onboarding improved",
+      },
+    ],
+    "Ghostwriting": [
+      {
+        title: "Executive Thought Leadership",
+        category: "Ghostwriting",
+        description: "Ghostwrote LinkedIn posts, articles, and keynote content for C-level executives, coaches, and speakers.",
+        results: "Brand authority enhanced",
+      },
+    ],
+    "Miscellaneous": [
+      {
+        title: "B2B Newsletter",
+        category: "Ghostwriting",
+        description: "Ghostwrote weekly newsletters for a business consultant, growing their subscriber base from 500 to 8,000.",
+        results: "1,500% subscriber growth",
+      },
+      {
+        title: "Content Marketing Campaign",
+        category: "Content Strategy",
+        description: "Developed and executed a multi-channel content campaign that generated 1,200 qualified leads in 90 days.",
+        results: "1,200 qualified leads",
+      },
+    ],
   };
 
   return (
@@ -600,70 +559,42 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
           {/* Selected Work Section */}
           <div>
             <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Selected Work</h1>
-            
-            <WorkFilter
-              availableTags={availableTags}
-              selectedFilters={selectedFilters}
-              onFilterChange={handleFilterChange}
-              onClearAll={handleClearAll}
-            />
+            <Tabs defaultValue="Cryptocurrency Taxes" className="w-full">
+              <TabsList className="w-full flex flex-wrap h-auto gap-2 bg-background/50 pixel-border p-4 mb-8">
+                <TabsTrigger value="Cryptocurrency Taxes" className="font-primary text-xs md:text-sm">Cryptocurrency Taxes</TabsTrigger>
+                <TabsTrigger value="PropTech" className="font-primary text-xs md:text-sm">PropTech</TabsTrigger>
+                <TabsTrigger value="Cybersecurity" className="font-primary text-xs md:text-sm">Cybersecurity</TabsTrigger>
+                <TabsTrigger value="Customer Success Stories" className="font-primary text-xs md:text-sm">Customer Success Stories</TabsTrigger>
+                <TabsTrigger value="Technology" className="font-primary text-xs md:text-sm">Technology</TabsTrigger>
+                <TabsTrigger value="Trading" className="font-primary text-xs md:text-sm">Trading</TabsTrigger>
+                <TabsTrigger value="UI/UX" className="font-primary text-xs md:text-sm">UI/UX</TabsTrigger>
+                <TabsTrigger value="Marketing Strategies" className="font-primary text-xs md:text-sm">Marketing Strategies</TabsTrigger>
+                <TabsTrigger value="Conversion Rate Optimization (CRO)" className="font-primary text-xs md:text-sm">CRO</TabsTrigger>
+                <TabsTrigger value="User Behavior" className="font-primary text-xs md:text-sm">User Behavior</TabsTrigger>
+                <TabsTrigger value="Software" className="font-primary text-xs md:text-sm">Software</TabsTrigger>
+                <TabsTrigger value="Ghostwriting" className="font-primary text-xs md:text-sm">Ghostwriting</TabsTrigger>
+                <TabsTrigger value="Miscellaneous" className="font-primary text-xs md:text-sm">Miscellaneous</TabsTrigger>
+              </TabsList>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredWork.map((work, index) => (
-                <PixelCard key={index} className="transition-transform hover:-translate-x-1 hover:-translate-y-1">
-                  <h3 className="font-primary text-lg mb-3">{work.title}</h3>
-                  <p className="font-secondary text-sm mb-4">{work.description}</p>
-                  
-                  {/* Tags */}
-                  <div className="space-y-3 mb-4">
-                    <div>
-                      <p className="font-primary text-xs text-muted-foreground mb-1">Work Type</p>
-                      <div className="flex flex-wrap gap-1">
-                        {work.workTypes.map(type => (
-                          <Badge key={type} className="font-secondary text-xs pixel-border bg-accent/20">
-                            {type}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <p className="font-primary text-xs text-muted-foreground mb-1">Industry</p>
-                      <div className="flex flex-wrap gap-1">
-                        {work.industries.map(industry => (
-                          <Badge key={industry} className="font-secondary text-xs pixel-border bg-secondary/20">
-                            {industry}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <p className="font-primary text-xs text-muted-foreground mb-1">Client Type</p>
-                      <div className="flex flex-wrap gap-1">
-                        {work.clientTypes.map(type => (
-                          <Badge key={type} className="font-secondary text-xs pixel-border bg-accent/30">
-                            {type}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
+              {Object.entries(selectedWorkByCategory).map(([category, projects]) => (
+                <TabsContent key={category} value={category}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {projects.map((project, index) => (
+                      <PixelCard key={index}>
+                        <div className="inline-block pixel-border bg-accent/20 px-3 py-1 mb-4">
+                          <span className="font-primary text-xs">{project.category}</span>
+                        </div>
+                        <h3 className="font-primary text-lg mb-3">{project.title}</h3>
+                        <p className="font-secondary text-sm mb-4">{project.description}</p>
+                        <div className="pixel-border bg-secondary/20 px-3 py-2 mt-4">
+                          <p className="font-secondary text-xs font-semibold">{project.results}</p>
+                        </div>
+                      </PixelCard>
+                    ))}
                   </div>
-
-                  <div className="pixel-border bg-secondary/20 px-3 py-2 mt-4">
-                    <p className="font-secondary text-xs font-semibold">{work.results}</p>
-                  </div>
-                </PixelCard>
+                </TabsContent>
               ))}
-            </div>
-
-            {filteredWork.length === 0 && (
-              <div className="text-center py-12">
-                <p className="font-secondary text-sm text-muted-foreground">
-                  No work items match the selected filters.
-                </p>
-              </div>
-            )}
+            </Tabs>
           </div>
         </div>
       </section>
