@@ -804,6 +804,15 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/rise-storytelling-content-carousel.pdf",
     },
     {
+      title: "Can't Convert Your Traffic?",
+      description: "LinkedIn carousel addressing common conversion challenges and proven strategies to turn website visitors into customers through strategic copywriting and messaging.",
+      results: "Conversion Optimization | Traffic Strategy | Sales Copy",
+      workType: ["LinkedIn Post"],
+      industry: ["Marketing"],
+      format: ["LinkedIn Post"],
+      downloadUrl: "/work/convert-traffic-carousel.pdf",
+    },
+    {
       title: "You Don't Need vs. You Just Need - Copywriting Essentials",
       description: "LinkedIn infographic contrasting common copywriting misconceptions with what truly drives results: precise language, structured copy, and strategic messaging.",
       results: "Copywriting Principles | Marketing Strategy | Brand Voice",
