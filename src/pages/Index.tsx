@@ -144,7 +144,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PixelCard className="relative overflow-hidden">
               <div 
-                className="absolute inset-0 opacity-10"
+                className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${emailMarketingBg})`,
                   backgroundSize: "cover",
@@ -163,7 +163,7 @@ const Index = () => {
 
             <PixelCard className="relative overflow-hidden">
               <div 
-                className="absolute inset-0 opacity-10"
+                className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${contentWritingBg})`,
                   backgroundSize: "cover",
@@ -182,7 +182,7 @@ const Index = () => {
 
             <PixelCard className="relative overflow-hidden">
               <div 
-                className="absolute inset-0 opacity-10"
+                className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${copywritingBg})`,
                   backgroundSize: "cover",
@@ -200,7 +200,7 @@ const Index = () => {
 
             <PixelCard className="relative overflow-hidden">
               <div 
-                className="absolute inset-0 opacity-10"
+                className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${strategyBg})`,
                   backgroundSize: "cover",
@@ -218,7 +218,7 @@ const Index = () => {
 
             <PixelCard className="relative overflow-hidden">
               <div 
-                className="absolute inset-0 opacity-10"
+                className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${optimizationBg})`,
                   backgroundSize: "cover",
@@ -236,7 +236,7 @@ const Index = () => {
 
             <PixelCard className="relative overflow-hidden">
               <div 
-                className="absolute inset-0 opacity-10"
+                className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${consultingBg})`,
                   backgroundSize: "cover",
