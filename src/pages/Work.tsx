@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { PixelCard } from "@/components/PixelCard";
 import { Cursor } from "@/components/ui/inverted-cursor";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown, X } from "lucide-react";
 import workBg from "@/assets/work-bg-pixel.png";
@@ -1064,15 +1065,25 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       >
         <div className="absolute inset-0 bg-background/80" />
         
-        <div className="container mx-auto max-w-6xl relative z-20 space-y-24">
-          {/* Case Studies Section */}
-          <div>
-            <div className="text-center mb-16">
-              <div className="inline-block pixel-border bg-gradient-to-r from-accent/30 via-secondary/30 to-accent/30 px-6 py-2 mb-6">
-                <span className="font-primary text-sm tracking-wider uppercase">Portfolio Highlights</span>
-              </div>
-              <h1 className="font-primary text-4xl md:text-6xl text-pixel">Case Studies</h1>
-            </div>
+        <div className="container mx-auto max-w-6xl relative z-20">
+          <Tabs defaultValue="case-studies" className="w-full">
+            <TabsList className="mb-12 w-full max-w-md mx-auto grid grid-cols-2">
+              <TabsTrigger value="case-studies" className="font-primary text-sm uppercase tracking-wider">
+                Case Studies
+              </TabsTrigger>
+              <TabsTrigger value="featured-work" className="font-primary text-sm uppercase tracking-wider">
+                Featured Work
+              </TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="case-studies">
+              <div>
+                <div className="text-center mb-16">
+                  <div className="inline-block pixel-border bg-gradient-to-r from-accent/30 via-secondary/30 to-accent/30 px-6 py-2 mb-6">
+                    <span className="font-primary text-sm tracking-wider uppercase">Portfolio Highlights</span>
+                  </div>
+                  <h1 className="font-primary text-4xl md:text-6xl text-pixel">Case Studies</h1>
+                </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {caseStudies.map((project, index) => (
                 <PixelCard 
@@ -1104,16 +1115,17 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                 </PixelCard>
               ))}
             </div>
-          </div>
-
-          {/* Featured Work Section */}
-          <div>
-            <div className="text-center mb-16">
-              <div className="inline-block pixel-border bg-gradient-to-r from-secondary/30 via-accent/30 to-secondary/30 px-6 py-2 mb-6">
-                <span className="font-primary text-sm tracking-wider uppercase">Selected Projects</span>
               </div>
-              <h1 className="font-primary text-4xl md:text-6xl text-pixel">Featured Work</h1>
-            </div>
+            </TabsContent>
+
+            <TabsContent value="featured-work">
+              <div>
+                <div className="text-center mb-16">
+                  <div className="inline-block pixel-border bg-gradient-to-r from-secondary/30 via-accent/30 to-secondary/30 px-6 py-2 mb-6">
+                    <span className="font-primary text-sm tracking-wider uppercase">Selected Projects</span>
+                  </div>
+                  <h1 className="font-primary text-4xl md:text-6xl text-pixel">Featured Work</h1>
+                </div>
             
             {/* Filter Component */}
             <div className="mb-12 space-y-4 relative z-50">
@@ -1279,7 +1291,9 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                 ))
               )}
             </div>
-          </div>
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 
