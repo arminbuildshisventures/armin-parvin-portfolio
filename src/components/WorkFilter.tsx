@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { ChevronDown, X } from "lucide-react";
 import { PixelCard } from "./PixelCard";
+import { useState } from "react";
 
 interface WorkFilterProps {
   availableTags: {
@@ -42,9 +43,16 @@ export function WorkFilter({
     category: 'workTypes' | 'industries' | 'clientTypes';
   }) => {
     const selectedCount = selectedTags.length;
+    const [isOpen, setIsOpen] = useState(false);
+    
+    const handleTagClick = (tag: string, e: React.MouseEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+      onFilterChange(category, tag);
+    };
     
     return (
-      <Popover>
+      <Popover open={isOpen} onOpenChange={setIsOpen}>
         <PopoverTrigger asChild>
           <Button 
             variant="outline" 
@@ -59,8 +67,18 @@ export function WorkFilter({
             <ChevronDown className="ml-2 h-4 w-4" />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-80 pixel-border bg-background z-50" align="start">
-          <div className="space-y-2">
+        <PopoverContent 
+          className="w-80 pixel-border bg-background z-50" 
+          align="start"
+          onInteractOutside={(e) => {
+            // Only close if clicking outside, not when clicking inside
+            const target = e.target as HTMLElement;
+            if (!target.closest('[data-tag-filter]')) {
+              setIsOpen(false);
+            }
+          }}
+        >
+          <div className="space-y-2" data-tag-filter>
             <h4 className="font-primary text-sm mb-3">{title}</h4>
             <div className="flex flex-wrap gap-2 max-h-60 overflow-y-auto">
               {tags.map(tag => {
@@ -68,7 +86,7 @@ export function WorkFilter({
                 return (
                   <Badge
                     key={tag}
-                    onClick={() => onFilterChange(category, tag)}
+                    onClick={(e) => handleTagClick(tag, e)}
                     className={`
                       cursor-pointer font-secondary text-xs pixel-border transition-all
                       ${isSelected 
@@ -89,7 +107,7 @@ export function WorkFilter({
   };
 
   return (
-    <PixelCard className="mb-8">
+    <PixelCard className="mb-8" hover={false}>
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div className="flex flex-wrap items-center gap-3">
           <h2 className="font-primary text-lg">Filter:</h2>
