@@ -130,14 +130,14 @@ export default function About() {
                 <div className="order-1 md:order-2">
                   {/* Professional portraits in a creative grid */}
                   <div className="grid grid-cols-3 gap-3 mb-3">
-                    <img src={discoveryProfessional1} alt="Professional portrait 1" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover rounded-lg hover:scale-105 transition-transform" />
-                    <img src={discoveryProfessional2} alt="Professional portrait 2" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover rounded-lg hover:scale-105 transition-transform" />
-                    <img src={discoveryProfessional3} alt="Professional portrait 3" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover rounded-lg hover:scale-105 transition-transform" />
+                    <img src={discoveryProfessional1} alt="Professional portrait 1" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
+                    <img src={discoveryProfessional2} alt="Professional portrait 2" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
+                    <img src={discoveryProfessional3} alt="Professional portrait 3" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
                   </div>
                   {/* Team collaboration and individual portrait */}
                   <div className="grid grid-cols-2 gap-3">
-                    <img src={discoveryTeam} alt="Team collaboration" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover rounded-lg hover:scale-105 transition-transform" />
-                    <img src={discoveryProfessional4} alt="Professional portrait 4" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover rounded-lg hover:scale-105 transition-transform" />
+                    <img src={discoveryTeam} alt="Team collaboration" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
+                    <img src={discoveryProfessional4} alt="Professional portrait 4" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
                   </div>
                 </div>
               </div>
