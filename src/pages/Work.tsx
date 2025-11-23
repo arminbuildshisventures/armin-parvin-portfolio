@@ -766,7 +766,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                               href={project.externalUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="pixel-border bg-primary/20 text-primary px-3 py-2 text-xs font-secondary hover:bg-primary/30 transition-colors"
+                              className="pixel-border bg-accent/20 text-accent px-3 py-2 text-xs font-secondary hover:bg-accent/30 transition-colors"
                             >
                               Read Blog
                             </a>
