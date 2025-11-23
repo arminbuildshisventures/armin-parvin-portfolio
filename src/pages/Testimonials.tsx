@@ -101,21 +101,13 @@ const Testimonials = () => {
   ];
 
   const regularTestimonials = [
-    // Testimonials with case studies first
+    // Strategically ordered for masonry layout - case studies at top
     {
       name: "Mehdi Rahmaninia",
       role: "Founder, CEO, and Marketing Management Consultant",
       content: "They really deliver what they are promising. I had an increased traffic since the contents were rich in terms of SEO, and the copy was good too. So, in the articles that were targeting my bottom funnel, the content and copy were converting pretty well. The overall experience of working with Renée Content was pretty great, and I was confident that they understood what I needed from them every step of the way.",
       rating: 5,
       avatar: avatar3,
-      caseStudyUrl: "#",
-    },
-    {
-      name: "Niloofar Sh.",
-      role: "Founder and CEO, Digital Marketing Agency",
-      content: "The quality of the content they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations. They went above and beyond to deliver content that genuinely resonated with my audience and contributed to our overall business growth and success.",
-      rating: 5,
-      avatar: avatar6,
       caseStudyUrl: "#",
     },
     {
@@ -127,19 +119,27 @@ const Testimonials = () => {
       caseStudyUrl: "#",
     },
     {
-      name: "Mahmoud Valanejad",
-      role: "Media Creation Company Owner, MV Production",
-      content: "I think they really care more about your business than you do. They are really experienced and they have a great customer support. You know, you can leave your business to them without any concern, and that's the point.",
-      rating: 5,
-      avatar: avatar9,
-      caseStudyUrl: "#",
-    },
-    {
       name: "Shadi V.",
       role: "Business Owner, Boutique",
       content: "In fact, our results were beyond my wildest dreams. Our website traffic skyrocketed, and we witnessed an impressive 3-fold increase in leads. Our content was engaging, informative, and perfectly aligned with our brand's message.",
       rating: 5,
       avatar: shadiAvatar,
+      caseStudyUrl: "#",
+    },
+    {
+      name: "Niloofar Sh.",
+      role: "Founder and CEO, Digital Marketing Agency",
+      content: "The quality of the content they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations. They went above and beyond to deliver content that genuinely resonated with my audience and contributed to our overall business growth and success.",
+      rating: 5,
+      avatar: avatar6,
+      caseStudyUrl: "#",
+    },
+    {
+      name: "Mahmoud Valanejad",
+      role: "Media Creation Company Owner, MV Production",
+      content: "I think they really care more about your business than you do. They are really experienced and they have a great customer support. You know, you can leave your business to them without any concern, and that's the point.",
+      rating: 5,
+      avatar: avatar9,
       caseStudyUrl: "#",
     },
     // Testimonials without case studies
