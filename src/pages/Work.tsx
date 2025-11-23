@@ -450,7 +450,6 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       industry: ["Cybersecurity"],
       format: ["White Paper", "ROI Analysis"],
       downloadUrl: "/work/next-gen-pentest-roi.pdf",
-      viewImageUrl: "/work/next-gen-pentest-diagram.png",
     },
     {
       title: "Next-Gen Pentest Buyer's Guide",
