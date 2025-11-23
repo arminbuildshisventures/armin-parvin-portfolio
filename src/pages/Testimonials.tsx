@@ -24,6 +24,7 @@ import masoudRezaei from "@/assets/testimonials/masoud-rezaei.png";
 import shadiAvatar from "@/assets/testimonials/shadi-avatar.png";
 import gabbieSanchez from "@/assets/testimonials/gabbie-sanchez.png";
 import manaBehzad from "@/assets/testimonials/mana-behzad.png";
+import abbyNduta from "@/assets/testimonials/abby-nduta.png";
 import lorenzoLogo from "@/assets/clients/LorenzoLogo.png";
 import rahmaniniaLogo from "@/assets/clients/Rahmaninia.png";
 import wtlLogo from "@/assets/clients/WTL.png";
@@ -224,6 +225,13 @@ const Testimonials = () => {
       content: "Armin was incredibly generous, practical, and patient during our session. Drawing from his entrepreneurial background, he helped me better position my skills in areas that were unfamiliar to me. He encouraged me to stay open to possibilities I hadn't considered and equipped me with a range of valuable resources to take advantage of moving forward.",
       rating: 5,
       avatar: manaBehzad,
+    },
+    {
+      name: "Abby Nduta",
+      role: "Developer, Technical Writer",
+      content: "I can tell Armin's a professional and the approach of the lesson was helpful and memorable. He has helped me A LOT in understanding the basics of copy and improve my storytelling. Thank you Armin, I will forever be grateful!",
+      rating: 5,
+      avatar: abbyNduta,
     },
     {
       name: "AmirAli Piroozbakhsh",
