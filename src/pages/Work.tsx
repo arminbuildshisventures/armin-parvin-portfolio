@@ -1068,16 +1068,16 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
         <div className="container mx-auto max-w-6xl relative z-20">
           <Tabs defaultValue="case-studies" className="w-full">
             <div className="mb-16 flex justify-center">
-              <TabsList className="pixel-border bg-background p-1 flex flex-col md:flex-row gap-1 w-full max-w-sm md:max-w-2xl">
+              <TabsList className="pixel-border pixel-shadow-lg bg-card/50 backdrop-blur-sm p-2 inline-flex gap-2">
                 <TabsTrigger 
                   value="case-studies" 
-                  className="font-primary text-sm md:text-base uppercase tracking-widest px-6 md:px-12 py-4 w-full transition-all duration-300 data-[state=active]:bg-accent data-[state=active]:text-background data-[state=inactive]:text-foreground/60 data-[state=inactive]:hover:text-foreground data-[state=inactive]:hover:bg-muted/20"
+                  className="font-primary text-base md:text-lg uppercase tracking-wider px-8 py-4 data-[state=active]:pixel-border data-[state=active]:bg-gradient-to-br data-[state=active]:from-accent/40 data-[state=active]:to-accent/20 data-[state=active]:text-accent data-[state=active]:pixel-shadow transition-all hover:-translate-y-1 data-[state=active]:translate-y-0"
                 >
                   Case Studies
                 </TabsTrigger>
                 <TabsTrigger 
                   value="featured-work" 
-                  className="font-primary text-sm md:text-base uppercase tracking-widest px-6 md:px-12 py-4 w-full transition-all duration-300 data-[state=active]:bg-secondary data-[state=active]:text-background data-[state=inactive]:text-foreground/60 data-[state=inactive]:hover:text-foreground data-[state=inactive]:hover:bg-muted/20"
+                  className="font-primary text-base md:text-lg uppercase tracking-wider px-8 py-4 data-[state=active]:pixel-border data-[state=active]:bg-gradient-to-br data-[state=active]:from-secondary/40 data-[state=active]:to-secondary/20 data-[state=active]:text-secondary data-[state=active]:pixel-shadow transition-all hover:-translate-y-1 data-[state=active]:translate-y-0"
                 >
                   Featured Work
                 </TabsTrigger>
