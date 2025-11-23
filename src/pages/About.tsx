@@ -9,6 +9,9 @@ import youngGuitar1 from "@/assets/journey/young-guitar-1.png";
 import youngPractice from "@/assets/journey/young-practice.png";
 import youngSmile from "@/assets/journey/young-smile.png";
 import youngGlasses from "@/assets/journey/young-glasses.png";
+import dedicationPiano from "@/assets/journey/dedication-piano.jpg";
+import dedicationGuitarStudio from "@/assets/journey/dedication-guitar-studio.jpg";
+import dedicationGuitarPerformance from "@/assets/journey/dedication-guitar-performance.png";
 import professionalPerformance from "@/assets/journey/professional-performance-updated.png";
 import professionalPortraitTech from "@/assets/journey/professional-portrait-tech.png";
 import discoveryProfessional1 from "@/assets/journey/discovery-professional-1.png";
@@ -112,8 +115,10 @@ export default function About() {
             {/* Segment 2: The Dedication */}
             <div className="relative mb-12 md:mb-16">
               <div className="grid md:grid-cols-2 gap-6 items-center">
-                <div className="flex gap-3 justify-center">
-                  <img src={professionalPerformance} alt="Professional performance" className="pixel-border pixel-shadow w-44 h-56 md:w-52 md:h-64 object-cover rounded-lg hover:scale-105 transition-transform" />
+                <div className="grid grid-cols-3 gap-3 justify-center">
+                  <img src={dedicationPiano} alt="Piano practice" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={dedicationGuitarStudio} alt="Guitar studio session" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={dedicationGuitarPerformance} alt="Guitar performance" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
                 </div>
                 <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🎸 The Dedication</h3>
