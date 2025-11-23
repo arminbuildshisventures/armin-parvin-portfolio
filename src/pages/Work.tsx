@@ -666,25 +666,19 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                     )}
 
                     {/* Tags at bottom */}
-                    <div className="space-y-2 pt-4 border-t border-border/20 mt-auto">
-                      {project.workType.length > 0 && (
-                        <div className="flex flex-wrap gap-1">
-                          {project.workType.map(type => (
-                            <span key={type} className="pixel-border bg-primary/20 text-primary px-2 py-1 text-xs font-secondary">
-                              {type}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-                      {project.industry.length > 0 && (
-                        <div className="flex flex-wrap gap-1">
-                          {project.industry.map(ind => (
-                            <span key={ind} className="pixel-border bg-accent/20 text-accent px-2 py-1 text-xs font-secondary">
-                              {ind}
-                            </span>
-                          ))}
-                        </div>
-                      )}
+                    <div className="pt-4 border-t border-border/20 mt-auto">
+                      <div className="flex flex-wrap gap-1">
+                        {project.workType.map(type => (
+                          <span key={type} className="pixel-border bg-primary/20 text-primary px-2 py-1 text-xs font-secondary">
+                            {type}
+                          </span>
+                        ))}
+                        {project.industry.map(ind => (
+                          <span key={ind} className="pixel-border bg-accent/20 text-accent px-2 py-1 text-xs font-secondary">
+                            {ind}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </PixelCard>
                 ))
