@@ -45,17 +45,17 @@ const Index = () => {
           }}
           className="container mx-auto relative z-10"
         >
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-block pixel-border bg-secondary px-6 py-2">
-              <p className="font-primary text-xs">Copywriter • Ghostwriter • Content Marketer • Email Marketer</p>
+          <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
+            <div className="pixel-border bg-secondary px-3 py-2 max-w-[90vw] mx-auto">
+              <p className="font-primary text-[9px] sm:text-xs whitespace-nowrap overflow-hidden text-ellipsis">Copywriter • Ghostwriter • Content Marketer • Email Marketer</p>
             </div>
-            <h1 className="font-primary text-3xl md:text-5xl lg:text-6xl text-pixel-inverted leading-relaxed">
+            <h1 className="font-primary text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-pixel-inverted leading-tight sm:leading-relaxed px-2">
               Words That Convert
             </h1>
-            <p className="font-secondary text-lg md:text-xl max-w-2xl mx-auto">
-              Let's make your brand stand out in a skeptical market.        
+            <p className="font-secondary text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-4">
+              Let's make your brand stand out in a skeptical market.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
               <PixelButton variant="primary" onClick={scrollToContact}>
                 Work With Me
               </PixelButton>
