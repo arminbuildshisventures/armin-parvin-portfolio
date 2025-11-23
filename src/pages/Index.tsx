@@ -45,7 +45,7 @@ const Index = () => {
       {/* Hero Section */}
       <AuroraBackground className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-20 pointer-events-none">
-          <img src={heroImage} alt="Pixel art marketing" className="w-full h-full object-cover" />
+          <img src={heroImage} alt="Pixel art marketing" className="w-full h-full object-cover object-bottom md:object-center" />
         </div>
         <motion.div
           initial={{
