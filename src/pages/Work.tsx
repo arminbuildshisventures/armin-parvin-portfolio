@@ -721,6 +721,15 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/freight-brokers-license-guide.pdf",
     },
     {
+      title: "4 Things Investors Look for in Real Estate Marketing Companies",
+      description: "Comprehensive guide highlighting key factors investors consider when choosing real estate marketing companies, from digital expertise to ROI tracking.",
+      results: "Real Estate Marketing Education | Investor Guide | Marketing Strategy",
+      workType: ["Blog"],
+      industry: ["Real Estate"],
+      format: ["Blog"],
+      downloadUrl: "/work/investors-real-estate-marketing-companies.pdf",
+    },
+    {
       title: "Nordic Defender at IT-Sikkerhetsdagen",
       description: "Press release announcing Nordic Defender's participation at IT-Sikkerhetsdagen event in Copenhagen, showcasing cybersecurity solutions to government organizations and industry peers.",
       results: "Event Participation | Market Visibility | Industry Networking",
