@@ -47,7 +47,6 @@ export function WorkFilter({
     
     const handleTagClick = (tag: string) => {
       onFilterChange(category, tag);
-      // Don't close the popover
     };
     
     return (
@@ -70,19 +69,10 @@ export function WorkFilter({
           className="w-80 pixel-border bg-background z-50" 
           align="start"
           onOpenAutoFocus={(e) => e.preventDefault()}
-          onCloseAutoFocus={(e) => e.preventDefault()}
-          onInteractOutside={(e) => {
-            // Close when clicking outside
-            setIsOpen(false);
-          }}
+          onFocusOutside={(e) => e.preventDefault()}
+          onPointerDownOutside={(e) => e.preventDefault()}
         >
-          <div 
-            className="space-y-2"
-            onPointerDownCapture={(e) => {
-              // Prevent popover from closing when clicking inside
-              e.stopPropagation();
-            }}
-          >
+          <div className="space-y-2">
             <div className="flex items-center justify-between mb-3">
               <h4 className="font-primary text-sm">{title}</h4>
               <button
