@@ -443,7 +443,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
 
   const selectedWork: WorkItem[] = [
     {
-      title: "Next-Gen Pentest ROI Analysis",
+      title: "Next-Gen PTaaS ROI",
       description: "Comprehensive white paper analyzing Return on Investment for Next-Gen Pentest as a Service, comparing traditional vs. next-gen pentesting with detailed cost-benefit analysis.",
       results: "35% Cost Reduction | 350% Higher ROI | Detailed ROI Framework",
       workType: ["White Paper"],
@@ -453,7 +453,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       viewImageUrl: "/work/next-gen-pentest-diagram.png",
     },
     {
-      title: "Penetration Testing Buyer's Guide",
+      title: "Next-Gen Pentest Buyer's Guide",
       description: "Educational buyer's guide helping potential clients understand penetration testing services, types of providers, and how to choose the right solution.",
       results: "14-Page Comprehensive Guide | Client Education Tool | Lead Generation Asset",
       workType: ["White Paper"],
@@ -462,10 +462,10 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/pentest-buyers-guide.pdf",
     },
     {
-      title: "Kubernetes Penetration Testing Service Overview",
+      title: "Kubernetes Penetration Testing",
       description: "One-page service overview explaining Kubernetes penetration testing services, security assessment process, and what the testing includes.",
       results: "Service Positioning | Clear Value Proposition | Technical Service Description",
-      workType: ["Webpage"],
+      workType: ["White Paper"],
       industry: ["Cybersecurity"],
       format: ["Service Page", "One-Pager"],
       downloadUrl: "/work/kubernetes-penetration-testing.pdf",
