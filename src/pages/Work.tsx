@@ -678,9 +678,9 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
             </div>
           </div>
 
-          {/* Selected Work Section */}
+          {/* Featured Work Section */}
           <div>
-            <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Selected Work</h1>
+            <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Featured Work</h1>
             
             {/* Filter Component */}
             <div className="mb-8 space-y-4">
@@ -830,14 +830,20 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
               )}
             </div>
 
-            {/* Work Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Work Cards Grid - Masonry Layout */}
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
               {filteredWork.map((project, index) => (
-                <PixelCard key={index}>
+                <PixelCard key={index} className="break-inside-avoid mb-8">
                   <h3 className="font-primary text-lg mb-3">{project.title}</h3>
                   
-                  {/* Tags */}
-                  <div className="space-y-2 mb-4">
+                  <p className="font-secondary text-sm mb-4">{project.description}</p>
+                  
+                  <div className="pixel-border bg-secondary/20 px-3 py-2 mb-4">
+                    <p className="font-secondary text-xs font-semibold">{project.results}</p>
+                  </div>
+
+                  {/* Tags at bottom */}
+                  <div className="space-y-2 pt-4 border-t border-border/20">
                     {project.workType.length > 0 && (
                       <div className="flex flex-wrap gap-1">
                         {project.workType.map(type => (
@@ -865,11 +871,6 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                         ))}
                       </div>
                     )}
-                  </div>
-
-                  <p className="font-secondary text-sm mb-4">{project.description}</p>
-                  <div className="pixel-border bg-secondary/20 px-3 py-2 mt-4">
-                    <p className="font-secondary text-xs font-semibold">{project.results}</p>
                   </div>
                 </PixelCard>
               ))}
