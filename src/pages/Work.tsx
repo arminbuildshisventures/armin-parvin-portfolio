@@ -57,6 +57,7 @@ const getButtonText = (workTypes: string[]) => {
   if (workTypes.includes("Press Release")) return "Read Press Release";
   if (workTypes.includes("Case Study")) return "Read Case Study";
   if (workTypes.includes("Blog")) return "Read Blog";
+  if (workTypes.includes("Research Analysis")) return "Download PDF";
   return "Read Article";
 };
 
@@ -730,6 +731,15 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/investors-real-estate-marketing-companies.pdf",
     },
     {
+      title: "Large-Cap Investment Opportunity - Short-Term Outlook (3-Months)",
+      description: "In-depth cryptocurrency research analysis examining large-cap investment opportunities with comprehensive market analysis and 3-month short-term outlook projections.",
+      results: "Cryptocurrency Market Research | Investment Analysis | Technical Analysis",
+      workType: ["Research Analysis"],
+      industry: ["Finance"],
+      format: ["Research Analysis"],
+      downloadUrl: "/work/large-cap-investment-opportunity.pdf",
+    },
+    {
       title: "Nordic Defender at IT-Sikkerhetsdagen",
       description: "Press release announcing Nordic Defender's participation at IT-Sikkerhetsdagen event in Copenhagen, showcasing cybersecurity solutions to government organizations and industry peers.",
       results: "Event Participation | Market Visibility | Industry Networking",
@@ -858,7 +868,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
   ];
 
   // Define available filter options even when no work items exist
-  const allWorkTypes = ["Blog", "Case Study", "Press Release", "White Paper", "Marketing Email", "Sales Email", "LinkedIn Post", "Webpage", "Landing Page"];
+  const allWorkTypes = ["Blog", "Case Study", "Press Release", "White Paper", "Marketing Email", "Sales Email", "LinkedIn Post", "Webpage", "Landing Page", "Research Analysis"];
   const allIndustries = ["Technology", "Real Estate", "Cybersecurity", "Finance", "Marketing", "E-commerce", "Media & Entertainment", "Professional Services"];
 
   // Filter logic
