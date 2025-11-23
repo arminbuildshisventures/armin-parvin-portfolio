@@ -768,7 +768,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                     <ChevronDown className="w-4 h-4" />
                   </button>
                   {workTypeOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-64 pixel-border bg-background p-4 z-50 max-h-96 overflow-y-auto">
+                    <div className="absolute top-full left-0 mt-2 w-64 pixel-border bg-background p-4 z-[100] max-h-96 overflow-y-auto shadow-lg">
                       {allWorkTypes.map(type => (
                         <label
                           key={type}
@@ -802,7 +802,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                     <ChevronDown className="w-4 h-4" />
                   </button>
                   {industryOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-64 pixel-border bg-background p-4 z-50 max-h-96 overflow-y-auto">
+                    <div className="absolute top-full left-0 mt-2 w-64 pixel-border bg-background p-4 z-[100] max-h-96 overflow-y-auto shadow-lg">
                       {allIndustries.map(industry => (
                         <label
                           key={industry}
