@@ -18,6 +18,12 @@ import discoveryTeam from "@/assets/journey/discovery-team.png";
 import presentDayHat from "@/assets/journey/present-day-hat.png";
 import presentDaySuit from "@/assets/journey/present-day-suit.png";
 import presentDayChair from "@/assets/journey/present-day-chair.png";
+import coffeeWorkspace1 from "@/assets/journey/coffee-workspace-1.jpg";
+import coffeeWorkspace2 from "@/assets/journey/coffee-workspace-2.jpg";
+import coffeeEspresso from "@/assets/journey/coffee-espresso.jpg";
+import coffeeHand from "@/assets/journey/coffee-hand.jpg";
+import coffeeTable1 from "@/assets/journey/coffee-table-1.jpg";
+import coffeeTable2 from "@/assets/journey/coffee-table-2.jpg";
 import { useState } from "react";
 export default function About() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -174,14 +180,10 @@ export default function About() {
               <div className="grid md:grid-cols-2 gap-6 items-center">
                 <div className="order-1 md:order-1 pixel-border pixel-shadow bg-secondary/10 border-secondary/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">📊 Present Day</h3>
-                  <p className="font-secondary text-base md:text-lg leading-relaxed mb-4">
+                  <p className="font-secondary text-base md:text-lg leading-relaxed">
                     Recently, I have immersed myself in finance, economics, and especially Web3, blockchain, and cryptocurrency 
                     research analysis. As a former math nerd, I can connect numbers to narratives and translate data into insight 
                     and strategy.
-                  </p>
-                  <p className="font-secondary text-base md:text-lg leading-relaxed text-accent font-medium italic border-l-4 border-accent pl-4">
-                    When I'm not working (does that even happen?), I'm sipping on too much specialty coffee and working. Yes, I'm 
-                    working even when I'm not.
                   </p>
                 </div>
                 <div className="order-2 md:order-2">
@@ -196,6 +198,26 @@ export default function About() {
                 </div>
               </div>
               <div className="absolute -right-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
+            </div>
+
+            {/* Coffee & Lifestyle Section */}
+            <div className="relative mt-8">
+              <div className="pixel-border pixel-shadow bg-accent/10 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                <p className="font-secondary text-base md:text-lg leading-relaxed text-accent font-medium italic border-l-4 border-accent pl-4 mb-6">
+                  When I'm not working (does that even happen?), I'm sipping on too much specialty coffee and working. Yes, I'm 
+                  working even when I'm not.
+                </p>
+                
+                {/* Coffee photos grid */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+                  <img src={coffeeWorkspace1} alt="Workspace with coffee" className="pixel-border pixel-shadow w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={coffeeWorkspace2} alt="Outdoor workspace" className="pixel-border pixel-shadow w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={coffeeEspresso} alt="Espresso shot" className="pixel-border pixel-shadow w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={coffeeHand} alt="Coffee in hand" className="pixel-border pixel-shadow w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={coffeeTable1} alt="Coffee table setup" className="pixel-border pixel-shadow w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={coffeeTable2} alt="Coffee table view" className="pixel-border pixel-shadow w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform" />
+                </div>
+              </div>
             </div>
           </div>
 
