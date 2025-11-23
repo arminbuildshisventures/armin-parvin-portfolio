@@ -204,13 +204,6 @@ const Testimonials = () => {
       avatar: avatar11,
     },
     {
-      name: "AmirAli Piroozbakhsh",
-      role: "Creative Director",
-      content: "My mentorship session with Armin Parvin was incredibly insightful. It illuminated aspects I had overlooked, lighting up the path I thought I already knew.",
-      rating: 5,
-      avatar: avatar10,
-    },
-    {
       name: "Luis Acoltzi",
       role: "Founder & Art Director/Designer, Pixel Hangar",
       content: "Armin was great at advising on my content strategy and how to approach new business. I really appreciate the time and I look forward to the next session.",
@@ -223,6 +216,13 @@ const Testimonials = () => {
       content: "Conversation was great. Armin has very high and rich knowledge and experience in the fields of content, copywriting and marketing. And as I expected, it helped and clarified my work path.",
       rating: 5,
       avatar: masoudRezaei,
+    },
+    {
+      name: "AmirAli Piroozbakhsh",
+      role: "Creative Director",
+      content: "My mentorship session with Armin Parvin was incredibly insightful. It illuminated aspects I had overlooked, lighting up the path I thought I already knew.",
+      rating: 5,
+      avatar: avatar10,
     },
   ];
   return (
@@ -375,11 +375,11 @@ const Testimonials = () => {
                     </div>
                   </div>
                   <Quote className="w-6 h-6 text-accent mb-3 opacity-50" />
-                  <p className="text-foreground mb-4 font-secondary text-sm">"{testimonial.content}"</p>
+                  <p className="text-foreground mb-4 font-secondary text-sm flex-grow">"{testimonial.content}"</p>
                   {testimonial.caseStudyUrl && (
                     <a 
                       href={testimonial.caseStudyUrl}
-                      className="mt-3 inline-block text-accent hover:text-accent/80 font-primary text-xs font-semibold transition-colors"
+                      className="mt-auto inline-block text-accent hover:text-accent/80 font-primary text-xs font-semibold transition-colors"
                     >
                       Read Case Study →
                     </a>
