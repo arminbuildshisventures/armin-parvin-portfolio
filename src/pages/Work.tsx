@@ -1,9 +1,9 @@
 import { Header } from "@/components/Header";
 import { PixelCard } from "@/components/PixelCard";
 import { Cursor } from "@/components/ui/inverted-cursor";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { ChevronDown, X } from "lucide-react";
 import workBg from "@/assets/work-bg-pixel.png";
 import roomvuResults1 from "@/assets/work/roomvu-results-1.png";
 import roomvuResults2 from "@/assets/work/roomvu-results-2.jpg";
@@ -41,9 +41,52 @@ interface CaseStudy {
   };
 }
 
+interface WorkItem {
+  title: string;
+  description: string;
+  results: string;
+  workType: string[];
+  industry: string[];
+  clientType: string[];
+  format: string[];
+}
+
 export default function Work() {
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy | null>(null);
   const [showFullInterview, setShowFullInterview] = useState(false);
+  
+  // Filter states
+  const [selectedWorkTypes, setSelectedWorkTypes] = useState<string[]>([]);
+  const [selectedIndustries, setSelectedIndustries] = useState<string[]>([]);
+  const [selectedClientTypes, setSelectedClientTypes] = useState<string[]>([]);
+  
+  // Dropdown states
+  const [workTypeOpen, setWorkTypeOpen] = useState(false);
+  const [industryOpen, setIndustryOpen] = useState(false);
+  const [clientTypeOpen, setClientTypeOpen] = useState(false);
+
+  // Refs for click-away
+  const workTypeRef = useRef<HTMLDivElement>(null);
+  const industryRef = useRef<HTMLDivElement>(null);
+  const clientTypeRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (workTypeRef.current && !workTypeRef.current.contains(event.target as Node)) {
+        setWorkTypeOpen(false);
+      }
+      if (industryRef.current && !industryRef.current.contains(event.target as Node)) {
+        setIndustryOpen(false);
+      }
+      if (clientTypeRef.current && !clientTypeRef.current.contains(event.target as Node)) {
+        setClientTypeOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const caseStudies: CaseStudy[] = [
     {
@@ -402,117 +445,196 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
     },
   ];
 
-  const selectedWorkByCategory = {
-    "Cryptocurrency Taxes": [
-      {
-        title: "Tax Strategy Content",
-        category: "Cryptocurrency Taxes",
-        description: "Created educational content on cryptocurrency tax optimization and compliance strategies.",
-        results: "Expert positioning established",
-      },
-    ],
-    "PropTech": [
-      {
-        title: "Real Estate Technology Content",
-        category: "PropTech",
-        description: "Developed content strategy for property technology platform targeting real estate professionals.",
-        results: "Market awareness increased",
-      },
-    ],
-    "Cybersecurity": [
-      {
-        title: "Security Product Marketing",
-        category: "Cybersecurity",
-        description: "Created technical content and marketing materials for cybersecurity solutions.",
-        results: "Product adoption driven",
-      },
-    ],
-    "Customer Success Stories": [
-      {
-        title: "Client Testimonial Campaign",
-        category: "Customer Success Stories",
-        description: "Crafted compelling customer success narratives that showcased product value and ROI.",
-        results: "Social proof enhanced",
-      },
-    ],
-    "Technology": [
-      {
-        title: "Tech Platform Content",
-        category: "Technology",
-        description: "Produced technical documentation and marketing content for SaaS platforms.",
-        results: "User engagement increased",
-      },
-    ],
-    "Trading": [
-      {
-        title: "Trading Platform Content",
-        category: "Trading",
-        description: "Developed educational content and market analysis for trading platform users.",
-        results: "User education improved",
-      },
-    ],
-    "UI/UX": [
-      {
-        title: "Design Process Documentation",
-        category: "UI/UX",
-        description: "Created content explaining UI/UX design principles and best practices.",
-        results: "Design awareness built",
-      },
-    ],
-    "Marketing Strategies": [
-      {
-        title: "Marketing Framework Content",
-        category: "Marketing Strategies",
-        description: "Developed strategic marketing content and frameworks for B2B companies.",
-        results: "Strategic positioning achieved",
-      },
-    ],
-    "Conversion Rate Optimization (CRO)": [
-      {
-        title: "CRO Case Studies",
-        category: "CRO",
-        description: "Audited and optimized website copy and CTAs, increasing conversion rate from 2.1% to 4.8%.",
-        results: "128% conversion increase",
-      },
-    ],
-    "User Behavior": [
-      {
-        title: "Behavioral Analytics Content",
-        category: "User Behavior",
-        description: "Created content on user behavior analysis and optimization strategies.",
-        results: "Insights delivered",
-      },
-    ],
-    "Software": [
-      {
-        title: "Software Documentation",
-        category: "Software",
-        description: "Produced technical documentation and user guides for software products.",
-        results: "User onboarding improved",
-      },
-    ],
-    "Ghostwriting": [
-      {
-        title: "Executive Thought Leadership",
-        category: "Ghostwriting",
-        description: "Ghostwrote LinkedIn posts, articles, and keynote content for C-level executives, coaches, and speakers.",
-        results: "Brand authority enhanced",
-      },
-    ],
-    "Miscellaneous": [
-      {
-        title: "B2B Newsletter",
-        category: "Ghostwriting",
-        description: "Ghostwrote weekly newsletters for a business consultant, growing their subscriber base from 500 to 8,000.",
-        results: "1,500% subscriber growth",
-      },
-      {
-        title: "Content Marketing Campaign",
-        category: "Content Strategy",
-        description: "Developed and executed a multi-channel content campaign that generated 1,200 qualified leads in 90 days.",
-        results: "1,200 qualified leads",
-      },
-    ],
+  const selectedWork: WorkItem[] = [
+    {
+      title: "Roomvu",
+      description: "PropTech platform offering hyper-local real estate video marketing. Increased weekly registrations from 170 to 500 through strategic cold email campaigns.",
+      results: "24,000+ Users Acquired | 10% Email Open Rate Increase | 2.5% CTOR Increase",
+      workType: ["Cold Email Marketing"],
+      industry: ["PropTech", "Real Estate"],
+      clientType: ["Startup"],
+      format: ["Email Campaigns", "Drip Sequences"],
+    },
+    {
+      title: "Nordic Defender",
+      description: "All-in-one cybersecurity solution. Managed comprehensive marketing channels for Next-Gen Pentest Solution.",
+      results: "30% Email Open Rate Increase | 50+ Technical Articles | 43+ Landing Pages",
+      workType: ["Product Marketing", "Email Marketing", "Content Marketing", "LinkedIn Ghostwriting"],
+      industry: ["Cybersecurity"],
+      clientType: ["Startup"],
+      format: ["White Papers", "Technical Articles", "Landing Pages", "Sales Documents", "Emails"],
+    },
+    {
+      title: "Cloudzy",
+      description: "VPS and Cloud Service Provider. Developed technical content achieving #1 rankings and featured snippets on Google.",
+      results: "23+ Technical Articles | 7X Better SERP Position | 5X Conversion Rates",
+      workType: ["Technical Writing"],
+      industry: ["Technology", "Cloud Infrastructure", "Hosting"],
+      clientType: ["Tech Company"],
+      format: ["Blog Posts", "Knowledge Base", "Landing Pages"],
+    },
+    {
+      title: "WP SMS Pro",
+      description: "WordPress SMS Marketing Plugin. Created educational blog content to drive awareness and adoption.",
+      results: "24+ Technical Articles | 3X Better SERP Position | 3.2X Conversion Rates",
+      workType: ["Content Marketing"],
+      industry: ["SaaS", "Communication Tools", "WordPress Plugins"],
+      clientType: ["SaaS Startup"],
+      format: ["Blog Posts", "Technical Guides"],
+    },
+    {
+      title: "LorenzoCPA",
+      description: "Certified Public Accountant specializing in crypto tax. Developed content strategy to establish authority.",
+      results: "16+ Technical Articles | 14+ Minutes Time on Page | 3X Conversion Rates",
+      workType: ["Crypto Tax", "Content Writing"],
+      industry: ["Crypto", "Blockchain", "Accounting", "Tax Services"],
+      clientType: ["Professional Services Firm"],
+      format: ["Blog Posts", "X Posts", "Newsletters"],
+    },
+    {
+      title: "BSuite365",
+      description: "Microsoft Excel Consultants and Programmers. Created technical content on Excel tips and best practices.",
+      results: "50+ Technical Articles | 2X Better SERP Position | 5X Conversion Rates",
+      workType: ["Excel", "Content Writing"],
+      industry: ["Software", "Productivity Tools"],
+      clientType: ["Software Company"],
+      format: ["Blog Posts", "Technical Tutorials"],
+    },
+    {
+      title: "WatchThemLive",
+      description: "User-tracking tool with session recordings and heatmaps. Managed all marketing channels to drive user activation.",
+      results: "52% Email Open Rate Increase | 630+ Emails | 62+ Blogs | 11X ROI",
+      workType: ["Content Marketing", "Email Marketing"],
+      industry: ["Analytics", "User Behavior", "SaaS"],
+      clientType: ["SaaS Startup"],
+      format: ["Emails", "Blog Posts", "Landing Pages"],
+    },
+    {
+      title: "Convert.com",
+      description: "Experimentation and optimization platform. Created thought leadership content for Full-Stack Experimentation.",
+      results: "SERP Rankings Achieved | Organic Traffic Increased | Brand Recognition Established",
+      workType: ["Content Marketing"],
+      industry: ["Experimentation", "A/B Testing", "SaaS"],
+      clientType: ["SaaS Company"],
+      format: ["Technical Articles", "Thought Leadership"],
+    },
+    {
+      title: "Citronity",
+      description: "Custom software development company. Set up email marketing to generate and nurture leads.",
+      results: "40% Email Open Rate Increase | 10% CTOR Increase | 4X ROI",
+      workType: ["Email Marketing"],
+      industry: ["Software Development", "Technology"],
+      clientType: ["Tech Company"],
+      format: ["Email Campaigns"],
+    },
+    {
+      title: "Influencer Marketing Business",
+      description: "Content strategy for influencer marketing business that drove website traffic and conversions.",
+      results: "38% Website Traffic Increase | 23% Conversion Rate Improvement",
+      workType: ["Content Marketing"],
+      industry: ["Influencer Marketing", "Digital Marketing"],
+      clientType: ["Marketing Agency"],
+      format: ["Blog Posts", "Website Copy"],
+    },
+    {
+      title: "Digital Marketing Agency",
+      description: "LinkedIn ghostwriting and content creation for agency founder to build personal brand and generate leads.",
+      results: "480% Increase in Leads and Revenue | Improved Brand Visibility",
+      workType: ["LinkedIn Ghostwriting", "Copywriting"],
+      industry: ["Digital Marketing", "Marketing Services"],
+      clientType: ["Marketing Agency"],
+      format: ["LinkedIn Posts", "Articles"],
+    },
+    {
+      title: "Rahmaninia Digital Marketing Agency",
+      description: "SEO-rich content targeting bottom-funnel conversion for marketing consulting firm.",
+      results: "Increased Website Traffic | Improved Conversion Rates | Enhanced Brand Visibility",
+      workType: ["Content Writing", "Copywriting"],
+      industry: ["Digital Marketing", "Consulting"],
+      clientType: ["Marketing Agency"],
+      format: ["Blog Posts", "SEO Articles"],
+    },
+    {
+      title: "Boutique",
+      description: "Fashion and home decor e-commerce. Content strategy and SEO to boost online sales.",
+      results: "Website Traffic Skyrocketed | 3X Leads Increase | 60% Revenue Increase",
+      workType: ["E-commerce Content"],
+      industry: ["E-commerce", "Fashion", "Home Decor"],
+      clientType: ["E-commerce Business"],
+      format: ["Product Descriptions", "Category Pages", "Blog Posts"],
+    },
+    {
+      title: "MV Production",
+      description: "Media creation company. Content writing and email marketing to drive business growth.",
+      results: "105% Business Growth | 3X Website Traffic | 3X Leads",
+      workType: ["Content Writing", "Email Marketing"],
+      industry: ["Media Production", "Entertainment"],
+      clientType: ["Creative Agency"],
+      format: ["Emails", "Blog Posts"],
+    },
+    {
+      title: "C-Level Executives, Coaches, and Speakers",
+      description: "Ghostwrote LinkedIn posts, articles, and keynote content to build thought leadership and personal brands.",
+      results: "Brand Authority Enhanced | Speaking Opportunities Secured | Consulting Contracts Won",
+      workType: ["Ghostwriting", "LinkedIn Ghostwriting"],
+      industry: ["Executive Coaching", "Professional Services"],
+      clientType: ["Individual Professionals"],
+      format: ["LinkedIn Posts", "Articles", "Keynote Content"],
+    },
+    {
+      title: "B2B Newsletter Growth",
+      description: "Ghostwrote weekly newsletters for business consultant, dramatically growing subscriber base.",
+      results: "1,500% Subscriber Growth (500 to 8,000)",
+      workType: ["Ghostwriting"],
+      industry: ["Business Consulting", "B2B"],
+      clientType: ["Consultant"],
+      format: ["Newsletters"],
+    },
+    {
+      title: "Multi-Channel Content Campaign",
+      description: "Developed and executed comprehensive content campaign across multiple channels.",
+      results: "1,200 Qualified Leads in 90 Days",
+      workType: ["Content Marketing"],
+      industry: ["B2B", "Technology"],
+      clientType: ["Tech Company"],
+      format: ["Blog Posts", "White Papers", "Case Studies", "Social Media"],
+    },
+    {
+      title: "CRO Optimization Project",
+      description: "Audited and optimized website copy and CTAs to dramatically increase conversion rates.",
+      results: "128% Conversion Increase (2.1% to 4.8%)",
+      workType: ["Copywriting", "CRO"],
+      industry: ["SaaS", "Technology"],
+      clientType: ["SaaS Company"],
+      format: ["Website Copy", "Landing Pages", "CTAs"],
+    },
+  ];
+
+  // Get unique filter options
+  const allWorkTypes = Array.from(new Set(selectedWork.flatMap(item => item.workType))).sort();
+  const allIndustries = Array.from(new Set(selectedWork.flatMap(item => item.industry))).sort();
+  const allClientTypes = Array.from(new Set(selectedWork.flatMap(item => item.clientType))).sort();
+
+  // Filter logic
+  const filteredWork = selectedWork.filter(item => {
+    const workTypeMatch = selectedWorkTypes.length === 0 || selectedWorkTypes.some(type => item.workType.includes(type));
+    const industryMatch = selectedIndustries.length === 0 || selectedIndustries.some(ind => item.industry.includes(ind));
+    const clientTypeMatch = selectedClientTypes.length === 0 || selectedClientTypes.some(type => item.clientType.includes(type));
+    return workTypeMatch && industryMatch && clientTypeMatch;
+  });
+
+  const toggleFilter = (value: string, selectedArray: string[], setSelectedArray: (arr: string[]) => void) => {
+    if (selectedArray.includes(value)) {
+      setSelectedArray(selectedArray.filter(item => item !== value));
+    } else {
+      setSelectedArray([...selectedArray, value]);
+    }
+  };
+
+  const clearAllFilters = () => {
+    setSelectedWorkTypes([]);
+    setSelectedIndustries([]);
+    setSelectedClientTypes([]);
   };
 
   return (
@@ -559,42 +681,205 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
           {/* Selected Work Section */}
           <div>
             <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Selected Work</h1>
-            <Tabs defaultValue="Cryptocurrency Taxes" className="w-full">
-              <TabsList className="w-full flex flex-wrap h-auto gap-2 bg-background/50 pixel-border p-4 mb-8">
-                <TabsTrigger value="Cryptocurrency Taxes" className="font-primary text-xs md:text-sm">Cryptocurrency Taxes</TabsTrigger>
-                <TabsTrigger value="PropTech" className="font-primary text-xs md:text-sm">PropTech</TabsTrigger>
-                <TabsTrigger value="Cybersecurity" className="font-primary text-xs md:text-sm">Cybersecurity</TabsTrigger>
-                <TabsTrigger value="Customer Success Stories" className="font-primary text-xs md:text-sm">Customer Success Stories</TabsTrigger>
-                <TabsTrigger value="Technology" className="font-primary text-xs md:text-sm">Technology</TabsTrigger>
-                <TabsTrigger value="Trading" className="font-primary text-xs md:text-sm">Trading</TabsTrigger>
-                <TabsTrigger value="UI/UX" className="font-primary text-xs md:text-sm">UI/UX</TabsTrigger>
-                <TabsTrigger value="Marketing Strategies" className="font-primary text-xs md:text-sm">Marketing Strategies</TabsTrigger>
-                <TabsTrigger value="Conversion Rate Optimization (CRO)" className="font-primary text-xs md:text-sm">CRO</TabsTrigger>
-                <TabsTrigger value="User Behavior" className="font-primary text-xs md:text-sm">User Behavior</TabsTrigger>
-                <TabsTrigger value="Software" className="font-primary text-xs md:text-sm">Software</TabsTrigger>
-                <TabsTrigger value="Ghostwriting" className="font-primary text-xs md:text-sm">Ghostwriting</TabsTrigger>
-                <TabsTrigger value="Miscellaneous" className="font-primary text-xs md:text-sm">Miscellaneous</TabsTrigger>
-              </TabsList>
+            
+            {/* Filter Component */}
+            <div className="mb-8 space-y-4">
+              <div className="flex flex-wrap gap-4">
+                {/* Work Type Filter */}
+                <div className="relative" ref={workTypeRef}>
+                  <button
+                    onClick={() => setWorkTypeOpen(!workTypeOpen)}
+                    className="pixel-border bg-background px-4 py-2 font-secondary text-sm flex items-center gap-2 min-w-[160px] justify-between"
+                  >
+                    <span>Work Type {selectedWorkTypes.length > 0 && `(${selectedWorkTypes.length})`}</span>
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                  {workTypeOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-64 pixel-border bg-background p-4 z-50 max-h-96 overflow-y-auto">
+                      {allWorkTypes.map(type => (
+                        <label
+                          key={type}
+                          className="flex items-center gap-2 py-2 cursor-pointer hover:bg-accent/10 px-2"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleFilter(type, selectedWorkTypes, setSelectedWorkTypes);
+                          }}
+                        >
+                          <input
+                            type="checkbox"
+                            checked={selectedWorkTypes.includes(type)}
+                            onChange={() => {}}
+                            className="w-4 h-4"
+                            onClick={(e) => e.stopPropagation()}
+                          />
+                          <span className="font-secondary text-sm">{type}</span>
+                        </label>
+                      ))}
+                    </div>
+                  )}
+                </div>
 
-              {Object.entries(selectedWorkByCategory).map(([category, projects]) => (
-                <TabsContent key={category} value={category}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
-                      <PixelCard key={index}>
-                        <div className="inline-block pixel-border bg-accent/20 px-3 py-1 mb-4">
-                          <span className="font-primary text-xs">{project.category}</span>
-                        </div>
-                        <h3 className="font-primary text-lg mb-3">{project.title}</h3>
-                        <p className="font-secondary text-sm mb-4">{project.description}</p>
-                        <div className="pixel-border bg-secondary/20 px-3 py-2 mt-4">
-                          <p className="font-secondary text-xs font-semibold">{project.results}</p>
-                        </div>
-                      </PixelCard>
-                    ))}
+                {/* Industry Filter */}
+                <div className="relative" ref={industryRef}>
+                  <button
+                    onClick={() => setIndustryOpen(!industryOpen)}
+                    className="pixel-border bg-background px-4 py-2 font-secondary text-sm flex items-center gap-2 min-w-[160px] justify-between"
+                  >
+                    <span>Industry {selectedIndustries.length > 0 && `(${selectedIndustries.length})`}</span>
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                  {industryOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-64 pixel-border bg-background p-4 z-50 max-h-96 overflow-y-auto">
+                      {allIndustries.map(industry => (
+                        <label
+                          key={industry}
+                          className="flex items-center gap-2 py-2 cursor-pointer hover:bg-accent/10 px-2"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleFilter(industry, selectedIndustries, setSelectedIndustries);
+                          }}
+                        >
+                          <input
+                            type="checkbox"
+                            checked={selectedIndustries.includes(industry)}
+                            onChange={() => {}}
+                            className="w-4 h-4"
+                            onClick={(e) => e.stopPropagation()}
+                          />
+                          <span className="font-secondary text-sm">{industry}</span>
+                        </label>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Client Type Filter */}
+                <div className="relative" ref={clientTypeRef}>
+                  <button
+                    onClick={() => setClientTypeOpen(!clientTypeOpen)}
+                    className="pixel-border bg-background px-4 py-2 font-secondary text-sm flex items-center gap-2 min-w-[160px] justify-between"
+                  >
+                    <span>Client Type {selectedClientTypes.length > 0 && `(${selectedClientTypes.length})`}</span>
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                  {clientTypeOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-64 pixel-border bg-background p-4 z-50 max-h-96 overflow-y-auto">
+                      {allClientTypes.map(type => (
+                        <label
+                          key={type}
+                          className="flex items-center gap-2 py-2 cursor-pointer hover:bg-accent/10 px-2"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleFilter(type, selectedClientTypes, setSelectedClientTypes);
+                          }}
+                        >
+                          <input
+                            type="checkbox"
+                            checked={selectedClientTypes.includes(type)}
+                            onChange={() => {}}
+                            className="w-4 h-4"
+                            onClick={(e) => e.stopPropagation()}
+                          />
+                          <span className="font-secondary text-sm">{type}</span>
+                        </label>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Clear Filters Button */}
+                {(selectedWorkTypes.length > 0 || selectedIndustries.length > 0 || selectedClientTypes.length > 0) && (
+                  <button
+                    onClick={clearAllFilters}
+                    className="pixel-border bg-secondary/20 px-4 py-2 font-secondary text-sm flex items-center gap-2"
+                  >
+                    <X className="w-4 h-4" />
+                    Clear All
+                  </button>
+                )}
+              </div>
+
+              {/* Active Filters Display */}
+              {(selectedWorkTypes.length > 0 || selectedIndustries.length > 0 || selectedClientTypes.length > 0) && (
+                <div className="flex flex-wrap gap-2">
+                  {selectedWorkTypes.map(type => (
+                    <div key={type} className="pixel-border bg-accent/20 px-3 py-1 flex items-center gap-2">
+                      <span className="font-secondary text-xs">{type}</span>
+                      <button onClick={() => toggleFilter(type, selectedWorkTypes, setSelectedWorkTypes)}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </div>
+                  ))}
+                  {selectedIndustries.map(industry => (
+                    <div key={industry} className="pixel-border bg-accent/20 px-3 py-1 flex items-center gap-2">
+                      <span className="font-secondary text-xs">{industry}</span>
+                      <button onClick={() => toggleFilter(industry, selectedIndustries, setSelectedIndustries)}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </div>
+                  ))}
+                  {selectedClientTypes.map(type => (
+                    <div key={type} className="pixel-border bg-accent/20 px-3 py-1 flex items-center gap-2">
+                      <span className="font-secondary text-xs">{type}</span>
+                      <button onClick={() => toggleFilter(type, selectedClientTypes, setSelectedClientTypes)}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Work Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredWork.map((project, index) => (
+                <PixelCard key={index}>
+                  <h3 className="font-primary text-lg mb-3">{project.title}</h3>
+                  
+                  {/* Tags */}
+                  <div className="space-y-2 mb-4">
+                    {project.workType.length > 0 && (
+                      <div className="flex flex-wrap gap-1">
+                        {project.workType.map(type => (
+                          <span key={type} className="inline-block pixel-border bg-accent/20 px-2 py-0.5">
+                            <span className="font-secondary text-xs">{type}</span>
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    {project.industry.length > 0 && (
+                      <div className="flex flex-wrap gap-1">
+                        {project.industry.map(ind => (
+                          <span key={ind} className="inline-block pixel-border bg-secondary/20 px-2 py-0.5">
+                            <span className="font-secondary text-xs">{ind}</span>
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    {project.clientType.length > 0 && (
+                      <div className="flex flex-wrap gap-1">
+                        {project.clientType.map(type => (
+                          <span key={type} className="inline-block pixel-border bg-primary/20 px-2 py-0.5">
+                            <span className="font-secondary text-xs">{type}</span>
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                </TabsContent>
+
+                  <p className="font-secondary text-sm mb-4">{project.description}</p>
+                  <div className="pixel-border bg-secondary/20 px-3 py-2 mt-4">
+                    <p className="font-secondary text-xs font-semibold">{project.results}</p>
+                  </div>
+                </PixelCard>
               ))}
-            </Tabs>
+            </div>
+
+            {filteredWork.length === 0 && (
+              <div className="text-center py-12">
+                <p className="font-secondary text-muted-foreground">No work items match your filters. Try adjusting your selection.</p>
+              </div>
+            )}
           </div>
         </div>
       </section>
