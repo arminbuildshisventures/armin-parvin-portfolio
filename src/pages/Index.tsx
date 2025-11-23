@@ -13,6 +13,14 @@ import copywritingBg from "@/assets/services/copywriting-bg.png";
 import strategyBg from "@/assets/services/strategy-bg.png";
 import optimizationBg from "@/assets/services/optimization-bg.png";
 import consultingBg from "@/assets/services/consulting-bg.png";
+import convertBg from "@/assets/case-studies/convert-bg.png";
+import roomvuBg from "@/assets/case-studies/roomvu-bg.png";
+import nordicBg from "@/assets/case-studies/nordic-bg.png";
+import cloudzyBg from "@/assets/case-studies/cloudzy-bg.png";
+import convertLogo from "@/assets/clients/convert.svg";
+import roomvuLogo from "@/assets/clients/roomvu.svg";
+import nordicLogo from "@/assets/clients/nordic.svg";
+import cloudzyLogo from "@/assets/clients/cloudzy.svg";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
 import { Cursor } from "@/components/ui/inverted-cursor";
@@ -270,62 +278,106 @@ const Index = () => {
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Case Studies</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Convert.com */}
-            <PixelCard>
-              <div className="bg-accent/20 pixel-border h-48 mb-6 flex items-center justify-center">
-                <span className="font-primary text-xs text-accent">Content Marketing</span>
-              </div>
-              <h3 className="font-primary text-sm mb-3">Convert.com: SERP Rankings Achieved</h3>
-              <p className="font-secondary text-sm leading-relaxed mb-4">
-                Created bottom-of-funnel content strategy and wrote multi-perspective articles to establish brand presence in SERPs for new features.
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
-                <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Technology</span>
+            <PixelCard className="relative overflow-hidden">
+              <div 
+                className="absolute inset-0 opacity-5"
+                style={{
+                  backgroundImage: `url(${convertBg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+              <div className="relative z-10">
+                <div className="bg-accent/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-3">
+                  <img src={convertLogo} alt="Convert.com" className="h-12 brightness-0 invert" />
+                  <span className="font-primary text-xs text-accent">Content Marketing</span>
+                </div>
+                <h3 className="font-primary text-sm mb-3">Convert.com: SERP Rankings Achieved</h3>
+                <p className="font-secondary text-sm leading-relaxed mb-4">
+                  Created bottom-of-funnel content strategy and wrote multi-perspective articles to establish brand presence in SERPs for new features.
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
+                  <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Technology</span>
+                </div>
               </div>
             </PixelCard>
 
             {/* Roomvu */}
-            <PixelCard>
-              <div className="bg-secondary/20 pixel-border h-48 mb-6 flex items-center justify-center">
-                <span className="font-primary text-xs text-secondary">Cold Email Marketing</span>
-              </div>
-              <h3 className="font-primary text-sm mb-3">Roomvu: 24,000+ Users Acquired</h3>
-              <p className="font-secondary text-sm leading-relaxed mb-4">
-                Redesigned email marketing strategy with advanced segmentation and hyper-personalized campaigns, increasing weekly registrations from 170 to 500.
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
-                <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Real Estate</span>
+            <PixelCard className="relative overflow-hidden">
+              <div 
+                className="absolute inset-0 opacity-5"
+                style={{
+                  backgroundImage: `url(${roomvuBg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+              <div className="relative z-10">
+                <div className="bg-secondary/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-3">
+                  <img src={roomvuLogo} alt="Roomvu" className="h-12 brightness-0 invert" />
+                  <span className="font-primary text-xs text-secondary">Cold Email Marketing</span>
+                </div>
+                <h3 className="font-primary text-sm mb-3">Roomvu: 24,000+ Users Acquired</h3>
+                <p className="font-secondary text-sm leading-relaxed mb-4">
+                  Redesigned email marketing strategy with advanced segmentation and hyper-personalized campaigns, increasing weekly registrations from 170 to 500.
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
+                  <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Real Estate</span>
+                </div>
               </div>
             </PixelCard>
 
             {/* Nordic Defender */}
-            <PixelCard>
-              <div className="bg-accent/20 pixel-border h-48 mb-6 flex items-center justify-center">
-                <span className="font-primary text-xs text-accent">Product Marketing</span>
-              </div>
-              <h3 className="font-primary text-sm mb-3">Nordic Defender: 30% Email Open Rate Increase</h3>
-              <p className="font-secondary text-sm leading-relaxed mb-4">
-                Managed all marketing channels for Next-Gen Pentest Solution including 100+ emails, 50+ technical articles, and 43+ landing pages.
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
-                <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Cybersecurity</span>
+            <PixelCard className="relative overflow-hidden">
+              <div 
+                className="absolute inset-0 opacity-5"
+                style={{
+                  backgroundImage: `url(${nordicBg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+              <div className="relative z-10">
+                <div className="bg-accent/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-3">
+                  <img src={nordicLogo} alt="Nordic Defender" className="h-12 brightness-0 invert" />
+                  <span className="font-primary text-xs text-accent">Product Marketing</span>
+                </div>
+                <h3 className="font-primary text-sm mb-3">Nordic Defender: 30% Email Open Rate Increase</h3>
+                <p className="font-secondary text-sm leading-relaxed mb-4">
+                  Managed all marketing channels for Next-Gen Pentest Solution including 100+ emails, 50+ technical articles, and 43+ landing pages.
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
+                  <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Cybersecurity</span>
+                </div>
               </div>
             </PixelCard>
 
             {/* Cloudzy */}
-            <PixelCard>
-              <div className="bg-secondary/20 pixel-border h-48 mb-6 flex items-center justify-center">
-                <span className="font-primary text-xs text-secondary">Technical Content</span>
-              </div>
-              <h3 className="font-primary text-sm mb-3">Cloudzy: #1 Rankings & 5X Conversion</h3>
-              <p className="font-secondary text-sm leading-relaxed mb-4">
-                Developed technical blog content and landing pages achieving #1 rankings, featured snippets, 5X conversion rates, and 2,360+ users acquired.
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
-                <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Technology</span>
+            <PixelCard className="relative overflow-hidden">
+              <div 
+                className="absolute inset-0 opacity-5"
+                style={{
+                  backgroundImage: `url(${cloudzyBg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+              <div className="relative z-10">
+                <div className="bg-secondary/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-3">
+                  <img src={cloudzyLogo} alt="Cloudzy" className="h-12 brightness-0 invert" />
+                  <span className="font-primary text-xs text-secondary">Technical Content</span>
+                </div>
+                <h3 className="font-primary text-sm mb-3">Cloudzy: #1 Rankings & 5X Conversion</h3>
+                <p className="font-secondary text-sm leading-relaxed mb-4">
+                  Developed technical blog content and landing pages achieving #1 rankings, featured snippets, 5X conversion rates, and 2,360+ users acquired.
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
+                  <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Technology</span>
+                </div>
               </div>
             </PixelCard>
           </div>
