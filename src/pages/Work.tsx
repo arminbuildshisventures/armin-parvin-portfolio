@@ -1189,12 +1189,14 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                             </a>
                           )}
                           {project.beforeAfterImage && (
-                            <button
-                              onClick={() => setViewImageUrl(project.beforeAfterImage!)}
+                            <a
+                              href={project.beforeAfterImage}
+                              target="_blank"
+                              rel="noopener noreferrer"
                               className="pixel-border bg-primary/20 text-primary px-3 py-2 text-xs font-secondary hover:bg-primary/30 transition-colors"
                             >
                               See Before/After
-                            </button>
+                            </a>
                           )}
                           {project.viewImageUrl && (
                             <button
