@@ -1068,17 +1068,17 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
         
         <div className="container mx-auto max-w-6xl relative z-20">
           <Tabs defaultValue="case-studies" className="w-full">
-            <div className="mb-16 flex justify-center">
-              <TabsList className="md:pixel-border md:pixel-shadow-lg bg-transparent md:bg-card/50 md:backdrop-blur-sm md:p-2 flex flex-col md:flex-row gap-0 md:gap-2 w-full md:w-auto p-0 mt-8 md:mt-0 items-stretch">
+            <div className="mb-12 flex justify-center">
+              <TabsList className="pixel-border pixel-shadow bg-card/80 backdrop-blur-sm p-1.5 inline-flex gap-1">
                 <TabsTrigger 
                   value="case-studies" 
-                  className="font-primary text-base md:text-lg uppercase tracking-wider px-8 py-4 border-2 border-border data-[state=active]:border-accent data-[state=active]:bg-accent/20 data-[state=active]:text-accent md:border-0 md:data-[state=active]:pixel-border md:data-[state=active]:bg-gradient-to-br md:data-[state=active]:from-accent/40 md:data-[state=active]:to-accent/20 md:data-[state=active]:pixel-shadow transition-all md:hover:-translate-y-1 data-[state=active]:translate-y-0 flex-1 md:flex-none"
+                  className="font-primary text-sm md:text-base uppercase tracking-wider px-6 md:px-8 py-2.5 md:py-3 data-[state=active]:bg-accent/20 data-[state=active]:text-accent data-[state=active]:pixel-border transition-all"
                 >
                   Case Studies
                 </TabsTrigger>
                 <TabsTrigger 
                   value="featured-work" 
-                  className="font-primary text-base md:text-lg uppercase tracking-wider px-8 py-4 border-2 border-border data-[state=active]:border-secondary data-[state=active]:bg-secondary/20 data-[state=active]:text-secondary md:border-0 md:data-[state=active]:pixel-border md:data-[state=active]:bg-gradient-to-br md:data-[state=active]:from-secondary/40 md:data-[state=active]:to-secondary/20 md:data-[state=active]:pixel-shadow transition-all md:hover:-translate-y-1 data-[state=active]:translate-y-0 flex-1 md:flex-none"
+                  className="font-primary text-sm md:text-base uppercase tracking-wider px-6 md:px-8 py-2.5 md:py-3 data-[state=active]:bg-secondary/20 data-[state=active]:text-secondary data-[state=active]:pixel-border transition-all"
                 >
                   Featured Work
                 </TabsTrigger>
