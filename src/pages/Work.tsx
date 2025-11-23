@@ -726,7 +726,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       >
         <div className="absolute inset-0 bg-background/80" />
         
-        <div className="container mx-auto max-w-6xl relative z-10 space-y-24">
+        <div className="container mx-auto max-w-6xl relative z-20 space-y-24">
           {/* Case Studies Section */}
           <div>
             <h1 className="font-primary text-3xl md:text-5xl mb-12 text-center text-pixel">Case Studies</h1>
