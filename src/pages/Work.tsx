@@ -919,7 +919,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       description: "Guest speaker presentation at ADPList's Don't Settle Conference 2025. Shared insights on content marketing, personal branding, and professional growth strategies with the ADPList community.",
       results: "Thought Leadership | Community Education | Professional Speaking",
       workType: ["Presentation"],
-      industry: ["Professional Services", "Marketing"],
+      industry: ["Marketing"],
       format: ["Presentation"],
       downloadUrl: "/work/adplist-dont-settle-conference.pdf",
     },
