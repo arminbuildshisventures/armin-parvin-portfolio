@@ -861,6 +861,33 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "/work/content-writing-mistakes-infographic.png",
     },
     {
+      title: "2025 Interest Rate Forecast: Economic Balancing Act",
+      description: "Marketing email for Roomvu analyzing 2025 interest rate predictions and their impact on the US housing market. Combines economic insights with actionable guidance for real estate professionals navigating rate fluctuations.",
+      results: "Market Analysis | Economic Insights | Real Estate Strategy",
+      workType: ["Marketing Email"],
+      industry: ["Real Estate"],
+      format: ["Marketing Email"],
+      downloadUrl: "/work/interest-rate-forecast-email.html",
+    },
+    {
+      title: "Global Tiny Home Market Set for Explosive Growth",
+      description: "Marketing email for Roomvu exploring the explosive growth trajectory of the tiny home market in US real estate. Highlights market trends, investment opportunities, and the shift toward minimalist living.",
+      results: "Market Trends | Investment Analysis | Industry Insights",
+      workType: ["Marketing Email"],
+      industry: ["Real Estate"],
+      format: ["Marketing Email"],
+      downloadUrl: "/work/tiny-home-market-email.html",
+    },
+    {
+      title: "EXIT Realty West Midtown: Twitter Lead Generation Strategy",
+      description: "Marketing email for Roomvu demonstrating how EXIT Realty West Midtown leveraged Twitter/X for real estate lead generation. Showcases social media marketing tactics and engagement strategies for realtors.",
+      results: "Social Media Strategy | Lead Generation | Platform Optimization",
+      workType: ["Marketing Email"],
+      industry: ["Real Estate"],
+      format: ["Marketing Email"],
+      downloadUrl: "/work/exit-realty-twitter-email.html",
+    },
+    {
       title: "Nordic Defender at IT-Sikkerhetsdagen",
       description: "Press release announcing Nordic Defender's participation at IT-Sikkerhetsdagen event in Copenhagen, showcasing cybersecurity solutions to government organizations and industry peers.",
       results: "Event Participation | Market Visibility | Industry Networking",
@@ -1185,7 +1212,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                               download
                               className="pixel-border bg-accent/20 text-accent px-3 py-2 text-xs font-secondary hover:bg-accent/30 transition-colors"
                             >
-                              Download PDF
+                              {project.downloadUrl.endsWith('.html') ? 'Download HTML' : 'Download PDF'}
                             </a>
                           )}
                           {project.beforeAfterImage && (
