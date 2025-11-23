@@ -135,7 +135,7 @@ export default function About() {
             {/* Segment 3: The Discovery */}
             <div className="relative mb-12 md:mb-16">
               <div className="grid md:grid-cols-2 gap-6 items-start">
-                <div className="pixel-border pixel-shadow bg-accent/10 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-2 md:order-1">
+                <div className="pixel-border pixel-shadow bg-accent/20 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-2 md:order-1">
                   <h3 className="font-primary text-xl md:text-2xl text-accent mb-4">💡 The Discovery</h3>
                   <p className="font-secondary text-base md:text-lg leading-relaxed">
                     I discovered marketing, and content immediately caught my attention (well, I am quite the storyteller, right?). 
@@ -185,7 +185,7 @@ export default function About() {
             {/* Segment 5: Present Day */}
             <div className="relative">
               <div className="grid md:grid-cols-2 gap-6 items-center">
-                <div className="order-1 md:order-1 pixel-border pixel-shadow bg-secondary/10 border-secondary/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                <div className="order-1 md:order-1 pixel-border pixel-shadow bg-secondary/20 border-secondary/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">📊 Present Day</h3>
                   <p className="font-secondary text-base md:text-lg leading-relaxed">
                     Recently, I have immersed myself in finance, economics, and especially Web3, blockchain, and cryptocurrency 
@@ -209,7 +209,7 @@ export default function About() {
 
             {/* Coffee & Lifestyle Section */}
             <div className="relative mt-8">
-              <div className="pixel-border pixel-shadow bg-accent/10 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+              <div className="pixel-border pixel-shadow bg-accent/20 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                 <p className="font-secondary text-base md:text-lg leading-relaxed text-accent font-medium italic border-l-4 border-accent pl-4 mb-6">
                   When I'm not working (does that even happen?), I'm sipping on too much specialty coffee and working. Yes, I'm 
                   working even when I'm not.
