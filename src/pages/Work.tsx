@@ -1136,7 +1136,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                     <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
                   </button>
                   {workTypeOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-72 pixel-border pixel-shadow-lg bg-card p-4 z-[100] max-h-96 overflow-y-auto">
+                    <div className="absolute top-full left-0 mt-2 w-72 pixel-border pixel-shadow-lg bg-card p-4 z-[100]">
                       {allWorkTypes.map(type => (
                         <label
                           key={type}
@@ -1166,7 +1166,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                     <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
                   </button>
                   {industryOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-72 pixel-border pixel-shadow-lg bg-card p-4 z-[100] max-h-96 overflow-y-auto">
+                    <div className="absolute top-full left-0 mt-2 w-72 pixel-border pixel-shadow-lg bg-card p-4 z-[100]">
                       {allIndustries.map(industry => (
                         <label
                           key={industry}
