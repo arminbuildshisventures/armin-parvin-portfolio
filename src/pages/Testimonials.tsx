@@ -22,6 +22,7 @@ import avatar12 from "@/assets/testimonials/avatar-12.png";
 import avatar13 from "@/assets/testimonials/avatar-13.png";
 import masoudRezaei from "@/assets/testimonials/masoud-rezaei.png";
 import shadiAvatar from "@/assets/testimonials/shadi-avatar.png";
+import gabbieSanchez from "@/assets/testimonials/gabbie-sanchez.png";
 import lorenzoLogo from "@/assets/clients/LorenzoLogo.png";
 import rahmaniniaLogo from "@/assets/clients/Rahmaninia.png";
 import wtlLogo from "@/assets/clients/WTL.png";
@@ -151,6 +152,13 @@ const Testimonials = () => {
       rating: 5,
       avatar: shadiAvatar,
       caseStudyUrl: "#",
+    },
+    {
+      name: "Gabbie Sanchez",
+      role: "Founder, Leverato",
+      content: "Armin is the most encouraging and enthusiastic mentor there is. He made me believe in myself, which is hard for someone with imposter syndrome. He made me believe that my skills are indeed highly in-demand and all I need is the right push to get myself out there. He is the push that I have been searching for all these years. Truly grateful that I get to call someone so insightful and positive as my mentor!",
+      rating: 5,
+      avatar: gabbieSanchez,
     },
     // Testimonials without case studies
     {
