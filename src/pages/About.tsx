@@ -8,7 +8,7 @@ import aboutBgPixel from "@/assets/about-bg-pixel.png";
 import youngGuitar1 from "@/assets/journey/young-guitar-1.png";
 import youngPractice from "@/assets/journey/young-practice.png";
 import youngSmile from "@/assets/journey/young-smile.png";
-import professionalPerformance from "@/assets/journey/professional-performance.png";
+import professionalPerformance from "@/assets/journey/professional-performance-updated.png";
 import professionalPortraitTech from "@/assets/journey/professional-portrait-tech.png";
 import discoveryProfessional1 from "@/assets/journey/discovery-professional-1.png";
 import discoveryProfessional2 from "@/assets/journey/discovery-professional-2.png";
