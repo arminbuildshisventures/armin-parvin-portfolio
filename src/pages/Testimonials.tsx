@@ -101,7 +101,6 @@ const Testimonials = () => {
   ];
 
   const regularTestimonials = [
-    // Testimonials with case studies first
     {
       name: "Mehdi Rahmaninia",
       role: "Founder, CEO, and Marketing Management Consultant",
@@ -142,7 +141,6 @@ const Testimonials = () => {
       avatar: shadiAvatar,
       caseStudyUrl: "#",
     },
-    // Testimonials without case studies
     {
       name: "Ines Cid Blasco",
       role: "VP of Sales, Sales for Good",
@@ -321,7 +319,7 @@ const Testimonials = () => {
           </div>
 
           {/* Regular Testimonials */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto auto-rows-auto">
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-8 max-w-7xl mx-auto">
             {regularTestimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -337,8 +335,9 @@ const Testimonials = () => {
                   duration: 0.6,
                   delay: (index + 2) * 0.1,
                 }}
+                className="break-inside-avoid mb-8"
               >
-                <PixelCard className="flex flex-col h-full">
+                <PixelCard className="flex flex-col">
                   <div className="flex items-center gap-3 mb-4">
                     <Avatar className="w-16 h-16 pixel-border">
                       <AvatarImage src={testimonial.avatar} alt={testimonial.name} className="object-cover" />
@@ -357,7 +356,7 @@ const Testimonials = () => {
                     </div>
                   </div>
                   <Quote className="w-6 h-6 text-accent mb-3 opacity-50" />
-                  <p className="text-foreground mb-4 font-secondary text-sm flex-grow">"{testimonial.content}"</p>
+                  <p className="text-foreground mb-4 font-secondary text-sm">"{testimonial.content}"</p>
                   {testimonial.caseStudyUrl && (
                     <a 
                       href={testimonial.caseStudyUrl}
