@@ -89,14 +89,14 @@ export default function Services() {
           </div>
 
           <Tabs defaultValue="content-marketing" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-8 sm:mb-10 md:mb-12 pixel-border bg-card">
-              <TabsTrigger value="content-marketing" className="font-primary text-[10px] sm:text-xs md:text-sm text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-2 sm:px-3 md:px-4">
+            <TabsList className="grid w-full grid-cols-3 mb-8 sm:mb-10 md:mb-12 pixel-border bg-card h-auto">
+              <TabsTrigger value="content-marketing" className="font-primary text-[9px] sm:text-xs md:text-sm text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-1 sm:px-3 md:px-4 py-3 sm:py-2 h-auto whitespace-normal leading-tight">
                 Content Marketing
               </TabsTrigger>
-              <TabsTrigger value="copywriting" className="font-primary text-[10px] sm:text-xs md:text-sm text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-2 sm:px-3 md:px-4">
+              <TabsTrigger value="copywriting" className="font-primary text-[9px] sm:text-xs md:text-sm text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-1 sm:px-3 md:px-4 py-3 sm:py-2 h-auto whitespace-normal leading-tight">
                 Copywriting
               </TabsTrigger>
-              <TabsTrigger value="email-marketing" className="font-primary text-[10px] sm:text-xs md:text-sm text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-2 sm:px-3 md:px-4">
+              <TabsTrigger value="email-marketing" className="font-primary text-[9px] sm:text-xs md:text-sm text-pixel data-[state=active]:bg-accent data-[state=active]:text-accent-foreground px-1 sm:px-3 md:px-4 py-3 sm:py-2 h-auto whitespace-normal leading-tight">
                 Email Marketing
               </TabsTrigger>
             </TabsList>
@@ -105,13 +105,13 @@ export default function Services() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {contentMarketingServices.map((service, index) => {
                 const Icon = service.icon;
-                return <PixelCard key={index} className="flex gap-3 sm:gap-4">
+                return <PixelCard key={index} className="flex flex-col sm:flex-row gap-3 sm:gap-4 p-4 sm:p-6">
                       <div className="flex-shrink-0">
                         <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
                       </div>
-                      <div>
-                        <h3 className="font-primary text-base sm:text-lg mb-1 sm:mb-2 text-pixel">{service.title}</h3>
-                        <p className="font-secondary text-xs sm:text-sm text-muted-foreground">{service.description}</p>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-primary text-sm sm:text-base md:text-lg mb-2 text-pixel">{service.title}</h3>
+                        <p className="font-secondary text-xs sm:text-sm text-muted-foreground leading-relaxed">{service.description}</p>
                       </div>
                     </PixelCard>;
               })}
@@ -129,13 +129,13 @@ export default function Services() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {copywritingServices.map((service, index) => {
                 const Icon = service.icon;
-                return <PixelCard key={index} className="flex gap-3 sm:gap-4">
+                return <PixelCard key={index} className="flex flex-col sm:flex-row gap-3 sm:gap-4 p-4 sm:p-6">
                       <div className="flex-shrink-0">
                         <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
                       </div>
-                      <div>
-                        <h3 className="font-primary text-base sm:text-lg mb-1 sm:mb-2 text-pixel">{service.title}</h3>
-                        <p className="font-secondary text-xs sm:text-sm text-muted-foreground">{service.description}</p>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-primary text-sm sm:text-base md:text-lg mb-2 text-pixel">{service.title}</h3>
+                        <p className="font-secondary text-xs sm:text-sm text-muted-foreground leading-relaxed">{service.description}</p>
                       </div>
                     </PixelCard>;
               })}
@@ -153,13 +153,13 @@ export default function Services() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {emailMarketingServices.map((service, index) => {
                 const Icon = service.icon;
-                return <PixelCard key={index} className="flex gap-3 sm:gap-4">
+                return <PixelCard key={index} className="flex flex-col sm:flex-row gap-3 sm:gap-4 p-4 sm:p-6">
                       <div className="flex-shrink-0">
                         <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
                       </div>
-                      <div>
-                        <h3 className="font-primary text-base sm:text-lg mb-1 sm:mb-2 text-pixel">{service.title}</h3>
-                        <p className="font-secondary text-xs sm:text-sm text-muted-foreground">{service.description}</p>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-primary text-sm sm:text-base md:text-lg mb-2 text-pixel">{service.title}</h3>
+                        <p className="font-secondary text-xs sm:text-sm text-muted-foreground leading-relaxed">{service.description}</p>
                       </div>
                     </PixelCard>;
               })}
