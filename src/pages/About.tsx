@@ -9,6 +9,7 @@ import youngGuitar1 from "@/assets/journey/young-guitar-1.png";
 import youngPractice from "@/assets/journey/young-practice.png";
 import youngSmile from "@/assets/journey/young-smile.png";
 import professionalPerformance from "@/assets/journey/professional-performance.png";
+import professionalPortraitTech from "@/assets/journey/professional-portrait-tech.png";
 import discoveryProfessional1 from "@/assets/journey/discovery-professional-1.png";
 import discoveryProfessional2 from "@/assets/journey/discovery-professional-2.png";
 import discoveryProfessional3 from "@/assets/journey/discovery-professional-3.png";
@@ -146,12 +147,21 @@ export default function About() {
 
             {/* Segment 4: Tech Immersion */}
             <div className="relative mb-12 md:mb-16">
-              <div className="pixel-border pixel-shadow bg-card/80 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🚀 Tech Immersion</h3>
-                <p className="font-secondary text-base md:text-lg leading-relaxed">
-                  My technology nerdiness allowed me to work with clients across various tech sectors, including FinTech, PropTech, 
-                  SaaS, MarCom, Cloud Infrastructure, Cybersecurity, and Software Development.
-                </p>
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                <div className="order-2 md:order-1 pixel-border pixel-shadow bg-card/80 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                  <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🚀 Tech Immersion</h3>
+                  <p className="font-secondary text-base md:text-lg leading-relaxed">
+                    My technology nerdiness allowed me to work with clients across various tech sectors, including FinTech, PropTech, 
+                    SaaS, MarCom, Cloud Infrastructure, Cybersecurity, and Software Development.
+                  </p>
+                </div>
+                <div className="order-1 md:order-2">
+                  {/* Professional portraits grid */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <img src={professionalPortraitTech} alt="Professional portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
+                    <img src={professionalPerformance} alt="Professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-cover object-top rounded-lg hover:scale-105 transition-transform" />
+                  </div>
+                </div>
               </div>
               <div className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{ transform: 'translate(-50%, -50%) rotate(45deg)' }} />
             </div>
