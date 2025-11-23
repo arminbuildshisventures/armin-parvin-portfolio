@@ -1068,16 +1068,16 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
         <div className="container mx-auto max-w-6xl relative z-20">
           <Tabs defaultValue="case-studies" className="w-full">
             <div className="mb-16 flex justify-center">
-              <TabsList className="pixel-border bg-background p-1 flex flex-col md:flex-row gap-1 w-full max-w-xs md:max-w-2xl md:w-auto">
+              <TabsList className="pixel-border bg-background p-1 flex flex-col md:flex-row gap-1 w-full max-w-sm md:max-w-2xl">
                 <TabsTrigger 
                   value="case-studies" 
-                  className="font-primary text-sm md:text-base uppercase tracking-widest px-6 md:px-12 py-3 md:py-4 w-full md:w-auto transition-all duration-300 data-[state=active]:bg-accent data-[state=active]:text-background data-[state=inactive]:text-muted-foreground data-[state=inactive]:hover:text-foreground data-[state=inactive]:hover:bg-muted/30"
+                  className="font-primary text-sm md:text-base uppercase tracking-widest px-6 md:px-12 py-4 w-full transition-all duration-300 data-[state=active]:bg-accent data-[state=active]:text-background data-[state=inactive]:text-foreground/60 data-[state=inactive]:hover:text-foreground data-[state=inactive]:hover:bg-muted/20"
                 >
                   Case Studies
                 </TabsTrigger>
                 <TabsTrigger 
                   value="featured-work" 
-                  className="font-primary text-sm md:text-base uppercase tracking-widest px-6 md:px-12 py-3 md:py-4 w-full md:w-auto transition-all duration-300 data-[state=active]:bg-secondary data-[state=active]:text-background data-[state=inactive]:text-muted-foreground data-[state=inactive]:hover:text-foreground data-[state=inactive]:hover:bg-muted/30"
+                  className="font-primary text-sm md:text-base uppercase tracking-widest px-6 md:px-12 py-4 w-full transition-all duration-300 data-[state=active]:bg-secondary data-[state=active]:text-background data-[state=inactive]:text-foreground/60 data-[state=inactive]:hover:text-foreground data-[state=inactive]:hover:bg-muted/20"
                 >
                   Featured Work
                 </TabsTrigger>
