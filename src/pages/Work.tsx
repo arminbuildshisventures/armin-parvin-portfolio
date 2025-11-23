@@ -1084,8 +1084,8 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-secondary to-accent opacity-60 group-hover:opacity-100 transition-opacity" />
                   
                   <div className="relative z-10 flex flex-col h-full">
-                    <div className="inline-block pixel-border bg-gradient-to-br from-accent/30 to-accent/10 px-4 py-2 mb-4 group-hover:from-accent/40 group-hover:to-accent/20 transition-all w-fit">
-                      <span className="font-primary text-xs uppercase tracking-wide">{project.category}</span>
+                    <div className="inline-block pixel-border bg-gradient-to-br from-accent/30 to-accent/10 px-2 py-1 mb-4 group-hover:from-accent/40 group-hover:to-accent/20 transition-all w-fit">
+                      <span className="font-primary text-[10px] uppercase tracking-wide">{project.category}</span>
                     </div>
                     <h3 className="font-primary text-xl mb-4 group-hover:text-accent transition-colors">{project.title}</h3>
                     <p className="font-secondary text-sm mb-6 leading-relaxed text-foreground/90">{project.description}</p>
@@ -1209,14 +1209,14 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                     <div className="relative z-10 flex flex-col h-full">
                       {/* Tags at top */}
                       <div className="mb-4 pt-2">
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5">
                           {project.workType.map(type => (
-                            <span key={type} className="pixel-border bg-gradient-to-br from-primary/20 to-primary/5 text-primary px-3 py-1 text-xs font-secondary uppercase tracking-wide">
+                            <span key={type} className="pixel-border bg-gradient-to-br from-primary/20 to-primary/5 text-primary px-2 py-0.5 text-[10px] font-secondary uppercase tracking-wide">
                               {type}
                             </span>
                           ))}
                           {project.industry.map(ind => (
-                            <span key={ind} className="pixel-border bg-gradient-to-br from-accent/20 to-accent/5 text-accent px-3 py-1 text-xs font-secondary uppercase tracking-wide">
+                            <span key={ind} className="pixel-border bg-gradient-to-br from-accent/20 to-accent/5 text-accent px-2 py-0.5 text-[10px] font-secondary uppercase tracking-wide">
                               {ind}
                             </span>
                           ))}
