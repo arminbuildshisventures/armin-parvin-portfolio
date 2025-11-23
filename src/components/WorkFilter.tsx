@@ -45,14 +45,8 @@ export function WorkFilter({
     const selectedCount = selectedTags.length;
     const [isOpen, setIsOpen] = useState(false);
     
-    const handleTagClick = (tag: string, e: React.MouseEvent) => {
-      e.preventDefault();
-      e.stopPropagation();
-      onFilterChange(category, tag);
-    };
-    
     return (
-      <Popover open={isOpen} onOpenChange={setIsOpen}>
+      <Popover open={isOpen} onOpenChange={setIsOpen} modal={false}>
         <PopoverTrigger asChild>
           <Button 
             variant="outline" 
@@ -70,15 +64,11 @@ export function WorkFilter({
         <PopoverContent 
           className="w-80 pixel-border bg-background z-50" 
           align="start"
-          onInteractOutside={(e) => {
-            // Only close if clicking outside, not when clicking inside
-            const target = e.target as HTMLElement;
-            if (!target.closest('[data-tag-filter]')) {
-              setIsOpen(false);
-            }
+          onPointerDownOutside={(e) => {
+            e.preventDefault();
           }}
         >
-          <div className="space-y-2" data-tag-filter>
+          <div className="space-y-2">
             <h4 className="font-primary text-sm mb-3">{title}</h4>
             <div className="flex flex-wrap gap-2 max-h-60 overflow-y-auto">
               {tags.map(tag => {
@@ -86,7 +76,7 @@ export function WorkFilter({
                 return (
                   <Badge
                     key={tag}
-                    onClick={(e) => handleTagClick(tag, e)}
+                    onClick={() => onFilterChange(category, tag)}
                     className={`
                       cursor-pointer font-secondary text-xs pixel-border transition-all
                       ${isSelected 
