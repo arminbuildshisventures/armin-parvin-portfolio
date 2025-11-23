@@ -5,6 +5,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Briefcase, GraduationCap, Code, Award, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import aboutBgPixel from "@/assets/about-bg-pixel.png";
+import youngGuitar1 from "@/assets/journey/young-guitar-1.png";
+import youngPractice from "@/assets/journey/young-practice.png";
+import youngSmile from "@/assets/journey/young-smile.png";
+import professionalPerformance from "@/assets/journey/professional-performance.png";
 import { useState } from "react";
 export default function About() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -65,41 +69,88 @@ export default function About() {
             <div className="h-[2px] flex-1 bg-gradient-to-r from-secondary via-secondary to-transparent" />
           </div>
 
-          <div className="pixel-border pixel-shadow bg-accent/5 border-accent/30 p-8 mb-16 max-w-4xl mx-auto hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-            <div className="space-y-6 font-secondary text-base md:text-lg leading-relaxed">
-              <p>
-                I come from an artistic family, with my mom being a graphic designer and painter, and my dad an illustrator. 
-                Music made me thrive, so I went on to become a professional Classical and Flamenco guitar player and instructor. 
-                When people were mining and buying Bitcoin, I was practicing music for well over 16 hours a day (huh ....).
-              </p>
-              
-              <p>
-                At some point, I realized that teaching wasn't my passion (even though I still mentor many people), so I decided 
-                to explore different paths to find out what was. I discovered marketing, and content immediately caught my 
-                attention (well, I am quite the storyteller, right?).
-              </p>
-              
-              <p>
-                I started writing blogs, landing page and webpage copy, emails, and LinkedIn posts. The blogs started ranking #1 
-                and #0 on Google, landing page conversion rates tripled, emails started getting too many signups, and LinkedIn 
-                posts started generating leads.
-              </p>
-              
-              <p>
-                My technology nerdiness allowed me to work with clients across various tech sectors, including FinTech, PropTech, 
-                SaaS, MarCom, Cloud Infrastructure, Cybersecurity, and Software Development.
-              </p>
-              
-              <p>
-                Recently, I have immersed myself in finance, economics, and especially Web3, blockchain, and cryptocurrency 
-                research analysis. As a former math nerd, I can connect numbers to narratives and translate data into insight 
-                and strategy.
-              </p>
-              
-              <p className="text-accent font-medium italic">
-                When I'm not working (does that even happen?), I'm sipping on too much specialty coffee and working. Yes, I'm 
-                working even when I'm not.
-              </p>
+          <div className="mb-16 max-w-5xl mx-auto relative">
+            {/* Connecting Thread */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-secondary via-accent to-secondary hidden md:block" style={{ transform: 'translateX(-50%)' }} />
+            
+            {/* Segment 1: Artistic Roots */}
+            <div className="relative mb-12 md:mb-16">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-2 md:order-1">
+                  <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🎨 Artistic Roots</h3>
+                  <p className="font-secondary text-base md:text-lg leading-relaxed">
+                    I come from an artistic family, with my mom being a graphic designer and painter, and my dad an illustrator. 
+                    Music made me thrive, so I went on to become a professional Classical and Flamenco guitar player and instructor.
+                  </p>
+                </div>
+                <div className="flex gap-3 order-1 md:order-2 justify-center">
+                  <img src={youngGuitar1} alt="Young musician with guitar" className="pixel-border pixel-shadow w-28 h-28 md:w-36 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={youngSmile} alt="Young artist" className="pixel-border pixel-shadow w-28 h-28 md:w-36 md:h-36 object-cover rounded-lg hover:scale-105 transition-transform" />
+                </div>
+              </div>
+              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
+            </div>
+
+            {/* Segment 2: The Dedication */}
+            <div className="relative mb-12 md:mb-16">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                <div className="flex gap-3 justify-center">
+                  <img src={youngPractice} alt="Practicing music" className="pixel-border pixel-shadow w-36 h-48 md:w-44 md:h-56 object-cover rounded-lg hover:scale-105 transition-transform" />
+                  <img src={professionalPerformance} alt="Professional performance" className="pixel-border pixel-shadow w-36 h-48 md:w-44 md:h-56 object-cover rounded-lg hover:scale-105 transition-transform" />
+                </div>
+                <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                  <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🎸 The Dedication</h3>
+                  <p className="font-secondary text-base md:text-lg leading-relaxed">
+                    When people were mining and buying Bitcoin, I was practicing music for well over 16 hours a day (huh ....). 
+                    At some point, I realized that teaching wasn't my passion (even though I still mentor many people), so I decided 
+                    to explore different paths to find out what was.
+                  </p>
+                </div>
+              </div>
+              <div className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{ transform: 'translate(-50%, -50%) rotate(45deg)' }} />
+            </div>
+
+            {/* Segment 3: The Discovery */}
+            <div className="relative mb-12 md:mb-16">
+              <div className="pixel-border pixel-shadow bg-accent/10 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                <h3 className="font-primary text-xl md:text-2xl text-accent mb-4">💡 The Discovery</h3>
+                <p className="font-secondary text-base md:text-lg leading-relaxed">
+                  I discovered marketing, and content immediately caught my attention (well, I am quite the storyteller, right?). 
+                  I started writing blogs, landing page and webpage copy, emails, and LinkedIn posts. The blogs started ranking #1 
+                  and #0 on Google, landing page conversion rates tripled, emails started getting too many signups, and LinkedIn 
+                  posts started generating leads.
+                </p>
+              </div>
+              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
+            </div>
+
+            {/* Segment 4: Tech Immersion */}
+            <div className="relative mb-12 md:mb-16">
+              <div className="pixel-border pixel-shadow bg-card/80 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🚀 Tech Immersion</h3>
+                <p className="font-secondary text-base md:text-lg leading-relaxed">
+                  My technology nerdiness allowed me to work with clients across various tech sectors, including FinTech, PropTech, 
+                  SaaS, MarCom, Cloud Infrastructure, Cybersecurity, and Software Development.
+                </p>
+              </div>
+              <div className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{ transform: 'translate(-50%, -50%) rotate(45deg)' }} />
+            </div>
+
+            {/* Segment 5: Present Day */}
+            <div className="relative">
+              <div className="pixel-border pixel-shadow bg-secondary/10 border-secondary/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">📊 Present Day</h3>
+                <p className="font-secondary text-base md:text-lg leading-relaxed mb-4">
+                  Recently, I have immersed myself in finance, economics, and especially Web3, blockchain, and cryptocurrency 
+                  research analysis. As a former math nerd, I can connect numbers to narratives and translate data into insight 
+                  and strategy.
+                </p>
+                <p className="font-secondary text-base md:text-lg leading-relaxed text-accent font-medium italic border-l-4 border-accent pl-4">
+                  When I'm not working (does that even happen?), I'm sipping on too much specialty coffee and working. Yes, I'm 
+                  working even when I'm not.
+                </p>
+              </div>
+              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
             </div>
           </div>
 
