@@ -45,12 +45,14 @@ export function WorkFilter({
     const selectedCount = selectedTags.length;
     const [isOpen, setIsOpen] = useState(false);
     
-    const handleTagClick = (tag: string) => {
+    const handleTagClick = (e: React.MouseEvent, tag: string) => {
+      e.preventDefault();
+      e.stopPropagation();
       onFilterChange(category, tag);
     };
     
     return (
-      <Popover open={isOpen} onOpenChange={setIsOpen}>
+      <Popover open={isOpen} onOpenChange={setIsOpen} modal={false}>
         <PopoverTrigger asChild>
           <Button 
             variant="outline" 
@@ -88,7 +90,7 @@ export function WorkFilter({
                 return (
                   <Badge
                     key={tag}
-                    onClick={() => handleTagClick(tag)}
+                    onClick={(e) => handleTagClick(e, tag)}
                     className={`
                       cursor-pointer font-secondary text-xs pixel-border transition-all
                       ${isSelected 
