@@ -6,6 +6,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import testimonialsBg from "@/assets/testimonials-bg-pixel.png";
 import trinaMoitra from "@/assets/testimonials/trina-moitra.png";
 import parandSh from "@/assets/testimonials/parand-sh.png";
+import alirezaKhorshidi from "@/assets/testimonials/alireza-khorshidi.png";
 import avatar1 from "@/assets/testimonials/avatar-1.png";
 import avatar2 from "@/assets/testimonials/avatar-2.png";
 import avatar3 from "@/assets/testimonials/avatar-3.png";
@@ -90,18 +91,27 @@ const Testimonials = () => {
       caseStudyUrl: "#",
     },
     {
+      name: "Alireza Khorshidi",
+      role: "Head of Growth & Lifecycle Marketing, Roomvu",
+      content:
+        "Armin approached cold email with a level of discipline that made a measurable impact on our pipeline. He developed targeting logic, personalization angles, and value-led messaging that aligned tightly with our ICPs. His ability to combine concise copy with relevant insights helped our campaigns stand out in crowded inboxes. He didn't just write strong emails; he built sequences that generated predictable registrations with prospects across multiple segments. His work contributed directly to higher outbound engagement and stronger funnel activity for the team.",
+      rating: 5,
+      avatar: alirezaKhorshidi,
+      caseStudyUrl: "#",
+    },
+  ];
+
+  const regularTestimonials = [
+    // Testimonials with case studies first
+    {
       name: "Parand Sh.",
       role: "Business Owner",
       content:
         "The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%. The quality of the delivered content has been excellent. It has definitely exceeded my expectations. Our collaboration has been an absolute pleasure, a decision I would make over and over again. They made sure that all my requirements were understood fully and executed flawlessly.",
       rating: 5,
       avatar: parandSh,
-      caseStudyUrl: "#", // Placeholder for case study link
+      caseStudyUrl: "#",
     },
-  ];
-
-  const regularTestimonials = [
-    // Testimonials with case studies first
     {
       name: "Mehdi Rahmaninia",
       role: "Founder, CEO, and Marketing Management Consultant",
