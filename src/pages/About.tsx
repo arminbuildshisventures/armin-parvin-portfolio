@@ -56,6 +56,53 @@ export default function About() {
             </button>
           </div>
 
+          {/* Personal Story Section */}
+          <div className="my-16 flex items-center gap-4">
+            <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-secondary to-transparent" />
+            <span className="font-primary text-xl md:text-2xl text-secondary pixel-border bg-card px-6 py-2">
+              ◆ The Journey ◆
+            </span>
+            <div className="h-[2px] flex-1 bg-gradient-to-r from-secondary via-secondary to-transparent" />
+          </div>
+
+          <div className="pixel-border pixel-shadow bg-accent/5 border-accent/30 p-8 mb-16 max-w-4xl mx-auto hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+            <div className="space-y-6 font-secondary text-base md:text-lg leading-relaxed">
+              <p>
+                I come from an artistic family, with my mom being a graphic designer and painter, and my dad an illustrator. 
+                Music made me thrive, so I went on to become a professional Classical and Flamenco guitar player and instructor. 
+                When people were mining and buying Bitcoin, I was practicing music for well over 16 hours a day (huh ....).
+              </p>
+              
+              <p>
+                At some point, I realized that teaching wasn't my passion (even though I still mentor many people), so I decided 
+                to explore different paths to find out what was. I discovered marketing, and content immediately caught my 
+                attention (well, I am quite the storyteller, right?).
+              </p>
+              
+              <p>
+                I started writing blogs, landing page and webpage copy, emails, and LinkedIn posts. The blogs started ranking #1 
+                and #0 on Google, landing page conversion rates tripled, emails started getting too many signups, and LinkedIn 
+                posts started generating leads.
+              </p>
+              
+              <p>
+                My technology nerdiness allowed me to work with clients across various tech sectors, including FinTech, PropTech, 
+                SaaS, MarCom, Cloud Infrastructure, Cybersecurity, and Software Development.
+              </p>
+              
+              <p>
+                Recently, I have immersed myself in finance, economics, and especially Web3, blockchain, and cryptocurrency 
+                research analysis. As a former math nerd, I can connect numbers to narratives and translate data into insight 
+                and strategy.
+              </p>
+              
+              <p className="text-accent font-medium italic">
+                When I'm not working (does that even happen?), I'm sipping on too much specialty coffee and working. Yes, I'm 
+                working even when I'm not.
+              </p>
+            </div>
+          </div>
+
           <Tabs defaultValue="experience" className="w-full">
             <TabsList className="grid sm:grid-cols-5 grid-cols-3 mb-8 pixel-border h-auto gap-2 p-2 bg-card/50">
               <TabsTrigger
