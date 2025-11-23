@@ -654,32 +654,35 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                     
                     <p className="font-secondary text-sm mb-4">{project.description}</p>
                     
-                    <div className="pixel-border bg-secondary/20 px-3 py-2 mb-4">
-                      <p className="font-secondary text-xs font-semibold">{project.results}</p>
-                    </div>
-
-                    {/* Action Buttons */}
-                    {(project.downloadUrl || project.viewImageUrl) && (
-                      <div className="flex gap-2 mb-4">
-                        {project.downloadUrl && (
-                          <a
-                            href={project.downloadUrl}
-                            download
-                            className="pixel-border bg-accent/20 text-accent px-3 py-2 text-xs font-secondary hover:bg-accent/30 transition-colors"
-                          >
-                            Download PDF
-                          </a>
-                        )}
-                        {project.viewImageUrl && (
-                          <button
-                            onClick={() => setViewImageUrl(project.viewImageUrl!)}
-                            className="pixel-border bg-primary/20 text-primary px-3 py-2 text-xs font-secondary hover:bg-primary/30 transition-colors"
-                          >
-                            View Diagram
-                          </button>
-                        )}
+                    {/* Bottom section with results and buttons */}
+                    <div className="mt-auto space-y-4">
+                      <div className="pixel-border bg-secondary/20 px-3 py-2">
+                        <p className="font-secondary text-xs font-semibold">{project.results}</p>
                       </div>
-                    )}
+
+                      {/* Action Buttons */}
+                      {(project.downloadUrl || project.viewImageUrl) && (
+                        <div className="flex gap-2">
+                          {project.downloadUrl && (
+                            <a
+                              href={project.downloadUrl}
+                              download
+                              className="pixel-border bg-accent/20 text-accent px-3 py-2 text-xs font-secondary hover:bg-accent/30 transition-colors"
+                            >
+                              Download PDF
+                            </a>
+                          )}
+                          {project.viewImageUrl && (
+                            <button
+                              onClick={() => setViewImageUrl(project.viewImageUrl!)}
+                              className="pixel-border bg-primary/20 text-primary px-3 py-2 text-xs font-secondary hover:bg-primary/30 transition-colors"
+                            >
+                              View Diagram
+                            </button>
+                          )}
+                        </div>
+                      )}
+                    </div>
 
                   </PixelCard>
                 ))
