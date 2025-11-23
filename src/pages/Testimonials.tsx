@@ -36,7 +36,7 @@ const Testimonials = () => {
         "Armin impressed me with his attention to detail & his knowledge of the industry from day 1. We needed someone to take on the production of bottom-of-the-funnel focused content and to seed Convert's name in the SERPs for our brand new features. Our collaboration was very pleasant. Renee Content has a good process and they really give 110% to understand your requirements. Thank you for being such consummate professionals!",
       rating: 5,
       avatar: trinaMoitra,
-      caseStudyUrl: "#",
+      caseStudyUrl: "/work?case=convert",
     },
     {
       name: "Alireza Khorshidi",
@@ -45,7 +45,7 @@ const Testimonials = () => {
         "Armin approached cold email with a level of discipline that made a measurable impact on our pipeline. He developed targeting logic, personalization angles, and value-led messaging that aligned tightly with our ICPs. His ability to combine concise copy with relevant insights helped our campaigns stand out in crowded inboxes. He didn't just write strong emails; he built sequences that generated predictable registrations with prospects across multiple segments. His work contributed directly to higher outbound engagement and stronger funnel activity for the team.",
       rating: 5,
       avatar: alirezaKhorshidi,
-      caseStudyUrl: "#",
+      caseStudyUrl: "/work?case=roomvu",
     },
   ];
 
@@ -58,7 +58,7 @@ const Testimonials = () => {
         "The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%. The quality of the delivered content has been excellent. It has definitely exceeded my expectations. Our collaboration has been an absolute pleasure, a decision I would make over and over again. They made sure that all my requirements were understood fully and executed flawlessly.",
       rating: 5,
       avatar: parandSh,
-      caseStudyUrl: "#",
+      caseStudyUrl: "/work?case=influencer-marketing-business",
     },
     {
       name: "Mehdi Rahmaninia",
@@ -66,7 +66,7 @@ const Testimonials = () => {
       content: "They really deliver what they are promising. I had an increased traffic since the contents were rich in terms of SEO, and the copy was good too. So, in the articles that were targeting my bottom funnel, the content and copy were converting pretty well. The overall experience of working with Renée Content was pretty great, and I was confident that they understood what I needed from them every step of the way.",
       rating: 5,
       avatar: avatar3,
-      caseStudyUrl: "#",
+      caseStudyUrl: "/work?case=rahmaninia-digital-marketing",
     },
     {
       name: "Niloofar Sh.",
@@ -74,7 +74,7 @@ const Testimonials = () => {
       content: "The quality of the content they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations. They went above and beyond to deliver content that genuinely resonated with my audience and contributed to our overall business growth and success.",
       rating: 5,
       avatar: avatar6,
-      caseStudyUrl: "#",
+      caseStudyUrl: "/work?case=digital-marketing-agency",
     },
     {
       name: "Negar Farazmand",
@@ -82,7 +82,7 @@ const Testimonials = () => {
       content: "Armin is smart and a fast learner. His knowledge in many fields helps him find his way in almost any role you give him. Moreover, Armin's ambition and enthusiasm are absolutely remarkable, which lead him to achieve continued progress. His technical skills, coding knowledge, and brilliant ideas were a great help to the team. Working with Armin on the same team was a great experience.",
       rating: 5,
       avatar: avatar7,
-      caseStudyUrl: "#",
+      caseStudyUrl: "/work?case=watchthemlive",
     },
     {
       name: "Mahmoud Valanejad",
@@ -90,7 +90,7 @@ const Testimonials = () => {
       content: "I think they really care more about your business than you do. They are really experienced and they have a great customer support. You know, you can leave your business to them without any concern, and that's the point.",
       rating: 5,
       avatar: avatar9,
-      caseStudyUrl: "#",
+      caseStudyUrl: "/work?case=mv-production",
     },
     {
       name: "Shadi V.",
@@ -98,7 +98,7 @@ const Testimonials = () => {
       content: "In fact, our results were beyond my wildest dreams. Our website traffic skyrocketed, and we witnessed an impressive 3-fold increase in leads. Our content was engaging, informative, and perfectly aligned with our brand's message.",
       rating: 5,
       avatar: shadiAvatar,
-      caseStudyUrl: "#",
+      caseStudyUrl: "/work?case=boutique",
     },
     {
       name: "Gabbie Sanchez",
