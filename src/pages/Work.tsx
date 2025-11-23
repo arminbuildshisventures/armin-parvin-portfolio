@@ -74,6 +74,7 @@ export default function Work() {
   const [showFullInterview, setShowFullInterview] = useState(false);
   const [viewImageUrl, setViewImageUrl] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<string>("case-studies");
+  const [highlightedWorkSlug, setHighlightedWorkSlug] = useState<string | null>(null);
   
   // Filter states
   const [selectedWorkTypes, setSelectedWorkTypes] = useState<string[]>([]);
@@ -126,16 +127,30 @@ export default function Work() {
         setSearchParams({});
       }
     } else if (workSlug) {
-      // For work items, just switch to the tab
+      // For work items, switch to tab and highlight
       const workItem = findWorkItemBySlug(workSlug);
       if (workItem) {
         setActiveTab('featured-work');
+        setHighlightedWorkSlug(workSlug);
+        
+        // Scroll to the work item after a brief delay to ensure tab switch
+        setTimeout(() => {
+          const element = document.getElementById(`work-${workSlug}`);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 300);
+        
+        // Clear highlight after 3 seconds
+        setTimeout(() => {
+          setHighlightedWorkSlug(null);
+        }, 3000);
       } else {
         // Invalid slug, clear parameter
         setSearchParams({});
       }
     }
-  }, [searchParams]);
+  }, [searchParams, setSearchParams]);
 
   // Update click handlers to add URL param
   const handleCaseStudyClick = (caseStudy: CaseStudy) => {
@@ -736,6 +751,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/how-when-should-you-pay-florida-bitcoin-taxes.pdf",
     },
     {
+      slug: "top-5-global-havens-bitcoin-taxes",
       title: "Top 5 Global Havens to Avoid Taxes on Bitcoin",
       description: "Analysis of five international tax havens offering favorable cryptocurrency tax treatment, helping Bitcoin investors understand legal tax optimization strategies.",
       results: "International Tax Planning | Bitcoin Tax Strategy | Global Opportunities",
@@ -745,6 +761,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/top-5-global-havens-avoid-taxes-bitcoin.pdf",
     },
     {
+      slug: "characteristics-top-crypto-tax-software",
       title: "Characteristics of Top Crypto Tax Software",
       description: "In-depth review of essential features and capabilities to look for when selecting cryptocurrency tax software for accurate reporting and compliance.",
       results: "Software Evaluation | Tax Tool Selection | Compliance Technology",
@@ -754,6 +771,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/characteristics-top-crypto-tax-software.pdf",
     },
     {
+      slug: "common-questions-nft-tax-accountant",
       title: "Common Questions to Ask Your NFT Tax Accountant",
       description: "Essential questions NFT holders should ask their tax accountants to ensure proper handling of NFT taxation and compliance requirements.",
       results: "NFT Tax Guidance | Accountant Selection | Tax Preparation",
@@ -763,6 +781,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/common-questions-nft-tax-accountant.pdf",
     },
     {
+      slug: "which-crypto-tax-software-best",
       title: "Which Crypto Tax Software is Best",
       description: "Comprehensive comparison of leading cryptocurrency tax software platforms, evaluating features, pricing, and effectiveness for different investor needs.",
       results: "Software Comparison | Platform Analysis | Best Practices",
@@ -772,6 +791,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/which-crypto-tax-software-best.pdf",
     },
     {
+      slug: "crypto-tax-software-manage-income-pro",
       title: "Crypto Tax Software: Manage Your Crypto Income Like a Pro",
       description: "Expert guide on leveraging cryptocurrency tax software to efficiently manage crypto income, track transactions, and maximize tax deductions.",
       results: "Income Management | Tax Optimization | Professional Strategies",
@@ -781,6 +801,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/crypto-tax-software-manage-income-pro.pdf",
     },
     {
+      slug: "surety-bond-freight-brokers",
       title: "What Is a Surety Bond for Freight Brokers? Things to Know",
       description: "Essential guide covering surety bond requirements, types (BMC-84 and BMC-85), and importance for freight brokers starting their brokerage business.",
       results: "Freight Broker Education | Compliance Guide | Risk Management",
@@ -790,6 +811,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/surety-bond-freight-brokers.pdf",
     },
     {
+      slug: "what-do-freight-brokers-do",
       title: "What Do Freight Brokers Do & How To Hire Them",
       description: "Comprehensive overview of freight broker responsibilities and step-by-step guide to hiring the right broker for your shipping needs.",
       results: "Industry Education | Hiring Guide | Freight Logistics",
@@ -799,6 +821,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/what-do-freight-brokers-do.pdf",
     },
     {
+      slug: "what-is-load-board",
       title: "What Is a Load Board & Its Importance",
       description: "Detailed explanation of load boards and their critical role in connecting shippers with carriers in the freight industry.",
       results: "Freight Technology | Industry Education | Logistics Platform",
@@ -808,6 +831,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/what-is-load-board.pdf",
     },
     {
+      slug: "freight-brokers-license-guide",
       title: "How Do I Get My Freight Broker's License? A Step-by-Step Guide",
       description: "Complete step-by-step guide to obtaining your freight broker license, covering requirements, processes, and starting your brokerage business.",
       results: "License Guide | Freight Broker Career | Compliance Process",
@@ -817,6 +841,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/freight-brokers-license-guide.pdf",
     },
     {
+      slug: "investors-real-estate-marketing-companies",
       title: "4 Things Investors Look for in Real Estate Marketing Companies",
       description: "Comprehensive guide highlighting key factors investors consider when choosing real estate marketing companies, from digital expertise to ROI tracking.",
       results: "Real Estate Marketing Education | Investor Guide | Marketing Strategy",
@@ -826,6 +851,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/investors-real-estate-marketing-companies.pdf",
     },
     {
+      slug: "large-cap-investment-opportunity",
       title: "Large-Cap Investment Opportunity - Short-Term Outlook (3-Months)",
       description: "In-depth cryptocurrency research analysis examining large-cap investment opportunities with comprehensive market analysis and 3-month short-term outlook projections.",
       results: "Cryptocurrency Market Research | Investment Analysis | Technical Analysis",
@@ -835,6 +861,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/large-cap-investment-opportunity.pdf",
     },
     {
+      slug: "losing-leads-bad-copy-carousel",
       title: "Want to Keep Losing Leads With Bad Copy?",
       description: "LinkedIn carousel post breaking down the critical mistakes in copywriting that cause businesses to lose leads and how to fix them with proven conversion principles.",
       results: "Marketing Education | Lead Generation | Copywriting Tips",
@@ -844,6 +871,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/losing-leads-bad-copy-carousel.pdf",
     },
     {
+      slug: "saas-welcome-emails-carousel",
       title: "Not All SaaS Welcome Emails Work",
       description: "LinkedIn carousel analyzing what makes SaaS welcome emails effective, with examples of common pitfalls and best practices for onboarding sequences.",
       results: "Email Marketing | SaaS Strategy | User Onboarding",
@@ -853,6 +881,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/saas-welcome-emails-carousel.pdf",
     },
     {
+      slug: "saas-burn-50k-content-carousel",
       title: "Reason Most SaaS Startups Burn $50K on Content",
       description: "LinkedIn carousel revealing the costly content marketing mistakes SaaS startups make and strategic approaches to maximize content ROI.",
       results: "Content Strategy | SaaS Marketing | Budget Optimization",
@@ -862,6 +891,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/saas-burn-50k-content-carousel.pdf",
     },
     {
+      slug: "content-must-have-purpose-carousel",
       title: "Content Must Have Purpose",
       description: "LinkedIn carousel exploring the fundamental principle that all effective content needs clear strategic purpose aligned with business objectives.",
       results: "Content Strategy | Marketing Philosophy | Business Goals",
@@ -871,6 +901,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/content-must-have-purpose-carousel.pdf",
     },
     {
+      slug: "jasmin-alic-killer-hooks-carousel",
       title: "5 Killer Hooks Jasmin Alic Wrote to Double His Results",
       description: "LinkedIn carousel analyzing five high-performing copywriting hooks from Jasmin Alic that dramatically improved engagement and conversion rates.",
       results: "Copywriting | Hook Writing | Engagement Strategy",
@@ -880,6 +911,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/jasmin-alic-killer-hooks-carousel.pdf",
     },
     {
+      slug: "future-content-marketing-carousel",
       title: "The Future of Content Marketing",
       description: "LinkedIn carousel exploring emerging trends, technologies, and strategies shaping the future landscape of content marketing.",
       results: "Industry Trends | Content Strategy | Future Planning",
@@ -889,6 +921,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/future-content-marketing-carousel.pdf",
     },
     {
+      slug: "rise-storytelling-content-carousel",
       title: "The Rise of Storytelling in Content Creation",
       description: "LinkedIn carousel examining how storytelling has become essential in content marketing and techniques for crafting compelling narratives.",
       results: "Storytelling | Content Creation | Audience Engagement",
@@ -898,6 +931,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/rise-storytelling-content-carousel.pdf",
     },
     {
+      slug: "convert-traffic-carousel",
       title: "Can't Convert Your Traffic?",
       description: "LinkedIn carousel addressing common conversion challenges and proven strategies to turn website visitors into customers through strategic copywriting and messaging.",
       results: "Conversion Optimization | Traffic Strategy | Sales Copy",
@@ -907,6 +941,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/convert-traffic-carousel.pdf",
     },
     {
+      slug: "jessica-horkan-linkedin-revamp",
       title: "Jessica Horkan - LinkedIn Profile Revamp",
       description: "Complete LinkedIn profile transformation for Jessica Horkan, Co-Founder at empatiX Consulting. Transformed generic profile into compelling professional brand showcasing expertise in customer experience and growth strategies.",
       results: "Profile Optimization | Professional Branding | Personal Marketing",
@@ -917,6 +952,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       beforeAfterImage: "/work/jessica-horkan-before-after.png",
     },
     {
+      slug: "jamila-musayeva-linkedin-revamp",
       title: "Jamila Musayeva - LinkedIn Profile Revamp",
       description: "Strategic LinkedIn profile redesign for Jamila Musayeva, Etiquette Consultant & Author with 1M YouTube subscribers. Elevated profile to reflect expertise, elegance, and thought leadership in modern etiquette.",
       results: "Personal Brand Enhancement | Thought Leadership | Professional Positioning",
@@ -927,6 +963,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       beforeAfterImage: "/work/jamila-musayeva-before-after.png",
     },
     {
+      slug: "copywriting-you-need-infographic",
       title: "You Don't Need vs. You Just Need - Copywriting Essentials",
       description: "LinkedIn infographic contrasting common copywriting misconceptions with what truly drives results: precise language, structured copy, and strategic messaging.",
       results: "Copywriting Principles | Marketing Strategy | Brand Voice",
@@ -936,6 +973,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "/work/copywriting-you-need-infographic.png",
     },
     {
+      slug: "email-marketing-tips-infographic",
       title: "8 Powerful Tips for High-Impact Marketing Emails",
       description: "LinkedIn infographic breaking down essential email marketing strategies: hyper-personalization, compelling subject lines, storytelling, A/B testing, and mobile-first design.",
       results: "Email Marketing | Conversion Optimization | Engagement Strategy",
@@ -945,6 +983,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "/work/email-marketing-tips-infographic.png",
     },
     {
+      slug: "content-writing-mistakes-infographic",
       title: "4 Layers of Mistakes in Content Writing",
       description: "LinkedIn infographic visualizing the hierarchy of content writing mistakes from surface-level errors to strategic misalignment, with actionable guidance for improvement.",
       results: "Content Quality | Writing Skills | Strategic Communication",
@@ -954,6 +993,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "/work/content-writing-mistakes-infographic.png",
     },
     {
+      slug: "interest-rate-forecast-email",
       title: "2025 Interest Rate Forecast: Economic Balancing Act",
       description: "Marketing email for Roomvu analyzing 2025 interest rate predictions and their impact on the US housing market. Combines economic insights with actionable guidance for real estate professionals navigating rate fluctuations.",
       results: "Market Analysis | Economic Insights | Real Estate Strategy",
@@ -963,6 +1003,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/interest-rate-forecast-email.html",
     },
     {
+      slug: "tiny-home-market-email",
       title: "Global Tiny Home Market Set for Explosive Growth",
       description: "Marketing email for Roomvu exploring the explosive growth trajectory of the tiny home market in US real estate. Highlights market trends, investment opportunities, and the shift toward minimalist living.",
       results: "Market Trends | Investment Analysis | Industry Insights",
@@ -972,6 +1013,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/tiny-home-market-email.html",
     },
     {
+      slug: "exit-realty-twitter-email",
       title: "EXIT Realty West Midtown: Twitter Lead Generation Strategy",
       description: "Marketing email for Roomvu demonstrating how EXIT Realty West Midtown leveraged Twitter/X for real estate lead generation. Showcases social media marketing tactics and engagement strategies for realtors.",
       results: "Social Media Strategy | Lead Generation | Platform Optimization",
@@ -981,6 +1023,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/exit-realty-twitter-email.html",
     },
     {
+      slug: "nordic-defender-it-sikkerhetsdagen",
       title: "Nordic Defender at IT-Sikkerhetsdagen",
       description: "Press release announcing Nordic Defender's participation at IT-Sikkerhetsdagen event in Copenhagen, showcasing cybersecurity solutions to government organizations and industry peers.",
       results: "Event Participation | Market Visibility | Industry Networking",
@@ -990,6 +1033,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/nordic-defender-at-it-sikkerhetsdagen",
     },
     {
+      slug: "nordic-defender-expanding-norway",
       title: "Nordic Defender Expanding to Norway",
       description: "Press release announcing Nordic Defender's expansion into Norway with a profitable cybersecurity contract, extending global reach and cementing leadership in the Nordic cybersecurity market.",
       results: "Market Expansion | International Growth | Partnership Announcement",
@@ -999,6 +1043,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/nordic-defender-expanding-to-norway",
     },
     {
+      slug: "securebug-rebrand",
       title: "SecureBug Announces Rebrand",
       description: "Press release announcing SecureBug's rebrand to Nordic Defender, reflecting the company's evolution from offensive to comprehensive offensive and defensive security solutions.",
       results: "Brand Evolution | Company Milestone | Strategic Positioning",
@@ -1008,6 +1053,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/securebug-announces-rebrand",
     },
     {
+      slug: "adplist-dont-settle-conference",
       title: "ADPList Don't Settle Conference - Guest Speaker Presentation",
       description: "Guest speaker presentation at ADPList's Don't Settle Conference 2025. Shared insights on content marketing, personal branding, and professional growth strategies with the ADPList community.",
       results: "Thought Leadership | Community Education | Professional Speaking",
@@ -1017,6 +1063,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       downloadUrl: "/work/adplist-dont-settle-conference.pdf",
     },
     {
+      slug: "new-ceo-vincent-heidarinia",
       title: "New CEO Vincent Heidarinia",
       description: "Press release announcing Vincent Heidarinia's appointment as CEO of Nordic Defender, highlighting his journey from founder to chief executive officer.",
       results: "Leadership Announcement | Executive Promotion | Company Growth",
@@ -1026,6 +1073,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/new-ceo-vincent-heidarinia",
     },
     {
+      slug: "mahsima-jalooli-new-coo",
       title: "Mahsima Jalooli as New COO",
       description: "Press release announcing Mahsima Jalooli's promotion from Technical Account Manager to Chief Operating Officer, bringing operational excellence to Nordic Defender.",
       results: "Leadership Announcement | Executive Promotion | Operational Growth",
@@ -1035,6 +1083,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/nordic-defender-appointed-mahsima-jalooli-as-the-new-coo",
     },
     {
+      slug: "new-head-marketing-kaveh-ghiassi",
       title: "New Head of Marketing Kaveh Ghiassi",
       description: "Press release announcing Kaveh Ghiassi joining Nordic Defender as Head of Marketing, bringing extensive experience to elevate the company's marketing strategies.",
       results: "Leadership Announcement | Marketing Expansion | Team Growth",
@@ -1044,6 +1093,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/new-head-of-marketing-kaveh-ghiassi",
     },
     {
+      slug: "new-sales-manager-jim-sadjeff",
       title: "New Sales Manager Jim Sadjeff",
       description: "Press release announcing Jim Sadjeff's appointment as Head of Global Sales, bringing proven track record from Heimdal Security to drive Nordic Defender's sales growth.",
       results: "Leadership Announcement | Sales Expansion | Global Growth",
@@ -1053,6 +1103,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/new-sales-manager-jim-sadjeff",
     },
     {
+      slug: "miro-novosel-account-executive",
       title: "Miro Novosel as Account Executive",
       description: "Press release announcing Miro Novosel's appointment as Account Executive Manager, bringing strong background in IT growth strategies to expand Nordic Defender's business.",
       results: "Team Expansion | Sales Growth | Market Development",
@@ -1062,6 +1113,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/nordic-defender-looks-forward-to-new-prospects-with-miro-novosel-as-account-executive",
     },
     {
+      slug: "marcel-van-den-boomen-appointed",
       title: "Marcel Van Den Boomen Appointed",
       description: "Press release announcing Marcel Van Den Boomen joining as Account Executive with 24+ years sales experience, expanding Nordic Defender to Netherlands and DACH region.",
       results: "International Expansion | Sales Leadership | Regional Growth",
@@ -1071,6 +1123,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/marcel-van-den-boomen-appointed-account-executive",
     },
     {
+      slug: "daniel-karimi-account-executive",
       title: "Daniel Karimi Joins as Account Executive",
       description: "Press release announcing Daniel Karimi joining Nordic Defender's sales team as Account Executive, adding extra power to the company's sales engine and expansion efforts.",
       results: "Team Expansion | Sales Growth | Market Development",
@@ -1080,6 +1133,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/daniel-karimi-joins-as-account-executive",
     },
     {
+      slug: "customer-story-stratsys",
       title: "Customer Story: Stratsys",
       description: "Case study showcasing how Nordic Defender's Next-Gen Pentest provided Stratsys with continuous pentesting, flexible attack surface coverage, and Jira integration for seamless workflow.",
       results: "Continuous Security | Workflow Integration | Client Satisfaction",
@@ -1089,6 +1143,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/customer-story-stratsys",
     },
     {
+      slug: "customer-story-aqua-robur-ab",
       title: "Customer Story: Aqua Robur AB",
       description: "Case study demonstrating how Nordic Defender ensured client compliance and data security for Aqua Robur AB's IoT devices through Next-Gen Pentest as a Service.",
       results: "Client Compliance | Data Security | Industry Adaptability",
@@ -1098,6 +1153,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/customer-story-aqua-robur-ab",
     },
     {
+      slug: "customer-story-coinlocally",
       title: "Customer Story: Coinlocally",
       description: "Case study highlighting how Nordic Defender provided comprehensive security for Coinlocally cryptocurrency exchange, protecting users' data and money from cyber threats.",
       results: "Crypto Security | Real-World Threat Response | User Protection",
@@ -1107,6 +1163,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       externalUrl: "https://nordicdefender.com/blog/customer-story-coinlocally",
     },
     {
+      slug: "customer-story-veidec-ab",
       title: "Customer Story: Veidec AB",
       description: "Case study showing how Nordic Defender's real-time portal and Next-Gen Pentest helped Veidec AB maintain business continuity while meeting budget and timeline requirements.",
       results: "Business Continuity | Real-Time Visibility | Budget Compliance",
@@ -1302,7 +1359,20 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                 </div>
               ) : (
                 filteredWork.map((project, index) => (
-                  <PixelCard key={index} className="transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg flex flex-col group relative overflow-hidden">
+                  <PixelCard 
+                    key={index} 
+                    id={project.slug ? `work-${project.slug}` : undefined}
+                    className={`transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg flex flex-col group relative overflow-hidden cursor-pointer ${
+                      highlightedWorkSlug === project.slug ? 'ring-4 ring-accent animate-pulse' : ''
+                    }`}
+                    onClick={() => {
+                      if (project.slug) {
+                        setSearchParams({ work: project.slug });
+                        setHighlightedWorkSlug(project.slug);
+                        setTimeout(() => setHighlightedWorkSlug(null), 3000);
+                      }
+                    }}
+                  >
                     {/* Gradient accent at top */}
                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent/50 via-secondary/50 to-accent/50 opacity-60 group-hover:opacity-100 transition-opacity" />
                     
