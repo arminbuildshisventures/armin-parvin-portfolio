@@ -28,8 +28,11 @@ import { motion } from "framer-motion";
 import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
 import { marqueeTestimonials } from "@/data/testimonials";
 import { useState } from "react";
+import { TextParticle } from "@/components/ui/text-particle";
+import { useIsMobile } from "@/hooks/use-mobile";
 const Index = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const isMobile = useIsMobile();
 
   const scrollToContact = () => {
     const element = document.getElementById("contact");
@@ -74,12 +77,39 @@ const Index = () => {
                 Copywriter • Ghostwriter • Content Marketer • Email Marketer
               </p>
             </div>
-            <h1 className="font-primary text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-pixel-inverted leading-tight sm:leading-relaxed px-2">
-              Words That Convert
-            </h1>
-            <p className="font-secondary text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-4">
-              Let's make your brand stand out in a skeptical market.
-            </p>
+            {isMobile ? (
+              <>
+                <h1 className="font-primary text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-pixel-inverted leading-tight sm:leading-relaxed px-2">
+                  Words That Convert
+                </h1>
+                <p className="font-secondary text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-4">
+                  Let's make your brand stand out in a skeptical market.
+                </p>
+              </>
+            ) : (
+              <>
+                <div className="h-32 w-full">
+                  <TextParticle
+                    text="Words That Convert"
+                    fontSize={80}
+                    particleColor="#FFFFFF"
+                    particleSize={2}
+                    particleDensity={4}
+                    fontFamily="var(--font-primary)"
+                  />
+                </div>
+                <div className="h-16 w-full max-w-2xl mx-auto">
+                  <TextParticle
+                    text="Let's make your brand stand out in a skeptical market."
+                    fontSize={28}
+                    particleColor="#FFFFFF"
+                    particleSize={1.5}
+                    particleDensity={5}
+                    fontFamily="var(--font-secondary)"
+                  />
+                </div>
+              </>
+            )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
               <PixelButton variant="primary" onClick={scrollToContact}>
                 Work With Me
