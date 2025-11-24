@@ -28,6 +28,7 @@ import { motion } from "framer-motion";
 import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
 import { marqueeTestimonials } from "@/data/testimonials";
 import { useState } from "react";
+import { Typewriter } from "@/components/ui/typewriter-text";
 const Index = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -78,7 +79,17 @@ const Index = () => {
               Words That Convert
             </h1>
             <p className="font-secondary text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-4">
-              Let's make your brand stand out in a skeptical market.
+              <Typewriter
+                text={[
+                  "Let's make your brand stand out in a skeptical market.",
+                  "Become the obvious choice in a skeptical market.",
+                  "Tell your unforgettable story in a skeptical market."
+                ]}
+                speed={100}
+                loop={true}
+                deleteSpeed={50}
+                delay={2000}
+              />
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
               <PixelButton variant="primary" onClick={scrollToContact}>
