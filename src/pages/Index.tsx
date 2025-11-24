@@ -28,7 +28,6 @@ import { motion } from "framer-motion";
 import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
 import { marqueeTestimonials } from "@/data/testimonials";
 import { useState } from "react";
-import { TextParticle } from "@/components/ui/text-particle";
 const Index = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -78,21 +77,9 @@ const Index = () => {
             <h1 className="font-primary text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-pixel-inverted leading-tight sm:leading-relaxed px-2">
               Words That Convert
             </h1>
-            {/* Regular text for mobile and tablet */}
-            <p className="lg:hidden font-secondary text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-4">
+            <p className="font-secondary text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-4">
               Let's make your brand stand out in a skeptical market.
             </p>
-            {/* Particle effect for desktop only */}
-            <div className="hidden lg:block h-32 max-w-2xl mx-auto">
-              <TextParticle
-                text="Let's make your brand stand out in a skeptical market."
-                fontSize={28}
-                particleColor="#e8b4b8"
-                particleSize={1.5}
-                particleDensity={4}
-                backgroundColor="transparent"
-              />
-            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
               <PixelButton variant="primary" onClick={scrollToContact}>
                 Work With Me
