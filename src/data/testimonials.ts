@@ -2,22 +2,23 @@ import trinaMoitra from "@/assets/testimonials/trina-moitra.png";
 import alirezaKhorshidi from "@/assets/testimonials/alireza-khorshidi.png";
 import parandSh from "@/assets/testimonials/parand-sh.png";
 import shadiAvatar from "@/assets/testimonials/shadi-avatar.png";
-import avatar3 from "@/assets/testimonials/avatar-3.png";
+import avatar1 from "@/assets/testimonials/avatar-1.png";
 import manaBehzad from "@/assets/testimonials/mana-behzad.png";
+import avatar2 from "@/assets/testimonials/avatar-2.png";
+import avatar3 from "@/assets/testimonials/avatar-3.png";
+import avatar4 from "@/assets/testimonials/avatar-4.png";
 import avatar5 from "@/assets/testimonials/avatar-5.png";
-import masoudRezaei from "@/assets/testimonials/masoud-rezaei.png";
+import avatar6 from "@/assets/testimonials/avatar-6.png";
 import avatar7 from "@/assets/testimonials/avatar-7.png";
 import avatar8 from "@/assets/testimonials/avatar-8.png";
 import avatar9 from "@/assets/testimonials/avatar-9.png";
 import avatar10 from "@/assets/testimonials/avatar-10.png";
 import avatar11 from "@/assets/testimonials/avatar-11.png";
-import avatar12 from "@/assets/testimonials/avatar-12.png";
+import masoudRezaei from "@/assets/testimonials/masoud-rezaei.png";
 import avatar13 from "@/assets/testimonials/avatar-13.png";
 import gabbieSanchez from "@/assets/testimonials/gabbie-sanchez.png";
 import cissyZhao from "@/assets/testimonials/cissy-zhao.png";
-import avatar1 from "@/assets/testimonials/avatar-1.png";
 import abbyNduta from "@/assets/testimonials/abby-nduta.png";
-import avatar2 from "@/assets/testimonials/avatar-2.png";
 
 export const marqueeTestimonials = [
   {
@@ -56,9 +57,9 @@ export const marqueeTestimonials = [
     author: {
       name: "Ines Cid Blasco",
       handle: "VP of Sales, Sales for Good",
-      avatar: avatar3
+      avatar: avatar1
     },
-    text: "Working with Armin was a game-changer for our content strategy. His insights and execution exceeded our expectations."
+    text: "Absolutely loved my session with Armin. You can tell he really knows his stuff: content writing. And on top of that, he genuinely wants to help."
   },
   {
     author: {
@@ -72,73 +73,73 @@ export const marqueeTestimonials = [
     author: {
       name: "Julia Doronina",
       handle: "Chief Marketing & Growth Leader, G-71",
-      avatar: avatar5
+      avatar: avatar2
     },
-    text: "Armin's strategic approach to content marketing delivered exceptional results for our growth initiatives."
+    text: "The session went great! Armin shared many insights and was very helpful in my research, also suggested solutions to the problem and assisted with evaluating the product's functionality."
   },
   {
     author: {
       name: "Mehdi Rahmaninia",
       handle: "Head of Marketing, WatchThemLive",
-      avatar: masoudRezaei
+      avatar: avatar3
     },
-    text: "The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%. They made sure that all my requirements were understood fully and executed flawlessly."
+    text: "They really deliver what they are promising. I had an increased traffic since the contents were rich in terms of SEO, and the copy was good too. They made sure that all my requirements were understood fully and executed flawlessly."
   },
   {
     author: {
       name: "Aria Sadeghian",
       handle: "CEO, Mirex Technologies",
-      avatar: avatar7
+      avatar: avatar4
     },
-    text: "Armin's technical content writing and strategic approach helped us achieve our marketing goals efficiently."
+    text: "It was a great honor to meet Armin about the barriers in our company, his sense of giving hints for solving your issues will cheer you up."
   },
   {
     author: {
       name: "Uju Okoye",
       handle: "Content Writer, Invoice.ng",
-      avatar: avatar8
+      avatar: avatar5
     },
-    text: "Learning from Armin has been invaluable. His expertise in content strategy and copywriting is remarkable."
+    text: "Armin was well-prepared and knowledgeable about content marketing. He was able to answer all of my questions and provided practical advice."
   },
   {
     author: {
       name: "Niloofar Sh.",
       handle: "Founder and CEO, Digital Marketing Agency",
-      avatar: avatar9
+      avatar: avatar6
     },
-    text: "480% increase in leads and revenue, improved personal brand visibility on LinkedIn, significant agency growth. Armin's ghostwriting services transformed our business."
+    text: "The quality of the content they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations."
   },
   {
     author: {
       name: "Mojtaba Tavazo",
       handle: "Founder and CEO, Casco Salon",
-      avatar: avatar10
+      avatar: avatar8
     },
-    text: "Armin's content strategy helped us reach our target audience effectively and grow our business."
+    text: "I'm very happy to meet Armin, and the mentoring session was enjoyable for me because Armin very professionally answered all my questions and gave me the best advice."
   },
   {
     author: {
       name: "Negar Farazmand",
       handle: "Content and SEO Manager, WatchThemLive",
-      avatar: avatar11
+      avatar: avatar7
     },
-    text: "Working with Armin on content and SEO has been a rewarding experience. His expertise is evident in every project."
+    text: "Armin is smart and a fast learner. His knowledge in many fields helps him find his way in almost any role you give him. Working with Armin was a great experience."
   },
   {
     author: {
       name: "Mahmoud Valanejad",
       handle: "Founder, Media Creation Company",
-      avatar: avatar12
+      avatar: avatar9
     },
-    text: "Business growth 105%, website traffic increased 3X, leads multiplied 3X. The quality of the delivered content has definitely exceeded my expectations."
+    text: "I think they really care more about your business than you do. They are really experienced and they have a great customer support."
   },
   {
     author: {
       name: "Mohammad Akhlaghi",
       handle: "Product Manager, Cafe Bazaar",
-      avatar: avatar13
+      avatar: avatar11
     },
-    text: "Armin's product marketing expertise and content strategy helped us effectively communicate our value proposition."
+    text: "Armin is a great person with great experience in Copywriting and SEO. I had a good meeting with him. I like to keep in touch with him in the future."
   },
   {
     author: {
@@ -160,9 +161,9 @@ export const marqueeTestimonials = [
     author: {
       name: "Luis Acoltzi",
       handle: "Founder & Art Director/Designer, Pixel Hangar",
-      avatar: avatar1
+      avatar: avatar13
     },
-    text: "Armin's creative approach and strategic thinking made our collaboration highly productive and impactful."
+    text: "Armin was great at advising on my content strategy and how to approach new business. I really appreciate the time and I look forward to the next session."
   },
   {
     author: {
@@ -176,8 +177,17 @@ export const marqueeTestimonials = [
     author: {
       name: "AmirAli Piroozbakhsh",
       handle: "Creative Director",
-      avatar: avatar2
+      avatar: avatar10
     },
-    text: "Armin's expertise in content strategy and his creative perspective brought exceptional value to our projects."
+    text: "My mentorship session with Armin Parvin was incredibly insightful. It illuminated aspects I had overlooked, lighting up the path I thought I already knew."
+  },
+  {
+    author: {
+      name: "Masoud Rezaei",
+      handle: "Social Media Specialist",
+      avatar: masoudRezaei
+    },
+    text: "Conversation was great. Armin has very high and rich knowledge and experience in the fields of content, copywriting and marketing."
   }
 ];
+
