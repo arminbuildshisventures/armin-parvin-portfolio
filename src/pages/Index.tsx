@@ -78,19 +78,21 @@ const Index = () => {
             <h1 className="font-primary text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-pixel-inverted leading-tight sm:leading-relaxed px-2">
               Words That Convert
             </h1>
-            <p className="font-secondary text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-4">
-              <Typewriter
-                text={[
-                  "Let's make your brand stand out in a skeptical market.",
-                  "Become the obvious choice in a skeptical market.",
-                  "Tell your unforgettable story in a skeptical market."
-                ]}
-                speed={100}
-                loop={true}
-                deleteSpeed={50}
-                delay={2000}
-              />
-            </p>
+            <div className="min-h-[4rem] md:min-h-0 flex items-center justify-center">
+              <p className="font-secondary text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-4">
+                <Typewriter
+                  text={[
+                    "Let's make your brand stand out in a skeptical market.",
+                    "Become the obvious choice in a skeptical market.",
+                    "Tell your unforgettable story in a skeptical market."
+                  ]}
+                  speed={100}
+                  loop={true}
+                  deleteSpeed={50}
+                  delay={2000}
+                />
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
               <PixelButton variant="primary" onClick={scrollToContact}>
                 Work With Me
