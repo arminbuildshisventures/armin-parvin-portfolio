@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { ClientLogos } from "@/components/ClientLogos";
+import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
+import { marqueeTestimonials } from "@/data/testimonials";
 import { FileText, Calendar } from "lucide-react";
 import { PixelCard } from "@/components/PixelCard";
 import insightsBg from "@/assets/insights-bg-pixel.png";
@@ -72,6 +74,13 @@ const Insights = () => {
           </div>
         </motion.div>
       </main>
+
+      {/* Testimonials Marquee */}
+      <TestimonialsSection
+        title="What Clients Say"
+        description="Trusted by marketing leaders and growing businesses worldwide"
+        testimonials={marqueeTestimonials}
+      />
 
       {/* Client Logos Section */}
       <ClientLogos />
