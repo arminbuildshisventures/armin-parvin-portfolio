@@ -27,7 +27,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 const Index = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  
+
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -43,7 +43,11 @@ const Index = () => {
       {/* Hero Section */}
       <AuroraBackground className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-20 pointer-events-none">
-          <img src={heroImage} alt="Pixel art marketing" className="w-full h-full object-cover object-[35%_bottom] md:object-center" />
+          <img
+            src={heroImage}
+            alt="Pixel art marketing"
+            className="w-full h-full object-cover object-[35%_bottom] md:object-center"
+          />
         </div>
         <motion.div
           initial={{
@@ -63,7 +67,9 @@ const Index = () => {
         >
           <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
             <div className="pixel-border bg-secondary px-3 py-2 max-w-[90vw] mx-auto">
-              <p className="font-primary text-[9px] sm:text-xs text-center leading-tight sm:whitespace-nowrap">Copywriter • Ghostwriter • Content Marketer • Email Marketer</p>
+              <p className="font-primary text-[9px] sm:text-xs text-center leading-tight sm:whitespace-nowrap">
+                Copywriter • Ghostwriter • Content Marketer • Email Marketer
+              </p>
             </div>
             <h1 className="font-primary text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-pixel-inverted leading-tight sm:leading-relaxed px-2">
               Words That Convert
@@ -72,7 +78,7 @@ const Index = () => {
               Let's make your brand stand out in a skeptical market.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
-              <PixelButton variant="primary" onClick={scrollToContact}>
+              <PixelButton variant="primary" onClick={() => window.open("https://arminparvin.me/work")}>
                 Work With Me
               </PixelButton>
               <PixelButton
@@ -83,7 +89,7 @@ const Index = () => {
                   })
                 }
               >
-                View Portfolio
+                View Work
               </PixelButton>
             </div>
           </div>
@@ -106,25 +112,26 @@ const Index = () => {
           <PixelCard>
             <div className="font-secondary text-base md:text-lg leading-relaxed">
               <p className={`mb-6 ${!isExpanded ? "md:block" : ""}`}>
-                Head of Content with <strong className="text-accent">5+ years of experience</strong> generating demand and high-quality leads in
-                SaaS and B2B Tech companies. Generated <strong className="text-accent">$12M+ in client revenue</strong>, boosted email engagement
-                (<strong className="text-accent">open rate +52%, CTOR +5%, registration +194%</strong>), and produced content{" "}
-                <strong className="text-accent">ranking #1 and #0</strong>.
+                Head of Content with <strong className="text-accent">5+ years of experience</strong> generating demand
+                and high-quality leads in SaaS and B2B Tech companies. Generated{" "}
+                <strong className="text-accent">$12M+ in client revenue</strong>, boosted email engagement (
+                <strong className="text-accent">open rate +52%, CTOR +5%, registration +194%</strong>), and produced
+                content <strong className="text-accent">ranking #1 and #0</strong>.
               </p>
-              
+
               <div className={`${isExpanded ? "block" : "hidden md:block"}`}>
                 <p className="mb-6">
-                  Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B
-                  Tech from early to growth stages.
+                  Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and
+                  B2B Tech from early to growth stages.
                 </p>
-                
+
                 <p>
                   Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to
                   narratives, and translating data into insight and strategy.
                 </p>
               </div>
-              
-              <button 
+
+              <button
                 onClick={() => setIsExpanded(!isExpanded)}
                 className="md:hidden mt-4 text-accent font-primary text-sm hover:underline"
               >
@@ -150,7 +157,7 @@ const Index = () => {
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PixelCard className="relative overflow-hidden">
-              <div 
+              <div
                 className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${emailMarketingBg})`,
@@ -169,7 +176,7 @@ const Index = () => {
             </PixelCard>
 
             <PixelCard className="relative overflow-hidden">
-              <div 
+              <div
                 className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${contentWritingBg})`,
@@ -188,7 +195,7 @@ const Index = () => {
             </PixelCard>
 
             <PixelCard className="relative overflow-hidden">
-              <div 
+              <div
                 className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${copywritingBg})`,
@@ -206,7 +213,7 @@ const Index = () => {
             </PixelCard>
 
             <PixelCard className="relative overflow-hidden">
-              <div 
+              <div
                 className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${strategyBg})`,
@@ -224,7 +231,7 @@ const Index = () => {
             </PixelCard>
 
             <PixelCard className="relative overflow-hidden">
-              <div 
+              <div
                 className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${optimizationBg})`,
@@ -242,7 +249,7 @@ const Index = () => {
             </PixelCard>
 
             <PixelCard className="relative overflow-hidden">
-              <div 
+              <div
                 className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${consultingBg})`,
@@ -278,7 +285,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Convert.com */}
             <PixelCard className="relative overflow-hidden">
-              <div 
+              <div
                 className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${convertBg})`,
@@ -293,7 +300,8 @@ const Index = () => {
                 </div>
                 <h3 className="font-primary text-sm mb-3">Convert.com: SERP Rankings Achieved</h3>
                 <p className="font-secondary text-sm leading-relaxed mb-4">
-                  Created bottom-of-funnel content strategy and wrote multi-perspective articles to establish brand presence in SERPs for new features.
+                  Created bottom-of-funnel content strategy and wrote multi-perspective articles to establish brand
+                  presence in SERPs for new features.
                 </p>
                 <div className="flex gap-2 flex-wrap">
                   <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
@@ -304,7 +312,7 @@ const Index = () => {
 
             {/* Roomvu */}
             <PixelCard className="relative overflow-hidden">
-              <div 
+              <div
                 className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${roomvuBg})`,
@@ -319,7 +327,8 @@ const Index = () => {
                 </div>
                 <h3 className="font-primary text-sm mb-3">Roomvu: 24,000+ Users Acquired</h3>
                 <p className="font-secondary text-sm leading-relaxed mb-4">
-                  Redesigned email marketing strategy with advanced segmentation and hyper-personalized campaigns, increasing weekly registrations from 170 to 500.
+                  Redesigned email marketing strategy with advanced segmentation and hyper-personalized campaigns,
+                  increasing weekly registrations from 170 to 500.
                 </p>
                 <div className="flex gap-2 flex-wrap">
                   <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
@@ -330,7 +339,7 @@ const Index = () => {
 
             {/* Nordic Defender */}
             <PixelCard className="relative overflow-hidden">
-              <div 
+              <div
                 className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${nordicBg})`,
@@ -345,7 +354,8 @@ const Index = () => {
                 </div>
                 <h3 className="font-primary text-sm mb-3">Nordic Defender: 30% Email Open Rate Increase</h3>
                 <p className="font-secondary text-sm leading-relaxed mb-4">
-                  Managed all marketing channels for Next-Gen Pentest Solution including 100+ emails, 50+ technical articles, and 43+ landing pages.
+                  Managed all marketing channels for Next-Gen Pentest Solution including 100+ emails, 50+ technical
+                  articles, and 43+ landing pages.
                 </p>
                 <div className="flex gap-2 flex-wrap">
                   <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
@@ -356,7 +366,7 @@ const Index = () => {
 
             {/* Cloudzy */}
             <PixelCard className="relative overflow-hidden">
-              <div 
+              <div
                 className="absolute inset-0 opacity-5"
                 style={{
                   backgroundImage: `url(${cloudzyBg})`,
@@ -371,7 +381,8 @@ const Index = () => {
                 </div>
                 <h3 className="font-primary text-sm mb-3">Cloudzy: #1 Rankings & 5X Conversion</h3>
                 <p className="font-secondary text-sm leading-relaxed mb-4">
-                  Developed technical blog content and landing pages achieving #1 rankings, featured snippets, 5X conversion rates, and 2,360+ users acquired.
+                  Developed technical blog content and landing pages achieving #1 rankings, featured snippets, 5X
+                  conversion rates, and 2,360+ users acquired.
                 </p>
                 <div className="flex gap-2 flex-wrap">
                   <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
