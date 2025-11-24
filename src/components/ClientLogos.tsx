@@ -31,10 +31,10 @@ export const ClientLogos = () => {
         <div className="pixel-border bg-zinc-800 backdrop-blur-sm p-8 rounded-lg relative">
           <p className="text-center text-zinc-400 font-secondary mb-6">Trusted by leading brands</p>
           <div className="relative w-full overflow-hidden">
-            <div className="flex [--gap:4rem]">
-              {[...Array(3)].map((_, setIndex) => (
-                <div key={setIndex} className="flex gap-16 flex-shrink-0 animate-marquee">
-                  {clientLogos.map((logo, index) => (
+            <div className="group flex overflow-hidden [--gap:4rem] [gap:var(--gap)] flex-row [--duration:30s]">
+              <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row">
+                {[...Array(3)].map((_, setIndex) => (
+                  clientLogos.map((logo, index) => (
                     <div
                       key={`${setIndex}-${index}`}
                       className={`flex items-center justify-center h-20 w-52 flex-shrink-0 hover:scale-110 transition-transform duration-300 ${
@@ -43,9 +43,9 @@ export const ClientLogos = () => {
                     >
                       <img src={logo.src} alt={logo.alt} className="h-14 w-auto object-contain brightness-0 invert" />
                     </div>
-                  ))}
-                </div>
-              ))}
+                  ))
+                ))}
+              </div>
             </div>
           </div>
           {/* Fade overlays */}
