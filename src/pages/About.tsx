@@ -28,31 +28,10 @@ import coffeeEspresso from "@/assets/journey/coffee-espresso.jpg";
 import coffeeHand from "@/assets/journey/coffee-hand.jpg";
 import coffeeTable1 from "@/assets/journey/coffee-table-1.jpg";
 import coffeeTable2 from "@/assets/journey/coffee-table-2.jpg";
-import { useState, useRef, useEffect } from "react";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useState } from "react";
 export default function About() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
-  
-  // Timeline scroll animation refs
-  const timelineRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [timelineHeight, setTimelineHeight] = useState(0);
-
-  useEffect(() => {
-    if (timelineRef.current) {
-      const rect = timelineRef.current.getBoundingClientRect();
-      setTimelineHeight(rect.height);
-    }
-  }, []);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 20%", "end 60%"],
-  });
-
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, timelineHeight]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -109,27 +88,9 @@ export default function About() {
             <div className="h-[2px] flex-1 bg-gradient-to-r from-secondary via-secondary to-transparent" />
           </div>
 
-          <div ref={containerRef} className="mb-16 max-w-5xl mx-auto relative">
-            {/* Connecting Thread with Scroll Animation */}
-            <div 
-              ref={timelineRef}
-              className="absolute left-1/2 top-0 bottom-0 w-[2px] hidden md:block overflow-hidden"
-              style={{ 
-                transform: 'translateX(-50%)',
-                background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--secondary)) 10%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 90%, transparent 100%)',
-                maskImage: 'linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)',
-                WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)'
-              }}
-            >
-              <motion.div
-                style={{
-                  height: heightTransform,
-                  opacity: opacityTransform,
-                  background: 'linear-gradient(to top, hsl(var(--accent)) 0%, hsl(var(--secondary)) 40%, transparent 100%)'
-                }}
-                className="absolute inset-x-0 top-0 w-[2px] rounded-full"
-              />
-            </div>
+          <div className="mb-16 max-w-5xl mx-auto relative">
+            {/* Connecting Thread */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-secondary via-accent to-secondary hidden md:block" style={{ transform: 'translateX(-50%)' }} />
             
             {/* Segment 1: Artistic Roots */}
             <div className="relative mb-12 md:mb-16">
