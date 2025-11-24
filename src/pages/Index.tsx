@@ -49,9 +49,8 @@ const Index = () => {
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <img
             src={heroImage}
-            alt="Pixel art marketing professional"
+            alt="Pixel art marketing"
             className="w-full h-full object-cover object-[35%_bottom] md:object-center"
-            fetchPriority="high"
           />
         </div>
         <motion.div

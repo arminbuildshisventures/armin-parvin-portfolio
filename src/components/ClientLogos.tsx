@@ -40,7 +40,7 @@ export const ClientLogos = () => {
                       logo.alt === "WP SMS" || logo.alt === "Lorenzo CPA" ? "px-10" : ""
                     }`}
                   >
-                    <img src={logo.src} alt={logo.alt} className="h-14 w-auto object-contain brightness-0 invert" loading="lazy" />
+                    <img src={logo.src} alt={logo.alt} className="h-14 w-auto object-contain brightness-0 invert" />
                   </div>
                 ))}
               </div>
@@ -52,7 +52,7 @@ export const ClientLogos = () => {
                       logo.alt === "WP SMS" || logo.alt === "Lorenzo CPA" ? "px-10" : ""
                     }`}
                   >
-                    <img src={logo.src} alt={logo.alt} className="h-14 w-auto object-contain brightness-0 invert" loading="lazy" />
+                    <img src={logo.src} alt={logo.alt} className="h-14 w-auto object-contain brightness-0 invert" />
                   </div>
                 ))}
               </div>
@@ -64,7 +64,7 @@ export const ClientLogos = () => {
                       logo.alt === "WP SMS" || logo.alt === "Lorenzo CPA" ? "px-10" : ""
                     }`}
                   >
-                    <img src={logo.src} alt={logo.alt} className="h-14 w-auto object-contain brightness-0 invert" loading="lazy" />
+                    <img src={logo.src} alt={logo.alt} className="h-14 w-auto object-contain brightness-0 invert" />
                   </div>
                 ))}
               </div>

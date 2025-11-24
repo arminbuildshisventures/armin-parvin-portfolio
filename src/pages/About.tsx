@@ -105,10 +105,10 @@ export default function About() {
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-3 order-2 md:order-2">
-                  <img src={youngGuitar1} alt="Young musician with guitar" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngGuitar1, alt: "Young musician with guitar" })} loading="lazy" />
-                  <img src={youngSmile} alt="Young artist" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngSmile, alt: "Young artist" })} loading="lazy" />
-                  <img src={youngPractice} alt="Practicing music" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngPractice, alt: "Practicing music" })} loading="lazy" />
-                  <img src={youngGlasses} alt="Young portrait with glasses" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngGlasses, alt: "Young portrait with glasses" })} loading="lazy" />
+                  <img src={youngGuitar1} alt="Young musician with guitar" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngGuitar1, alt: "Young musician with guitar" })} />
+                  <img src={youngSmile} alt="Young artist" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngSmile, alt: "Young artist" })} />
+                  <img src={youngPractice} alt="Practicing music" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngPractice, alt: "Practicing music" })} />
+                  <img src={youngGlasses} alt="Young portrait with glasses" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngGlasses, alt: "Young portrait with glasses" })} />
                 </div>
               </div>
               <div className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
@@ -126,9 +126,9 @@ export default function About() {
                   </p>
                 </div>
                 <div className="grid grid-cols-3 gap-3 justify-center order-2 md:order-1">
-                  <img src={dedicationPiano} alt="Piano practice" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationPiano, alt: "Piano practice" })} loading="lazy" />
-                  <img src={dedicationGuitarStudio} alt="Guitar studio session" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationGuitarStudio, alt: "Guitar studio session" })} loading="lazy" />
-                  <img src={dedicationGuitarPerformance} alt="Guitar performance" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationGuitarPerformance, alt: "Guitar performance" })} loading="lazy" />
+                  <img src={dedicationPiano} alt="Piano practice" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationPiano, alt: "Piano practice" })} />
+                  <img src={dedicationGuitarStudio} alt="Guitar studio session" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationGuitarStudio, alt: "Guitar studio session" })} />
+                  <img src={dedicationGuitarPerformance} alt="Guitar performance" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationGuitarPerformance, alt: "Guitar performance" })} />
                 </div>
               </div>
               <div className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{ transform: 'translate(-50%, -50%) rotate(45deg)' }} />
@@ -149,14 +149,14 @@ export default function About() {
                 <div className="order-2 md:order-2">
                   {/* Professional portraits in a creative grid */}
                   <div className="grid grid-cols-3 gap-3 mb-3">
-                    <img src={discoveryProfessional1} alt="Professional portrait 1" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional1, alt: "Professional portrait 1" })} loading="lazy" />
-                    <img src={discoveryProfessional2} alt="Professional portrait 2" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional2, alt: "Professional portrait 2" })} loading="lazy" />
-                    <img src={discoveryProfessional3} alt="Professional portrait 3" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional3, alt: "Professional portrait 3" })} loading="lazy" />
+                    <img src={discoveryProfessional1} alt="Professional portrait 1" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional1, alt: "Professional portrait 1" })} />
+                    <img src={discoveryProfessional2} alt="Professional portrait 2" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional2, alt: "Professional portrait 2" })} />
+                    <img src={discoveryProfessional3} alt="Professional portrait 3" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional3, alt: "Professional portrait 3" })} />
                   </div>
                   {/* Team collaboration and individual portrait */}
                   <div className="grid grid-cols-2 gap-3">
-                    <img src={discoveryTeam} alt="Team collaboration" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryTeam, alt: "Team collaboration" })} loading="lazy" />
-                    <img src={discoveryProfessional4} alt="Professional portrait 4" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional4, alt: "Professional portrait 4" })} loading="lazy" />
+                    <img src={discoveryTeam} alt="Team collaboration" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryTeam, alt: "Team collaboration" })} />
+                    <img src={discoveryProfessional4} alt="Professional portrait 4" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional4, alt: "Professional portrait 4" })} />
                   </div>
                 </div>
               </div>
@@ -176,8 +176,8 @@ export default function About() {
                 <div className="order-2 md:order-1">
                   {/* Professional portraits grid */}
                   <div className="grid grid-cols-2 gap-3">
-                    <img src={professionalPortraitTech} alt="Professional portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: professionalPortraitTech, alt: "Professional portrait with hat" })} loading="lazy" />
-                    <img src={professionalPerformance} alt="Professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: professionalPerformance, alt: "Professional portrait" })} loading="lazy" />
+                    <img src={professionalPortraitTech} alt="Professional portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: professionalPortraitTech, alt: "Professional portrait with hat" })} />
+                    <img src={professionalPerformance} alt="Professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: professionalPerformance, alt: "Professional portrait" })} />
                   </div>
                 </div>
               </div>
@@ -198,11 +198,11 @@ export default function About() {
                 <div className="order-2 md:order-2">
                   {/* Present day portraits in creative grid */}
                   <div className="grid grid-cols-2 gap-3">
-                    <img src={presentDayHat} alt="Present day portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDayHat, alt: "Present day portrait with hat" })} loading="lazy" />
-                    <img src={presentDaySuit} alt="Present day professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDaySuit, alt: "Present day professional portrait" })} loading="lazy" />
+                    <img src={presentDayHat} alt="Present day portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDayHat, alt: "Present day portrait with hat" })} />
+                    <img src={presentDaySuit} alt="Present day professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDaySuit, alt: "Present day professional portrait" })} />
                   </div>
                   <div className="mt-3">
-                    <img src={presentDayChair} alt="Present day portrait with red hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDayChair, alt: "Present day portrait with red hat" })} loading="lazy" />
+                    <img src={presentDayChair} alt="Present day portrait with red hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDayChair, alt: "Present day portrait with red hat" })} />
                   </div>
                 </div>
               </div>
@@ -219,12 +219,12 @@ export default function About() {
                 
                 {/* Coffee photos grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
-                  <img src={coffeeWorkspace1} alt="Workspace with coffee" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeWorkspace1, alt: "Workspace with coffee" })} loading="lazy" />
-                  <img src={coffeeWorkspace2} alt="Outdoor workspace" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeWorkspace2, alt: "Outdoor workspace" })} loading="lazy" />
-                  <img src={coffeeEspresso} alt="Espresso shot" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeEspresso, alt: "Espresso shot" })} loading="lazy" />
-                  <img src={coffeeHand} alt="Coffee in hand" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeHand, alt: "Coffee in hand" })} loading="lazy" />
-                  <img src={coffeeTable1} alt="Coffee table setup" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeTable1, alt: "Coffee table setup" })} loading="lazy" />
-                  <img src={coffeeTable2} alt="Coffee table view" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeTable2, alt: "Coffee table view" })} loading="lazy" />
+                  <img src={coffeeWorkspace1} alt="Workspace with coffee" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeWorkspace1, alt: "Workspace with coffee" })} />
+                  <img src={coffeeWorkspace2} alt="Outdoor workspace" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeWorkspace2, alt: "Outdoor workspace" })} />
+                  <img src={coffeeEspresso} alt="Espresso shot" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeEspresso, alt: "Espresso shot" })} />
+                  <img src={coffeeHand} alt="Coffee in hand" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeHand, alt: "Coffee in hand" })} />
+                  <img src={coffeeTable1} alt="Coffee table setup" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeTable1, alt: "Coffee table setup" })} />
+                  <img src={coffeeTable2} alt="Coffee table view" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeTable2, alt: "Coffee table view" })} />
                 </div>
               </div>
             </div>
