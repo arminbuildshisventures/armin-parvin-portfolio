@@ -14,56 +14,58 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6 relative">
-            <NavLink 
-              to="/" 
-              className="font-secondary text-sm hover:text-accent transition-colors relative py-2"
-              activeClassName="before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_var(--accent)] before:transition-all before:duration-300"
-            >
-              Home
-            </NavLink>
-            <NavLink 
-              to="/about" 
-              className="font-secondary text-sm hover:text-accent transition-colors relative py-2"
-              activeClassName="before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_var(--accent)] before:transition-all before:duration-300"
-            >
-              About
-            </NavLink>
-            <NavLink 
-              to="/services" 
-              className="font-secondary text-sm hover:text-accent transition-colors relative py-2"
-              activeClassName="before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_var(--accent)] before:transition-all before:duration-300"
-            >
-              Services
-            </NavLink>
-            <NavLink 
-              to="/work" 
-              className="font-secondary text-sm hover:text-accent transition-colors relative py-2"
-              activeClassName="before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_var(--accent)] before:transition-all before:duration-300"
-            >
-              Work
-            </NavLink>
-            <NavLink 
-              to="/testimonials" 
-              className="font-secondary text-sm hover:text-accent transition-colors relative py-2"
-              activeClassName="before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_var(--accent)] before:transition-all before:duration-300"
-            >
-              Testimonials
-            </NavLink>
-            <NavLink 
-              to="/insights" 
-              className="font-secondary text-sm hover:text-accent transition-colors relative py-2"
-              activeClassName="before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_var(--accent)] before:transition-all before:duration-300"
-            >
-              Insights
-            </NavLink>
-            <NavLink 
-              to="/contact" 
-              className="font-secondary text-sm hover:text-accent transition-colors relative py-2"
-              activeClassName="before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_var(--accent)] before:transition-all before:duration-300"
-            >
-              Contact
-            </NavLink>
+          <div className="hidden md:flex items-center relative">
+            <div className="flex items-center gap-2 bg-card/30 backdrop-blur-sm rounded-full p-2 border border-border/50">
+              <NavLink 
+                to="/" 
+                className="font-secondary text-sm px-6 py-3 rounded-full transition-all duration-300 relative"
+                activeClassName="bg-card text-foreground shadow-lg before:absolute before:-top-5 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_hsl(var(--accent))]"
+              >
+                Home
+              </NavLink>
+              <NavLink 
+                to="/about" 
+                className="font-secondary text-sm px-6 py-3 rounded-full transition-all duration-300 relative"
+                activeClassName="bg-card text-foreground shadow-lg before:absolute before:-top-5 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_hsl(var(--accent))]"
+              >
+                About
+              </NavLink>
+              <NavLink 
+                to="/services" 
+                className="font-secondary text-sm px-6 py-3 rounded-full transition-all duration-300 relative"
+                activeClassName="bg-card text-foreground shadow-lg before:absolute before:-top-5 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_hsl(var(--accent))]"
+              >
+                Services
+              </NavLink>
+              <NavLink 
+                to="/work" 
+                className="font-secondary text-sm px-6 py-3 rounded-full transition-all duration-300 relative"
+                activeClassName="bg-card text-foreground shadow-lg before:absolute before:-top-5 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_hsl(var(--accent))]"
+              >
+                Work
+              </NavLink>
+              <NavLink 
+                to="/testimonials" 
+                className="font-secondary text-sm px-6 py-3 rounded-full transition-all duration-300 relative"
+                activeClassName="bg-card text-foreground shadow-lg before:absolute before:-top-5 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_hsl(var(--accent))]"
+              >
+                Testimonials
+              </NavLink>
+              <NavLink 
+                to="/insights" 
+                className="font-secondary text-sm px-6 py-3 rounded-full transition-all duration-300 relative"
+                activeClassName="bg-card text-foreground shadow-lg before:absolute before:-top-5 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_hsl(var(--accent))]"
+              >
+                Insights
+              </NavLink>
+              <NavLink 
+                to="/contact" 
+                className="font-secondary text-sm px-6 py-3 rounded-full transition-all duration-300 relative"
+                activeClassName="bg-card text-foreground shadow-lg before:absolute before:-top-5 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_hsl(var(--accent))]"
+              >
+                Contact
+              </NavLink>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
