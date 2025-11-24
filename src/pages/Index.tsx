@@ -78,17 +78,10 @@ const Index = () => {
               Let's make your brand stand out in a skeptical market.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
-              <PixelButton variant="primary" onClick={() => window.open("https://arminparvin.me/work")}>
+              <PixelButton variant="primary" onClick={scrollToContact}>
                 Work With Me
               </PixelButton>
-              <PixelButton
-                variant="accent"
-                onClick={() =>
-                  document.getElementById("work")?.scrollIntoView({
-                    behavior: "smooth",
-                  })
-                }
-              >
+              <PixelButton variant="accent" onClick={() => window.open("https://arminparvin.me/work")}>
                 View Work
               </PixelButton>
             </div>
