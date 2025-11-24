@@ -283,7 +283,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-background/90"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Case Studies</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Convert.com */}
             <Link to="/work?case=convert-com">
               <PixelCard className="relative overflow-hidden cursor-pointer">
