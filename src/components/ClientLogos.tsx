@@ -31,7 +31,7 @@ export const ClientLogos = () => {
         <div className="pixel-border bg-zinc-800 backdrop-blur-sm p-8 rounded-lg relative">
           <p className="text-center text-zinc-400 font-secondary mb-6">Trusted by leading brands</p>
           <div className="relative w-full overflow-hidden">
-            <div className="flex">
+            <div className="flex [--gap:4rem]">
               {[...Array(3)].map((_, setIndex) => (
                 <div key={setIndex} className="flex gap-16 flex-shrink-0 animate-marquee">
                   {clientLogos.map((logo, index) => (
