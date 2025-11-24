@@ -1,5 +1,4 @@
 import { Header } from "@/components/Header";
-import { Cursor } from "@/components/ui/inverted-cursor";
 import { ClientLogos } from "@/components/ClientLogos";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Briefcase, GraduationCap, Code, Award, Target } from "lucide-react";
@@ -36,7 +35,6 @@ export default function About() {
   
   return (
     <div className="min-h-screen flex flex-col">
-      <Cursor />
       <Header />
 
       <section
