@@ -60,7 +60,7 @@ export const testimonials: Testimonial[] = [
       "The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%. The quality of the delivered content has been excellent. It has definitely exceeded my expectations. Our collaboration has been an absolute pleasure, a decision I would make over and over again. They made sure that all my requirements were understood fully and executed flawlessly.",
     rating: 5,
     avatar: parandSh,
-    featured: false,
+    featured: true,
     caseStudyUrl: "/work?case=influencer-marketing-business",
   },
   {
