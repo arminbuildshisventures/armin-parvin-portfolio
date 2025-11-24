@@ -20,174 +20,224 @@ import gabbieSanchez from "@/assets/testimonials/gabbie-sanchez.png";
 import cissyZhao from "@/assets/testimonials/cissy-zhao.png";
 import abbyNduta from "@/assets/testimonials/abby-nduta.png";
 
-export const marqueeTestimonials = [
+export interface Testimonial {
+  name: string;
+  role: string;
+  content: string;
+  rating: number;
+  avatar: string;
+  featured: boolean;
+  caseStudyUrl?: string;
+}
+
+export const testimonials: Testimonial[] = [
+  // Featured Testimonials
   {
-    author: {
-      name: "Trina Moitra",
-      handle: "CMO, Convert.com",
-      avatar: trinaMoitra
-    },
-    text: "Armin impressed me with his attention to detail & his knowledge of the industry from day 1. We needed someone to take on the production of bottom-of-the-funnel focused content and to seed Convert's name in the SERPs for our brand new features."
+    name: "Trina Moitra",
+    role: "CMO, Convert.com",
+    content:
+      "Armin impressed me with his attention to detail & his knowledge of the industry from day 1. We needed someone to take on the production of bottom-of-the-funnel focused content and to seed Convert's name in the SERPs for our brand new features. Our collaboration was very pleasant. Renee Content has a good process and they really give 110% to understand your requirements. Thank you for being such consummate professionals!",
+    rating: 5,
+    avatar: trinaMoitra,
+    featured: true,
+    caseStudyUrl: "/work?case=convert",
   },
   {
-    author: {
-      name: "Alireza Khorshidi",
-      handle: "Head of Growth & Lifecycle Marketing, Roomvu",
-      avatar: alirezaKhorshidi
-    },
-    text: "Armin is a highly effective strategic copywriter. I managed him at Roomvu, where he ran our cold email outbound, and strong results consistently backed his performance. He doesn't just write; he leverages the power of content within a specific, results-driven strategy."
+    name: "Alireza Khorshidi",
+    role: "Head of Growth & Lifecycle Marketing, Roomvu",
+    content:
+      "Armin is a highly effective strategic copywriter. I managed him at Roomvu, where he ran our cold email outbound, and strong results consistently backed his performance. He doesn't just write; he leverages the power of content within a specific, results-driven strategy. While his focus was cold email with us, I know he is also very capable of driving multi-channel content strategies (across email, LinkedIn, and X). He's a professional, clear communicator and brings a valuable creative perspective (he's also a professional guitar player!). I strongly recommend him to any team.",
+    rating: 5,
+    avatar: alirezaKhorshidi,
+    featured: true,
+    caseStudyUrl: "/work?case=roomvu",
+  },
+  // Regular Testimonials
+  {
+    name: "Parand Sh.",
+    role: "Founder, Influencer Marketing Agency",
+    content:
+      "The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%. The quality of the delivered content has been excellent. It has definitely exceeded my expectations. Our collaboration has been an absolute pleasure, a decision I would make over and over again. They made sure that all my requirements were understood fully and executed flawlessly.",
+    rating: 5,
+    avatar: parandSh,
+    featured: false,
+    caseStudyUrl: "/work?case=influencer-marketing-business",
   },
   {
-    author: {
-      name: "Parand Sh.",
-      handle: "Founder, Influencer Marketing",
-      avatar: parandSh
-    },
-    text: "The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%. The quality of the delivered content has been excellent."
+    name: "Shadi V.",
+    role: "Founder, Boutique",
+    content:
+      "In fact, our results were beyond my wildest dreams. Our website traffic skyrocketed, and we witnessed an impressive 3-fold increase in leads. Our content was engaging, informative, and perfectly aligned with our brand's message.",
+    rating: 5,
+    avatar: shadiAvatar,
+    featured: false,
+    caseStudyUrl: "/work?case=boutique",
   },
   {
-    author: {
-      name: "Shadi V.",
-      handle: "Founder, Boutique",
-      avatar: shadiAvatar
-    },
-    text: "The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%. Our collaboration has been an absolute pleasure, a decision I would make over and over again."
+    name: "Ines Cid Blasco",
+    role: "VP of Sales, Sales for Good",
+    content:
+      "Absolutely loved my session with Armin. You can tell he really knows his stuff: content writing. And on top of that, he genuinely wants to help. He has a very reciprocal approach to business, meaning he is as keen to give value as he is to receive it. Would highly recommend working with Armin!",
+    rating: 5,
+    avatar: avatar1,
+    featured: false,
   },
   {
-    author: {
-      name: "Ines Cid Blasco",
-      handle: "VP of Sales, Sales for Good",
-      avatar: avatar1
-    },
-    text: "Absolutely loved my session with Armin. You can tell he really knows his stuff: content writing. And on top of that, he genuinely wants to help."
+    name: "Mana Behzad",
+    role: "Multidisciplinary Creative",
+    content:
+      "Armin was incredibly generous, practical, and patient during our session. Drawing from his entrepreneurial background, he helped me better position my skills in areas that were unfamiliar to me. He encouraged me to stay open to possibilities I hadn't considered and equipped me with a range of valuable resources to take advantage of moving forward.",
+    rating: 5,
+    avatar: manaBehzad,
+    featured: false,
   },
   {
-    author: {
-      name: "Mana Behzad",
-      handle: "Multidisciplinary Creative",
-      avatar: manaBehzad
-    },
-    text: "Armin was incredibly generous, practical, and patient during our session. Drawing from his entrepreneurial background, he helped me better position my skills in areas that were unfamiliar to me."
+    name: "Julia Doronina",
+    role: "Chief Marketing & Growth Leader, G-71",
+    content:
+      "The session went great! Armin shared many insights and was very helpful in my research, also suggested solutions to the problem and assisted with evaluating the product's functionality.",
+    rating: 5,
+    avatar: avatar2,
+    featured: false,
   },
   {
-    author: {
-      name: "Julia Doronina",
-      handle: "Chief Marketing & Growth Leader, G-71",
-      avatar: avatar2
-    },
-    text: "The session went great! Armin shared many insights and was very helpful in my research, also suggested solutions to the problem and assisted with evaluating the product's functionality."
+    name: "Mehdi Rahmaninia",
+    role: "Head of Marketing, WatchThemLive",
+    content:
+      "They really deliver what they are promising. I had an increased traffic since the contents were rich in terms of SEO, and the copy was good too. So, in the articles that were targeting my bottom funnel, the content and copy were converting pretty well. The overall experience of working with Renée Content was pretty great, and I was confident that they understood what I needed from them every step of the way.",
+    rating: 5,
+    avatar: avatar3,
+    featured: false,
+    caseStudyUrl: "/work?case=rahmaninia-digital-marketing",
   },
   {
-    author: {
-      name: "Mehdi Rahmaninia",
-      handle: "Head of Marketing, WatchThemLive",
-      avatar: avatar3
-    },
-    text: "They really deliver what they are promising. I had an increased traffic since the contents were rich in terms of SEO, and the copy was good too. They made sure that all my requirements were understood fully and executed flawlessly."
+    name: "Aria Sadeghian",
+    role: "CEO, Mirex Technologies",
+    content:
+      "It was a great honor to meet Armin about the barriers in our company, his sense of giving hints for solving your issues will cheer you up. Thanks, Armin for your support and time.",
+    rating: 5,
+    avatar: avatar4,
+    featured: false,
   },
   {
-    author: {
-      name: "Aria Sadeghian",
-      handle: "CEO, Mirex Technologies",
-      avatar: avatar4
-    },
-    text: "It was a great honor to meet Armin about the barriers in our company, his sense of giving hints for solving your issues will cheer you up."
+    name: "Uju Okoye",
+    role: "Content Writer, Invoice.ng",
+    content:
+      "Armin was well-prepared and knowledgeable about content marketing. He was able to answer all of my questions and provided practical advice. He was patient and understanding. He took the time to listen to my goals and concerns, and he tailored his advice to my specific needs. Honestly, he was very helpful, he provided me with lots of resources to aid my learning and career, and offered to help more should the need be. Overall his session was absolutely awesome. Thank you, Armin.",
+    rating: 5,
+    avatar: avatar5,
+    featured: false,
   },
   {
-    author: {
-      name: "Uju Okoye",
-      handle: "Content Writer, Invoice.ng",
-      avatar: avatar5
-    },
-    text: "Armin was well-prepared and knowledgeable about content marketing. He was able to answer all of my questions and provided practical advice."
+    name: "Niloofar Sh.",
+    role: "Founder and CEO, Digital Marketing Agency",
+    content:
+      "The quality of the content they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations. They went above and beyond to deliver content that genuinely resonated with my audience and contributed to our overall business growth and success.",
+    rating: 5,
+    avatar: avatar6,
+    featured: false,
+    caseStudyUrl: "/work?case=digital-marketing-agency",
   },
   {
-    author: {
-      name: "Niloofar Sh.",
-      handle: "Founder and CEO, Digital Marketing Agency",
-      avatar: avatar6
-    },
-    text: "The quality of the content they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations."
+    name: "Mojtaba Tavazo",
+    role: "Founder and CEO, Casco Salon",
+    content:
+      "I'm very happy to meet Armin, and the mentoring session was enjoyable for me because Armin very professionally answered all my questions, examined the hidden aspects of my product, and gave me the best advice for it. I like to keep in touch with him in the future.",
+    rating: 5,
+    avatar: avatar8,
+    featured: false,
   },
   {
-    author: {
-      name: "Mojtaba Tavazo",
-      handle: "Founder and CEO, Casco Salon",
-      avatar: avatar8
-    },
-    text: "I'm very happy to meet Armin, and the mentoring session was enjoyable for me because Armin very professionally answered all my questions and gave me the best advice."
+    name: "Negar Farazmand",
+    role: "Content and SEO Manager, WatchThemLive",
+    content:
+      "Armin is smart and a fast learner. His knowledge in many fields helps him find his way in almost any role you give him. Moreover, Armin's ambition and enthusiasm are absolutely remarkable, which lead him to achieve continued progress. His technical skills, coding knowledge, and brilliant ideas were a great help to the team. Working with Armin on the same team was a great experience.",
+    rating: 5,
+    avatar: avatar7,
+    featured: false,
+    caseStudyUrl: "/work?case=watchthemlive",
   },
   {
-    author: {
-      name: "Negar Farazmand",
-      handle: "Content and SEO Manager, WatchThemLive",
-      avatar: avatar7
-    },
-    text: "Armin is smart and a fast learner. His knowledge in many fields helps him find his way in almost any role you give him. Working with Armin was a great experience."
+    name: "Mahmoud Valanejad",
+    role: "Founder, Media Creation Company",
+    content:
+      "I think they really care more about your business than you do. They are really experienced and they have a great customer support. You know, you can leave your business to them without any concern, and that's the point.",
+    rating: 5,
+    avatar: avatar9,
+    featured: false,
+    caseStudyUrl: "/work?case=mv-production",
   },
   {
-    author: {
-      name: "Mahmoud Valanejad",
-      handle: "Founder, Media Creation Company",
-      avatar: avatar9
-    },
-    text: "I think they really care more about your business than you do. They are really experienced and they have a great customer support."
+    name: "Mohammad Akhlaghi",
+    role: "Product Manager, Cafe Bazaar",
+    content:
+      "Armin is a great person with great experience in Copywriting and SEO. I had a good meeting with him. I like to keep in touch with him in the future.",
+    rating: 5,
+    avatar: avatar11,
+    featured: false,
   },
   {
-    author: {
-      name: "Mohammad Akhlaghi",
-      handle: "Product Manager, Cafe Bazaar",
-      avatar: avatar11
-    },
-    text: "Armin is a great person with great experience in Copywriting and SEO. I had a good meeting with him. I like to keep in touch with him in the future."
+    name: "Gabbie Sanchez",
+    role: "Founder, Leverato",
+    content:
+      "Armin is the most encouraging and enthusiastic mentor there is. He made me believe in myself, which is hard for someone with imposter syndrome. He made me believe that my skills are indeed highly in-demand and all I need is the right push to get myself out there. He is the push that I have been searching for all these years. Truly grateful that I get to call someone so insightful and positive as my mentor!",
+    rating: 5,
+    avatar: gabbieSanchez,
+    featured: false,
   },
   {
-    author: {
-      name: "Gabbie Sanchez",
-      handle: "Founder, Leverato",
-      avatar: gabbieSanchez
-    },
-    text: "Armin is the most encouraging and enthusiastic mentor there is. He made me believe in myself, which is hard for someone with imposter syndrome. Truly grateful that I get to call someone so insightful and positive as my mentor!"
+    name: "Cissy Zhao",
+    role: "Founder, Cissy Zhao Consulting",
+    content:
+      "This is probably one of the best spent one hour of my life. Armin understands what it takes to build a personal brand and shares valuable techniques and strategies patiently and systematically. He is also positive and friendly. Amazing vibe. Thank you so much for this.",
+    rating: 5,
+    avatar: cissyZhao,
+    featured: false,
   },
   {
-    author: {
-      name: "Cissy Zhao",
-      handle: "Founder, Cissy Zhao Consulting",
-      avatar: cissyZhao
-    },
-    text: "This is probably one of the best spent one hour of my life. Armin understands what it takes to build a personal brand and shares valuable techniques and strategies patiently and systematically."
+    name: "Luis Acoltzi",
+    role: "Founder & Art Director/Designer, Pixel Hangar",
+    content:
+      "Armin was great at advising on my content strategy and how to approach new business. I really appreciate the time and I look forward to the next session.",
+    rating: 5,
+    avatar: avatar13,
+    featured: false,
   },
   {
-    author: {
-      name: "Luis Acoltzi",
-      handle: "Founder & Art Director/Designer, Pixel Hangar",
-      avatar: avatar13
-    },
-    text: "Armin was great at advising on my content strategy and how to approach new business. I really appreciate the time and I look forward to the next session."
+    name: "Abby Nduta",
+    role: "Developer, Technical Writer",
+    content:
+      "I can tell Armin's a professional and the approach of the lesson was helpful and memorable. He has helped me A LOT in understanding the basics of copy and improve my storytelling. Thank you Armin, I will forever be grateful!",
+    rating: 5,
+    avatar: abbyNduta,
+    featured: false,
   },
   {
-    author: {
-      name: "Abby Nduta",
-      handle: "Developer, Technical Writer",
-      avatar: abbyNduta
-    },
-    text: "I can tell Armin's a professional and the approach of the lesson was helpful and memorable. He has helped me A LOT in understanding the basics of copy and improve my storytelling."
+    name: "AmirAli Piroozbakhsh",
+    role: "Creative Director",
+    content:
+      "My mentorship session with Armin Parvin was incredibly insightful. It illuminated aspects I had overlooked, lighting up the path I thought I already knew.",
+    rating: 5,
+    avatar: avatar10,
+    featured: false,
   },
   {
-    author: {
-      name: "AmirAli Piroozbakhsh",
-      handle: "Creative Director",
-      avatar: avatar10
-    },
-    text: "My mentorship session with Armin Parvin was incredibly insightful. It illuminated aspects I had overlooked, lighting up the path I thought I already knew."
+    name: "Masoud Rezaei",
+    role: "Social Media Specialist",
+    content:
+      "Conversation was great. Armin has very high and rich knowledge and experience in the fields of content, copywriting and marketing. And as I expected, it helped and clarified my work path.",
+    rating: 5,
+    avatar: masoudRezaei,
+    featured: false,
   },
-  {
-    author: {
-      name: "Masoud Rezaei",
-      handle: "Social Media Specialist",
-      avatar: masoudRezaei
-    },
-    text: "Conversation was great. Armin has very high and rich knowledge and experience in the fields of content, copywriting and marketing."
-  }
 ];
 
+// Export formatted for marquee component
+export const marqueeTestimonials = testimonials.map((t) => ({
+  author: {
+    name: t.name,
+    handle: t.role,
+    avatar: t.avatar,
+  },
+  text: t.content,
+}));
