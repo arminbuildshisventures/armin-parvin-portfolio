@@ -81,7 +81,14 @@ const Index = () => {
               <PixelButton variant="primary" onClick={scrollToContact}>
                 Work With Me
               </PixelButton>
-              <PixelButton variant="accent" onClick={() => window.open("https://arminparvin.me/work")}>
+              <PixelButton
+                variant="accent"
+                onClick={() =>
+                  document.getElementById("work")?.scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
+              >
                 View Work
               </PixelButton>
             </div>
