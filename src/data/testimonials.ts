@@ -64,6 +64,26 @@ export const testimonials: Testimonial[] = [
     caseStudyUrl: "/work?case=influencer-marketing-business",
   },
   {
+    name: "Negar Farazmand",
+    role: "Content and SEO Manager, WatchThemLive",
+    content:
+      "Armin is smart and a fast learner. His knowledge in many fields helps him find his way in almost any role you give him. Moreover, Armin's ambition and enthusiasm are absolutely remarkable, which lead him to achieve continued progress. His technical skills, coding knowledge, and brilliant ideas were a great help to the team. Working with Armin on the same team was a great experience.",
+    rating: 5,
+    avatar: avatar7,
+    featured: false,
+    caseStudyUrl: "/work?case=watchthemlive",
+  },
+  {
+    name: "Mehdi Rahmaninia",
+    role: "Head of Marketing, WatchThemLive",
+    content:
+      "They really deliver what they are promising. I had an increased traffic since the contents were rich in terms of SEO, and the copy was good too. So, in the articles that were targeting my bottom funnel, the content and copy were converting pretty well. The overall experience of working with Renée Content was pretty great, and I was confident that they understood what I needed from them every step of the way.",
+    rating: 5,
+    avatar: avatar3,
+    featured: false,
+    caseStudyUrl: "/work?case=rahmaninia-digital-marketing",
+  },
+  {
     name: "Shadi V.",
     role: "Founder, Boutique",
     content:
@@ -72,6 +92,53 @@ export const testimonials: Testimonial[] = [
     avatar: shadiAvatar,
     featured: false,
     caseStudyUrl: "/work?case=boutique",
+  },
+  {
+    name: "Niloofar Sh.",
+    role: "Founder and CEO, Digital Marketing Agency",
+    content:
+      "The quality of the content they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations. They went above and beyond to deliver content that genuinely resonated with my audience and contributed to our overall business growth and success.",
+    rating: 5,
+    avatar: avatar6,
+    featured: false,
+    caseStudyUrl: "/work?case=digital-marketing-agency",
+  },
+  {
+    name: "Mahmoud Valanejad",
+    role: "Founder, Media Creation Company",
+    content:
+      "I think they really care more about your business than you do. They are really experienced and they have a great customer support. You know, you can leave your business to them without any concern, and that's the point.",
+    rating: 5,
+    avatar: avatar9,
+    featured: false,
+    caseStudyUrl: "/work?case=mv-production",
+  },
+  {
+    name: "Gabbie Sanchez",
+    role: "Founder, Leverato",
+    content:
+      "Armin is the most encouraging and enthusiastic mentor there is. He made me believe in myself, which is hard for someone with imposter syndrome. He made me believe that my skills are indeed highly in-demand and all I need is the right push to get myself out there. He is the push that I have been searching for all these years. Truly grateful that I get to call someone so insightful and positive as my mentor!",
+    rating: 5,
+    avatar: gabbieSanchez,
+    featured: false,
+  },
+  {
+    name: "Cissy Zhao",
+    role: "Founder, Cissy Zhao Consulting",
+    content:
+      "During our session, Armin took the time to understand my goals and challenges and even extended the call just to make sure all my questions were answered I left the session with a fresh perspective, actionable next steps, and a renewed sense of clarity and motivation. If you’re looking for a mentor who truly cares and brings both expertise and empathy to the table, I couldn’t recommend Armin more!",
+    rating: 5,
+    avatar: cissyZhao,
+    featured: false,
+  },
+  {
+    name: "Luis Acoltzi",
+    role: "Founder & Art Director/Designer, Pixel Hangar",
+    content:
+      "Armin was great at advising on my content strategy and how to approach new business. I really appreciate the time and I look forward to the next session.",
+    rating: 5,
+    avatar: avatar13,
+    featured: false,
   },
   {
     name: "Ines Cid Blasco",
@@ -101,16 +168,6 @@ export const testimonials: Testimonial[] = [
     featured: false,
   },
   {
-    name: "Mehdi Rahmaninia",
-    role: "Head of Marketing, WatchThemLive",
-    content:
-      "They really deliver what they are promising. I had an increased traffic since the contents were rich in terms of SEO, and the copy was good too. So, in the articles that were targeting my bottom funnel, the content and copy were converting pretty well. The overall experience of working with Renée Content was pretty great, and I was confident that they understood what I needed from them every step of the way.",
-    rating: 5,
-    avatar: avatar3,
-    featured: false,
-    caseStudyUrl: "/work?case=rahmaninia-digital-marketing",
-  },
-  {
     name: "Aria Sadeghian",
     role: "CEO, Mirex Technologies",
     content:
@@ -129,16 +186,6 @@ export const testimonials: Testimonial[] = [
     featured: false,
   },
   {
-    name: "Niloofar Sh.",
-    role: "Founder and CEO, Digital Marketing Agency",
-    content:
-      "The quality of the content they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations. They went above and beyond to deliver content that genuinely resonated with my audience and contributed to our overall business growth and success.",
-    rating: 5,
-    avatar: avatar6,
-    featured: false,
-    caseStudyUrl: "/work?case=digital-marketing-agency",
-  },
-  {
     name: "Mojtaba Tavazo",
     role: "Founder and CEO, Casco Salon",
     content:
@@ -146,26 +193,6 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     avatar: avatar8,
     featured: false,
-  },
-  {
-    name: "Negar Farazmand",
-    role: "Content and SEO Manager, WatchThemLive",
-    content:
-      "Armin is smart and a fast learner. His knowledge in many fields helps him find his way in almost any role you give him. Moreover, Armin's ambition and enthusiasm are absolutely remarkable, which lead him to achieve continued progress. His technical skills, coding knowledge, and brilliant ideas were a great help to the team. Working with Armin on the same team was a great experience.",
-    rating: 5,
-    avatar: avatar7,
-    featured: false,
-    caseStudyUrl: "/work?case=watchthemlive",
-  },
-  {
-    name: "Mahmoud Valanejad",
-    role: "Founder, Media Creation Company",
-    content:
-      "I think they really care more about your business than you do. They are really experienced and they have a great customer support. You know, you can leave your business to them without any concern, and that's the point.",
-    rating: 5,
-    avatar: avatar9,
-    featured: false,
-    caseStudyUrl: "/work?case=mv-production",
   },
   {
     name: "Mohammad Akhlaghi",
@@ -177,48 +204,12 @@ export const testimonials: Testimonial[] = [
     featured: false,
   },
   {
-    name: "Gabbie Sanchez",
-    role: "Founder, Leverato",
-    content:
-      "Armin is the most encouraging and enthusiastic mentor there is. He made me believe in myself, which is hard for someone with imposter syndrome. He made me believe that my skills are indeed highly in-demand and all I need is the right push to get myself out there. He is the push that I have been searching for all these years. Truly grateful that I get to call someone so insightful and positive as my mentor!",
-    rating: 5,
-    avatar: gabbieSanchez,
-    featured: false,
-  },
-  {
-    name: "Cissy Zhao",
-    role: "Founder, Cissy Zhao Consulting",
-    content:
-      "This is probably one of the best spent one hour of my life. Armin understands what it takes to build a personal brand and shares valuable techniques and strategies patiently and systematically. He is also positive and friendly. Amazing vibe. Thank you so much for this.",
-    rating: 5,
-    avatar: cissyZhao,
-    featured: false,
-  },
-  {
-    name: "Luis Acoltzi",
-    role: "Founder & Art Director/Designer, Pixel Hangar",
-    content:
-      "Armin was great at advising on my content strategy and how to approach new business. I really appreciate the time and I look forward to the next session.",
-    rating: 5,
-    avatar: avatar13,
-    featured: false,
-  },
-  {
     name: "Abby Nduta",
     role: "Developer, Technical Writer",
     content:
-      "I can tell Armin's a professional and the approach of the lesson was helpful and memorable. He has helped me A LOT in understanding the basics of copy and improve my storytelling. Thank you Armin, I will forever be grateful!",
+      "This is probably one of the best spent one hour of my life. Armin understands what it takes to build a personal brand and shares valuable techniques and strategies patiently and systematically. He is also positive and friendly. Amazing vibe. Thank you so much for this.",
     rating: 5,
     avatar: abbyNduta,
-    featured: false,
-  },
-  {
-    name: "AmirAli Piroozbakhsh",
-    role: "Creative Director",
-    content:
-      "My mentorship session with Armin Parvin was incredibly insightful. It illuminated aspects I had overlooked, lighting up the path I thought I already knew.",
-    rating: 5,
-    avatar: avatar10,
     featured: false,
   },
   {
@@ -228,6 +219,15 @@ export const testimonials: Testimonial[] = [
       "Conversation was great. Armin has very high and rich knowledge and experience in the fields of content, copywriting and marketing. And as I expected, it helped and clarified my work path.",
     rating: 5,
     avatar: masoudRezaei,
+    featured: false,
+  },
+  {
+    name: "AmirAli Piroozbakhsh",
+    role: "Creative Director",
+    content:
+      "My mentorship session with Armin Parvin was incredibly insightful. It illuminated aspects I had overlooked, lighting up the path I thought I already knew.",
+    rating: 5,
+    avatar: avatar10,
     featured: false,
   },
 ];
