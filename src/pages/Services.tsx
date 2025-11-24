@@ -2,7 +2,6 @@ import { Header } from "@/components/Header";
 import { PixelCard } from "@/components/PixelCard";
 import { ClientLogos } from "@/components/ClientLogos";
 import { Lightbulb, Megaphone, Mail, BookOpen, PenTool, FileText, TrendingUp, MessageSquare, Sparkles } from "lucide-react";
-import { Cursor } from "@/components/ui/inverted-cursor";
 import servicesBg from "@/assets/services-bg-pixel.png";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function Services() {
@@ -66,7 +65,6 @@ export default function Services() {
     description: "End-to-end campaign execution from strategy to analysis and optimization."
   }];
   return <div className="min-h-screen flex flex-col">
-      <Cursor />
       <Header />
       
       <section className="flex-grow py-12 sm:py-20 md:py-24 px-4 pt-24 sm:pt-28 md:pt-32 relative" style={{

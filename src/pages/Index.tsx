@@ -24,7 +24,6 @@ import cloudzyLogo from "@/assets/clients/cloudzy.svg";
 import { ClientLogos } from "@/components/ClientLogos";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
-import { Cursor } from "@/components/ui/inverted-cursor";
 import { useState } from "react";
 const Index = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -39,7 +38,6 @@ const Index = () => {
   };
   return (
     <div className="min-h-screen">
-      <Cursor />
       <Header />
 
       {/* Hero Section */}

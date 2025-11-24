@@ -1,7 +1,6 @@
 import { Header } from "@/components/Header";
 import { PixelCard } from "@/components/PixelCard";
 import { ClientLogos } from "@/components/ClientLogos";
-import { Cursor } from "@/components/ui/inverted-cursor";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState, useEffect, useRef } from "react";
@@ -1209,7 +1208,6 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Cursor />
       <Header />
       
       <section 

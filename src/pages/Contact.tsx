@@ -3,7 +3,6 @@ import { PixelCard } from "@/components/PixelCard";
 import { ClientLogos } from "@/components/ClientLogos";
 import { PixelButton } from "@/components/PixelButton";
 import { Mail, Linkedin } from "lucide-react";
-import { Cursor } from "@/components/ui/inverted-cursor";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -54,7 +53,6 @@ export default function Contact() {
   };
   return (
     <div className="min-h-screen flex flex-col">
-      <Cursor />
       <Header />
 
       <section 
