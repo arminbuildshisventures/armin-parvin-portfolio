@@ -42,7 +42,7 @@ const Testimonials = () => {
       name: "Alireza Khorshidi",
       role: "Head of Growth & Lifecycle Marketing, Roomvu",
       content:
-        "Armin approached cold email with a level of discipline that made a measurable impact on our pipeline. He developed targeting logic, personalization angles, and value-led messaging that aligned tightly with our ICPs. His ability to combine concise copy with relevant insights helped our campaigns stand out in crowded inboxes. He didn't just write strong emails; he built sequences that generated predictable registrations with prospects across multiple segments. His work contributed directly to higher outbound engagement and stronger funnel activity for the team.",
+        "Armin is a highly effective strategic copywriter. I managed him at Roomvu, where he ran our cold email outbound, and strong results consistently backed his performance. He doesn't just write; he leverages the power of content within a specific, results-driven strategy. While his focus was cold email with us, I know he is also very capable of driving multi-channel content strategies (across email, LinkedIn, and X). He's a professional, clear communicator and brings a valuable creative perspective (he's also a professional guitar player!). I strongly recommend him to any team.",
       rating: 5,
       avatar: alirezaKhorshidi,
       caseStudyUrl: "/work?case=roomvu",
