@@ -285,8 +285,8 @@ const Index = () => {
           <h2 className="font-primary text-2xl md:text-4xl mb-12 text-center text-pixel">Case Studies</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Convert.com */}
-            <Link to="/work?case=convert-com">
-              <PixelCard className="relative overflow-hidden cursor-pointer">
+            <Link to="/work?case=convert-com" className="h-full">
+              <PixelCard className="relative overflow-hidden cursor-pointer h-full flex flex-col">
                 <div
                   className="absolute inset-0 opacity-5"
                   style={{
@@ -295,7 +295,7 @@ const Index = () => {
                     backgroundPosition: "center",
                   }}
                 />
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col h-full">
                   <div className="bg-accent/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-4">
                     <img src={convertLogo} alt="Convert.com" className="h-12 brightness-0 invert" />
                     <span className="font-primary text-sm text-accent text-center">Content Marketing</span>
@@ -305,7 +305,7 @@ const Index = () => {
                     Created bottom-of-funnel content strategy and wrote multi-perspective articles to establish brand
                     presence in SERPs for new features.
                   </p>
-                  <div className="flex gap-2 flex-wrap">
+                  <div className="flex gap-2 flex-wrap mt-auto">
                     <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
                     <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Technology</span>
                   </div>
@@ -314,8 +314,8 @@ const Index = () => {
             </Link>
 
             {/* Roomvu */}
-            <Link to="/work?case=roomvu">
-              <PixelCard className="relative overflow-hidden cursor-pointer">
+            <Link to="/work?case=roomvu" className="h-full">
+              <PixelCard className="relative overflow-hidden cursor-pointer h-full flex flex-col">
                 <div
                   className="absolute inset-0 opacity-5"
                   style={{
@@ -324,7 +324,7 @@ const Index = () => {
                     backgroundPosition: "center",
                   }}
                 />
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col h-full">
                   <div className="bg-secondary/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-4">
                     <img src={roomvuLogo} alt="Roomvu" className="h-12 brightness-0 invert" />
                     <span className="font-primary text-sm text-secondary text-center">Cold Email Marketing</span>
@@ -334,7 +334,7 @@ const Index = () => {
                     Redesigned email marketing strategy with advanced segmentation and hyper-personalized campaigns,
                     increasing weekly registrations from 170 to 500.
                   </p>
-                  <div className="flex gap-2 flex-wrap">
+                  <div className="flex gap-2 flex-wrap mt-auto">
                     <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
                     <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Real Estate</span>
                   </div>
@@ -343,8 +343,8 @@ const Index = () => {
             </Link>
 
             {/* Nordic Defender */}
-            <Link to="/work?case=nordic-defender">
-              <PixelCard className="relative overflow-hidden cursor-pointer">
+            <Link to="/work?case=nordic-defender" className="h-full">
+              <PixelCard className="relative overflow-hidden cursor-pointer h-full flex flex-col">
                 <div
                   className="absolute inset-0 opacity-5"
                   style={{
@@ -353,7 +353,7 @@ const Index = () => {
                     backgroundPosition: "center",
                   }}
                 />
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col h-full">
                   <div className="bg-accent/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-4">
                     <img src={nordicLogo} alt="Nordic Defender" className="h-12 brightness-0 invert" />
                     <span className="font-primary text-sm text-accent text-center">Product Marketing</span>
@@ -363,7 +363,7 @@ const Index = () => {
                     Managed all marketing channels for Next-Gen Pentest Solution including 100+ emails, 50+ technical
                     articles, and 43+ landing pages.
                   </p>
-                  <div className="flex gap-2 flex-wrap">
+                  <div className="flex gap-2 flex-wrap mt-auto">
                     <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
                     <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Cybersecurity</span>
                   </div>
@@ -372,8 +372,8 @@ const Index = () => {
             </Link>
 
             {/* Cloudzy */}
-            <Link to="/work?case=cloudzy">
-              <PixelCard className="relative overflow-hidden cursor-pointer">
+            <Link to="/work?case=cloudzy" className="h-full">
+              <PixelCard className="relative overflow-hidden cursor-pointer h-full flex flex-col">
                 <div
                   className="absolute inset-0 opacity-5"
                   style={{
@@ -382,7 +382,7 @@ const Index = () => {
                     backgroundPosition: "center",
                   }}
                 />
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col h-full">
                   <div className="bg-secondary/20 pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-4">
                     <img src={cloudzyLogo} alt="Cloudzy" className="h-12 brightness-0 invert" />
                     <span className="font-primary text-sm text-secondary text-center">Technical Content</span>
@@ -392,7 +392,7 @@ const Index = () => {
                     Developed technical blog content and landing pages achieving #1 rankings, featured snippets, 5X
                     conversion rates, and 2,360+ users acquired.
                   </p>
-                  <div className="flex gap-2 flex-wrap">
+                  <div className="flex gap-2 flex-wrap mt-auto">
                     <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
                     <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">Technology</span>
                   </div>
