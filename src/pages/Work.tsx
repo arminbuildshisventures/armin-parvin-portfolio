@@ -1,6 +1,8 @@
 import { Header } from "@/components/Header";
 import { PixelCard } from "@/components/PixelCard";
 import { ClientLogos } from "@/components/ClientLogos";
+import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
+import { marqueeTestimonials } from "@/data/testimonials";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState, useEffect, useRef } from "react";
@@ -1636,6 +1638,13 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
           )}
         </DialogContent>
       </Dialog>
+
+      {/* Testimonials Marquee */}
+      <TestimonialsSection
+        title="What Clients Say"
+        description="Trusted by marketing leaders and growing businesses worldwide"
+        testimonials={marqueeTestimonials}
+      />
 
       {/* Client Logos Section */}
       <ClientLogos />

@@ -1,6 +1,8 @@
 import { Header } from "@/components/Header";
 import { PixelCard } from "@/components/PixelCard";
 import { ClientLogos } from "@/components/ClientLogos";
+import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
+import { marqueeTestimonials } from "@/data/testimonials";
 import { PixelButton } from "@/components/PixelButton";
 import { Mail, Linkedin } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -188,6 +190,13 @@ export default function Contact() {
           </PixelCard>
         </div>
       </section>
+
+      {/* Testimonials Marquee */}
+      <TestimonialsSection
+        title="What Clients Say"
+        description="Trusted by marketing leaders and growing businesses worldwide"
+        testimonials={marqueeTestimonials}
+      />
 
       {/* Client Logos Section */}
       <ClientLogos />

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { ClientLogos } from "@/components/ClientLogos";
+import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
+import { marqueeTestimonials } from "@/data/testimonials";
 import { Quote } from "lucide-react";
 import { PixelCard } from "@/components/PixelCard";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -333,6 +335,13 @@ const Testimonials = () => {
         </motion.div>
         </main>
       </div>
+
+      {/* Testimonials Marquee */}
+      <TestimonialsSection
+        title="What Clients Say"
+        description="Trusted by marketing leaders and growing businesses worldwide"
+        testimonials={marqueeTestimonials}
+      />
 
       {/* Client Logos Section */}
       <ClientLogos />

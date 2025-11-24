@@ -1,6 +1,8 @@
 import { Header } from "@/components/Header";
 import { PixelCard } from "@/components/PixelCard";
 import { ClientLogos } from "@/components/ClientLogos";
+import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
+import { marqueeTestimonials } from "@/data/testimonials";
 import { Lightbulb, Megaphone, Mail, BookOpen, PenTool, FileText, TrendingUp, MessageSquare, Sparkles } from "lucide-react";
 import servicesBg from "@/assets/services-bg-pixel.png";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -173,6 +175,13 @@ export default function Services() {
           </Tabs>
         </div>
       </section>
+
+      {/* Testimonials Marquee */}
+      <TestimonialsSection
+        title="What Clients Say"
+        description="Trusted by marketing leaders and growing businesses worldwide"
+        testimonials={marqueeTestimonials}
+      />
 
       {/* Client Logos Section */}
       <ClientLogos />

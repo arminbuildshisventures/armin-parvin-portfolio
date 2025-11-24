@@ -17,6 +17,9 @@ export default {
       },
     },
     extend: {
+      maxWidth: {
+        container: "1280px",
+      },
       fontFamily: {
         primary: ['"Press Start 2P"', 'cursive'],
         secondary: ['Poppins', 'sans-serif'],
@@ -97,19 +100,15 @@ export default {
           },
         },
         marquee: {
-          "0%": {
-            transform: "translateX(0%)",
-          },
-          "100%": {
-            transform: "translateX(-100%)",
-          },
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         aurora: "aurora 60s linear infinite",
-        marquee: "marquee 20s linear infinite",
+        marquee: "marquee var(--duration) linear infinite",
       },
     },
   },

@@ -25,6 +25,8 @@ import cloudzyLogo from "@/assets/clients/cloudzy.svg";
 import { ClientLogos } from "@/components/ClientLogos";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
+import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
+import { marqueeTestimonials } from "@/data/testimonials";
 import { useState } from "react";
 const Index = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -434,6 +436,13 @@ const Index = () => {
           </PixelCard>
         </div>
       </section>
+
+      {/* Testimonials Marquee */}
+      <TestimonialsSection
+        title="What Clients Say"
+        description="Trusted by marketing leaders and growing businesses worldwide"
+        testimonials={marqueeTestimonials}
+      />
 
       {/* Client Logos Section */}
       <ClientLogos />
