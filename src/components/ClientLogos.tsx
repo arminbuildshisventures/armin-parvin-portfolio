@@ -29,7 +29,7 @@ export const ClientLogos = () => {
     <section className="py-16 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
         <div className="pixel-border bg-zinc-800 backdrop-blur-sm p-8 rounded-lg relative">
-          <p className="text-center text-zinc-400 font-secondary mb-6">Trusted by leading brands</p>
+          <p className="text-center text-zinc-400 font-secondary mb-6">Trusted by Leading Brands</p>
           <div className="relative w-full overflow-hidden">
             <div className="flex [--duration:40s]">
               <div className="flex gap-16 flex-shrink-0 animate-marquee">
