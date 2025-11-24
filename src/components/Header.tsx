@@ -1,6 +1,7 @@
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "@/components/NavLink";
 import logo from "@/assets/logo.png";
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,28 +14,56 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
-            <Link to="/" className="font-secondary text-sm hover:text-accent transition-colors">
+          <div className="hidden md:flex items-center gap-6 relative">
+            <NavLink 
+              to="/" 
+              className="font-secondary text-sm hover:text-accent transition-colors relative py-2"
+              activeClassName="before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_var(--accent)] before:transition-all before:duration-300"
+            >
               Home
-            </Link>
-            <Link to="/about" className="font-secondary text-sm hover:text-accent transition-colors">
+            </NavLink>
+            <NavLink 
+              to="/about" 
+              className="font-secondary text-sm hover:text-accent transition-colors relative py-2"
+              activeClassName="before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_var(--accent)] before:transition-all before:duration-300"
+            >
               About
-            </Link>
-            <Link to="/services" className="font-secondary text-sm hover:text-accent transition-colors">
+            </NavLink>
+            <NavLink 
+              to="/services" 
+              className="font-secondary text-sm hover:text-accent transition-colors relative py-2"
+              activeClassName="before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_var(--accent)] before:transition-all before:duration-300"
+            >
               Services
-            </Link>
-            <Link to="/work" className="font-secondary text-sm hover:text-accent transition-colors">
+            </NavLink>
+            <NavLink 
+              to="/work" 
+              className="font-secondary text-sm hover:text-accent transition-colors relative py-2"
+              activeClassName="before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_var(--accent)] before:transition-all before:duration-300"
+            >
               Work
-            </Link>
-            <Link to="/testimonials" className="font-secondary text-sm hover:text-accent transition-colors">
+            </NavLink>
+            <NavLink 
+              to="/testimonials" 
+              className="font-secondary text-sm hover:text-accent transition-colors relative py-2"
+              activeClassName="before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_var(--accent)] before:transition-all before:duration-300"
+            >
               Testimonials
-            </Link>
-            <Link to="/insights" className="font-secondary text-sm hover:text-accent transition-colors">
+            </NavLink>
+            <NavLink 
+              to="/insights" 
+              className="font-secondary text-sm hover:text-accent transition-colors relative py-2"
+              activeClassName="before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_var(--accent)] before:transition-all before:duration-300"
+            >
               Insights
-            </Link>
-            <Link to="/contact" className="font-secondary text-sm hover:text-accent transition-colors">
+            </NavLink>
+            <NavLink 
+              to="/contact" 
+              className="font-secondary text-sm hover:text-accent transition-colors relative py-2"
+              activeClassName="before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:w-12 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-accent before:to-transparent before:rounded-full before:shadow-[0_0_12px_var(--accent)] before:transition-all before:duration-300"
+            >
               Contact
-            </Link>
+            </NavLink>
           </div>
 
           {/* Mobile Menu Button */}
