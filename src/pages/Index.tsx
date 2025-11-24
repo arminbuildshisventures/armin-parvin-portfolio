@@ -29,6 +29,7 @@ import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
 import { marqueeTestimonials } from "@/data/testimonials";
 import { useState } from "react";
 import { Typewriter } from "@/components/ui/typewriter-text";
+import { FlipWords } from "@/components/ui/flip-words";
 const Index = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -76,7 +77,7 @@ const Index = () => {
               </p>
             </div>
             <h1 className="font-primary text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-pixel-inverted leading-tight sm:leading-relaxed px-2">
-              Words That Convert
+              <FlipWords words={["Words", "Blogs", "Copy", "Emails", "Stories", "Newsletters", "Landing Pages"]} duration={3000} /> That Convert
             </h1>
             <p className="font-secondary text-base sm:text-lg md:text-xl max-w-2xl mx-auto px-4">
               <Typewriter
