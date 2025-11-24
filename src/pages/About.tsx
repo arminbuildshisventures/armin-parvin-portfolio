@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Briefcase, GraduationCap, Code, Award, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Timeline } from "@/components/ui/timeline";
 import aboutBgPixel from "@/assets/about-bg-pixel.png";
 import youngGuitar1 from "@/assets/journey/young-guitar-1.png";
 import youngPractice from "@/assets/journey/young-practice.png";
@@ -32,6 +33,128 @@ import { useState } from "react";
 export default function About() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+  
+  const timelineData = [
+    {
+      title: "🎨 Artistic Roots",
+      content: (
+        <div className="space-y-6">
+          <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+            <p className="font-secondary text-base md:text-lg leading-relaxed">
+              I come from an artistic family, with my mom being a graphic designer and painter, and my dad an illustrator. 
+              Music made me thrive, so I went on to become a professional Classical and Flamenco guitar player and instructor.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <img src={youngGuitar1} alt="Young musician with guitar" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngGuitar1, alt: "Young musician with guitar" })} />
+            <img src={youngSmile} alt="Young artist" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngSmile, alt: "Young artist" })} />
+            <img src={youngPractice} alt="Practicing music" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngPractice, alt: "Practicing music" })} />
+            <img src={youngGlasses} alt="Young portrait with glasses" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngGlasses, alt: "Young portrait with glasses" })} />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "🎸 The Dedication",
+      content: (
+        <div className="space-y-6">
+          <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+            <p className="font-secondary text-base md:text-lg leading-relaxed">
+              When people were mining and buying Bitcoin, I was practicing music for well over 16 hours a day (huh ....). 
+              At some point, I realized that teaching wasn't my passion (even though I still mentor many people), so I decided 
+              to explore different paths to find out what was.
+            </p>
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            <img src={dedicationPiano} alt="Piano practice" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationPiano, alt: "Piano practice" })} />
+            <img src={dedicationGuitarStudio} alt="Guitar studio session" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationGuitarStudio, alt: "Guitar studio session" })} />
+            <img src={dedicationGuitarPerformance} alt="Guitar performance" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationGuitarPerformance, alt: "Guitar performance" })} />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "💡 The Discovery",
+      content: (
+        <div className="space-y-6">
+          <div className="pixel-border pixel-shadow bg-accent/30 border-accent/30 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+            <p className="font-secondary text-base md:text-lg leading-relaxed">
+              I discovered marketing, and content immediately caught my attention (well, I am quite the storyteller, right?). 
+              I started writing blogs, landing page and webpage copy, emails, and LinkedIn posts. The blogs started ranking #1 
+              and #0 on Google, landing page conversion rates tripled, emails started getting too many signups, and LinkedIn 
+              posts started generating leads.
+            </p>
+          </div>
+          <div className="grid grid-cols-3 gap-3 mb-3">
+            <img src={discoveryProfessional1} alt="Professional portrait 1" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional1, alt: "Professional portrait 1" })} />
+            <img src={discoveryProfessional2} alt="Professional portrait 2" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional2, alt: "Professional portrait 2" })} />
+            <img src={discoveryProfessional3} alt="Professional portrait 3" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional3, alt: "Professional portrait 3" })} />
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <img src={discoveryTeam} alt="Team collaboration" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryTeam, alt: "Team collaboration" })} />
+            <img src={discoveryProfessional4} alt="Professional portrait 4" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional4, alt: "Professional portrait 4" })} />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "🚀 Tech Immersion",
+      content: (
+        <div className="space-y-6">
+          <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+            <p className="font-secondary text-base md:text-lg leading-relaxed">
+              My technology nerdiness allowed me to work with clients across various tech sectors, including FinTech, PropTech, 
+              SaaS, MarCom, Cloud Infrastructure, Cybersecurity, and Software Development.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <img src={professionalPortraitTech} alt="Professional portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: professionalPortraitTech, alt: "Professional portrait with hat" })} />
+            <img src={professionalPerformance} alt="Professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: professionalPerformance, alt: "Professional portrait" })} />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "📊 Present Day",
+      content: (
+        <div className="space-y-6">
+          <div className="pixel-border pixel-shadow bg-secondary/30 border-secondary/30 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+            <p className="font-secondary text-base md:text-lg leading-relaxed">
+              Recently, I have immersed myself in finance, economics, and especially Web3, blockchain, and cryptocurrency 
+              research analysis. As a former math nerd, I can connect numbers to narratives and translate data into insight 
+              and strategy.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <img src={presentDayHat} alt="Present day portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDayHat, alt: "Present day portrait with hat" })} />
+            <img src={presentDaySuit} alt="Present day professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDaySuit, alt: "Present day professional portrait" })} />
+          </div>
+          <div className="mt-3">
+            <img src={presentDayChair} alt="Present day portrait with red hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDayChair, alt: "Present day portrait with red hat" })} />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "☕ Coffee & Work",
+      content: (
+        <div className="pixel-border pixel-shadow bg-accent/30 border-accent/30 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+          <p className="font-secondary text-base md:text-lg leading-relaxed text-accent font-medium italic border-l-4 border-accent pl-4 mb-6">
+            When I'm not working (does that even happen?), I'm sipping on too much specialty coffee and working. Yes, I'm 
+            working even when I'm not.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <img src={coffeeWorkspace1} alt="Workspace with coffee" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeWorkspace1, alt: "Workspace with coffee" })} />
+            <img src={coffeeWorkspace2} alt="Outdoor workspace" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeWorkspace2, alt: "Outdoor workspace" })} />
+            <img src={coffeeEspresso} alt="Espresso shot" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeEspresso, alt: "Espresso shot" })} />
+            <img src={coffeeHand} alt="Coffee in hand" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeHand, alt: "Coffee in hand" })} />
+            <img src={coffeeTable1} alt="Coffee table setup" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeTable1, alt: "Coffee table setup" })} />
+            <img src={coffeeTable2} alt="Coffee table view" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeTable2, alt: "Coffee table view" })} />
+          </div>
+        </div>
+      ),
+    },
+  ];
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -79,154 +202,8 @@ export default function About() {
             </button>
           </div>
 
-          {/* Personal Story Section */}
-          <div className="my-16 flex items-center gap-4">
-            <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-secondary to-transparent" />
-            <span className="font-primary text-xl md:text-2xl text-secondary pixel-border bg-card px-6 py-2">
-              ◆ The Journey ◆
-            </span>
-            <div className="h-[2px] flex-1 bg-gradient-to-r from-secondary via-secondary to-transparent" />
-          </div>
-
-          <div className="mb-16 max-w-5xl mx-auto relative">
-            {/* Connecting Thread */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-secondary via-accent to-secondary hidden md:block" style={{ transform: 'translateX(-50%)' }} />
-            
-            {/* Segment 1: Artistic Roots */}
-            <div className="relative mb-12 md:mb-16">
-              <div className="grid md:grid-cols-2 gap-6 items-center">
-                <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-1 md:order-1">
-                  <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🎨 Artistic Roots</h3>
-                  <p className="font-secondary text-base md:text-lg leading-relaxed">
-                    I come from an artistic family, with my mom being a graphic designer and painter, and my dad an illustrator. 
-                    Music made me thrive, so I went on to become a professional Classical and Flamenco guitar player and instructor.
-                  </p>
-                </div>
-                <div className="grid grid-cols-2 gap-3 order-2 md:order-2">
-                  <img src={youngGuitar1} alt="Young musician with guitar" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngGuitar1, alt: "Young musician with guitar" })} />
-                  <img src={youngSmile} alt="Young artist" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngSmile, alt: "Young artist" })} />
-                  <img src={youngPractice} alt="Practicing music" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngPractice, alt: "Practicing music" })} />
-                  <img src={youngGlasses} alt="Young portrait with glasses" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngGlasses, alt: "Young portrait with glasses" })} />
-                </div>
-              </div>
-              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
-            </div>
-
-            {/* Segment 2: The Dedication */}
-            <div className="relative mb-12 md:mb-16">
-              <div className="grid md:grid-cols-2 gap-6 items-center">
-                <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-1 md:order-2">
-                  <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🎸 The Dedication</h3>
-                  <p className="font-secondary text-base md:text-lg leading-relaxed">
-                    When people were mining and buying Bitcoin, I was practicing music for well over 16 hours a day (huh ....). 
-                    At some point, I realized that teaching wasn't my passion (even though I still mentor many people), so I decided 
-                    to explore different paths to find out what was.
-                  </p>
-                </div>
-                <div className="grid grid-cols-3 gap-3 justify-center order-2 md:order-1">
-                  <img src={dedicationPiano} alt="Piano practice" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationPiano, alt: "Piano practice" })} />
-                  <img src={dedicationGuitarStudio} alt="Guitar studio session" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationGuitarStudio, alt: "Guitar studio session" })} />
-                  <img src={dedicationGuitarPerformance} alt="Guitar performance" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationGuitarPerformance, alt: "Guitar performance" })} />
-                </div>
-              </div>
-              <div className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{ transform: 'translate(-50%, -50%) rotate(45deg)' }} />
-            </div>
-
-            {/* Segment 3: The Discovery */}
-            <div className="relative mb-12 md:mb-16">
-              <div className="grid md:grid-cols-2 gap-6 items-start">
-                <div className="pixel-border pixel-shadow bg-accent/30 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-1 md:order-1">
-                  <h3 className="font-primary text-xl md:text-2xl text-accent mb-4">💡 The Discovery</h3>
-                  <p className="font-secondary text-base md:text-lg leading-relaxed">
-                    I discovered marketing, and content immediately caught my attention (well, I am quite the storyteller, right?). 
-                    I started writing blogs, landing page and webpage copy, emails, and LinkedIn posts. The blogs started ranking #1 
-                    and #0 on Google, landing page conversion rates tripled, emails started getting too many signups, and LinkedIn 
-                    posts started generating leads.
-                  </p>
-                </div>
-                <div className="order-2 md:order-2">
-                  {/* Professional portraits in a creative grid */}
-                  <div className="grid grid-cols-3 gap-3 mb-3">
-                    <img src={discoveryProfessional1} alt="Professional portrait 1" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional1, alt: "Professional portrait 1" })} />
-                    <img src={discoveryProfessional2} alt="Professional portrait 2" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional2, alt: "Professional portrait 2" })} />
-                    <img src={discoveryProfessional3} alt="Professional portrait 3" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional3, alt: "Professional portrait 3" })} />
-                  </div>
-                  {/* Team collaboration and individual portrait */}
-                  <div className="grid grid-cols-2 gap-3">
-                    <img src={discoveryTeam} alt="Team collaboration" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryTeam, alt: "Team collaboration" })} />
-                    <img src={discoveryProfessional4} alt="Professional portrait 4" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional4, alt: "Professional portrait 4" })} />
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
-            </div>
-
-            {/* Segment 4: Tech Immersion */}
-            <div className="relative mb-12 md:mb-16">
-              <div className="grid md:grid-cols-2 gap-6 items-center">
-                <div className="order-1 md:order-2 pixel-border pixel-shadow bg-card/80 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                  <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🚀 Tech Immersion</h3>
-                  <p className="font-secondary text-base md:text-lg leading-relaxed">
-                    My technology nerdiness allowed me to work with clients across various tech sectors, including FinTech, PropTech, 
-                    SaaS, MarCom, Cloud Infrastructure, Cybersecurity, and Software Development.
-                  </p>
-                </div>
-                <div className="order-2 md:order-1">
-                  {/* Professional portraits grid */}
-                  <div className="grid grid-cols-2 gap-3">
-                    <img src={professionalPortraitTech} alt="Professional portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: professionalPortraitTech, alt: "Professional portrait with hat" })} />
-                    <img src={professionalPerformance} alt="Professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: professionalPerformance, alt: "Professional portrait" })} />
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{ transform: 'translate(-50%, -50%) rotate(45deg)' }} />
-            </div>
-
-            {/* Segment 5: Present Day */}
-            <div className="relative">
-              <div className="grid md:grid-cols-2 gap-6 items-center">
-                <div className="order-1 md:order-1 pixel-border pixel-shadow bg-secondary/30 border-secondary/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                  <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">📊 Present Day</h3>
-                  <p className="font-secondary text-base md:text-lg leading-relaxed">
-                    Recently, I have immersed myself in finance, economics, and especially Web3, blockchain, and cryptocurrency 
-                    research analysis. As a former math nerd, I can connect numbers to narratives and translate data into insight 
-                    and strategy.
-                  </p>
-                </div>
-                <div className="order-2 md:order-2">
-                  {/* Present day portraits in creative grid */}
-                  <div className="grid grid-cols-2 gap-3">
-                    <img src={presentDayHat} alt="Present day portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDayHat, alt: "Present day portrait with hat" })} />
-                    <img src={presentDaySuit} alt="Present day professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDaySuit, alt: "Present day professional portrait" })} />
-                  </div>
-                  <div className="mt-3">
-                    <img src={presentDayChair} alt="Present day portrait with red hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDayChair, alt: "Present day portrait with red hat" })} />
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
-            </div>
-
-            {/* Coffee & Lifestyle Section */}
-            <div className="relative mt-8">
-              <div className="pixel-border pixel-shadow bg-accent/30 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                <p className="font-secondary text-base md:text-lg leading-relaxed text-accent font-medium italic border-l-4 border-accent pl-4 mb-6">
-                  When I'm not working (does that even happen?), I'm sipping on too much specialty coffee and working. Yes, I'm 
-                  working even when I'm not.
-                </p>
-                
-                {/* Coffee photos grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
-                  <img src={coffeeWorkspace1} alt="Workspace with coffee" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeWorkspace1, alt: "Workspace with coffee" })} />
-                  <img src={coffeeWorkspace2} alt="Outdoor workspace" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeWorkspace2, alt: "Outdoor workspace" })} />
-                  <img src={coffeeEspresso} alt="Espresso shot" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeEspresso, alt: "Espresso shot" })} />
-                  <img src={coffeeHand} alt="Coffee in hand" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeHand, alt: "Coffee in hand" })} />
-                  <img src={coffeeTable1} alt="Coffee table setup" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeTable1, alt: "Coffee table setup" })} />
-                  <img src={coffeeTable2} alt="Coffee table view" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeTable2, alt: "Coffee table view" })} />
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Journey Timeline Section */}
+          <Timeline data={timelineData} />
 
           <Tabs defaultValue="experience" className="w-full">
             <TabsList className="grid sm:grid-cols-5 grid-cols-3 mb-8 pixel-border h-auto gap-2 p-2 bg-card/50">
