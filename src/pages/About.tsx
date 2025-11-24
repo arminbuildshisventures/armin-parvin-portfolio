@@ -164,14 +164,14 @@ export default function About() {
             {/* Segment 4: Tech Immersion */}
             <div className="relative mb-12 md:mb-16">
               <div className="grid md:grid-cols-2 gap-6 items-center">
-                <div className="order-1 md:order-1 lg:order-2 pixel-border pixel-shadow bg-card/80 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+                <div className="order-1 md:order-2 pixel-border pixel-shadow bg-card/80 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🚀 Tech Immersion</h3>
                   <p className="font-secondary text-base md:text-lg leading-relaxed">
                     My technology nerdiness allowed me to work with clients across various tech sectors, including FinTech, PropTech, 
                     SaaS, MarCom, Cloud Infrastructure, Cybersecurity, and Software Development.
                   </p>
                 </div>
-                <div className="order-2 md:order-2 lg:order-1">
+                <div className="order-2 md:order-1">
                   {/* Professional portraits grid */}
                   <div className="grid grid-cols-2 gap-3">
                     <img src={professionalPortraitTech} alt="Professional portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: professionalPortraitTech, alt: "Professional portrait with hat" })} />
