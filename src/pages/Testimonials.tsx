@@ -6,7 +6,7 @@ import { testimonials, marqueeTestimonials } from "@/data/testimonials";
 import { Quote } from "lucide-react";
 import { PixelCard } from "@/components/PixelCard";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import testimonialsBg from "@/assets/testimonials-bg-pixel.png";
+import testimonialsBg from "@/assets/testimonials-bg-pixel.jpg";
 
 const Testimonials = () => {
   const featuredTestimonials = testimonials.filter(t => t.featured);

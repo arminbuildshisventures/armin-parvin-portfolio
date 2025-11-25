@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown, X } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
-import workBg from "@/assets/work-bg-pixel.png";
+import workBg from "@/assets/work-bg-pixel.jpg";
 import roomvuResults1 from "@/assets/work/roomvu-results-1.png";
 import roomvuResults2 from "@/assets/work/roomvu-results-2.jpg";
 import roomvuResults3 from "@/assets/work/roomvu-results-3.jpg";

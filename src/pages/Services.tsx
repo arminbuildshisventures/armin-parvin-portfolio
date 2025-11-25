@@ -4,7 +4,7 @@ import { ClientLogos } from "@/components/ClientLogos";
 import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
 import { marqueeTestimonials } from "@/data/testimonials";
 import { Lightbulb, Megaphone, Mail, BookOpen, PenTool, FileText, TrendingUp, MessageSquare, Sparkles } from "lucide-react";
-import servicesBg from "@/assets/services-bg-pixel.png";
+import servicesBg from "@/assets/services-bg-pixel.jpg";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function Services() {
   const contentMarketingServices = [{
