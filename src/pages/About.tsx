@@ -6,7 +6,7 @@ import { marqueeTestimonials } from "@/data/testimonials";
 import { Briefcase, GraduationCap, Code, Award, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import aboutBgPixel from "@/assets/about-bg-pixel.png";
+import aboutBgPixel from "@/assets/about-bg-pixel.jpg";
 import youngGuitar1 from "@/assets/journey/young-guitar-1.png";
 import youngPractice from "@/assets/journey/young-practice.png";
 import youngSmile from "@/assets/journey/young-smile.png";

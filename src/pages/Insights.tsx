@@ -5,7 +5,7 @@ import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
 import { marqueeTestimonials } from "@/data/testimonials";
 import { FileText, Calendar } from "lucide-react";
 import { PixelCard } from "@/components/PixelCard";
-import insightsBg from "@/assets/insights-bg-pixel.png";
+import insightsBg from "@/assets/insights-bg-pixel.jpg";
 
 const Insights = () => {
   const insights = [
