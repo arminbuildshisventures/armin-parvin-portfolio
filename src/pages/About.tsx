@@ -33,21 +33,19 @@ import coffeeTable2 from "@/assets/journey/coffee-table-2.jpg";
 import { useState } from "react";
 export default function About() {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
+  return <div className="min-h-screen flex flex-col">
       <Header />
 
-      <section
-        className="flex-grow py-24 px-4 pt-32 relative"
-        style={{
-          backgroundImage: `url(${aboutBgPixel})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
-      >
+      <section className="flex-grow py-24 px-4 pt-32 relative" style={{
+      backgroundImage: `url(${aboutBgPixel})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundAttachment: "fixed"
+    }}>
         <div className="absolute inset-0 bg-background/80" />
 
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -74,10 +72,7 @@ export default function About() {
               </p>
             </div>
 
-            <button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="md:hidden mt-4 text-accent font-primary text-sm hover:underline"
-            >
+            <button onClick={() => setIsExpanded(!isExpanded)} className="md:hidden mt-4 text-accent font-primary text-sm hover:underline">
               {isExpanded ? "Read Less" : "Read More"}
             </button>
           </div>
@@ -93,10 +88,9 @@ export default function About() {
 
           <div className="mb-16 max-w-5xl mx-auto relative">
             {/* Connecting Thread */}
-            <div
-              className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-secondary via-accent to-secondary hidden md:block"
-              style={{ transform: "translateX(-50%)" }}
-            />
+            <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-secondary via-accent to-secondary hidden md:block" style={{
+            transform: "translateX(-50%)"
+          }} />
 
             {/* Segment 1: Artistic Roots */}
             <div className="relative mb-12 md:mb-16">
@@ -110,36 +104,27 @@ export default function About() {
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-3 order-2 md:order-2">
-                  <img
-                    src={youngGuitar1}
-                    alt="Young musician with guitar"
-                    className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                    onClick={() => setSelectedImage({ src: youngGuitar1, alt: "Young musician with guitar" })}
-                  />
-                  <img
-                    src={youngSmile}
-                    alt="Young artist"
-                    className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                    onClick={() => setSelectedImage({ src: youngSmile, alt: "Young artist" })}
-                  />
-                  <img
-                    src={youngPractice}
-                    alt="Practicing music"
-                    className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                    onClick={() => setSelectedImage({ src: youngPractice, alt: "Practicing music" })}
-                  />
-                  <img
-                    src={youngGlasses}
-                    alt="Young portrait with glasses"
-                    className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                    onClick={() => setSelectedImage({ src: youngGlasses, alt: "Young portrait with glasses" })}
-                  />
+                  <img src={youngGuitar1} alt="Young musician with guitar" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                  src: youngGuitar1,
+                  alt: "Young musician with guitar"
+                })} />
+                  <img src={youngSmile} alt="Young artist" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                  src: youngSmile,
+                  alt: "Young artist"
+                })} />
+                  <img src={youngPractice} alt="Practicing music" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                  src: youngPractice,
+                  alt: "Practicing music"
+                })} />
+                  <img src={youngGlasses} alt="Young portrait with glasses" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                  src: youngGlasses,
+                  alt: "Young portrait with glasses"
+                })} />
                 </div>
               </div>
-              <div
-                className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block"
-                style={{ transform: "translate(50%, -50%) rotate(45deg)" }}
-              />
+              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block" style={{
+              transform: "translate(50%, -50%) rotate(45deg)"
+            }} />
             </div>
 
             {/* Segment 2: The Dedication */}
@@ -154,30 +139,23 @@ export default function About() {
                   </p>
                 </div>
                 <div className="grid grid-cols-3 gap-3 justify-center order-2 md:order-1">
-                  <img
-                    src={dedicationPiano}
-                    alt="Piano practice"
-                    className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                    onClick={() => setSelectedImage({ src: dedicationPiano, alt: "Piano practice" })}
-                  />
-                  <img
-                    src={dedicationGuitarStudio}
-                    alt="Guitar studio session"
-                    className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                    onClick={() => setSelectedImage({ src: dedicationGuitarStudio, alt: "Guitar studio session" })}
-                  />
-                  <img
-                    src={dedicationGuitarPerformance}
-                    alt="Guitar performance"
-                    className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                    onClick={() => setSelectedImage({ src: dedicationGuitarPerformance, alt: "Guitar performance" })}
-                  />
+                  <img src={dedicationPiano} alt="Piano practice" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                  src: dedicationPiano,
+                  alt: "Piano practice"
+                })} />
+                  <img src={dedicationGuitarStudio} alt="Guitar studio session" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                  src: dedicationGuitarStudio,
+                  alt: "Guitar studio session"
+                })} />
+                  <img src={dedicationGuitarPerformance} alt="Guitar performance" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                  src: dedicationGuitarPerformance,
+                  alt: "Guitar performance"
+                })} />
                 </div>
               </div>
-              <div
-                className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block"
-                style={{ transform: "translate(-50%, -50%) rotate(45deg)" }}
-              />
+              <div className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{
+              transform: "translate(-50%, -50%) rotate(45deg)"
+            }} />
             </div>
 
             {/* Segment 3: The Discovery */}
@@ -195,46 +173,35 @@ export default function About() {
                 <div className="order-2 md:order-2">
                   {/* Professional portraits in a creative grid */}
                   <div className="grid grid-cols-3 gap-3 mb-3">
-                    <img
-                      src={discoveryProfessional1}
-                      alt="Professional portrait 1"
-                      className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                      onClick={() => setSelectedImage({ src: discoveryProfessional1, alt: "Professional portrait 1" })}
-                    />
-                    <img
-                      src={discoveryProfessional2}
-                      alt="Professional portrait 2"
-                      className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                      onClick={() => setSelectedImage({ src: discoveryProfessional2, alt: "Professional portrait 2" })}
-                    />
-                    <img
-                      src={discoveryProfessional3}
-                      alt="Professional portrait 3"
-                      className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                      onClick={() => setSelectedImage({ src: discoveryProfessional3, alt: "Professional portrait 3" })}
-                    />
+                    <img src={discoveryProfessional1} alt="Professional portrait 1" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                    src: discoveryProfessional1,
+                    alt: "Professional portrait 1"
+                  })} />
+                    <img src={discoveryProfessional2} alt="Professional portrait 2" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                    src: discoveryProfessional2,
+                    alt: "Professional portrait 2"
+                  })} />
+                    <img src={discoveryProfessional3} alt="Professional portrait 3" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                    src: discoveryProfessional3,
+                    alt: "Professional portrait 3"
+                  })} />
                   </div>
                   {/* Team collaboration and individual portrait */}
                   <div className="grid grid-cols-2 gap-3">
-                    <img
-                      src={discoveryTeam}
-                      alt="Team collaboration"
-                      className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                      onClick={() => setSelectedImage({ src: discoveryTeam, alt: "Team collaboration" })}
-                    />
-                    <img
-                      src={discoveryProfessional4}
-                      alt="Professional portrait 4"
-                      className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                      onClick={() => setSelectedImage({ src: discoveryProfessional4, alt: "Professional portrait 4" })}
-                    />
+                    <img src={discoveryTeam} alt="Team collaboration" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                    src: discoveryTeam,
+                    alt: "Team collaboration"
+                  })} />
+                    <img src={discoveryProfessional4} alt="Professional portrait 4" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                    src: discoveryProfessional4,
+                    alt: "Professional portrait 4"
+                  })} />
                   </div>
                 </div>
               </div>
-              <div
-                className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block"
-                style={{ transform: "translate(50%, -50%) rotate(45deg)" }}
-              />
+              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block" style={{
+              transform: "translate(50%, -50%) rotate(45deg)"
+            }} />
             </div>
 
             {/* Segment 4: Tech Immersion */}
@@ -250,27 +217,20 @@ export default function About() {
                 <div className="order-2 md:order-1">
                   {/* Professional portraits grid */}
                   <div className="grid grid-cols-2 gap-3">
-                    <img
-                      src={professionalPortraitTech}
-                      alt="Professional portrait with hat"
-                      className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                      onClick={() =>
-                        setSelectedImage({ src: professionalPortraitTech, alt: "Professional portrait with hat" })
-                      }
-                    />
-                    <img
-                      src={professionalPerformance}
-                      alt="Professional portrait"
-                      className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                      onClick={() => setSelectedImage({ src: professionalPerformance, alt: "Professional portrait" })}
-                    />
+                    <img src={professionalPortraitTech} alt="Professional portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                    src: professionalPortraitTech,
+                    alt: "Professional portrait with hat"
+                  })} />
+                    <img src={professionalPerformance} alt="Professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                    src: professionalPerformance,
+                    alt: "Professional portrait"
+                  })} />
                   </div>
                 </div>
               </div>
-              <div
-                className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block"
-                style={{ transform: "translate(-50%, -50%) rotate(45deg)" }}
-              />
+              <div className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{
+              transform: "translate(-50%, -50%) rotate(45deg)"
+            }} />
             </div>
 
             {/* Segment 5: Present Day */}
@@ -287,37 +247,26 @@ export default function About() {
                 <div className="order-2 md:order-2">
                   {/* Present day portraits in creative grid */}
                   <div className="grid grid-cols-2 gap-3">
-                    <img
-                      src={presentDayHat}
-                      alt="Present day portrait with hat"
-                      className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                      onClick={() => setSelectedImage({ src: presentDayHat, alt: "Present day portrait with hat" })}
-                    />
-                    <img
-                      src={presentDaySuit}
-                      alt="Present day professional portrait"
-                      className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                      onClick={() =>
-                        setSelectedImage({ src: presentDaySuit, alt: "Present day professional portrait" })
-                      }
-                    />
+                    <img src={presentDayHat} alt="Present day portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                    src: presentDayHat,
+                    alt: "Present day portrait with hat"
+                  })} />
+                    <img src={presentDaySuit} alt="Present day professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                    src: presentDaySuit,
+                    alt: "Present day professional portrait"
+                  })} />
                   </div>
                   <div className="mt-3">
-                    <img
-                      src={presentDayChair}
-                      alt="Present day portrait with red hat"
-                      className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                      onClick={() =>
-                        setSelectedImage({ src: presentDayChair, alt: "Present day portrait with red hat" })
-                      }
-                    />
+                    <img src={presentDayChair} alt="Present day portrait with red hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                    src: presentDayChair,
+                    alt: "Present day portrait with red hat"
+                  })} />
                   </div>
                 </div>
               </div>
-              <div
-                className="absolute -right-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block"
-                style={{ transform: "translate(50%, -50%) rotate(45deg)" }}
-              />
+              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{
+              transform: "translate(50%, -50%) rotate(45deg)"
+            }} />
             </div>
 
             {/* Coffee & Lifestyle Section */}
@@ -330,42 +279,30 @@ export default function About() {
 
                 {/* Coffee photos grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
-                  <img
-                    src={coffeeWorkspace1}
-                    alt="Workspace with coffee"
-                    className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                    onClick={() => setSelectedImage({ src: coffeeWorkspace1, alt: "Workspace with coffee" })}
-                  />
-                  <img
-                    src={coffeeWorkspace2}
-                    alt="Outdoor workspace"
-                    className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                    onClick={() => setSelectedImage({ src: coffeeWorkspace2, alt: "Outdoor workspace" })}
-                  />
-                  <img
-                    src={coffeeEspresso}
-                    alt="Espresso shot"
-                    className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                    onClick={() => setSelectedImage({ src: coffeeEspresso, alt: "Espresso shot" })}
-                  />
-                  <img
-                    src={coffeeHand}
-                    alt="Coffee in hand"
-                    className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                    onClick={() => setSelectedImage({ src: coffeeHand, alt: "Coffee in hand" })}
-                  />
-                  <img
-                    src={coffeeTable1}
-                    alt="Coffee table setup"
-                    className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                    onClick={() => setSelectedImage({ src: coffeeTable1, alt: "Coffee table setup" })}
-                  />
-                  <img
-                    src={coffeeTable2}
-                    alt="Coffee table view"
-                    className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
-                    onClick={() => setSelectedImage({ src: coffeeTable2, alt: "Coffee table view" })}
-                  />
+                  <img src={coffeeWorkspace1} alt="Workspace with coffee" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                  src: coffeeWorkspace1,
+                  alt: "Workspace with coffee"
+                })} />
+                  <img src={coffeeWorkspace2} alt="Outdoor workspace" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                  src: coffeeWorkspace2,
+                  alt: "Outdoor workspace"
+                })} />
+                  <img src={coffeeEspresso} alt="Espresso shot" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                  src: coffeeEspresso,
+                  alt: "Espresso shot"
+                })} />
+                  <img src={coffeeHand} alt="Coffee in hand" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                  src: coffeeHand,
+                  alt: "Coffee in hand"
+                })} />
+                  <img src={coffeeTable1} alt="Coffee table setup" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                  src: coffeeTable1,
+                  alt: "Coffee table setup"
+                })} />
+                  <img src={coffeeTable2} alt="Coffee table view" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({
+                  src: coffeeTable2,
+                  alt: "Coffee table view"
+                })} />
                 </div>
               </div>
             </div>
@@ -373,38 +310,23 @@ export default function About() {
 
           <Tabs defaultValue="experience" className="w-full">
             <TabsList className="grid sm:grid-cols-5 grid-cols-3 mb-8 pixel-border h-auto gap-2 p-2 bg-card/50">
-              <TabsTrigger
-                value="experience"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm"
-              >
+              <TabsTrigger value="experience" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm">
                 <Briefcase className="w-4 h-4 sm:mr-2" />
                 <span className="hidden sm:inline">Experience</span>
               </TabsTrigger>
-              <TabsTrigger
-                value="education"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm"
-              >
+              <TabsTrigger value="education" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm">
                 <GraduationCap className="w-4 h-4 sm:mr-2" />
                 <span className="hidden sm:inline">Education</span>
               </TabsTrigger>
-              <TabsTrigger
-                value="skills"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm"
-              >
+              <TabsTrigger value="skills" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm">
                 <Code className="w-4 h-4 sm:mr-2" />
                 <span className="hidden sm:inline">Skills</span>
               </TabsTrigger>
-              <TabsTrigger
-                value="recognition"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm col-span-3 sm:col-span-1"
-              >
+              <TabsTrigger value="recognition" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm col-span-3 sm:col-span-1">
                 <Award className="w-4 h-4 sm:mr-2" />
                 <span className="hidden sm:inline">Recognition</span>
               </TabsTrigger>
-              <TabsTrigger
-                value="interests"
-                className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm col-span-3 sm:col-span-1"
-              >
+              <TabsTrigger value="interests" className="pixel-border data-[state=active]:bg-secondary data-[state=active]:text-secondary-foreground text-xs sm:text-sm col-span-3 sm:col-span-1">
                 <Target className="w-4 h-4 sm:mr-2" />
                 <span className="hidden sm:inline">Interests</span>
               </TabsTrigger>
@@ -426,8 +348,7 @@ export default function About() {
                 </div>
                 <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
                   <div className="flex gap-3">
-                    {[...Array(3)].map((_, i) => (
-                      <div key={i} className="flex gap-3 animate-marquee shrink-0">
+                    {[...Array(3)].map((_, i) => <div key={i} className="flex gap-3 animate-marquee shrink-0">
                         <Badge variant="secondary" className="pixel-border">
                           Email Marketing
                         </Badge>
@@ -482,8 +403,7 @@ export default function About() {
                         <Badge variant="secondary" className="pixel-border">
                           Sales
                         </Badge>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </div>
               </div>
@@ -496,7 +416,7 @@ export default function About() {
                       Mar. 2023 — Nov. 2025
                     </span>
                   </div>
-                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">Renee Content · Remote</p>
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">Renee Content · (Remote)</p>
                   <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1 flex-shrink-0">●</span>
@@ -514,12 +434,12 @@ export default function About() {
 
                 <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
-                    <h3 className="font-primary text-base sm:text-xl">Content Marketing Mentor</h3>
+                    <h3 className="font-primary text-base sm:text-xl">Professional Content Marketing Mentor</h3>
                     <span className="font-secondary text-xs sm:text-sm text-muted-foreground">
                       Mar. 2023 — Nov. 2025
                     </span>
                   </div>
-                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">ADPList · Remote</p>
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">ADPList · (Remote)</p>
                   <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1 flex-shrink-0">●</span>
@@ -536,9 +456,7 @@ export default function About() {
                     <h3 className="font-primary text-base sm:text-xl">Guest Speaker</h3>
                     <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Apr. 2025</span>
                   </div>
-                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">
-                    ADPList's 2025 Don't Settle Conference · Remote
-                  </p>
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">ADPList's 2025 Don't Settle Conference · (Remote)</p>
                   <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1 flex-shrink-0">●</span>
@@ -920,11 +838,7 @@ export default function About() {
       </section>
 
       {/* Testimonials Marquee */}
-      <TestimonialsSection
-        title="What Clients Say"
-        description="Trusted by marketing leaders and growing businesses worldwide"
-        testimonials={marqueeTestimonials}
-      />
+      <TestimonialsSection title="What Clients Say" description="Trusted by marketing leaders and growing businesses worldwide" testimonials={marqueeTestimonials} />
 
       {/* Client Logos Section */}
       <ClientLogos />
@@ -944,13 +858,10 @@ export default function About() {
       {/* Image Modal */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
         <DialogContent className="max-w-4xl w-[95vw] h-[90vh] p-0 bg-background/95 pixel-border">
-          {selectedImage && (
-            <div className="w-full h-full flex items-center justify-center p-6">
+          {selectedImage && <div className="w-full h-full flex items-center justify-center p-6">
               <img src={selectedImage.src} alt={selectedImage.alt} className="max-w-full max-h-full object-contain" />
-            </div>
-          )}
+            </div>}
         </DialogContent>
       </Dialog>
-    </div>
-  );
+    </div>;
 }
