@@ -84,7 +84,7 @@ const Index = () => {
                   text={[
                     "Let's make your brand stand out in a skeptical market.",
                     "Become the obvious choice in a skeptical market.",
-                    "Tell your unforgettable story in a skeptical market."
+                    "Tell your unforgettable story in a skeptical market.",
                   ]}
                   speed={100}
                   loop={true}
@@ -128,8 +128,8 @@ const Index = () => {
           <PixelCard>
             <div className="font-secondary text-base md:text-lg leading-relaxed">
               <p className={`mb-6 ${!isExpanded ? "md:block" : ""}`}>
-                Head of Content with <strong className="text-accent">5+ years of experience</strong> generating demand
-                and high-quality leads in SaaS and B2B Tech companies. Generated{" "}
+                Content and Copy Lead with <strong className="text-accent">5+ years of experience</strong> generating
+                demand and high-quality leads in SaaS and B2B Tech companies. Generated{" "}
                 <strong className="text-accent">$12M+ in client revenue</strong>, boosted email engagement (
                 <strong className="text-accent">open rate +52%, CTOR +5%, registration +194%</strong>), and produced
                 content <strong className="text-accent">ranking #1 and #0</strong>.
