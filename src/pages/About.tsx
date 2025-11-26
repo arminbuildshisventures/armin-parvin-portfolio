@@ -491,7 +491,7 @@ export default function About() {
               <div className="space-y-6">
                 <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
-                    <h3 className="font-primary text-base sm:text-xl">Head of Content</h3>
+                    <h3 className="font-primary text-base sm:text-xl">Content and Copy Lead</h3>
                     <span className="font-secondary text-xs sm:text-sm text-muted-foreground">
                       Mar. 2023 — Nov. 2025
                     </span>
