@@ -34,7 +34,7 @@ import { useState } from "react";
 export default function About() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
-  
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -55,25 +55,26 @@ export default function About() {
 
           <div className="pixel-border pixel-shadow bg-card p-6 mb-12 max-w-4xl mx-auto">
             <p className={`font-secondary text-base md:text-lg leading-relaxed mb-6 ${!isExpanded ? "md:block" : ""}`}>
-              Head of Content with <strong className="text-accent">5+ years of experience</strong> generating demand and high-quality leads in
-              SaaS and B2B Tech companies. Generated <strong className="text-accent">$12M+ in client revenue</strong>, boosted email engagement
-              (<strong className="text-accent">open rate +52%, CTOR +5%, registration +194%</strong>), and produced content{" "}
-              <strong className="text-accent">ranking #1 and #0</strong>.
+              Content and Copy Lead with <strong className="text-accent">5+ years of experience</strong> generating
+              demand and high-quality leads in SaaS and B2B Tech companies. Generated{" "}
+              <strong className="text-accent">$12M+ in client revenue</strong>, boosted email engagement (
+              <strong className="text-accent">open rate +52%, CTOR +5%, registration +194%</strong>), and produced
+              content <strong className="text-accent">ranking #1 and #0</strong>.
             </p>
-            
+
             <div className={`${isExpanded ? "block" : "hidden md:block"}`}>
               <p className="font-secondary text-base md:text-lg leading-relaxed mb-6">
-                Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and B2B
-                Tech from early to growth stages.
+                Led content, email, and LinkedIn growth and strategy for startups and mid-sized firms across SaaS and
+                B2B Tech from early to growth stages.
               </p>
-              
+
               <p className="font-secondary text-base md:text-lg leading-relaxed">
                 Currently building expertise in the Web3, blockchain, and cryptocurrency space, connecting numbers to
                 narratives, and translating data into insight and strategy.
               </p>
             </div>
-            
-            <button 
+
+            <button
               onClick={() => setIsExpanded(!isExpanded)}
               className="md:hidden mt-4 text-accent font-primary text-sm hover:underline"
             >
@@ -92,26 +93,53 @@ export default function About() {
 
           <div className="mb-16 max-w-5xl mx-auto relative">
             {/* Connecting Thread */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-secondary via-accent to-secondary hidden md:block" style={{ transform: 'translateX(-50%)' }} />
-            
+            <div
+              className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-secondary via-accent to-secondary hidden md:block"
+              style={{ transform: "translateX(-50%)" }}
+            />
+
             {/* Segment 1: Artistic Roots */}
             <div className="relative mb-12 md:mb-16">
               <div className="grid md:grid-cols-2 gap-6 items-center">
                 <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-1 md:order-1">
                   <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🎨 Artistic Roots</h3>
                   <p className="font-secondary text-base md:text-lg leading-relaxed">
-                    I come from an artistic family, with my mom being a graphic designer and painter, and my dad an illustrator. 
-                    Music made me thrive, so I went on to become a professional Classical and Flamenco guitar player and instructor.
+                    I come from an artistic family, with my mom being a graphic designer and painter, and my dad an
+                    illustrator. Music made me thrive, so I went on to become a professional Classical and Flamenco
+                    guitar player and instructor.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-3 order-2 md:order-2">
-                  <img src={youngGuitar1} alt="Young musician with guitar" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngGuitar1, alt: "Young musician with guitar" })} />
-                  <img src={youngSmile} alt="Young artist" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngSmile, alt: "Young artist" })} />
-                  <img src={youngPractice} alt="Practicing music" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngPractice, alt: "Practicing music" })} />
-                  <img src={youngGlasses} alt="Young portrait with glasses" className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: youngGlasses, alt: "Young portrait with glasses" })} />
+                  <img
+                    src={youngGuitar1}
+                    alt="Young musician with guitar"
+                    className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onClick={() => setSelectedImage({ src: youngGuitar1, alt: "Young musician with guitar" })}
+                  />
+                  <img
+                    src={youngSmile}
+                    alt="Young artist"
+                    className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onClick={() => setSelectedImage({ src: youngSmile, alt: "Young artist" })}
+                  />
+                  <img
+                    src={youngPractice}
+                    alt="Practicing music"
+                    className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onClick={() => setSelectedImage({ src: youngPractice, alt: "Practicing music" })}
+                  />
+                  <img
+                    src={youngGlasses}
+                    alt="Young portrait with glasses"
+                    className="pixel-border pixel-shadow w-full h-28 md:h-36 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onClick={() => setSelectedImage({ src: youngGlasses, alt: "Young portrait with glasses" })}
+                  />
                 </div>
               </div>
-              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
+              <div
+                className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block"
+                style={{ transform: "translate(50%, -50%) rotate(45deg)" }}
+              />
             </div>
 
             {/* Segment 2: The Dedication */}
@@ -120,18 +148,36 @@ export default function About() {
                 <div className="pixel-border pixel-shadow bg-card/80 p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-1 md:order-2">
                   <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🎸 The Dedication</h3>
                   <p className="font-secondary text-base md:text-lg leading-relaxed">
-                    When people were mining and buying Bitcoin, I was practicing music for well over 16 hours a day (huh ....). 
-                    At some point, I realized that teaching wasn't my passion (even though I still mentor many people), so I decided 
-                    to explore different paths to find out what was.
+                    When people were mining and buying Bitcoin, I was practicing music for well over 16 hours a day (huh
+                    ....). At some point, I realized that teaching wasn't my passion (even though I still mentor many
+                    people), so I decided to explore different paths to find out what was.
                   </p>
                 </div>
                 <div className="grid grid-cols-3 gap-3 justify-center order-2 md:order-1">
-                  <img src={dedicationPiano} alt="Piano practice" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationPiano, alt: "Piano practice" })} />
-                  <img src={dedicationGuitarStudio} alt="Guitar studio session" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationGuitarStudio, alt: "Guitar studio session" })} />
-                  <img src={dedicationGuitarPerformance} alt="Guitar performance" className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: dedicationGuitarPerformance, alt: "Guitar performance" })} />
+                  <img
+                    src={dedicationPiano}
+                    alt="Piano practice"
+                    className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onClick={() => setSelectedImage({ src: dedicationPiano, alt: "Piano practice" })}
+                  />
+                  <img
+                    src={dedicationGuitarStudio}
+                    alt="Guitar studio session"
+                    className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onClick={() => setSelectedImage({ src: dedicationGuitarStudio, alt: "Guitar studio session" })}
+                  />
+                  <img
+                    src={dedicationGuitarPerformance}
+                    alt="Guitar performance"
+                    className="pixel-border pixel-shadow w-full h-40 md:h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onClick={() => setSelectedImage({ src: dedicationGuitarPerformance, alt: "Guitar performance" })}
+                  />
                 </div>
               </div>
-              <div className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{ transform: 'translate(-50%, -50%) rotate(45deg)' }} />
+              <div
+                className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block"
+                style={{ transform: "translate(-50%, -50%) rotate(45deg)" }}
+              />
             </div>
 
             {/* Segment 3: The Discovery */}
@@ -140,27 +186,55 @@ export default function About() {
                 <div className="pixel-border pixel-shadow bg-accent/30 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all order-1 md:order-1">
                   <h3 className="font-primary text-xl md:text-2xl text-accent mb-4">💡 The Discovery</h3>
                   <p className="font-secondary text-base md:text-lg leading-relaxed">
-                    I discovered marketing, and content immediately caught my attention (well, I am quite the storyteller, right?). 
-                    I started writing blogs, landing page and webpage copy, emails, and LinkedIn posts. The blogs started ranking #1 
-                    and #0 on Google, landing page conversion rates tripled, emails started getting too many signups, and LinkedIn 
-                    posts started generating leads.
+                    I discovered marketing, and content immediately caught my attention (well, I am quite the
+                    storyteller, right?). I started writing blogs, landing page and webpage copy, emails, and LinkedIn
+                    posts. The blogs started ranking #1 and #0 on Google, landing page conversion rates tripled, emails
+                    started getting too many signups, and LinkedIn posts started generating leads.
                   </p>
                 </div>
                 <div className="order-2 md:order-2">
                   {/* Professional portraits in a creative grid */}
                   <div className="grid grid-cols-3 gap-3 mb-3">
-                    <img src={discoveryProfessional1} alt="Professional portrait 1" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional1, alt: "Professional portrait 1" })} />
-                    <img src={discoveryProfessional2} alt="Professional portrait 2" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional2, alt: "Professional portrait 2" })} />
-                    <img src={discoveryProfessional3} alt="Professional portrait 3" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional3, alt: "Professional portrait 3" })} />
+                    <img
+                      src={discoveryProfessional1}
+                      alt="Professional portrait 1"
+                      className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                      onClick={() => setSelectedImage({ src: discoveryProfessional1, alt: "Professional portrait 1" })}
+                    />
+                    <img
+                      src={discoveryProfessional2}
+                      alt="Professional portrait 2"
+                      className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                      onClick={() => setSelectedImage({ src: discoveryProfessional2, alt: "Professional portrait 2" })}
+                    />
+                    <img
+                      src={discoveryProfessional3}
+                      alt="Professional portrait 3"
+                      className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                      onClick={() => setSelectedImage({ src: discoveryProfessional3, alt: "Professional portrait 3" })}
+                    />
                   </div>
                   {/* Team collaboration and individual portrait */}
                   <div className="grid grid-cols-2 gap-3">
-                    <img src={discoveryTeam} alt="Team collaboration" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryTeam, alt: "Team collaboration" })} />
-                    <img src={discoveryProfessional4} alt="Professional portrait 4" className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: discoveryProfessional4, alt: "Professional portrait 4" })} />
+                    <img
+                      src={discoveryTeam}
+                      alt="Team collaboration"
+                      className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                      onClick={() => setSelectedImage({ src: discoveryTeam, alt: "Team collaboration" })}
+                    />
+                    <img
+                      src={discoveryProfessional4}
+                      alt="Professional portrait 4"
+                      className="pixel-border pixel-shadow w-full h-32 md:h-40 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                      onClick={() => setSelectedImage({ src: discoveryProfessional4, alt: "Professional portrait 4" })}
+                    />
                   </div>
                 </div>
               </div>
-              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
+              <div
+                className="absolute -right-4 top-1/2 w-8 h-8 bg-secondary pixel-border hidden md:block"
+                style={{ transform: "translate(50%, -50%) rotate(45deg)" }}
+              />
             </div>
 
             {/* Segment 4: Tech Immersion */}
@@ -169,19 +243,34 @@ export default function About() {
                 <div className="order-1 md:order-2 pixel-border pixel-shadow bg-card/80 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">🚀 Tech Immersion</h3>
                   <p className="font-secondary text-base md:text-lg leading-relaxed">
-                    My technology nerdiness allowed me to work with clients across various tech sectors, including FinTech, PropTech, 
-                    SaaS, MarCom, Cloud Infrastructure, Cybersecurity, and Software Development.
+                    My technology nerdiness allowed me to work with clients across various tech sectors, including
+                    FinTech, PropTech, SaaS, MarCom, Cloud Infrastructure, Cybersecurity, and Software Development.
                   </p>
                 </div>
                 <div className="order-2 md:order-1">
                   {/* Professional portraits grid */}
                   <div className="grid grid-cols-2 gap-3">
-                    <img src={professionalPortraitTech} alt="Professional portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: professionalPortraitTech, alt: "Professional portrait with hat" })} />
-                    <img src={professionalPerformance} alt="Professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: professionalPerformance, alt: "Professional portrait" })} />
+                    <img
+                      src={professionalPortraitTech}
+                      alt="Professional portrait with hat"
+                      className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                      onClick={() =>
+                        setSelectedImage({ src: professionalPortraitTech, alt: "Professional portrait with hat" })
+                      }
+                    />
+                    <img
+                      src={professionalPerformance}
+                      alt="Professional portrait"
+                      className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                      onClick={() => setSelectedImage({ src: professionalPerformance, alt: "Professional portrait" })}
+                    />
                   </div>
                 </div>
               </div>
-              <div className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{ transform: 'translate(-50%, -50%) rotate(45deg)' }} />
+              <div
+                className="absolute -left-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block"
+                style={{ transform: "translate(-50%, -50%) rotate(45deg)" }}
+              />
             </div>
 
             {/* Segment 5: Present Day */}
@@ -190,41 +279,93 @@ export default function About() {
                 <div className="order-1 md:order-1 pixel-border pixel-shadow bg-secondary/30 border-secondary/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <h3 className="font-primary text-xl md:text-2xl text-secondary mb-4">📊 Present Day</h3>
                   <p className="font-secondary text-base md:text-lg leading-relaxed">
-                    Recently, I have immersed myself in finance, economics, and especially Web3, blockchain, and cryptocurrency 
-                    research analysis. As a former math nerd, I can connect numbers to narratives and translate data into insight 
-                    and strategy.
+                    Recently, I have immersed myself in finance, economics, and especially Web3, blockchain, and
+                    cryptocurrency research analysis. As a former math nerd, I can connect numbers to narratives and
+                    translate data into insight and strategy.
                   </p>
                 </div>
                 <div className="order-2 md:order-2">
                   {/* Present day portraits in creative grid */}
                   <div className="grid grid-cols-2 gap-3">
-                    <img src={presentDayHat} alt="Present day portrait with hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDayHat, alt: "Present day portrait with hat" })} />
-                    <img src={presentDaySuit} alt="Present day professional portrait" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDaySuit, alt: "Present day professional portrait" })} />
+                    <img
+                      src={presentDayHat}
+                      alt="Present day portrait with hat"
+                      className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                      onClick={() => setSelectedImage({ src: presentDayHat, alt: "Present day portrait with hat" })}
+                    />
+                    <img
+                      src={presentDaySuit}
+                      alt="Present day professional portrait"
+                      className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                      onClick={() =>
+                        setSelectedImage({ src: presentDaySuit, alt: "Present day professional portrait" })
+                      }
+                    />
                   </div>
                   <div className="mt-3">
-                    <img src={presentDayChair} alt="Present day portrait with red hat" className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: presentDayChair, alt: "Present day portrait with red hat" })} />
+                    <img
+                      src={presentDayChair}
+                      alt="Present day portrait with red hat"
+                      className="pixel-border pixel-shadow w-full h-48 md:h-56 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                      onClick={() =>
+                        setSelectedImage({ src: presentDayChair, alt: "Present day portrait with red hat" })
+                      }
+                    />
                   </div>
                 </div>
               </div>
-              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block" style={{ transform: 'translate(50%, -50%) rotate(45deg)' }} />
+              <div
+                className="absolute -right-4 top-1/2 w-8 h-8 bg-accent pixel-border hidden md:block"
+                style={{ transform: "translate(50%, -50%) rotate(45deg)" }}
+              />
             </div>
 
             {/* Coffee & Lifestyle Section */}
             <div className="relative mt-8">
               <div className="pixel-border pixel-shadow bg-accent/30 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                 <p className="font-secondary text-base md:text-lg leading-relaxed text-accent font-medium italic border-l-4 border-accent pl-4 mb-6">
-                  When I'm not working (does that even happen?), I'm sipping on too much specialty coffee and working. Yes, I'm 
-                  working even when I'm not.
+                  When I'm not working (does that even happen?), I'm sipping on too much specialty coffee and working.
+                  Yes, I'm working even when I'm not.
                 </p>
-                
+
                 {/* Coffee photos grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
-                  <img src={coffeeWorkspace1} alt="Workspace with coffee" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeWorkspace1, alt: "Workspace with coffee" })} />
-                  <img src={coffeeWorkspace2} alt="Outdoor workspace" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeWorkspace2, alt: "Outdoor workspace" })} />
-                  <img src={coffeeEspresso} alt="Espresso shot" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeEspresso, alt: "Espresso shot" })} />
-                  <img src={coffeeHand} alt="Coffee in hand" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeHand, alt: "Coffee in hand" })} />
-                  <img src={coffeeTable1} alt="Coffee table setup" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeTable1, alt: "Coffee table setup" })} />
-                  <img src={coffeeTable2} alt="Coffee table view" className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer" onClick={() => setSelectedImage({ src: coffeeTable2, alt: "Coffee table view" })} />
+                  <img
+                    src={coffeeWorkspace1}
+                    alt="Workspace with coffee"
+                    className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onClick={() => setSelectedImage({ src: coffeeWorkspace1, alt: "Workspace with coffee" })}
+                  />
+                  <img
+                    src={coffeeWorkspace2}
+                    alt="Outdoor workspace"
+                    className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onClick={() => setSelectedImage({ src: coffeeWorkspace2, alt: "Outdoor workspace" })}
+                  />
+                  <img
+                    src={coffeeEspresso}
+                    alt="Espresso shot"
+                    className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onClick={() => setSelectedImage({ src: coffeeEspresso, alt: "Espresso shot" })}
+                  />
+                  <img
+                    src={coffeeHand}
+                    alt="Coffee in hand"
+                    className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onClick={() => setSelectedImage({ src: coffeeHand, alt: "Coffee in hand" })}
+                  />
+                  <img
+                    src={coffeeTable1}
+                    alt="Coffee table setup"
+                    className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onClick={() => setSelectedImage({ src: coffeeTable1, alt: "Coffee table setup" })}
+                  />
+                  <img
+                    src={coffeeTable2}
+                    alt="Coffee table view"
+                    className="pixel-border pixel-shadow w-full h-48 object-contain rounded-lg hover:scale-105 transition-transform cursor-pointer"
+                    onClick={() => setSelectedImage({ src: coffeeTable2, alt: "Coffee table view" })}
+                  />
                 </div>
               </div>
             </div>
@@ -279,30 +420,68 @@ export default function About() {
               <div className="pixel-border pixel-shadow bg-card/30 p-4 sm:p-6 mb-6">
                 <div className="text-center mb-4 sm:mb-6">
                   <h3 className="font-primary text-xl sm:text-2xl md:text-3xl text-secondary mb-2">5+ Years</h3>
-                  <p className="font-secondary text-base sm:text-lg text-muted-foreground">of Professional Experience</p>
+                  <p className="font-secondary text-base sm:text-lg text-muted-foreground">
+                    of Professional Experience
+                  </p>
                 </div>
                 <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
                   <div className="flex gap-3">
                     {[...Array(3)].map((_, i) => (
                       <div key={i} className="flex gap-3 animate-marquee shrink-0">
-                        <Badge variant="secondary" className="pixel-border">Email Marketing</Badge>
-                        <Badge variant="secondary" className="pixel-border">Content Strategy</Badge>
-                        <Badge variant="secondary" className="pixel-border">Copywriting</Badge>
-                        <Badge variant="secondary" className="pixel-border">Ghostwriting</Badge>
-                        <Badge variant="secondary" className="pixel-border">Content Writing</Badge>
-                        <Badge variant="secondary" className="pixel-border">SEO</Badge>
-                        <Badge variant="secondary" className="pixel-border">Leadership</Badge>
-                        <Badge variant="secondary" className="pixel-border">Cryptocurrency Research Analysis</Badge>
-                        <Badge variant="secondary" className="pixel-border">Creative Writing</Badge>
-                        <Badge variant="secondary" className="pixel-border">Storytelling</Badge>
-                        <Badge variant="secondary" className="pixel-border">Technical Writing</Badge>
-                        <Badge variant="secondary" className="pixel-border">Content Editing</Badge>
-                        <Badge variant="secondary" className="pixel-border">Copy Editing</Badge>
-                        <Badge variant="secondary" className="pixel-border">Proofreading</Badge>
-                        <Badge variant="secondary" className="pixel-border">Campaign Management</Badge>
-                        <Badge variant="secondary" className="pixel-border">Research</Badge>
-                        <Badge variant="secondary" className="pixel-border">Marketing</Badge>
-                        <Badge variant="secondary" className="pixel-border">Sales</Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Email Marketing
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Content Strategy
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Copywriting
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Ghostwriting
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Content Writing
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          SEO
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Leadership
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Cryptocurrency Research Analysis
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Creative Writing
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Storytelling
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Technical Writing
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Content Editing
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Copy Editing
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Proofreading
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Campaign Management
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Research
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Marketing
+                        </Badge>
+                        <Badge variant="secondary" className="pixel-border">
+                          Sales
+                        </Badge>
                       </div>
                     ))}
                   </div>
@@ -313,7 +492,9 @@ export default function About() {
                 <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
                     <h3 className="font-primary text-base sm:text-xl">Head of Content</h3>
-                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Mar. 2023 — Nov. 2025</span>
+                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">
+                      Mar. 2023 — Nov. 2025
+                    </span>
                   </div>
                   <p className="font-primary text-sm sm:text-base text-secondary mb-3">Renee Content · Remote</p>
                   <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
@@ -334,7 +515,9 @@ export default function About() {
                 <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
                     <h3 className="font-primary text-base sm:text-xl">Content Marketing Mentor</h3>
-                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Mar. 2023 — Nov. 2025</span>
+                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">
+                      Mar. 2023 — Nov. 2025
+                    </span>
                   </div>
                   <p className="font-primary text-sm sm:text-base text-secondary mb-3">ADPList · Remote</p>
                   <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
@@ -353,7 +536,9 @@ export default function About() {
                     <h3 className="font-primary text-base sm:text-xl">Guest Speaker</h3>
                     <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Apr. 2025</span>
                   </div>
-                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">ADPList's 2025 Don't Settle Conference · Remote</p>
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">
+                    ADPList's 2025 Don't Settle Conference · Remote
+                  </p>
                   <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1 flex-shrink-0">●</span>
@@ -368,7 +553,9 @@ export default function About() {
                 <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
                     <h3 className="font-primary text-base sm:text-xl">Senior Email Marketing Manager</h3>
-                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Nov. 2023 — Jan. 2025</span>
+                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">
+                      Nov. 2023 — Jan. 2025
+                    </span>
                   </div>
                   <p className="font-primary text-sm sm:text-base text-secondary mb-3">
                     Roomvu · Vancouver, British Columbia, Canada (Remote)
@@ -391,7 +578,9 @@ export default function About() {
                 <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
                     <h3 className="font-primary text-base sm:text-xl">Digital Marketing Manager</h3>
-                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Jun. 2023 — Sep. 2023</span>
+                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">
+                      Jun. 2023 — Sep. 2023
+                    </span>
                   </div>
                   <p className="font-primary text-sm sm:text-base text-secondary mb-3">
                     Citronity · Vancouver, British Columbia, Canada (Remote)
@@ -400,7 +589,10 @@ export default function About() {
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1 flex-shrink-0">●</span>
                       <span>
-                        Developed and implemented comprehensive digital marketing strategies to enhance the company's brand visibility, generating qualified leads, driving customer acquisition, identifying target audiences, creating engaging campaigns, and leveraging various digital channels to maximize reach and engagement
+                        Developed and implemented comprehensive digital marketing strategies to enhance the company's
+                        brand visibility, generating qualified leads, driving customer acquisition, identifying target
+                        audiences, creating engaging campaigns, and leveraging various digital channels to maximize
+                        reach and engagement
                       </span>
                     </li>
                   </ul>
@@ -415,7 +607,9 @@ export default function About() {
                       Nov. 2022 — Jun. 2023
                     </span>
                   </div>
-                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">Nordic Defender · Gothenburg, Sweden (Remote)</p>
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">
+                    Nordic Defender · Gothenburg, Sweden (Remote)
+                  </p>
                   <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1 flex-shrink-0">●</span>
@@ -438,9 +632,13 @@ export default function About() {
                 <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
                     <h3 className="font-primary text-base sm:text-xl">Technical Content Writer</h3>
-                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Apr. 2022 — Sep. 2022</span>
+                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">
+                      Apr. 2022 — Sep. 2022
+                    </span>
                   </div>
-                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">Cloudzy · Dubai, United Arab Emirates (Remote)</p>
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-3">
+                    Cloudzy · Dubai, United Arab Emirates (Remote)
+                  </p>
                   <ul className="space-y-2 font-secondary text-sm sm:text-base text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1 flex-shrink-0">●</span>
@@ -456,7 +654,9 @@ export default function About() {
                 <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
                     <h3 className="font-primary text-base sm:text-xl">Content Marketer & Email Marketer</h3>
-                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">Sep. 2021 — Apr. 2022</span>
+                    <span className="font-secondary text-xs sm:text-sm text-muted-foreground">
+                      Sep. 2021 — Apr. 2022
+                    </span>
                   </div>
                   <p className="font-primary text-sm sm:text-base text-secondary mb-3">
                     WatchThemLive · Toronto, Ontario, Canada (Remote)
@@ -465,7 +665,8 @@ export default function About() {
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1 flex-shrink-0">●</span>
                       <span>
-                        Developed and executed targeted email marketing campaigns to nurture leads, drive engagement, and grow conversions, increasing open rates by 50%+ and CTRs by 23%+
+                        Developed and executed targeted email marketing campaigns to nurture leads, drive engagement,
+                        and grow conversions, increasing open rates by 50%+ and CTRs by 23%+
                       </span>
                     </li>
                   </ul>
@@ -483,13 +684,16 @@ export default function About() {
               <div className="space-y-6">
                 <div className="pixel-border pixel-shadow bg-card p-4 sm:p-6 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                   <h3 className="font-primary text-base sm:text-xl mb-2">Kharazmi University</h3>
-                  <p className="font-primary text-sm sm:text-base text-secondary mb-2">Bachelor of Arts - BA, English Language and Literature</p>
+                  <p className="font-primary text-sm sm:text-base text-secondary mb-2">
+                    Bachelor of Arts - BA, English Language and Literature
+                  </p>
                   <p className="font-secondary text-xs sm:text-sm text-muted-foreground mb-4">2017 - 2021</p>
                   <p className="font-secondary text-sm sm:text-base text-muted-foreground">
-                    Studied and analyzed major works of English literature and philosophy, history, and elementary French language.
+                    Studied and analyzed major works of English literature and philosophy, history, and elementary
+                    French language.
                   </p>
                 </div>
-                
+
                 <div className="pixel-border pixel-shadow bg-card/30 p-4 sm:p-6">
                   <h3 className="font-primary text-base sm:text-xl mb-4 sm:mb-6">Professional Certifications</h3>
                   <div className="grid grid-cols-1 gap-4 font-secondary text-sm sm:text-base">
@@ -497,41 +701,41 @@ export default function About() {
                       <p className="font-semibold">Digital Skills: Web Analytics</p>
                       <p className="text-muted-foreground text-sm">Accenture | Issued Dec 2021</p>
                     </div>
-                    
+
                     <div>
                       <p className="font-semibold">Successful Negotiation: Essential Strategies and Skills</p>
                       <p className="text-muted-foreground text-sm">Coursera | Issued Dec 2021</p>
                       <p className="text-xs text-muted-foreground">Credential ID: AQQT4SSWMYM2</p>
                     </div>
-                    
+
                     <div>
                       <p className="font-semibold">Digital Skills: Digital Marketing</p>
                       <p className="text-muted-foreground text-sm">Accenture | Issued Nov 2021</p>
                     </div>
-                    
+
                     <div>
                       <p className="font-semibold">Essential Skills for Your Career Development</p>
                       <p className="text-muted-foreground text-sm">University of Leeds | Issued Nov 2021</p>
                     </div>
-                    
+
                     <div>
                       <p className="font-semibold">Learning Python (2020)</p>
                       <p className="text-muted-foreground text-sm">LinkedIn | Issued Nov 2021</p>
                       <p className="text-xs text-muted-foreground">Credential ID: AcXR1nPYplQDz7S17VPq01atgnhj</p>
                     </div>
-                    
+
                     <div>
                       <p className="font-semibold">The Fundamentals of Digital Marketing</p>
                       <p className="text-muted-foreground text-sm">Google | Issued Nov 2021</p>
                       <p className="text-xs text-muted-foreground">Credential ID: TKU 5TS KJX</p>
                     </div>
-                    
+
                     <div>
                       <p className="font-semibold">Inbound Marketing</p>
                       <p className="text-muted-foreground text-sm">HubSpot Academy | Issued Sep 2021</p>
                       <p className="text-xs text-muted-foreground">Credential ID: 19725d86b52b4b828f77c3189524c998</p>
                     </div>
-                    
+
                     <div>
                       <p className="font-semibold">Digital Advertising</p>
                       <p className="text-muted-foreground text-sm">HubSpot Academy | Issued Oct 2021</p>
@@ -742,11 +946,7 @@ export default function About() {
         <DialogContent className="max-w-4xl w-[95vw] h-[90vh] p-0 bg-background/95 pixel-border">
           {selectedImage && (
             <div className="w-full h-full flex items-center justify-center p-6">
-              <img 
-                src={selectedImage.src} 
-                alt={selectedImage.alt} 
-                className="max-w-full max-h-full object-contain"
-              />
+              <img src={selectedImage.src} alt={selectedImage.alt} className="max-w-full max-h-full object-contain" />
             </div>
           )}
         </DialogContent>
