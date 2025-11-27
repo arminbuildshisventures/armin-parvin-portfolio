@@ -27,7 +27,6 @@ const Insights = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="absolute inset-0 bg-background/80" />
       <Header />
       
       <main className="flex-grow container mx-auto px-4 pt-32 pb-16 relative z-10">
