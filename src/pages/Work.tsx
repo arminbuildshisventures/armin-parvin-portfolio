@@ -37,6 +37,7 @@ import bsuiteLogo from "@/assets/clients/bsuite-logo.svg";
 import wtlLogo from "@/assets/clients/WTL.png";
 import veronalabsLogo from "@/assets/clients/veronalabs.png";
 import rahmaninaLogo from "@/assets/clients/Rahmaninia.png";
+import mvProductionLogo from "@/assets/clients/mv-production.png";
 
 interface CaseStudy {
   slug: string;
@@ -481,7 +482,9 @@ I can't recommend Renée Content enough. If you're looking for content writing s
       title: "MV Production",
       category: "Creative Content",
       description: "Developed creative content and copy for media production company brand storytelling.",
-      results: "Business Growth: 105% | Website Traffic Increased 3X | Leads Multiplied 3X",
+      results: "105% Growth | 3X Traffic",
+      logo: mvProductionLogo,
+      industry: "Media & Entertainment",
       challenge: "MV Production, a media creation company specializing in film scores, background music, jingles, and advertisement media, faced significant challenges dealing with content creation, website traffic, and producing quality material for customers. These content and traffic issues were impacting their ability to attract and convert clients effectively.",
       process: "Leveraged deep expertise in content marketing to address the challenges with precision. Quickly identified the core issues and implemented strategic content solutions. Created engaging content that showcased MV Production's creative capabilities across film scoring, music production, and media creation. Developed content strategy focused on demonstrating their expertise and attracting the right clientele. Provided exceptional customer service support throughout the process, treating the client's business with care and attention to detail.",
       outcome: "The results were astonishing. Website traffic increased significantly, leads multiplied three times more than expected, and the business experienced 105% growth. The quality content exceeded expectations and effectively communicated MV Production's value proposition. The comprehensive content strategy successfully attracted higher-quality client inquiries and contributed to substantial business growth and success.",

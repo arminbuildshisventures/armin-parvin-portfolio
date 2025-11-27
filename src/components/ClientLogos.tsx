@@ -9,6 +9,7 @@ import nordicLogo from "@/assets/clients/nordic.svg";
 import roomvuLogo from "@/assets/clients/roomvu.svg";
 import veronalabsLogo from "@/assets/clients/veronalabs.png";
 import wpsmsLogo from "@/assets/clients/wpsms.png";
+import mvProductionLogo from "@/assets/clients/mv-production.png";
 
 export const ClientLogos = () => {
   const clientLogos = [
@@ -23,6 +24,7 @@ export const ClientLogos = () => {
     { src: roomvuLogo, alt: "Roomvu" },
     { src: veronalabsLogo, alt: "Verona Labs" },
     { src: wpsmsLogo, alt: "WP SMS" },
+    { src: mvProductionLogo, alt: "MV Production" },
   ];
 
   return (
