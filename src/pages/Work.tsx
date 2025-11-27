@@ -22,6 +22,21 @@ import avatar7 from "@/assets/testimonials/avatar-7.png";
 import mahmoudValanejad from "@/assets/testimonials/avatar-9.png";
 import shadiV from "@/assets/testimonials/shadi-avatar.png";
 import { Star } from "lucide-react";
+import convertLogo from "@/assets/clients/convert.svg";
+import roomvuLogo from "@/assets/clients/roomvu.svg";
+import nordicLogo from "@/assets/clients/nordic.svg";
+import cloudzyLogo from "@/assets/clients/cloudzy.svg";
+import convertBg from "@/assets/case-studies/convert-bg.png";
+import roomvuBg from "@/assets/case-studies/roomvu-bg.png";
+import nordicBg from "@/assets/case-studies/nordic-bg.png";
+import cloudzyBg from "@/assets/case-studies/cloudzy-bg.png";
+import wpSmsLogo from "@/assets/clients/wpsms.png";
+import lorenzoLogo from "@/assets/clients/LorenzoLogo.png";
+import citronityLogo from "@/assets/clients/citronity.svg";
+import bsuiteLogo from "@/assets/clients/bsuite-logo.svg";
+import wtlLogo from "@/assets/clients/WTL.png";
+import veronalabsLogo from "@/assets/clients/veronalabs.png";
+import rahmaninaLogo from "@/assets/clients/Rahmaninia.png";
 
 interface CaseStudy {
   slug: string;
@@ -33,6 +48,9 @@ interface CaseStudy {
   process: string;
   outcome: string;
   images: string[];
+  logo?: string;
+  bgImage?: string;
+  industry?: string;
   testimonial?: {
     name: string;
     title: string;
@@ -175,11 +193,14 @@ export default function Work() {
       title: "Convert.com",
       category: "Content Marketing",
       description: "Created bottom-of-funnel content strategy and wrote multi-perspective articles to establish brand presence in SERPs for new features.",
-      results: "SERP Rankings Achieved | Organic Traffic Increased | Brand Recognition Established",
+      results: "SERP Rankings Achieved",
       challenge: "Convert.com needed to establish a strong brand presence in search results for their brand new features and seed Convert's name in the SERPs. The challenge was creating content that would rank well while also providing value to potential customers at the bottom of the funnel. They specifically needed multi-perspective, journalistic articles about a new space called Full-Stack Experimentation.",
       process: "Developed a comprehensive content strategy focusing on feature-specific content and Full-Stack Experimentation thought leadership. Conducted keyword research, competitor analysis, and created detailed content briefs. Worked closely with the product team to understand technical specifications and translated them into accessible, SEO-optimized content. Produced multi-perspective, journalistic articles that positioned Convert as leaders in the Full-Stack Experimentation space.",
       outcome: "Successfully established Convert.com's presence in SERPs for target keywords. The content strategy led to increased organic traffic and improved brand recognition within the industry. Content pieces consistently ranked in top positions for competitive keywords, positioning Convert as thought leaders in the Full-Stack Experimentation space.",
       images: [],
+      logo: convertLogo,
+      bgImage: convertBg,
+      industry: "Technology",
       testimonial: {
         name: "Trina Moitra",
         title: "CMO",
@@ -193,12 +214,15 @@ export default function Work() {
       slug: "roomvu",
       title: "Roomvu",
       category: "Cold Email Marketing",
-      description: "Roomvu is a PropTech platform offering hyper-local real estate video marketing. Through winning email marketing, copywriting, and storytelling techniques, brought them an added client base of 24,000+ users.",
-      results: "Email Open Rate Increase: 10% | Email CTOR Increase: 2.5% | Emails Crafted: 1,000+ | Users Acquired: 24,000+",
+      description: "Redesigned email marketing strategy with advanced segmentation and hyper-personalized campaigns, increasing weekly registrations from 170 to 500.",
+      results: "24,000+ Users Acquired",
       challenge: "Roomvu is a PropTech platform that offers hyper-local real estate video marketing. They acquire clients through different processes, including SEO, Cold Emails, paid ads, social media, organic, referrals, and Email Marketing. When we decided to work together, they already had a cold email marketing setup. However, the untapped potential was huge. Roomvu faced low user registration rates and needed to significantly improve conversion through their cold email marketing efforts. The existing campaigns weren't engaging enough and lacked strategic automation.",
       process: "I redesigned the entire email marketing strategy from the ground up. Implemented advanced segmentation, created hyper-personalized drip campaigns, A/B tested subject lines and copy, and developed automated workflows based on user behavior. I also optimized send times and refined messaging to resonate with the real estate professional audience.",
       outcome: "Through winning email marketing, copywriting, and storytelling techniques, I brought roomvu an added client base of 24,000+ users, increasing their weekly registrations from an average of 170 to an average of 500. Email open rate increased by 10%, email CTOR increased by 2.5%, and over 1,000+ emails were crafted throughout the engagement.",
       images: [roomvuResults2, roomvuResults3, roomvuResults1],
+      logo: roomvuLogo,
+      bgImage: roomvuBg,
+      industry: "Real Estate",
       testimonial: {
         name: "Alireza Khorshidi",
         title: "Head of Growth & Lifecycle Marketing",
@@ -212,23 +236,29 @@ export default function Work() {
       slug: "nordic-defender",
       title: "Nordic Defender",
       category: "Product Marketing",
-      description: "Managed all marketing channels for Next-Gen Pentest Solution including email marketing, content writing, white papers, and sales documents.",
-      results: "Email Open Rate Increase: 30% | Email CTOR Increase: 10% | Emails Crafted: 100+ | Technical Articles Written: 50+ | Sales Document Developed: 10+ | Landing Pages Developed: 43+",
+      description: "Managed all marketing channels for Next-Gen Pentest Solution including 100+ emails, 50+ technical articles, and 43+ landing pages.",
+      results: "30% Email Open Rate Increase",
       challenge: "Nordic Defender is an all-in-one cybersecurity solution provider that serves organizations, companies, and businesses in different industries and sizes. Nordic Defender entered a highly competitive cybersecurity market with established players. They needed to differentiate their products and establish credibility quickly to gain market share. I was responsible for all marketing channels related to their Next-Gen Pentest Solution, including email marketing, content writing, landing page writing, white paper writing, and sales document writing.",
       process: "I initiated and conducted in-depth market analysis proactively to identify trends and competitive differentiators. Partnered with cross-functional teams to simplify complex cybersecurity concepts into white papers, press releases, case studies, blogs, articles, emails, LinkedIn posts, webpages, and landing pages. I set up their email marketing system and used winning copywriting and storytelling techniques to maximize Nordic Defender's ROI and added revenue.",
       outcome: "Successfully positioned Nordic Defender as a credible player in the cybersecurity space. Achieved 30% increase in email open rates and 10% improvement in email CTOR. Created 100+ emails, 50+ technical articles, 10+ sales documents, and 43+ landing pages. The content strategy generated qualified leads and established the brand as a thought leader. Market awareness increased significantly within the first six months.",
       images: [],
+      logo: nordicLogo,
+      bgImage: nordicBg,
+      industry: "Cybersecurity",
     },
     {
       slug: "cloudzy",
       title: "Cloudzy",
       category: "Technical Content",
-      description: "Cloudzy is a VPS and Cloud Service Provider serving hundreds of thousands of users worldwide. Developed technical blog content, knowledge base, and landing pages to maximize conversion rates and website visitors.",
-      results: "Technical Articles Written: 23+ | Minutes Time on Page: 13+ | Landing Pages Copy Developed: 37+ | Better SERP Position: 7X | #1 Rankings and Featured Snippets Achieved | Conversion Rates: 5X | Users Acquired: 2,360+",
+      description: "Developed technical blog content and landing pages achieving #1 rankings, featured snippets, 5X conversion rates, and 2,360+ users acquired.",
+      results: "#1 Rankings & 5X Conversion",
       challenge: "Cloudzy is a VPS and Cloud Service Provider serving hundreds of thousands of users worldwide. They needed to improve their organic search visibility and conversion rates in a competitive cloud hosting market. I was responsible for developing their technical blog content, knowledge base, and landing pages and webpages copy to ensure the maximum conversion rate.",
       process: "I used winning copywriting and storytelling techniques to maximize Cloudzy's website visitors, conversion rates, and added revenue. Researched high-value keywords with commercial intent and created in-depth technical blog posts that provided genuine value to readers while incorporating SEO best practices. Focused on comprehensive coverage of topics, proper heading structure, internal linking, and user experience. Ensured technical accuracy while maintaining readability. Developed landing page copy optimized for conversions.",
       outcome: "Achieved significant improvements across all metrics: wrote 23+ technical articles with an average time on page of 13+ minutes, developed copy for 37+ landing pages and webpages, improved SERP position by 7X with multiple articles achieving #1 rankings and featured snippets (position zero) on Google, increased conversion rates by 5X, and helped acquire 2,360+ new users. The technical blog posts became valuable resources frequently shared within the cloud hosting community.",
       images: [],
+      logo: cloudzyLogo,
+      bgImage: cloudzyBg,
+      industry: "Technology",
     },
     {
       slug: "wp-sms-pro",
@@ -1244,32 +1274,39 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
 
             <TabsContent value="case-studies">
               <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {caseStudies.map((project, index) => (
                 <PixelCard 
                   key={index}
-                  className="cursor-pointer transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg group relative overflow-hidden flex flex-col"
+                  className="cursor-pointer transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg group relative overflow-hidden flex flex-col h-full"
                   onClick={() => handleCaseStudyClick(project)}
                 >
-                  {/* Gradient accent line at top */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-secondary to-accent opacity-60 group-hover:opacity-100 transition-opacity" />
-                  
+                  {project.bgImage && (
+                    <div
+                      className="absolute inset-0 opacity-5"
+                      style={{
+                        backgroundImage: `url(${project.bgImage})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }}
+                    />
+                  )}
                   <div className="relative z-10 flex flex-col h-full">
-                    <div className="inline-block pixel-border bg-gradient-to-br from-accent/30 to-accent/10 px-2 py-1 mb-4 group-hover:from-accent/40 group-hover:to-accent/20 transition-all w-fit">
-                      <span className="font-primary text-[10px] uppercase tracking-wide">{project.category}</span>
-                    </div>
-                    <h3 className="font-primary text-xl mb-4 group-hover:text-accent transition-colors">{project.title}</h3>
-                    <p className="font-secondary text-sm mb-6 leading-relaxed text-foreground/90">{project.description}</p>
-                    
-                    {/* Bottom section - sticks to bottom */}
-                    <div className="mt-auto space-y-4">
-                      <div className="pixel-border bg-gradient-to-br from-secondary/30 to-secondary/10 px-4 py-3 group-hover:from-secondary/40 group-hover:to-secondary/20 transition-all">
-                        <p className="font-secondary text-xs font-semibold leading-relaxed">{project.results}</p>
+                    {project.logo && (
+                      <div className={`${project.slug === 'convert-com' || project.slug === 'nordic-defender' ? 'bg-accent/20' : 'bg-secondary/20'} pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-4`}>
+                        <img src={project.logo} alt={project.title} className="h-12 brightness-0 invert" />
+                        <span className={`font-primary text-sm ${project.slug === 'convert-com' || project.slug === 'nordic-defender' ? 'text-accent' : 'text-secondary'} text-center`}>{project.category}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-accent group-hover:gap-4 transition-all">
-                        <span className="font-primary text-[11px] uppercase tracking-wider">View Case Study</span>
-                        <span className="text-lg">→</span>
-                      </div>
+                    )}
+                    <h3 className="font-primary text-sm mb-3">{project.title}: {project.results}</h3>
+                    <p className="font-secondary text-sm leading-relaxed mb-4">
+                      {project.description}
+                    </p>
+                    <div className="flex gap-2 flex-wrap mt-auto">
+                      <span className="pixel-border bg-secondary/30 px-3 py-1 text-xs font-secondary">Case Study</span>
+                      {project.industry && (
+                        <span className="pixel-border bg-accent/30 px-3 py-1 text-xs font-secondary">{project.industry}</span>
+                      )}
                     </div>
                   </div>
                 </PixelCard>
