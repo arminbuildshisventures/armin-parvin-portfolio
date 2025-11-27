@@ -151,17 +151,17 @@ const Testimonials = () => {
           </div>
         </motion.div>
         </main>
-
-        {/* Testimonials Marquee */}
-        <TestimonialsSection
-          title="What Clients Say"
-          description="Trusted by marketing leaders and growing businesses worldwide"
-          testimonials={marqueeTestimonials}
-        />
-
-        {/* Client Logos Section */}
-        <ClientLogos />
       </div>
+
+      {/* Testimonials Marquee */}
+      <TestimonialsSection
+        title="What Clients Say"
+        description="Trusted by marketing leaders and growing businesses worldwide"
+        testimonials={marqueeTestimonials}
+      />
+
+      {/* Client Logos Section */}
+      <ClientLogos />
 
       <footer className="py-8 px-4 pixel-border border-b-0 border-x-0">
         <div className="container mx-auto text-center">
