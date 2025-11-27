@@ -234,6 +234,54 @@ export default function Work() {
       },
     },
     {
+      slug: "influencer-marketing-business",
+      title: "Influencer Marketing Business",
+      category: "Content Marketing",
+      description: "Developed content strategy and materials for influencer marketing platform launch and growth.",
+      results: "Website Traffic Increase: 38% | Conversion Rate Improvement: 23%",
+      challenge: "Launching a new influencer marketing platform required establishing credibility and attracting both brands and influencers to a two-sided marketplace. The platform needed content that would appeal to both audiences simultaneously.",
+      process: "Developed dual-audience content strategy addressing both brands and influencers. Created launch materials including website copy, pitch decks, and educational resources. Produced thought leadership content about influencer marketing trends. Developed case studies and success stories as the platform gained traction.",
+      outcome: "The content helped connect with the target audience effectively, resulting in a 38% boost in website traffic and a 23% improvement in conversion rate. Successfully launched the platform with strong initial adoption from both sides. The content effectively communicated value propositions to different audience segments, and the platform grew steadily with content serving as a key driver of user acquisition.",
+      images: [],
+      testimonial: {
+        name: "Parand Sh.",
+        title: "Business Owner",
+        company: "",
+        avatar: parandSh,
+        rating: 5,
+        text: "The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%. The quality of the delivered content has been excellent. It has definitely exceeded my expectations. Our collaboration has been an absolute pleasure, a decision I would make over and over again. They made sure that all my requirements were understood fully and executed flawlessly."
+      },
+      interview: {
+        url: "https://www.youtube.com/watch?v=d6C_mqxejlU",
+        content: `**Can you briefly introduce yourself and your business?**
+Hi, this is Parand and I'm a business owner. I would like to take a moment to share my experience with Renée Content.
+
+**What were the specific challenges or goals you had when you approached Renée Content for content writing services?**
+Before I left the task of content writing to Renée Content, I was facing some challenges in my online business. What I was actually looking for was engaging content in the niche of influencer marketing, but every time I outsourced the task to freelancers, they would just disappoint because as good as they were, they just failed to capture the essence of my business or bring me any closer to my business objectives, not to mention that their content sometimes really lacked the human touch I just really wanted to see.
+
+**How did Renée Content address those challenges or help you achieve your goals?**
+When I first approached Renée Content, I shared my concerns and expectactions, and ever since, they've done everything within their means to help me overcome the obstacles.
+
+**What results did you experience after working with Renée Content? (e.g., increase in website traffic, higher engagement, etc.)**
+The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%.
+
+**How would you describe the quality of the content provided by Renée Content? Did it meet or exceed your expectations?**
+The quality of the delivered content has been excellent. It has definitely exceeded my expectations.
+
+**How was the overall experience of working with Renée Content? Was the communication smooth and efficient?**
+In general, working with Renée Content has been an absolute pleasure, a decision I would make over and over again. The communication was smooth and efficient and they made sure that all my requirements were understood fully and executed flawlessly.
+
+**Did you feel that Renée Content truly understood your brand's voice and style?**
+Oh yes, very much so. It was as if they know my business better than I do sometimes.
+
+**How has the content provided by Renée Content contributed to your overall business growth and success?**
+The engagement I see in my online content is at a much different level with Renée Content's help and I think that's very consequential for my business right now and my business goals in the future.
+
+**Would you recommend Renée Content to other businesses looking for content writing services? If so, why?**
+Yes, definitely. I think as a content creation agency, Renée Content is doing an excellent job and I'm glad I made the decision to outsource my content marketing to them. I hope they keep up the good work and I would definitely encourage other businesses to reach out to them and see how they can help them as well.`
+      },
+    },
+    {
       slug: "nordic-defender",
       title: "Nordic Defender",
       category: "Product Marketing",
@@ -438,51 +486,6 @@ I think the great cooperation between my team and their team brought about more 
 
 **Would you recommend Renée Content to other businesses looking for content writing services?**
 Definitely I recommend it, actually because they're really experienced and they have a great customer support, and, you know, you can leave your business to them without any concern. And that's the point, I think.`
-      },
-    },
-    {
-      slug: "influencer-marketing-business",
-      title: "Influencer Marketing Business",
-      category: "Content Marketing",
-      description: "Developed content strategy and materials for influencer marketing platform launch and growth.",
-      results: "Website Traffic Increase: 38% | Conversion Rate Improvement: 23%",
-      challenge: "Launching a new influencer marketing platform required establishing credibility and attracting both brands and influencers to a two-sided marketplace. The platform needed content that would appeal to both audiences simultaneously.",
-      process: "Developed dual-audience content strategy addressing both brands and influencers. Created launch materials including website copy, pitch decks, and educational resources. Produced thought leadership content about influencer marketing trends. Developed case studies and success stories as the platform gained traction.",
-      outcome: "The content helped connect with the target audience effectively, resulting in a 38% boost in website traffic and a 23% improvement in conversion rate. Successfully launched the platform with strong initial adoption from both sides. The content effectively communicated value propositions to different audience segments, and the platform grew steadily with content serving as a key driver of user acquisition.",
-      images: [],
-      testimonial: {
-        name: "Parand Sh.",
-        title: "Business Owner",
-        company: "",
-        avatar: parandSh,
-        rating: 5,
-        text: "The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%. The quality of the delivered content has been excellent. It has definitely exceeded my expectations. Our collaboration has been an absolute pleasure, a decision I would make over and over again. They made sure that all my requirements were understood fully and executed flawlessly."
-      },
-      interview: {
-        url: "https://www.youtube.com/watch?v=d6C_mqxejlU",
-        content: `**Can you briefly introduce yourself and your business?**
-Hi, this is Parand and I'm a business owner. I would like to take a moment to share my experience with Renée Content.
-
-**What were the specific challenges or goals you had when you approached Renée Content for content writing services?**
-Before I left the task of content writing to Renée Content, I was facing some challenges in my online business. What I was actually looking for was engaging content in the niche of influencer marketing, but every time I outsourced the task to freelancers, they would just disappoint because as good as they were, they just failed to capture the essence of my business or bring me any closer to my business objectives, not to mention that their content sometimes really lacked the human touch I just really wanted to see.
-
-**How did Renée Content address those challenges or help you achieve your goals?**
-When I first approached Renée Content, I shared my concerns and expectactions, and ever since, they've done everything within their means to help me overcome the obstacles.
-
-**What results did you experience after working with Renée Content? (e.g., increase in website traffic, higher engagement, etc.)**
-The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%.
-
-**How would you describe the quality of the content provided by Renée Content? Did it meet or exceed your expectations?**
-The quality of the delivered content has been excellent. It has definitely exceeded my expectations.
-
-**How was the overall experience of working with Renée Content? Was the communication smooth and efficient?**
-In general, working with Renée Content has been an absolute pleasure, a decision I would make over and over again. The communication was smooth and efficient and they made sure that all my requirements were understood fully and executed flawlessly.
-
-**What sets Renée Content apart from other content writing service providers you have worked with in the past?**
-The personalized experience alongside the highly customized content that reflected my business values and resonated with my audience really sets them apart from every other service I have tried.
-
-**Would you recommend Renée Content to other businesses looking for content writing services?**
-Given the quality of the service, I would definitely recommend Renée Content to any business seeking content writing services, and I would definitely be coming back for more.`
       },
     },
     {
@@ -1294,7 +1297,7 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                 <PixelCard 
                   key={index}
                   className={`cursor-pointer transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg group relative overflow-hidden flex flex-col h-full ${
-                    index < 2 ? 'md:col-span-2' : ''
+                    index < 3 ? 'md:col-span-2' : ''
                   }`}
                   onClick={() => handleCaseStudyClick(project)}
                 >
