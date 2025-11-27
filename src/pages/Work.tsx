@@ -1623,9 +1623,29 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                         href={selectedCaseStudy.interview.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-secondary text-sm text-accent hover:underline block"
+                        className="block group"
                       >
-                        Watch the interview on YouTube →
+                        <div className="relative pixel-border overflow-hidden bg-black hover:pixel-shadow-lg transition-all hover:-translate-x-1 hover:-translate-y-1">
+                          <img 
+                            src={`https://img.youtube.com/vi/${selectedCaseStudy.interview.url.split('v=')[1]?.split('&')[0]}/maxresdefault.jpg`}
+                            alt="YouTube Interview Thumbnail"
+                            className="w-full h-auto group-hover:opacity-80 transition-opacity"
+                            onError={(e) => {
+                              // Fallback to hqdefault if maxresdefault doesn't exist
+                              e.currentTarget.src = `https://img.youtube.com/vi/${selectedCaseStudy.interview.url.split('v=')[1]?.split('&')[0]}/hqdefault.jpg`;
+                            }}
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-20 h-20 bg-accent/90 pixel-border flex items-center justify-center group-hover:bg-accent transition-colors">
+                              <svg className="w-10 h-10 text-background" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <p className="font-secondary text-sm text-accent hover:underline mt-2 text-center">
+                          Watch the Full Interview on YouTube →
+                        </p>
                       </a>
                       {selectedCaseStudy.interview.content && (
                         <div className="space-y-3">
