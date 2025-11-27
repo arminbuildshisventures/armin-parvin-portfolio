@@ -335,51 +335,6 @@ export default function Work() {
       },
     },
     {
-      slug: "influencer-marketing-business",
-      title: "Influencer Marketing Business",
-      category: "Content Marketing",
-      description: "Developed content strategy and materials for influencer marketing platform launch and growth.",
-      results: "Website Traffic Increase: 38% | Conversion Rate Improvement: 23%",
-      challenge: "Launching a new influencer marketing platform required establishing credibility and attracting both brands and influencers to a two-sided marketplace. The platform needed content that would appeal to both audiences simultaneously.",
-      process: "Developed dual-audience content strategy addressing both brands and influencers. Created launch materials including website copy, pitch decks, and educational resources. Produced thought leadership content about influencer marketing trends. Developed case studies and success stories as the platform gained traction.",
-      outcome: "The content helped connect with the target audience effectively, resulting in a 38% boost in website traffic and a 23% improvement in conversion rate. Successfully launched the platform with strong initial adoption from both sides. The content effectively communicated value propositions to different audience segments, and the platform grew steadily with content serving as a key driver of user acquisition.",
-      images: [],
-      testimonial: {
-        name: "Parand Sh.",
-        title: "Business Owner",
-        company: "",
-        avatar: parandSh,
-        rating: 5,
-        text: "The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%. The quality of the delivered content has been excellent. It has definitely exceeded my expectations. Our collaboration has been an absolute pleasure, a decision I would make over and over again. They made sure that all my requirements were understood fully and executed flawlessly."
-      },
-      interview: {
-        url: "https://www.youtube.com/watch?v=d6C_mqxejlU",
-        content: `**Can you briefly introduce yourself and your business?**
-Hi, this is Parand and I'm a business owner. I would like to take a moment to share my experience with Renée Content.
-
-**What were the specific challenges or goals you had when you approached Renée Content for content writing services?**
-Before I left the task of content writing to Renée Content, I was facing some challenges in my online business. What I was actually looking for was engaging content in the niche of influencer marketing, but every time I outsourced the task to freelancers, they would just disappoint because as good as they were, they just failed to capture the essence of my business or bring me any closer to my business objectives, not to mention that their content sometimes really lacked the human touch I just really wanted to see.
-
-**How did Renée Content address those challenges or help you achieve your goals?**
-When I first approached Renée Content, I shared my concerns and expectactions, and ever since, they've done everything within their means to help me overcome the obstacles.
-
-**What results did you experience after working with Renée Content? (e.g., increase in website traffic, higher engagement, etc.)**
-The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%.
-
-**How would you describe the quality of the content provided by Renée Content? Did it meet or exceed your expectations?**
-The quality of the delivered content has been excellent. It has definitely exceeded my expectations.
-
-**How was the overall experience of working with Renée Content? Was the communication smooth and efficient?**
-In general, working with Renée Content has been an absolute pleasure, a decision I would make over and over again. The communication was smooth and efficient and they made sure that all my requirements were understood fully and executed flawlessly.
-
-**What sets Renée Content apart from other content writing service providers you have worked with in the past?**
-The personalized experience alongside the highly customized content that reflected my business values and resonated with my audience really sets them apart from every other service I have tried.
-
-**Would you recommend Renée Content to other businesses looking for content writing services?**
-Given the quality of the service, I would definitely recommend Renée Content to any business seeking content writing services, and I would definitely be coming back for more.`
-      },
-    },
-    {
       slug: "rahmaninia-digital-marketing-agency",
       title: "Rahmaninia Digital Marketing Agency",
       category: "Agency Content",
@@ -433,51 +388,6 @@ I definitely recommend using Renée agency services as they give you an overally
       },
     },
     {
-      slug: "digital-marketing-agency",
-      title: "Digital Marketing Agency",
-      category: "Content Marketing",
-      description: "Executed content marketing strategy to establish thought leadership and drive client acquisition.",
-      results: "Leads and Revenue Increase: 480% | Improved Brand Visibility | Enhanced Personal Brand",
-      challenge: "The agency founder struggled to consistently produce engaging content that truly resonated with her audience. As a digital marketing agency owner, she knew the importance of having a strong online presence but needed support with LinkedIn ghostwriting, copywriting, and content writing services to establish thought leadership and drive client acquisition.",
-      process: "Developed comprehensive content strategy focusing on LinkedIn ghostwriting, copywriting, and content writing. Created engaging thought leadership content that perfectly captured the brand's voice and style. Implemented consistent publishing schedule across LinkedIn and website. Crafted in-depth articles and insights that resonated with the target audience. Focused on building both personal brand visibility and agency growth through strategic content that contributed to overall business success.",
-      outcome: "The results were incredible. Working with Renée Content not only improved the founder's personal brand visibility on LinkedIn, but it also had a significant impact on the agency's growth, achieving a remarkable 480% increase in leads and revenue. The quality of content exceeded expectations, perfectly capturing the brand's voice while significantly strengthening the online presence.",
-      images: [],
-      testimonial: {
-        name: "Niloofar Sh.",
-        title: "Founder and CEO",
-        company: "Digital Marketing Agency",
-        avatar: niloofar,
-        rating: 5,
-        text: "The quality of the content they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations. They went above and beyond to deliver content that genuinely resonated with my audience and contributed to our overall business growth and success."
-      },
-      interview: {
-        url: "https://www.youtube.com/watch?v=i2BPHd_y2jw",
-        content: `**Can you briefly introduce yourself and your business?**
-Hi there. My name is Niloofar, and I am the founder and CEO of a leading digital marketing agency. Today, I want to take a moment to share my amazing experience working with Renée Content.
-
-**What were the specific challenges or goals you had when you approached Renée Content for content writing services?**
-When I approached Renée Content, I had specific challenges I needed to overcome. As a digital marketing agency owner, I knew the importance of having a strong online presence, but I struggled to consistently produce engaging content that truly resonated with my audience. That's when I decided to try their LinkedIn ghostwriting, copywriting, and content writing services, and oh boy, was that a game-changer!
-
-**What results did you experience after working with Renée Content? (e.g., increase in website traffic, higher engagement, etc.)**
-The results were incredible. Working with Renée Content not only improved my personal brand's visibility on LinkedIn,  but it also had a significant impact on my agency's growth. We saw a remarkable 480% increase in leads and revenue.
-
-**How would you describe the quality of the content provided by Renée Content? Did it meet or exceed your expectations?**
-The quality of the contents they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations.
-
-**How was the overall experience of working with Renée Content? Was the communication smooth and efficient?**
-Communication with the team was always smooth and efficient, making the entire process enjoyable and stress-free.
-
-**What sets Renée Content apart from other content writing service providers you have worked with in the past?**
-What truly sets Renée Content apart is their dedication to understanding my business's unique needs. They went above and beyond to deliver content that generally resonated with my audience and contributed to our overall business growth and success.
-
-**How has the content provided by Renée Content contributed to your overall business growth and success?**
-Thanks to Renée Content's expertise, our online presence has never been stronger. Their services have become an invaluable asset to both my personal brand and my agency.
-
-**Would you recommend Renée Content to other businesses looking for content writing services? If so, why?**
-I can't recommend Renée Content enough. If you're looking for content writing services that drive real results, look no further. Trust me, they'll take your brand to new heights. If you want to boost your online presence and experience significant growth like I did, don't hesitate; reach out to Renée Content and see the magic unfold. Thank you Renée Content for being an incredible partner in our success story.`
-      },
-    },
-    {
       slug: "mv-production",
       title: "MV Production",
       category: "Creative Content",
@@ -521,13 +431,103 @@ It was really pleasant, you know, the customer service support. I think they rea
 They're really smart and responsive, and more important, they pay attention to any aspects and I think that's all you need.
 
 **Did you feel that Renée Content truly understood your brand's voice and style?**
-Of course they did. Otherwise, I wouldn't ask them for help.
+Yes, yes exactly, you know. The cooperation, you know, between my team and their team was really great and they finally, you know, achieved the result that we expected at first, and that was really great. And I think they really know the business.
 
 **How has the content provided by Renée Content contributed to your overall business growth and success?**
-It was efficient and very effective, and it encompassed our desire and every aspects that a business needs. And actually, it resulted in 105% of growth in the company, and it was great.
+I think the great cooperation between my team and their team brought about more quality in the product that we expected, and the overall experience was really great and I recommend everybody to use their services.
+
+**Would you recommend Renée Content to other businesses looking for content writing services?**
+Definitely I recommend it, actually because they're really experienced and they have a great customer support, and, you know, you can leave your business to them without any concern. And that's the point, I think.`
+      },
+    },
+    {
+      slug: "influencer-marketing-business",
+      title: "Influencer Marketing Business",
+      category: "Content Marketing",
+      description: "Developed content strategy and materials for influencer marketing platform launch and growth.",
+      results: "Website Traffic Increase: 38% | Conversion Rate Improvement: 23%",
+      challenge: "Launching a new influencer marketing platform required establishing credibility and attracting both brands and influencers to a two-sided marketplace. The platform needed content that would appeal to both audiences simultaneously.",
+      process: "Developed dual-audience content strategy addressing both brands and influencers. Created launch materials including website copy, pitch decks, and educational resources. Produced thought leadership content about influencer marketing trends. Developed case studies and success stories as the platform gained traction.",
+      outcome: "The content helped connect with the target audience effectively, resulting in a 38% boost in website traffic and a 23% improvement in conversion rate. Successfully launched the platform with strong initial adoption from both sides. The content effectively communicated value propositions to different audience segments, and the platform grew steadily with content serving as a key driver of user acquisition.",
+      images: [],
+      testimonial: {
+        name: "Parand Sh.",
+        title: "Business Owner",
+        company: "",
+        avatar: parandSh,
+        rating: 5,
+        text: "The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%. The quality of the delivered content has been excellent. It has definitely exceeded my expectations. Our collaboration has been an absolute pleasure, a decision I would make over and over again. They made sure that all my requirements were understood fully and executed flawlessly."
+      },
+      interview: {
+        url: "https://www.youtube.com/watch?v=d6C_mqxejlU",
+        content: `**Can you briefly introduce yourself and your business?**
+Hi, this is Parand and I'm a business owner. I would like to take a moment to share my experience with Renée Content.
+
+**What were the specific challenges or goals you had when you approached Renée Content for content writing services?**
+Before I left the task of content writing to Renée Content, I was facing some challenges in my online business. What I was actually looking for was engaging content in the niche of influencer marketing, but every time I outsourced the task to freelancers, they would just disappoint because as good as they were, they just failed to capture the essence of my business or bring me any closer to my business objectives, not to mention that their content sometimes really lacked the human touch I just really wanted to see.
+
+**How did Renée Content address those challenges or help you achieve your goals?**
+When I first approached Renée Content, I shared my concerns and expectactions, and ever since, they've done everything within their means to help me overcome the obstacles.
+
+**What results did you experience after working with Renée Content? (e.g., increase in website traffic, higher engagement, etc.)**
+The result speaks for itself really. The content has helped me connect with my target audience, boost my website traffic by 38%, and improve the conversion rate by 23%.
+
+**How would you describe the quality of the content provided by Renée Content? Did it meet or exceed your expectations?**
+The quality of the delivered content has been excellent. It has definitely exceeded my expectations.
+
+**How was the overall experience of working with Renée Content? Was the communication smooth and efficient?**
+In general, working with Renée Content has been an absolute pleasure, a decision I would make over and over again. The communication was smooth and efficient and they made sure that all my requirements were understood fully and executed flawlessly.
+
+**What sets Renée Content apart from other content writing service providers you have worked with in the past?**
+The personalized experience alongside the highly customized content that reflected my business values and resonated with my audience really sets them apart from every other service I have tried.
+
+**Would you recommend Renée Content to other businesses looking for content writing services?**
+Given the quality of the service, I would definitely recommend Renée Content to any business seeking content writing services, and I would definitely be coming back for more.`
+      },
+    },
+    {
+      slug: "digital-marketing-agency",
+      title: "Digital Marketing Agency",
+      category: "Content Marketing",
+      description: "Executed content marketing strategy to establish thought leadership and drive client acquisition.",
+      results: "Leads and Revenue Increase: 480% | Improved Brand Visibility | Enhanced Personal Brand",
+      challenge: "The agency founder struggled to consistently produce engaging content that truly resonated with her audience. As a digital marketing agency owner, she knew the importance of having a strong online presence but needed support with LinkedIn ghostwriting, copywriting, and content writing services to establish thought leadership and drive client acquisition.",
+      process: "Developed comprehensive content strategy focusing on LinkedIn ghostwriting, copywriting, and content writing. Created engaging thought leadership content that perfectly captured the brand's voice and style. Implemented consistent publishing schedule across LinkedIn and website. Crafted in-depth articles and insights that resonated with the target audience. Focused on building both personal brand visibility and agency growth through strategic content that contributed to overall business success.",
+      outcome: "The results were incredible. Working with Renée Content not only improved the founder's personal brand visibility on LinkedIn, but it also had a significant impact on the agency's growth, achieving a remarkable 480% increase in leads and revenue. The quality of content exceeded expectations, perfectly capturing the brand's voice while significantly strengthening the online presence.",
+      images: [],
+      testimonial: {
+        name: "Niloofar Sh.",
+        title: "Founder and CEO",
+        company: "Digital Marketing Agency",
+        avatar: niloofar,
+        rating: 5,
+        text: "The quality of the content they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations. They went above and beyond to deliver content that genuinely resonated with my audience and contributed to our overall business growth and success."
+      },
+      interview: {
+        url: "https://www.youtube.com/watch?v=i2BPHd_y2jw",
+        content: `**Can you briefly introduce yourself and your business?**
+Hi there. My name is Niloofar, and I am the founder and CEO of a leading digital marketing agency. Today, I want to take a moment to share my amazing experience working with Renée Content.
+
+**What were the specific challenges or goals you had when you approached Renée Content for content writing services?**
+When I approached Renée Content, I had specific challenges I needed to overcome. As a digital marketing agency owner, I knew the importance of having a strong online presence, but I struggled to consistently produce engaging content that truly resonated with my audience. That's when I decided to try their LinkedIn ghostwriting, copywriting, and content writing services, and oh boy, was that a game-changer!
+
+**What results did you experience after working with Renée Content? (e.g., increase in website traffic, higher engagement, etc.)**
+The results were incredible. Working with Renée Content not only improved my personal brand's visibility on LinkedIn,  but it also had a significant impact on my agency's growth. We saw a remarkable 480% increase in leads and revenue.
+
+**How would you describe the quality of the content provided by Renée Content? Did it meet or exceed your expectations?**
+The quality of the contents they provided was simply outstanding. It perfectly captured my brand's voice and style, and their attention to detail exceeded my expectations.
+
+**How was the overall experience of working with Renée Content? Was the communication smooth and efficient?**
+Communication with the team was always smooth and efficient, making the entire process enjoyable and stress-free.
+
+**What sets Renée Content apart from other content writing service providers you have worked with in the past?**
+What truly sets Renée Content apart is their dedication to understanding my business's unique needs. They went above and beyond to deliver content that generally resonated with my audience and contributed to our overall business growth and success.
+
+**How has the content provided by Renée Content contributed to your overall business growth and success?**
+Thanks to Renée Content's expertise, our online presence has never been stronger. Their services have become an invaluable asset to both my personal brand and my agency.
 
 **Would you recommend Renée Content to other businesses looking for content writing services? If so, why?**
-Definitely I recommend it, actually because they're really experienced and they have a great customer support, and, you know, you can leave your business to them without any concern. And that's the point, I think.`
+I can't recommend Renée Content enough. If you're looking for content writing services that drive real results, look no further. Trust me, they'll take your brand to new heights. If you want to boost your online presence and experience significant growth like I did, don't hesitate; reach out to Renée Content and see the magic unfold. Thank you Renée Content for being an incredible partner in our success story.`
       },
     },
     {
