@@ -45,9 +45,9 @@ interface CaseStudy {
   category: string;
   description: string;
   results: string;
-  challenge: string;
-  process: string;
-  outcome: string;
+  challenge: string[];
+  process: string[];
+  outcome: string[];
   images: string[];
   logo?: string;
   bgImage?: string;
@@ -195,9 +195,21 @@ export default function Work() {
       category: "Cold Email Marketing",
       description: "Redesigned email marketing strategy with advanced segmentation and hyper-personalized campaigns, increasing weekly registrations from 170 to 500.",
       results: "24,000+ Users Acquired",
-      challenge: "Roomvu is a PropTech platform that offers hyper-local real estate video marketing. They acquire clients through different processes, including SEO, Cold Emails, paid ads, social media, organic, referrals, and Email Marketing. When we decided to work together, they already had a cold email marketing setup. However, the untapped potential was huge. Roomvu faced low user registration rates and needed to significantly improve conversion through their cold email marketing efforts. The existing campaigns weren't engaging enough and lacked strategic automation.",
-      process: "I redesigned the entire email marketing strategy from the ground up. Implemented advanced segmentation, created hyper-personalized drip campaigns, A/B tested subject lines and copy, and developed automated workflows based on user behavior. I also optimized send times and refined messaging to resonate with the real estate professional audience.",
-      outcome: "Through winning email marketing, copywriting, and storytelling techniques, I brought roomvu an added client base of 24,000+ users, increasing their weekly registrations from an average of 170 to an average of 500. Email open rate increased by 10%, email CTOR increased by 2.5%, and over 1,000+ emails were crafted throughout the engagement.",
+      challenge: [
+        "PropTech platform with low user registration rates despite existing cold email setup",
+        "Existing campaigns lacked engagement and strategic automation",
+        "Needed to significantly improve conversion through cold email marketing"
+      ],
+      process: [
+        "Redesigned entire email marketing strategy with advanced segmentation and hyper-personalized drip campaigns",
+        "A/B tested subject lines and copy, developed automated workflows based on user behavior",
+        "Optimized send times and refined messaging to resonate with real estate professionals"
+      ],
+      outcome: [
+        "Added 24,000+ users, increasing weekly registrations from 170 to 500",
+        "Email open rate increased 10%, CTOR increased 2.5%",
+        "Crafted 1,000+ emails throughout the engagement"
+      ],
       images: [roomvuResults2, roomvuResults3, roomvuResults1],
       logo: roomvuLogo,
       bgImage: roomvuBg,
@@ -217,9 +229,21 @@ export default function Work() {
       category: "Content Marketing",
       description: "Created bottom-of-funnel content strategy and wrote multi-perspective articles to establish brand presence in SERPs for new features.",
       results: "SERP Rankings Achieved",
-      challenge: "Convert.com needed to establish a strong brand presence in search results for their brand new features and seed Convert's name in the SERPs. The challenge was creating content that would rank well while also providing value to potential customers at the bottom of the funnel. They specifically needed multi-perspective, journalistic articles about a new space called Full-Stack Experimentation.",
-      process: "Developed a comprehensive content strategy focusing on feature-specific content and Full-Stack Experimentation thought leadership. Conducted keyword research, competitor analysis, and created detailed content briefs. Worked closely with the product team to understand technical specifications and translated them into accessible, SEO-optimized content. Produced multi-perspective, journalistic articles that positioned Convert as leaders in the Full-Stack Experimentation space.",
-      outcome: "Successfully established Convert.com's presence in SERPs for target keywords. The content strategy led to increased organic traffic and improved brand recognition within the industry. Content pieces consistently ranked in top positions for competitive keywords, positioning Convert as thought leaders in the Full-Stack Experimentation space.",
+      challenge: [
+        "Needed to establish strong brand presence in SERPs for brand new features",
+        "Required content that would rank well while providing value at the bottom of the funnel",
+        "Needed multi-perspective journalistic articles about Full-Stack Experimentation"
+      ],
+      process: [
+        "Developed comprehensive content strategy with keyword research and competitor analysis",
+        "Worked closely with product team to translate technical specs into accessible SEO-optimized content",
+        "Produced multi-perspective journalistic articles positioning Convert as thought leaders"
+      ],
+      outcome: [
+        "Successfully established Convert.com's presence in SERPs for target keywords",
+        "Increased organic traffic and improved brand recognition within the industry",
+        "Content pieces consistently ranked in top positions, establishing thought leadership"
+      ],
       images: [],
       logo: convertLogo,
       bgImage: convertBg,
@@ -239,9 +263,21 @@ export default function Work() {
       category: "Content Marketing",
       description: "Developed content strategy and materials for influencer marketing platform launch and growth.",
       results: "Website Traffic Increase: 38% | Conversion Rate Improvement: 23%",
-      challenge: "Launching a new influencer marketing platform required establishing credibility and attracting both brands and influencers to a two-sided marketplace. The platform needed content that would appeal to both audiences simultaneously.",
-      process: "Developed dual-audience content strategy addressing both brands and influencers. Created launch materials including website copy, pitch decks, and educational resources. Produced thought leadership content about influencer marketing trends. Developed case studies and success stories as the platform gained traction.",
-      outcome: "The content helped connect with the target audience effectively, resulting in a 38% boost in website traffic and a 23% improvement in conversion rate. Successfully launched the platform with strong initial adoption from both sides. The content effectively communicated value propositions to different audience segments, and the platform grew steadily with content serving as a key driver of user acquisition.",
+      challenge: [
+        "Required establishing credibility and attracting both brands and influencers to two-sided marketplace",
+        "Content needed to appeal to both audiences simultaneously",
+        "Previous freelancers failed to capture business essence or provide the human touch needed"
+      ],
+      process: [
+        "Developed dual-audience content strategy addressing both brands and influencers",
+        "Created launch materials including website copy, pitch decks, and educational resources",
+        "Produced thought leadership content about influencer marketing trends and success stories"
+      ],
+      outcome: [
+        "38% boost in website traffic and 23% improvement in conversion rate",
+        "Successfully launched platform with strong initial adoption from both sides",
+        "Content effectively communicated value propositions and drove user acquisition"
+      ],
       images: [],
       testimonial: {
         name: "Parand Sh.",
@@ -287,9 +323,21 @@ Yes, definitely. I think as a content creation agency, Renée Content is doing a
       category: "Product Marketing",
       description: "Managed all marketing channels for Next-Gen Pentest Solution including 100+ emails, 50+ technical articles, and 43+ landing pages.",
       results: "30% Email Open Rate Increase",
-      challenge: "Nordic Defender is an all-in-one cybersecurity solution provider that serves organizations, companies, and businesses in different industries and sizes. Nordic Defender entered a highly competitive cybersecurity market with established players. They needed to differentiate their products and establish credibility quickly to gain market share. I was responsible for all marketing channels related to their Next-Gen Pentest Solution, including email marketing, content writing, landing page writing, white paper writing, and sales document writing.",
-      process: "I initiated and conducted in-depth market analysis proactively to identify trends and competitive differentiators. Partnered with cross-functional teams to simplify complex cybersecurity concepts into white papers, press releases, case studies, blogs, articles, emails, LinkedIn posts, webpages, and landing pages. I set up their email marketing system and used winning copywriting and storytelling techniques to maximize Nordic Defender's ROI and added revenue.",
-      outcome: "Successfully positioned Nordic Defender as a credible player in the cybersecurity space. Achieved 30% increase in email open rates and 10% improvement in email CTOR. Created 100+ emails, 50+ technical articles, 10+ sales documents, and 43+ landing pages. The content strategy generated qualified leads and established the brand as a thought leader. Market awareness increased significantly within the first six months.",
+      challenge: [
+        "Entered highly competitive cybersecurity market with established players",
+        "Needed to differentiate products and establish credibility quickly",
+        "Responsible for all marketing channels for Next-Gen Pentest Solution"
+      ],
+      process: [
+        "Conducted in-depth market analysis to identify trends and competitive differentiators",
+        "Partnered with cross-functional teams to simplify complex cybersecurity concepts into multiple formats",
+        "Set up email marketing system using winning copywriting and storytelling techniques"
+      ],
+      outcome: [
+        "30% increase in email open rates, 10% improvement in email CTOR",
+        "Created 100+ emails, 50+ technical articles, 10+ sales documents, 43+ landing pages",
+        "Generated qualified leads and established brand as thought leader with increased market awareness"
+      ],
       images: [],
       logo: nordicLogo,
       bgImage: nordicBg,
@@ -301,9 +349,20 @@ Yes, definitely. I think as a content creation agency, Renée Content is doing a
       category: "Technical Content",
       description: "Developed technical blog content and landing pages achieving #1 rankings, featured snippets, 5X conversion rates, and 2,360+ users acquired.",
       results: "#1 Rankings & 5X Conversion",
-      challenge: "Cloudzy is a VPS and Cloud Service Provider serving hundreds of thousands of users worldwide. They needed to improve their organic search visibility and conversion rates in a competitive cloud hosting market. I was responsible for developing their technical blog content, knowledge base, and landing pages and webpages copy to ensure the maximum conversion rate.",
-      process: "I used winning copywriting and storytelling techniques to maximize Cloudzy's website visitors, conversion rates, and added revenue. Researched high-value keywords with commercial intent and created in-depth technical blog posts that provided genuine value to readers while incorporating SEO best practices. Focused on comprehensive coverage of topics, proper heading structure, internal linking, and user experience. Ensured technical accuracy while maintaining readability. Developed landing page copy optimized for conversions.",
-      outcome: "Achieved significant improvements across all metrics: wrote 23+ technical articles with an average time on page of 13+ minutes, developed copy for 37+ landing pages and webpages, improved SERP position by 7X with multiple articles achieving #1 rankings and featured snippets (position zero) on Google, increased conversion rates by 5X, and helped acquire 2,360+ new users. The technical blog posts became valuable resources frequently shared within the cloud hosting community.",
+      challenge: [
+        "Needed to improve organic search visibility and conversion rates in competitive cloud hosting market",
+        "Responsible for developing technical blog content, knowledge base, and landing page copy"
+      ],
+      process: [
+        "Researched high-value keywords with commercial intent and created in-depth technical blog posts",
+        "Focused on comprehensive topic coverage, proper heading structure, and user experience",
+        "Developed landing page copy optimized for conversions while ensuring technical accuracy"
+      ],
+      outcome: [
+        "Wrote 23+ technical articles with 13+ minutes average time on page",
+        "Improved SERP position by 7X with multiple #1 rankings and featured snippets",
+        "Increased conversion rates 5X and helped acquire 2,360+ new users"
+      ],
       images: [],
       logo: cloudzyLogo,
       bgImage: cloudzyBg,
@@ -315,9 +374,20 @@ Yes, definitely. I think as a content creation agency, Renée Content is doing a
       category: "Blog Content Writing",
       description: "Developed blog content writing to increase website visitors and convert them into loyal users for this WordPress SMS Marketing plugin.",
       results: "24+ Articles | 3.2X Conversion",
-      challenge: "WP SMS Pro is a subsidiary of the parent company VeronaLabs. They offer an all-in-one WordPress plugin that handles SMS Marketing for businesses, helping them grow efficiently. WP SMS Pro struggled with low brand awareness in a niche market. They needed a content strategy that would educate their target audience about SMS marketing for WordPress while driving product adoption. I was responsible for their blog content writing, increasing their website visitors, and converting the visitors into loyal users.",
-      process: "I used winning copywriting and storytelling techniques to maximize the time on page and conversion rates of the users. Developed a multi-channel content strategy targeting WordPress site owners and developers. Created educational content about SMS marketing benefits, use cases, and implementation guides. Produced tutorials, comparison articles, and integration guides. Established a content calendar with consistent publishing schedule.",
-      outcome: "Significantly increased brand awareness within the WordPress community. Wrote 24+ technical articles with an average time on page of 6.5+ minutes, improved SERP position by 3X, and increased conversion rates by 3.2X. Organic traffic grew steadily, and product sign-ups improved. The educational content positioned WP SMS Pro as the go-to solution for WordPress SMS integration.",
+      challenge: [
+        "Low brand awareness in niche WordPress SMS marketing market",
+        "Needed content strategy to educate target audience about SMS marketing while driving product adoption"
+      ],
+      process: [
+        "Developed multi-channel content strategy targeting WordPress site owners and developers",
+        "Created educational content about SMS marketing benefits, use cases, and implementation guides",
+        "Established consistent publishing schedule with tutorials, comparison articles, and integration guides"
+      ],
+      outcome: [
+        "Wrote 24+ technical articles with 6.5+ minutes average time on page",
+        "Improved SERP position 3X and increased conversion rates 3.2X",
+        "Positioned WP SMS Pro as go-to solution for WordPress SMS integration"
+      ],
       images: [],
       logo: wpSmsLogo,
       industry: "Technology",
@@ -328,9 +398,20 @@ Yes, definitely. I think as a content creation agency, Renée Content is doing a
       category: "Copywriting",
       description: "Developed blog content, X posts, and newsletters for this Certified Public Accountant specializing in tax strategy and crypto tax.",
       results: "16+ Articles | 3X Conversion",
-      challenge: "Lorenzo Abbatiello is a Certified Public Accountant (CPA) who advises clients on tax strategy, including crypto tax. LorenzoCPA needed to differentiate themselves in a crowded accounting services market. Their existing website copy didn't effectively communicate their expertise or build trust with potential clients. I was responsible for their blog content writing, X and newsletter ghostwriting, increasing their website visitors, and converting the visitors into loyal users.",
-      process: "I used winning copywriting and storytelling techniques to maximize the time on page and conversion rates of the users. Rewrote all website copy with a focus on establishing authority and building client trust. Created service page copy that clearly explained complex tax concepts in accessible language. Developed a professional yet approachable brand voice. Crafted compelling calls-to-action and trust-building elements throughout the site.",
-      outcome: "Successfully positioned LorenzoCPA as a trusted authority in accounting and tax services. Wrote 16+ technical articles with an average time on page of 14+ minutes, improved SERP position by 2X, and increased conversion rates by 3X. The new copy improved website engagement metrics and increased consultation bookings. Client feedback indicated the website now effectively communicated the firm's expertise and professionalism.",
+      challenge: [
+        "Needed to differentiate in crowded accounting services market",
+        "Website copy didn't effectively communicate expertise or build trust with potential clients"
+      ],
+      process: [
+        "Rewrote all website copy with focus on establishing authority and building client trust",
+        "Created service page copy explaining complex tax concepts in accessible language",
+        "Developed professional yet approachable brand voice with compelling CTAs"
+      ],
+      outcome: [
+        "Wrote 16+ technical articles with 14+ minutes average time on page",
+        "Improved SERP position 2X and increased conversion rates 3X",
+        "Improved engagement metrics and increased consultation bookings"
+      ],
       images: [],
       logo: lorenzoLogo,
       industry: "Finance",
@@ -341,9 +422,20 @@ Yes, definitely. I think as a content creation agency, Renée Content is doing a
       category: "Digital Marketing",
       description: "Generated and nurtured leads through email marketing to book sales calls for this custom software development company.",
       results: "40+ Emails | 4X ROI",
-      challenge: "citronity is a custom software development company that offers software development, Team as a Service (TaaS), MVP building, product discovery, and UI/UX design to businesses of all sorts. citronity lacked a cohesive digital marketing presence across channels. They needed an integrated strategy to improve brand visibility and generate quality leads across multiple platforms. I was responsible for their email marketing efforts, generating and nurturing leads, and booking sales calls.",
-      process: "I set up their email marketing system and used winning copywriting and storytelling techniques to turn leads into clients. Developed a comprehensive multi-channel digital marketing strategy. Coordinated content across social media, blog, email, and paid channels. Created consistent brand messaging and visual identity. Implemented tracking and analytics to measure performance across all channels. Optimized campaigns based on data-driven insights.",
-      outcome: "Established strong multi-channel presence with consistent brand messaging. Achieved 40% increase in email open rates, 10% improvement in email CTOR, crafted 40+ emails, and delivered 4X ROI. Lead generation increased across all channels with improved quality of leads. The integrated approach created synergy between channels, amplifying overall marketing effectiveness.",
+      challenge: [
+        "Lacked cohesive digital marketing presence and needed integrated strategy",
+        "Required email marketing efforts to generate and nurture leads for booking sales calls"
+      ],
+      process: [
+        "Set up email marketing system with winning copywriting and storytelling techniques",
+        "Developed comprehensive multi-channel strategy with consistent brand messaging",
+        "Implemented tracking and analytics to optimize campaigns based on data-driven insights"
+      ],
+      outcome: [
+        "40% increase in email open rates, 10% improvement in CTOR, 4X ROI",
+        "Crafted 40+ emails with improved lead generation across all channels",
+        "Created synergy between channels, amplifying overall marketing effectiveness"
+      ],
       images: [],
       logo: citronityLogo,
       industry: "Technology",
@@ -354,9 +446,20 @@ Yes, definitely. I think as a content creation agency, Renée Content is doing a
       category: "Technical Content",
       description: "Wrote technical blog content covering Excel tips, tricks, and complexities for this Microsoft Excel consultancy team.",
       results: "50+ Articles | 5X Conversion",
-      challenge: "BSUITE365 is a team of Microsoft Excel Consultants and Programmers that offer tailored solutions to help businesses and brands ensure efficiency and accurate reporting. BSuite365 struggled to engage enterprise clients with their existing content. They needed sophisticated B2B content that would resonate with decision-makers and demonstrate clear ROI. I was responsible for their technical blog writing that covered a wide range of topics related to Microsoft Excel tips, tricks, and complexities.",
-      process: "I generated tons of website visitors, improved their SERP position and time on page, and multiplied their conversion rates. Developed enterprise-focused content strategy with emphasis on ROI and business value. Created whitepapers, case studies, and thought leadership pieces. Collaborated with sales team to understand buyer pain points and objections. Crafted content for each stage of the enterprise buying cycle.",
-      outcome: "Significantly improved engagement with enterprise prospects. Wrote 50+ technical articles with an average time on page of 8+ minutes, improved SERP position by 2X, and increased conversion rates by 5X. The content assets became valuable tools for the sales team, shortening sales cycles. Multiple enterprise clients cited the content as influential in their decision-making process.",
+      challenge: [
+        "Struggled to engage enterprise clients with existing content",
+        "Needed sophisticated B2B content demonstrating clear ROI to decision-makers"
+      ],
+      process: [
+        "Developed enterprise-focused content strategy with emphasis on ROI and business value",
+        "Created whitepapers, case studies, and thought leadership pieces for each buying cycle stage",
+        "Collaborated with sales team to address buyer pain points and objections"
+      ],
+      outcome: [
+        "Wrote 50+ technical articles with 8+ minutes average time on page",
+        "Improved SERP position 2X and increased conversion rates 5X",
+        "Content assets shortened sales cycles and influenced enterprise client decisions"
+      ],
       images: [],
       logo: bsuiteLogo,
       industry: "Professional Services",
@@ -367,9 +470,20 @@ Yes, definitely. I think as a content creation agency, Renée Content is doing a
       category: "Digital Marketing",
       description: "Managed all marketing channels including email marketing, content marketing, and landing pages for this user-tracking tool.",
       results: "630+ Emails | 11X ROI",
-      challenge: "WatchThemLive is a user-tracking tool that enables business owners to watch their user behaviors through session recordings and heatmaps. WatchThemLive had low email engagement rates and struggled to convert subscribers into active users. Their email campaigns weren't delivering the expected ROI. I was responsible for all marketing channels including email marketing, content marketing, technical content writing, and landing page copywriting.",
-      process: "I set up their email marketing system and used winning copywriting and storytelling techniques to bring in the clients effectively and efficiently. Completely redesigned email campaign strategy with focus on personalization and value delivery. Implemented advanced segmentation based on user behavior and preferences. A/B tested every element from subject lines to CTAs. Created compelling copy that emphasized benefits over features. Optimized email design for better mobile experience.",
-      outcome: "Achieved 52% increase in email open rates and 23% improvement in click-through rates, delivering 11X ROI. Crafted 630+ emails, wrote 62+ blog posts, and developed 18+ landing pages. Email campaigns became a primary driver of user activation and retention. The improved engagement led to measurable increases in product usage and customer lifetime value.",
+      challenge: [
+        "Low email engagement rates and struggled to convert subscribers into active users",
+        "Email campaigns weren't delivering expected ROI across all marketing channels"
+      ],
+      process: [
+        "Completely redesigned email campaign strategy with focus on personalization and value delivery",
+        "Implemented advanced segmentation based on user behavior with A/B testing of all elements",
+        "Optimized email design for mobile experience emphasizing benefits over features"
+      ],
+      outcome: [
+        "52% increase in email open rates, 23% improvement in click-through rates, 11X ROI",
+        "Crafted 630+ emails, wrote 62+ blog posts, developed 18+ landing pages",
+        "Email campaigns became primary driver of user activation, retention, and product usage"
+      ],
       images: [watchthemLiveResults1],
       logo: wtlLogo,
       industry: "Technology",
@@ -390,9 +504,20 @@ Yes, definitely. I think as a content creation agency, Renée Content is doing a
       results: "Increased Traffic | Better Conversion",
       logo: rahmaninaLogo,
       industry: "Marketing",
-      challenge: "The agency needed to establish a strong brand identity and differentiate themselves in a competitive digital marketing landscape. They required a complete content suite that would showcase their expertise and attract high-value clients.",
-      process: "Developed comprehensive brand positioning strategy and created full content suite including website copy, service descriptions, case studies, and thought leadership content. Crafted unique brand voice that balanced professionalism with approachability. Created portfolio presentations and client-facing materials.",
-      outcome: "The content delivered increased website traffic with rich SEO optimization and excellent copywriting. Articles targeting the bottom funnel converted particularly well. Successfully positioned the agency with a distinct brand identity, helping attract larger, more profitable clients. Agency credibility increased significantly, leading to improved close rates and higher-value contracts.",
+      challenge: [
+        "Needed to establish strong brand identity and differentiate in competitive digital marketing landscape",
+        "Required complete content suite to showcase expertise and attract high-value clients"
+      ],
+      process: [
+        "Developed comprehensive brand positioning strategy with unique voice balancing professionalism and approachability",
+        "Created full content suite including website copy, service descriptions, case studies, and thought leadership",
+        "Crafted portfolio presentations and client-facing materials"
+      ],
+      outcome: [
+        "Increased website traffic with rich SEO optimization and excellent copywriting",
+        "Bottom funnel articles converted particularly well",
+        "Successfully positioned agency with distinct brand identity, attracting larger, more profitable clients"
+      ],
       images: [],
       testimonial: {
         name: "Mehdi Rahmaninia",
@@ -443,9 +568,20 @@ I definitely recommend using Renée agency services as they give you an overally
       results: "105% Growth | 3X Traffic",
       logo: mvProductionLogo,
       industry: "Media & Entertainment",
-      challenge: "MV Production, a media creation company specializing in film scores, background music, jingles, and advertisement media, faced significant challenges dealing with content creation, website traffic, and producing quality material for customers. These content and traffic issues were impacting their ability to attract and convert clients effectively.",
-      process: "Leveraged deep expertise in content marketing to address the challenges with precision. Quickly identified the core issues and implemented strategic content solutions. Created engaging content that showcased MV Production's creative capabilities across film scoring, music production, and media creation. Developed content strategy focused on demonstrating their expertise and attracting the right clientele. Provided exceptional customer service support throughout the process, treating the client's business with care and attention to detail.",
-      outcome: "The results were astonishing. Website traffic increased significantly, leads multiplied three times more than expected, and the business experienced 105% growth. The quality content exceeded expectations and effectively communicated MV Production's value proposition. The comprehensive content strategy successfully attracted higher-quality client inquiries and contributed to substantial business growth and success.",
+      challenge: [
+        "Faced significant challenges with content creation, website traffic, and producing quality material",
+        "Content and traffic issues impacted ability to attract and convert clients effectively"
+      ],
+      process: [
+        "Leveraged deep content marketing expertise to quickly identify core issues",
+        "Created engaging content showcasing MV Production's creative capabilities across all services",
+        "Developed strategy focused on demonstrating expertise and attracting right clientele"
+      ],
+      outcome: [
+        "Website traffic increased significantly, leads multiplied 3X more than expected",
+        "Business experienced 105% growth with quality content exceeding expectations",
+        "Successfully attracted higher-quality client inquiries and substantial business growth"
+      ],
       images: [],
       testimonial: {
         name: "Mahmoud Valanejad",
@@ -494,9 +630,20 @@ Definitely I recommend it, actually because they're really experienced and they 
       category: "Content Marketing",
       description: "Executed content marketing strategy to establish thought leadership and drive client acquisition.",
       results: "Leads and Revenue Increase: 480% | Improved Brand Visibility | Enhanced Personal Brand",
-      challenge: "The agency founder struggled to consistently produce engaging content that truly resonated with her audience. As a digital marketing agency owner, she knew the importance of having a strong online presence but needed support with LinkedIn ghostwriting, copywriting, and content writing services to establish thought leadership and drive client acquisition.",
-      process: "Developed comprehensive content strategy focusing on LinkedIn ghostwriting, copywriting, and content writing. Created engaging thought leadership content that perfectly captured the brand's voice and style. Implemented consistent publishing schedule across LinkedIn and website. Crafted in-depth articles and insights that resonated with the target audience. Focused on building both personal brand visibility and agency growth through strategic content that contributed to overall business success.",
-      outcome: "The results were incredible. Working with Renée Content not only improved the founder's personal brand visibility on LinkedIn, but it also had a significant impact on the agency's growth, achieving a remarkable 480% increase in leads and revenue. The quality of content exceeded expectations, perfectly capturing the brand's voice while significantly strengthening the online presence.",
+      challenge: [
+        "Struggled to consistently produce engaging content that resonated with audience",
+        "Needed LinkedIn ghostwriting, copywriting, and content writing for thought leadership and client acquisition"
+      ],
+      process: [
+        "Developed comprehensive content strategy focusing on LinkedIn ghostwriting, copywriting, and content writing",
+        "Created engaging thought leadership content capturing brand's voice perfectly",
+        "Implemented consistent publishing schedule with in-depth articles resonating with target audience"
+      ],
+      outcome: [
+        "480% increase in leads and revenue with improved personal brand visibility on LinkedIn",
+        "Quality of content exceeded expectations while perfectly capturing brand's voice",
+        "Significantly strengthened online presence and agency growth"
+      ],
       images: [],
       testimonial: {
         name: "Niloofar Sh.",
@@ -539,9 +686,20 @@ I can't recommend Renée Content enough. If you're looking for content writing s
       category: "E-commerce Content",
       description: "Created content marketing strategy for online boutique specializing in trendy fashion and home decor items.",
       results: "Website Traffic Skyrocketed | Leads Increase: 3X | Revenue Increase: 60%",
-      challenge: "Primary challenge was generating enough online traffic to boost sales and expand reach to connect with a larger audience of potential customers for the small online boutique specializing in trendy fashion and home decor items.",
-      process: "Implemented content strategies and SEO expertise to elevate website visibility. Created well-researched, beautifully written articles and blog posts that resonated with target audience. Captured brand's voice and style flawlessly, making content genuinely authentic and appealing. Focused on driving organic traffic and increasing online presence.",
-      outcome: "Website traffic skyrocketed with impressive 3-fold increase in leads. Content was engaging, informative, and perfectly aligned with brand's message, driving more conversions than ever before. Revenue increased by remarkable 60%, with business flourishing and attracting more loyal customers. Positioned business as industry leader through well-crafted content that boosted website performance.",
+      challenge: [
+        "E-commerce boutique struggled with generating online traffic to boost sales",
+        "Needed to expand reach and connect with larger audience of potential customers"
+      ],
+      process: [
+        "Implemented content strategies and SEO expertise to elevate website visibility",
+        "Created well-researched, beautifully written articles and blog posts resonating with target audience",
+        "Captured brand's voice and style flawlessly, focusing on driving organic traffic"
+      ],
+      outcome: [
+        "Website traffic skyrocketed with impressive 3X increase in leads",
+        "Revenue increased by remarkable 60% with more conversions than ever",
+        "Positioned business as industry leader through well-crafted content"
+      ],
       images: [],
       testimonial: {
         name: "Shadi V.",
@@ -590,9 +748,20 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
       category: "Ghostwriting",
       description: "Ghostwrote thought leadership content for C-level executives, coaches, and speakers to build their personal brands.",
       results: "Personal brand authority established",
-      challenge: "Executives, coaches, and speakers needed to establish strong personal brands but lacked time to create consistent, high-quality content. They required authentic content that reflected their voice and expertise while maintaining professional standards.",
-      process: "Conducted in-depth interviews to understand their perspectives, experiences, and unique insights. Developed content that authentically represented their voice and expertise. Created LinkedIn posts, articles, and keynote content. Maintained consistent publishing schedule while ensuring all content aligned with their brand positioning.",
-      outcome: "Successfully built personal brand authority for multiple clients. Their LinkedIn following and engagement grew significantly. Several clients secured speaking opportunities and consulting contracts directly attributed to their enhanced online presence and thought leadership content.",
+      challenge: [
+        "Executives, coaches, and speakers lacked time to create consistent high-quality content",
+        "Required authentic content reflecting their voice and expertise while maintaining professional standards"
+      ],
+      process: [
+        "Conducted in-depth interviews to understand their perspectives, experiences, and unique insights",
+        "Developed content authentically representing their voice with LinkedIn posts, articles, and keynote content",
+        "Maintained consistent publishing schedule aligned with brand positioning"
+      ],
+      outcome: [
+        "Successfully built personal brand authority for multiple clients",
+        "LinkedIn following and engagement grew significantly",
+        "Clients secured speaking opportunities and consulting contracts attributed to enhanced online presence"
+      ],
       images: [],
     },
   ];
@@ -1556,9 +1725,14 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                   <h3 className="font-primary text-xl text-accent pixel-border inline-block px-3 py-1 bg-accent/10">
                     Challenge
                   </h3>
-                  <p className="font-secondary text-sm leading-relaxed">
-                    {selectedCaseStudy.challenge}
-                  </p>
+                  <ul className="space-y-2 list-none">
+                    {selectedCaseStudy.challenge.map((point, index) => (
+                      <li key={index} className="font-secondary text-sm leading-relaxed flex items-start gap-3">
+                        <span className="text-accent mt-1 flex-shrink-0">▸</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {/* Process Section */}
@@ -1566,9 +1740,14 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                   <h3 className="font-primary text-xl text-accent pixel-border inline-block px-3 py-1 bg-accent/10">
                     Process
                   </h3>
-                  <p className="font-secondary text-sm leading-relaxed">
-                    {selectedCaseStudy.process}
-                  </p>
+                  <ul className="space-y-2 list-none">
+                    {selectedCaseStudy.process.map((point, index) => (
+                      <li key={index} className="font-secondary text-sm leading-relaxed flex items-start gap-3">
+                        <span className="text-accent mt-1 flex-shrink-0">▸</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {/* Outcome Section */}
@@ -1576,9 +1755,14 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                   <h3 className="font-primary text-xl text-accent pixel-border inline-block px-3 py-1 bg-accent/10">
                     Outcome
                   </h3>
-                  <p className="font-secondary text-sm leading-relaxed">
-                    {selectedCaseStudy.outcome}
-                  </p>
+                  <ul className="space-y-2 list-none">
+                    {selectedCaseStudy.outcome.map((point, index) => (
+                      <li key={index} className="font-secondary text-sm leading-relaxed flex items-start gap-3">
+                        <span className="text-accent mt-1 flex-shrink-0">▸</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {/* Testimonial Section */}
