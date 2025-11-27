@@ -768,6 +768,36 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
 
   const selectedWork: WorkItem[] = [
     {
+      slug: "vba-for-loops",
+      title: "VBA For Loops in Microsoft Excel",
+      description: "Comprehensive guide to using VBA For Loops in Excel, covering loop types, syntax, and practical examples for automating repetitive tasks.",
+      results: "Excel Automation | VBA Programming | Loop Implementation",
+      workType: ["Blog"],
+      industry: ["Technology"],
+      format: ["Blog"],
+      externalUrl: "https://bsuite365.com/blog/excel/vba-for-loops-in-microsoft-excel/",
+    },
+    {
+      slug: "pivot-tables-excel",
+      title: "Pivot Tables in Excel",
+      description: "Complete guide to creating and using pivot tables in Excel for data analysis, summarization, and reporting.",
+      results: "Data Analysis | Excel Features | Business Intelligence",
+      workType: ["Blog"],
+      industry: ["Technology"],
+      format: ["Blog"],
+      externalUrl: "https://bsuite365.com/blog/excel/pivot-tables-in-excel/",
+    },
+    {
+      slug: "track-business-expenses",
+      title: "Track Business Expenses in Excel",
+      description: "Step-by-step guide to creating an expense tracking system in Excel for small businesses and entrepreneurs.",
+      results: "Financial Management | Expense Tracking | Business Tools",
+      workType: ["Blog"],
+      industry: ["Technology"],
+      format: ["Blog"],
+      externalUrl: "https://bsuite365.com/blog/excel/track-business-expenses/",
+    },
+    {
       slug: "next-gen-ptaas-roi",
       title: "Next-Gen PTaaS ROI",
       description: "Comprehensive white paper analyzing Return on Investment for Next-Gen Pentest as a Service, comparing traditional vs. next-gen pentesting with detailed cost-benefit analysis.",
