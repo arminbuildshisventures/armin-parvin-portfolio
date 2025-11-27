@@ -1462,6 +1462,16 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
             </TabsContent>
           </Tabs>
         </div>
+
+        {/* Testimonials Marquee */}
+        <TestimonialsSection
+          title="What Clients Say"
+          description="Trusted by marketing leaders and growing businesses worldwide"
+          testimonials={marqueeTestimonials}
+        />
+
+        {/* Client Logos Section */}
+        <ClientLogos />
       </section>
 
       {/* Image Viewer Modal */}
@@ -1638,16 +1648,6 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
           )}
         </DialogContent>
       </Dialog>
-
-      {/* Testimonials Marquee */}
-      <TestimonialsSection
-        title="What Clients Say"
-        description="Trusted by marketing leaders and growing businesses worldwide"
-        testimonials={marqueeTestimonials}
-      />
-
-      {/* Client Logos Section */}
-      <ClientLogos />
 
       {/* Footer */}
       <footer className="py-8 px-4 pixel-border border-b-0 border-x-0 relative z-10 bg-background">

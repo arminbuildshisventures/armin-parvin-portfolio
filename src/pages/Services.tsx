@@ -174,17 +174,17 @@ export default function Services() {
             </TabsContent>
           </Tabs>
         </div>
+
+        {/* Testimonials Marquee */}
+        <TestimonialsSection
+          title="What Clients Say"
+          description="Trusted by marketing leaders and growing businesses worldwide"
+          testimonials={marqueeTestimonials}
+        />
+
+        {/* Client Logos Section */}
+        <ClientLogos />
       </section>
-
-      {/* Testimonials Marquee */}
-      <TestimonialsSection
-        title="What Clients Say"
-        description="Trusted by marketing leaders and growing businesses worldwide"
-        testimonials={marqueeTestimonials}
-      />
-
-      {/* Client Logos Section */}
-      <ClientLogos />
 
       {/* Footer */}
       <footer className="py-8 px-4 pixel-border border-b-0 border-x-0 relative z-10 bg-background">
