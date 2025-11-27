@@ -1308,9 +1308,9 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
                   )}
                   <div className="relative z-10 flex flex-col h-full">
                     {project.logo && (
-                      <div className={`${project.slug === 'convert-com' || project.slug === 'nordic-defender' ? 'bg-accent/20' : 'bg-secondary/20'} pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-4`}>
+                      <div className={`${index % 2 === 0 ? 'bg-accent/20' : 'bg-secondary/20'} pixel-border h-48 mb-6 flex flex-col items-center justify-center gap-4`}>
                         <img src={project.logo} alt={project.title} className="h-12 brightness-0 invert" />
-                        <span className={`font-primary text-sm ${project.slug === 'convert-com' || project.slug === 'nordic-defender' ? 'text-accent' : 'text-secondary'} text-center`}>{project.category}</span>
+                        <span className={`font-primary text-sm ${index % 2 === 0 ? 'text-accent' : 'text-secondary'} text-center`}>{project.category}</span>
                       </div>
                     )}
                     <h3 className="font-primary text-sm mb-3">{project.title}: {project.results}</h3>
