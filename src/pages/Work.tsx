@@ -190,28 +190,6 @@ export default function Work() {
 
   const caseStudies: CaseStudy[] = [
     {
-      slug: "convert-com",
-      title: "Convert.com",
-      category: "Content Marketing",
-      description: "Created bottom-of-funnel content strategy and wrote multi-perspective articles to establish brand presence in SERPs for new features.",
-      results: "SERP Rankings Achieved",
-      challenge: "Convert.com needed to establish a strong brand presence in search results for their brand new features and seed Convert's name in the SERPs. The challenge was creating content that would rank well while also providing value to potential customers at the bottom of the funnel. They specifically needed multi-perspective, journalistic articles about a new space called Full-Stack Experimentation.",
-      process: "Developed a comprehensive content strategy focusing on feature-specific content and Full-Stack Experimentation thought leadership. Conducted keyword research, competitor analysis, and created detailed content briefs. Worked closely with the product team to understand technical specifications and translated them into accessible, SEO-optimized content. Produced multi-perspective, journalistic articles that positioned Convert as leaders in the Full-Stack Experimentation space.",
-      outcome: "Successfully established Convert.com's presence in SERPs for target keywords. The content strategy led to increased organic traffic and improved brand recognition within the industry. Content pieces consistently ranked in top positions for competitive keywords, positioning Convert as thought leaders in the Full-Stack Experimentation space.",
-      images: [],
-      logo: convertLogo,
-      bgImage: convertBg,
-      industry: "Technology",
-      testimonial: {
-        name: "Trina Moitra",
-        title: "CMO",
-        company: "Convert.com",
-        avatar: trinaMoitra,
-        rating: 5,
-        text: "Armin impressed me with his attention to detail & his knowledge of the industry from day 1. We needed someone to take on the production of bottom-of-the-funnel focused content and to seed Convert's name in the SERPs for our brand new features. Our collaboration was very pleasant. Renee Content has a good process and they really give 110% to understand your requirements. Thank you for being such consummate professionals!"
-      },
-    },
-    {
       slug: "roomvu",
       title: "Roomvu",
       category: "Cold Email Marketing",
@@ -231,6 +209,28 @@ export default function Work() {
         avatar: alirezaKhorshidi,
         rating: 5,
         text: "Armin is a highly effective strategic copywriter. I managed him at Roomvu, where he ran our cold email outbound, and strong results consistently backed his performance. He doesn't just write; he leverages the power of content within a specific, results-driven strategy. While his focus was cold email with us, I know he is also very capable of driving multi-channel content strategies (across email, LinkedIn, and X). He's a professional, clear communicator and brings a valuable creative perspective (he's also a professional guitar player!). I strongly recommend him to any team."
+      },
+    },
+    {
+      slug: "convert-com",
+      title: "Convert.com",
+      category: "Content Marketing",
+      description: "Created bottom-of-funnel content strategy and wrote multi-perspective articles to establish brand presence in SERPs for new features.",
+      results: "SERP Rankings Achieved",
+      challenge: "Convert.com needed to establish a strong brand presence in search results for their brand new features and seed Convert's name in the SERPs. The challenge was creating content that would rank well while also providing value to potential customers at the bottom of the funnel. They specifically needed multi-perspective, journalistic articles about a new space called Full-Stack Experimentation.",
+      process: "Developed a comprehensive content strategy focusing on feature-specific content and Full-Stack Experimentation thought leadership. Conducted keyword research, competitor analysis, and created detailed content briefs. Worked closely with the product team to understand technical specifications and translated them into accessible, SEO-optimized content. Produced multi-perspective, journalistic articles that positioned Convert as leaders in the Full-Stack Experimentation space.",
+      outcome: "Successfully established Convert.com's presence in SERPs for target keywords. The content strategy led to increased organic traffic and improved brand recognition within the industry. Content pieces consistently ranked in top positions for competitive keywords, positioning Convert as thought leaders in the Full-Stack Experimentation space.",
+      images: [],
+      logo: convertLogo,
+      bgImage: convertBg,
+      industry: "Technology",
+      testimonial: {
+        name: "Trina Moitra",
+        title: "CMO",
+        company: "Convert.com",
+        avatar: trinaMoitra,
+        rating: 5,
+        text: "Armin impressed me with his attention to detail & his knowledge of the industry from day 1. We needed someone to take on the production of bottom-of-the-funnel focused content and to seed Convert's name in the SERPs for our brand new features. Our collaboration was very pleasant. Renee Content has a good process and they really give 110% to understand your requirements. Thank you for being such consummate professionals!"
       },
     },
     {
@@ -1293,7 +1293,9 @@ Yes, I highly recommend Renée Content to fellow small business owners because t
               {caseStudies.map((project, index) => (
                 <PixelCard 
                   key={index}
-                  className="cursor-pointer transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg group relative overflow-hidden flex flex-col h-full"
+                  className={`cursor-pointer transition-all duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:pixel-shadow-lg group relative overflow-hidden flex flex-col h-full ${
+                    index < 2 ? 'md:col-span-2' : ''
+                  }`}
                   onClick={() => handleCaseStudyClick(project)}
                 >
                   {project.bgImage && (
