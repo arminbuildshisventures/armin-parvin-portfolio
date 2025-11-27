@@ -268,9 +268,11 @@ export default function About() {
               transform: "translate(50%, -50%) rotate(45deg)"
             }} />
             </div>
+          </div>
 
-            {/* Coffee & Lifestyle Section */}
-            <div className="relative mt-8">
+          {/* Coffee & Lifestyle Section */}
+          <div className="mt-16 max-w-5xl mx-auto">
+            <div className="relative">
               <div className="pixel-border pixel-shadow bg-accent/30 border-accent/30 p-6 md:p-8 hover:pixel-shadow-lg hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
                 <p className="font-secondary text-base md:text-lg leading-relaxed text-accent font-medium italic border-l-4 border-accent pl-4 mb-6">
                   When I'm not working (does that even happen?), I'm sipping on too much specialty coffee and working.
